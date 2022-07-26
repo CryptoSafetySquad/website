@@ -5,22 +5,22 @@ import styles from '../styles/Home.module.css'
 const guides = [
   {
     url: '/guides/adblock',
-    title: 'AdBlock',
+    title: 'Guide: AdBlock',
     description: 'Improve browser security by blocking known bad websites.'
   },
   {
     url: '/general-tips',
-    title: 'General Safety Tips',
+    title: 'Guide: General Safety Tips',
     description: 'Some tips that will become second nature over time.'
   },
   {
     url: '/guides/discorddm',
-    title: 'Discord: Server DMs',
+    title: 'Guide: Discord: Server DMs',
     description: 'Disable server DMs (reduces spam bots).'
   },
   {
     url: '/research',
-    title: 'Research',
+    title: 'Project Research',
     description: 'Some project research by members of our community staff.'
   }
 ]
@@ -42,7 +42,6 @@ const Home: NextPage = () => {
           Community dedicated to safely onboarding new users to the world of Crypto and providing ongoing support
         </p>
 
-        <h2>Guides</h2>
         <div className={styles.grid}>
           {
             guides.map(card => (
