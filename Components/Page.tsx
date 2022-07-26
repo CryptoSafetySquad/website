@@ -3,17 +3,18 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 interface PageComponentProps {
-  title?: string;
-  slug?: string;
-  content?: React.ReactNode;
+  title: string;
+  slug: string;
+  description: string;
+  content: React.ReactNode;
 }
 
-const Page = ({ title, slug, content }: PageComponentProps) => {
+const Page = ({ title, slug, content, description }: PageComponentProps) => {
   return (
     <div>
       <Head>
         <title>Crypto Safety Squad | {title}</title>
-        <meta name="description" content="A community project dedicated to onboarding new users safely into CryptoCurrencies." />
+        <meta name="description" content={description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
