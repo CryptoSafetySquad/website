@@ -29,9 +29,10 @@ const AuthorComponent = ({ nickname, content, fullname, image, socials }: Author
   return (
     <div>
       <div className='author'>
+        {image && <img src={image} />}
         <h2>{fullname} {fullname && nickname && `aka `} {nickname}</h2>
         {socials && socials.linkedin && <a className='link-small' href={socials.linkedin} target='_blank' rel='noopener noreferrer'>LinkedIn</a>}
-        {image && <img src={image} />}
+        
         <div className='mt-4'>
           {content}
         </div>
