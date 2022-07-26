@@ -16,7 +16,7 @@ const AdBlock: NextPage = () => {
           <li><img src='/images/guide/discord-desktop-user-settings.png' /></li>
           <li>Click on Privacy &amp; Safety</li>
           <li><img src='/images/guide/discord-desktop-user-settings-privacy-safety.png' /></li>
-          <ul>Untick "Allow direct messages from server members".</ul>
+          <ul>Untick &quot;Allow direct messages from server members&quot;.</ul>
           <li><img src='/images/guide/discord-desktop-user-settings-server-dms.png' /></li>
         </ul>
 
@@ -25,7 +25,7 @@ const AdBlock: NextPage = () => {
         <ul>
           <li>Right click on the server icon and click on Privacy Settings</li>
           <li><img src='/images/guide/discord-desktop-privacy-settings.png' /></li>
-          <li>Untick "Allow direct messages from server members". and click Done.</li>
+          <li>Untick &quot;Allow direct messages from server members&quot;. and click Done.</li>
           <li><img src='/images/guide/discord-desktop-privacy-settings-server-dms.png' /></li>
         </ul>
       </div>
