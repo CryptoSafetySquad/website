@@ -11,7 +11,9 @@ export interface AuthorProps {
   image?: string | false;
   socials?: {
     linkedin?: string;
-  }
+  },
+  guidesCount?: number;
+  researchCount?: number;
 }
 
 const AuthorComponent = ({ nickname, content, fullname, image, socials }: AuthorProps) => {
