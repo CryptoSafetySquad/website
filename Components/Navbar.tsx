@@ -1,7 +1,7 @@
 const Navbar = () => (
-  <div className='p-2 flex'>
+  <div className='p-4 flex'>
     <div>
-      <a href='/'>CryptoSafetySquad</a>
+      <a href='/'>Crypto Safety Squad</a>
     </div>
     <div></div>
   </div>
