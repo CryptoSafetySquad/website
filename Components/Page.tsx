@@ -18,7 +18,8 @@ const Page: NextPage = (props: PageComponentProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='max-w-7xl m-auto py-4 px-2 md:py-12 md:px-4 bg-dark rounded-md'>
+      <main className='max-w-5xl m-auto py-4 px-2 md:py-12 md:px-4 bg-dark rounded-md'>
+        <h1 className='mt-6 mb-12'>{title}</h1>
         {children}
         {/* <Discussion slug='guides/adblock' title='AdBlocking' /> */}
       </main>

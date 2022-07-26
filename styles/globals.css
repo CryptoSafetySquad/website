@@ -9,11 +9,18 @@
   h2 {
     @apply text-xl;
   }
+  p {
+    @apply mb-2;
+  }
+  li {
+    @apply mb-2;
+  }
 }
 
 :root {
   --bg-dark: hsl(225, 100%, 7%);
   --bg-light: hsl(0, 0%, 93%);
+  --link-dark: hsl(187, 90%, 52%);
 }
 
 html,
@@ -44,5 +51,11 @@ a {
   body {
     color: white;
     background: var(--bg-dark);
+  }
+  a {
+    color: var(--link-dark);
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 0.05rem;
   }
 }
