@@ -9,6 +9,9 @@
   h2 {
     @apply text-xl;
   }
+  h3 {
+    @apply text-lg;
+  }
   p {
     @apply mb-2;
   }
@@ -22,6 +25,7 @@
   --bg-darker: hsl(225, 100%, 5%);
   --bg-light: hsl(0, 0%, 93%);
   --link-dark: hsl(187, 90%, 52%);
+  --text-secondary-dark: hsl(69, 100%, 47%);
 }
 
 html,
@@ -69,7 +73,7 @@ a {
   @apply mb-4;
 }
 
-.guide h1, .guide h2 {
+.guide h1, .guide h2, .guide h3 {
   @apply my-8;
 }
 
@@ -86,6 +90,9 @@ a {
     font-weight: 600;
     font-style: italic;
     letter-spacing: 0.05rem;
+  }
+  .text-secondary {
+    color: var(--text-secondary-dark);
   }
   .guide .string {
     background-color: var(--bg-darker);

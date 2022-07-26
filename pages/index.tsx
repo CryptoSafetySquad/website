@@ -7,6 +7,11 @@ const guides = [
     url: '/guides/adblock',
     title: 'AdBlock',
     description: 'Improve browser security by blocking known bad websites.'
+  },
+  {
+    url: '/guides/discorddm',
+    title: 'Discord: Server DMs',
+    description: 'Disable server DMs (reduces spam bots).'
   }
 ]
 
@@ -37,11 +42,6 @@ const Home: NextPage = () => {
               </a>
             ))
           }
-
-          {/* <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a> */}
         </div>
       </main>
 
