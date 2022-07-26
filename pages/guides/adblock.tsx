@@ -23,7 +23,7 @@ const AdBlock: NextPage = () => {
       <div className='code'>
       <p>https://raw.githubusercontent.com/MetaGamersGuild/ublock-filters/main/crypto.txt</p>
       </div>
-      <p className='mb-8'>Click apply changes and boom we&apos;re done (we update the list from time to time and ublock will automatically keep the lists up to date on your end).</p>
+      <p className='mb-8'>Click apply changes and the lists filters should now be applied in the browser.</p>
       {/* <Discussion slug='guides/adblock' title='AdBlocking' /> */}
     </>
   );
