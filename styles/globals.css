@@ -19,6 +19,7 @@
 
 :root {
   --bg-dark: hsl(225, 100%, 7%);
+  --bg-darker: hsl(225, 100%, 5%);
   --bg-light: hsl(0, 0%, 93%);
   --link-dark: hsl(187, 90%, 52%);
 }
@@ -55,6 +56,14 @@ a {
 
 .guide {
   line-height: 1.8rem;
+}
+
+.guide .string {
+  background-color: var(--bg-darker);
+  padding: 0.5rem;
+  font-family: monospace;
+  font-size: 1.2rem;
+  display: inline-block;
 }
 
 .guide p {

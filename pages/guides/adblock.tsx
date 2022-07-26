@@ -20,9 +20,7 @@ const AdBlock: NextPage = () => {
         <li>under custom click import</li>
         <li>paste in the URL:</li>
         </ol>
-        <div className='code'>
-        <p>https://raw.githubusercontent.com/MetaGamersGuild/ublock-filters/main/crypto.txt</p>
-        </div>
+        <p><span className='string'>https://raw.githubusercontent.com/MetaGamersGuild/ublock-filters/main/crypto.txt</span></p>
         <p className='mb-8'>Click apply changes and the lists filters should now be applied in the browser, uBo will now automatically keep this list up to date regularly.</p>
         {/* <Discussion slug='guides/adblock' title='AdBlocking' /> */}
       </div>
