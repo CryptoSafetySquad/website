@@ -6,24 +6,26 @@ const AdBlock: NextPage = () => {
   const title = 'Ad-blocking with uBlock Origin and Installing CryptoSafetySquad AdBlock filters'
   const content = (
     <>
-      <p>One of the easiest ways to prevent mistakenly clicking on a malicious link is to have up to date filters that pro-actively block some of the most well known bad urls.</p>
-      <p>While this doesn&apos;t guarantee you&apos;ll never click on a bad link, it&apos;s a very easy to set up first step which can help you to think if a website is legitimate or not.</p>
+      <div className='guide'>
+        <p>One of the easiest ways to prevent mistakenly clicking on a malicious link is to have up to date filters that pro-actively block some of the most well known bad urls.</p>
+        <p>While this doesn&apos;t guarantee you&apos;ll never click on a bad link, it&apos;s a very easy to set up first step which can help you to think if a website is legitimate or not.</p>
 
-      <p className='mb-4'>We have created a bunch of filters for adblocking extensions (works with Adblock or uBlock Origin) - we highly recommend uBlock Origin</p>
-      <h2 className='my-4'>Step 1: Install uBlock</h2>
-      <p className='mb-4'>To install uBlock Origin go <a href='https://github.com/gorhill/uBlock' target='_blank' rel='noreferrer noopener'>here</a> and click the link for your web browser.</p>
-      <h2 className='my-4'>Step 2: Add custom filters</h2>
-      <ol>
-      <li>click uBlock icon</li>
-      <li>go to dashboard (settings cog)</li>
-      <li>under custom click import</li>
-      <li>paste in the URL:</li>
-      </ol>
-      <div className='code'>
-      <p>https://raw.githubusercontent.com/MetaGamersGuild/ublock-filters/main/crypto.txt</p>
+        <p>We have created a bunch of filters for adblocking extensions (works with Adblock or uBlock Origin) - we highly recommend uBlock Origin</p>
+        <h2>Step 1: Install uBlock</h2>
+        <p>To install uBlock Origin go <a href='https://github.com/gorhill/uBlock' target='_blank' rel='noreferrer noopener'>here</a> and click the link for your web browser.</p>
+        <h2>Step 2: Add custom filters</h2>
+        <ol>
+        <li>click uBlock icon</li>
+        <li>go to dashboard (settings cog)</li>
+        <li>under custom click import</li>
+        <li>paste in the URL:</li>
+        </ol>
+        <div className='code'>
+        <p>https://raw.githubusercontent.com/MetaGamersGuild/ublock-filters/main/crypto.txt</p>
+        </div>
+        <p className='mb-8'>Click apply changes and the lists filters should now be applied in the browser.</p>
+        {/* <Discussion slug='guides/adblock' title='AdBlocking' /> */}
       </div>
-      <p className='mb-8'>Click apply changes and the lists filters should now be applied in the browser.</p>
-      {/* <Discussion slug='guides/adblock' title='AdBlocking' /> */}
     </>
   )
 
