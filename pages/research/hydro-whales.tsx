@@ -18,7 +18,6 @@ const doxxed = () => {
 }
 
 const goodPoints = [
-  doxxed(),
   'Has legal team on retainer',
   'Full whitepaper',
   'Website content is captured in wayback machine.'
@@ -41,6 +40,7 @@ const HydroWhales: NextPage = () => {
         </ul>
         <h2 className='text-secondary'>Good Factors</h2>
         <ul>
+          <li>{tick}{doxxed()}</li>
           {goodPoints.map(good => (<li key={good}>{tick}{good}</li>))}
         </ul>
         <h2 className='text-secondary'>Red Flags?</h2>
