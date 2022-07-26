@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+}
+
 :root {
   --bg-dark: hsl(225, 100%, 7%);
   --bg-light: hsl(0, 0%, 93%);
