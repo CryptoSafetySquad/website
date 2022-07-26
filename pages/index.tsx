@@ -2,6 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
+const discordUrl = 'https://discord.gg/2R7JETvAsc'
+
 const cards = [
   {
     url: '/guides/adblock',
@@ -43,6 +45,17 @@ const Home: NextPage = () => {
           </a> */}
         </div>
       </main>
+
+      <div style={{position: 'fixed', bottom: 0, right: '1rem'}}>
+        <a
+          href={discordUrl}
+          target='_blank'
+          rel='noopener noreferrer'
+          className='mr-4'
+        >
+          <img src='/images/icons/discord.svg' width='48' height='48' />
+        </a>
+      </div>
     </div>
   )
 }
