@@ -8,7 +8,7 @@ const AdBlock: NextPage = () => {
   const authors = [PrivateSniper]
   const content = (
     <div className='grid grid-cols-3'>
-      {authors.map(author => <AuthorComponent {...author} />)}
+      {authors.map(author => <AuthorComponent key={`${author.nickname}-${author.fullname}`} {...author} />)}
     </div>
   )
 
