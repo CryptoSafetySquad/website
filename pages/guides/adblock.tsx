@@ -8,7 +8,7 @@ const AdBlock: NextPage = () => {
     <>
       <div className='guide'>
         <p>One of the easiest ways to prevent mistakenly clicking on a malicious link is to have up to date filters that pro-actively block some of the most well known bad urls.</p>
-        <p>While this doesn&apos;t guarantee you&apos;ll never click on a bad link, it&apos;s a very easy to set up first step which can help you to think if a website is legitimate or not.</p>
+        <p>While this doesn&apos;t guarantee you&apos;ll never click on a bad link, it&apos;s a very easy to set up first step which can help you to identify if a website is legitimate or not.</p>
 
         <p>We have created a bunch of filters for adblocking extensions (works with Adblock or uBlock Origin) - we highly recommend uBlock Origin</p>
         <h2>Step 1: Install uBlock</h2>
