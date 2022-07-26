@@ -9,6 +9,11 @@ const guides = [
     description: 'Improve browser security by blocking known bad websites.'
   },
   {
+    url: '/general-tips',
+    title: 'General Safety Tips',
+    description: 'Some tips that will become second nature over time.'
+  },
+  {
     url: '/guides/discorddm',
     title: 'Discord: Server DMs',
     description: 'Disable server DMs (reduces spam bots).'
