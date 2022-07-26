@@ -1,6 +1,4 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
 import Page from '../../Components/Page'
 import PrivateSniper from '../../data/authors/PrivateSniper'
 
@@ -11,16 +9,16 @@ const AdBlock: NextPage = () => {
       <p>One of the easiest ways to prevent mistakenly clicking on a malicious link is to have up to date filters that pro-actively block some of the most well known bad urls.</p>
       <p>While this doesn&apos;t guarantee you&apos;ll never click on a bad link, it&apos;s a very easy to set up first step which can help you to think if a website is legitimate or not.</p>
 
+      <p className='mb-4'>We have created a bunch of filters for adblocking extensions (works with Adblock or uBlock Origin) - we highly recommend uBlock Origin</p>
       <h2 className='my-4'>Step 1: Install uBlock</h2>
-      <p className='mb-2'>We have created a bunch of filters for adblocking extensions (works with Adblock or uBlock Origin) - we highly recommend uBlock Origin</p>
-      <p className='mb-2'>To install uBlock Origin go <a href='https://github.com/gorhill/uBlock' target='_blank' rel='noreferrer noopener'>here</a> and click the link for your web browser.</p>
+      <p className='mb-4'>To install uBlock Origin go <a href='https://github.com/gorhill/uBlock' target='_blank' rel='noreferrer noopener'>here</a> and click the link for your web browser.</p>
       <h2 className='my-4'>Step 2: Add custom filters</h2>
-      <ul>
+      <ol>
       <li>click uBlock icon</li>
       <li>go to dashboard (settings cog)</li>
       <li>under custom click import</li>
       <li>paste in the URL:</li>
-      </ul>
+      </ol>
       <div className='code'>
       <p>https://raw.githubusercontent.com/MetaGamersGuild/ublock-filters/main/crypto.txt</p>
       </div>

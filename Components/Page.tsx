@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { AuthorProps, default as Author } from './Author'
+import Navbar from './Navbar'
 
 interface PageComponentProps {
   title: string;
@@ -16,6 +17,8 @@ const Page = ({ title, slug, content, description, author }: PageComponentProps)
         <title>Crypto Safety Squad | {title}</title>
         <meta name="description" content={description} />
       </Head>
+
+      <Navbar />
 
       <main className='max-w-5xl m-auto py-4 px-2 md:py-12 md:px-4 bg-dark rounded-md'>
         <h1 className='mt-6 mb-12'>{title}</h1>
