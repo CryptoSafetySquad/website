@@ -2,15 +2,25 @@ import Head from 'next/head'
 import Image from 'next/image'
 import JsonLd from './JsonLd';
 
-export interface AuthorProps {
-  nickname?: string;
-  fullname?: string;
+interface Person {
+  fullname: string;
+  firstName?: string;
+  lastName?: string;
+}
+
+interface Alias {
+  nickname: string
+}
+
+interface PersonAndAlias extends Person, Alias {}
+
+type AuthorProps = {
   content?: React.ReactNode;
   image?: string | false;
   socials?: {
     linkedin?: string;
   }
-}
+} & (PersonAndAlias | Person | Alias)
 
 const AuthorComponent = ({ nickname, content, fullname, image, socials }: AuthorProps) => {
   const jsonLdData: any = {
