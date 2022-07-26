@@ -26,7 +26,12 @@ const Page = ({ title, slug, content, description, author }: PageComponentProps)
           <div>
             {content}
           </div>
-          {author && <Author {...author} />}
+          {author && (
+            <aside>
+              <h2 className='mb-2'>About the author</h2>
+              <Author {...author} />
+            </aside>
+          )}
         </div>
         {/* <Discussion slug='guides/adblock' title='AdBlocking' /> */}
       </main>

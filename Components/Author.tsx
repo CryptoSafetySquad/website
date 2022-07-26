@@ -5,7 +5,6 @@ import JsonLd from './JsonLd';
 export interface AuthorProps {
   nickname?: string;
   fullname?: string;
-  slug: string;
   content?: React.ReactNode;
   image?: string | false;
   socials?: {
@@ -13,7 +12,7 @@ export interface AuthorProps {
   }
 }
 
-const AuthorComponent = ({ nickname, slug, content, fullname, image, socials }: AuthorProps) => {
+const AuthorComponent = ({ nickname, content, fullname, image, socials }: AuthorProps) => {
   const jsonLdData: any = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -28,7 +27,7 @@ const AuthorComponent = ({ nickname, slug, content, fullname, image, socials }: 
   return (
     <div>
       <div className='author'>
-        <h2>Author: {fullname} {fullname && nickname && `aka `} {nickname}</h2>
+        <h2>{fullname} {fullname && nickname && `aka `} {nickname}</h2>
         {socials && socials.linkedin && <a className='link-small' href={socials.linkedin} target='_blank' rel='noopener noreferrer'>LinkedIn</a>}
         {image && <img src={image} />}
         <div className='mt-4'>
