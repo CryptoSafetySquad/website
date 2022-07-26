@@ -40,8 +40,17 @@ a {
   text-decoration: none;
 }
 
+.link-small {
+  @apply text-sm;
+}
+
 * {
   box-sizing: border-box;
+}
+
+.author {
+  box-shadow: 0 0 2px #ececec;
+  @apply p-2;
 }
 
 @media (prefers-color-scheme: dark) {

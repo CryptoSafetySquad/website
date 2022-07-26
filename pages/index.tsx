@@ -17,7 +17,6 @@ const Home: NextPage = () => {
       <Head>
         <title>Crypto Safety Squad | Home</title>
         <meta name="description" content="A community project dedicated to onboarding new users safely into CryptoCurrencies." />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>

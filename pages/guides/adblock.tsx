@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Page from '../../Components/Page'
+import PrivateSniper from '../../data/authors/PrivateSniper'
 
 const AdBlock: NextPage = () => {
   const title = 'Ad-blocking with uBlock Origin and Installing CryptoSafetySquad AdBlock filters'
@@ -33,6 +34,7 @@ const AdBlock: NextPage = () => {
       title,
       content,
       slug: 'guides/adblock',
+      author: PrivateSniper,
       description: 'A security guide to use adblocking features of ublock origin to help secure browsers'
     }} />
   )
