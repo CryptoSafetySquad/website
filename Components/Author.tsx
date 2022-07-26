@@ -34,8 +34,8 @@ const AuthorComponent = ({ nickname, slug, content, fullname, image, socials }: 
         <div className='mt-4'>
           {content}
         </div>
+        <JsonLd json={jsonLdData} />
       </div>
-      <JsonLd json={jsonLdData} />
     </div>
   )
 }
