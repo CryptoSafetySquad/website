@@ -26,6 +26,7 @@
   --bg-light: hsl(0, 0%, 93%);
   --link-dark: hsl(187, 90%, 52%);
   --text-secondary-dark: hsl(69, 100%, 47%);
+  --text-danger-dark: rgb(231, 28, 28);
 }
 
 html,
@@ -96,5 +97,8 @@ a {
   }
   .guide .string {
     background-color: var(--bg-darker);
+  }
+  .danger {
+    color: var(--text-danger-dark);
   }
 }
