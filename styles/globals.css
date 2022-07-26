@@ -1,9 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-dark: hsl(225, 100%, 7%);
+  --bg-light: hsl(0, 0%, 93%);
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body {
+  background: var(--bg-light);
 }
 
 a {
@@ -21,6 +34,6 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background: var(--bg-dark);
   }
 }
