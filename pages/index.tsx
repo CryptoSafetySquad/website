@@ -6,7 +6,7 @@ import styles from '../styles/Home.module.css'
 const cards = [
   {
     url: '/guides/adblock',
-    title: 'AdBlock',
+    title: 'Guide: AdBlock',
     description: 'Improve browser security by blocking known bad websites.'
   }
 ]
