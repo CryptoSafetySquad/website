@@ -41,7 +41,7 @@ const HydroWhales: NextPage = () => {
         </ul>
         <h2 className='text-secondary'>Good Factors</h2>
         <ul>
-          {goodPoints.map(good => (<li>{tick}{good}</li>))}
+          {goodPoints.map(good => (<li key={good}>{tick}{good}</li>))}
         </ul>
         <h2 className='text-secondary'>Red Flags?</h2>
         <ul>
