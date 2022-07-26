@@ -3,7 +3,6 @@ import { AuthorProps } from '../../Components/Author'
 const PrivateSniper: AuthorProps = {
   nickname: 'PrivateSniper',
   fullname: 'David Craig',
-  slug: 'privatesniper',
   socials: {
     linkedin: 'https://www.linkedin.com/in/davidcraig86/'
   },
