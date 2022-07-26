@@ -25,7 +25,7 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-          Community dedicated to safely onboarding new users to the world of Crypto
+          Community dedicated to safely onboarding new users to the world of Crypto and providing ongoing support
         </p>
 
         <div className={styles.grid}>
