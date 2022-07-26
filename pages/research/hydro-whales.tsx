@@ -29,7 +29,7 @@ const HydroWhales: NextPage = () => {
     <>
       <div className='guide'>
         <Disclaimer />
-        TLDR: Overall Rating: 📗 (10) Excellent
+        TLDR: Overall Rating: 🟩 (10) Excellent
         <p>TLDR: What is this about?: A passive income focused community, powered by bitcoin mining and community voted investments.</p>
         <h2 className='text-secondary'>Links</h2>
         <ul>

@@ -17,6 +17,11 @@ const guides = [
     url: '/guides/discorddm',
     title: 'Discord: Server DMs',
     description: 'Disable server DMs (reduces spam bots).'
+  },
+  {
+    url: '/research',
+    title: 'Research',
+    description: 'Some project research by members of our community staff.'
   }
 ]
 

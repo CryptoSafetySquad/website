@@ -79,6 +79,20 @@ a {
   @apply my-8;
 }
 
+.table {
+  width: 100%;
+}
+
+.table th {
+  text-align: left;
+  background-color: var(--bg-darker);
+  padding: 0.5rem;
+}
+
+.table .center {
+  text-align: center;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
