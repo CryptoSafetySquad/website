@@ -3,6 +3,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+const cards = [
+  {
+    url: '/guides/adblock',
+    title: 'AdBlock',
+    description: 'Improve browser security by blocking known bad websites.'
+  }
+]
+
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -22,10 +30,14 @@ const Home: NextPage = () => {
         </p>
 
         <div className={styles.grid}>
-          <a href="/guides/adblock" className={styles.card}>
-            <h2>AdBlock</h2>
-            <p>Improve browser security by blocking known bad websites.</p>
-          </a>
+          {
+            cards.map(card => (
+              <a key={card.url} href={card.url} className={styles.card}>
+                <p className={`${styles.cardTitle} mb-2`}>{card.title}</p>
+                <p>{card.description}</p>
+              </a>
+            ))
+          }
 
           {/* <a href="https://nextjs.org/learn" className={styles.card}>
             <h2>Learn &rarr;</h2>
