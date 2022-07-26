@@ -33,7 +33,7 @@ const AdBlock: NextPage = () => {
         </ul>
 
         <h3>Mobile</h3>
-        <p>Similar to desktop, from the server list you can long tap the server icon or click the three dots, then scroll down the popup panel and untick "Allow Direct Messages".</p>
+        <p>Similar to desktop, from the server list you can long tap the server icon or click the three dots, then scroll down the popup panel and untick &quot;Allow Direct Messages&quot;.</p>
         
       </div>
     </>
