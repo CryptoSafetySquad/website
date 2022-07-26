@@ -2,10 +2,10 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-const cards = [
+const guides = [
   {
     url: '/guides/adblock',
-    title: 'Guide: AdBlock',
+    title: 'AdBlock',
     description: 'Improve browser security by blocking known bad websites.'
   }
 ]
@@ -27,9 +27,10 @@ const Home: NextPage = () => {
           Community dedicated to safely onboarding new users to the world of Crypto and providing ongoing support
         </p>
 
+        <h2>Guides</h2>
         <div className={styles.grid}>
           {
-            cards.map(card => (
+            guides.map(card => (
               <a key={card.url} href={card.url} className={styles.card}>
                 <p className={`${styles.cardTitle} mb-2`}>{card.title}</p>
                 <p>{card.description}</p>
