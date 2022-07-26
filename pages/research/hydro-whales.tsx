@@ -5,8 +5,7 @@ import ExternalLink from '../../Components/ExternalLink'
 
 const tick = '✅'
 const warn = '⚠️'
-const Disclaimer = () => <p className='danger'>Disclaimer: This is just a high level of my own basic research, it is not financial advice, you should conduct your own research before investing into any project. I accept no responsibility for your own investing decisions or any outcomes from investing in these projects.</p>
-const wayback = 'https://web.archive.org/web/20220711192706/https://www.hydrowhalesclub.com/'
+const Disclaimer = () => <p className='warn'>Disclaimer: This is just a high level of my own basic research, it is not financial advice, you should conduct your own research before investing into any project. I accept no responsibility for your own investing decisions or any outcomes from investing in any project.</p>
 
 const doxxed = () => {
   return (
@@ -18,9 +17,10 @@ const doxxed = () => {
 }
 
 const goodPoints = [
-  'Has legal team on retainer',
-  'Full whitepaper',
-  'Website content is captured in wayback machine.'
+  { key: 'doxxed', content: doxxed() },
+  { key:'legal', content: 'Has legal team on retainer' },
+  { key:'whitepaper', content: 'Full whitepaper' },
+  { key:'wayback', content: (<>Website content is captured in <ExternalLink href='https://web.archive.org/web/20220711192706/https://www.hydrowhalesclub.com/' text='wayback machine' /></>) }
 ]
 
 const HydroWhales: NextPage = () => {
@@ -40,8 +40,7 @@ const HydroWhales: NextPage = () => {
         </ul>
         <h2 className='text-secondary'>Good Factors</h2>
         <ul>
-          <li>{tick}{doxxed()}</li>
-          {goodPoints.map(good => (<li key={good}>{tick}{good}</li>))}
+          {goodPoints.map(good => (<li key={good.key}>{tick}{good.content}</li>))}
         </ul>
         <h2 className='text-secondary'>Red Flags?</h2>
         <ul>
