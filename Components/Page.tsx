@@ -5,10 +5,10 @@ import Image from 'next/image'
 interface PageComponentProps {
     title?: string;
     slug?: string;
-    children?: React.ReactNode;
+    content?: React.ReactNode;
 }
 
-const Page = ({ title, slug, children }: PageComponentProps) => {
+const Page = ({ title, slug, content }: PageComponentProps) => {
   return (
     <div>
       <Head>
@@ -19,7 +19,7 @@ const Page = ({ title, slug, children }: PageComponentProps) => {
 
       <main className='max-w-5xl m-auto py-4 px-2 md:py-12 md:px-4 bg-dark rounded-md'>
         <h1 className='mt-6 mb-12'>{title}</h1>
-        {children}
+        {content}
         {/* <Discussion slug='guides/adblock' title='AdBlocking' /> */}
       </main>
     </div>
