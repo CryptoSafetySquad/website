@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import JsonLd from './JsonLd';
 
 export interface AuthorProps {
   nickname?: string;
@@ -13,6 +14,17 @@ export interface AuthorProps {
 }
 
 const AuthorComponent = ({ nickname, slug, content, fullname, image, socials }: AuthorProps) => {
+  const jsonLdData: any = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+  };
+  if (fullname) {
+    jsonLdData.name = fullname
+  }
+  if (socials && socials.linkedin) {
+    jsonLdData.sameAs = socials.linkedin
+  }
+
   return (
     <div>
       <div className='author'>
@@ -23,6 +35,7 @@ const AuthorComponent = ({ nickname, slug, content, fullname, image, socials }: 
           {content}
         </div>
       </div>
+      <JsonLd json={jsonLdData} />
     </div>
   )
 }
