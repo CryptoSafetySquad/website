@@ -14,13 +14,15 @@ export interface AuthorProps {
 
 const AuthorComponent = ({ nickname, slug, content, fullname, image, socials }: AuthorProps) => {
   return (
-    <div className='author'>
+    <div>
+      <div className='author'>
         <h2>Author: {fullname} {fullname && nickname && `aka `} {nickname}</h2>
         {socials && socials.linkedin && <a className='link-small' href={socials.linkedin} target='_blank' rel='noopener noreferrer'>LinkedIn</a>}
         {image && <img src={image} />}
         <div className='mt-4'>
           {content}
         </div>
+      </div>
     </div>
   )
 }
