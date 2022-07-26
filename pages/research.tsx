@@ -1,14 +1,18 @@
 import type { NextPage } from 'next'
 import Page from '../Components/Page'
 import PrivateSniper from '../data/authors/PrivateSniper'
+import { overview as hwmc } from './research/hydro-whales'
+import { overview as omni } from './research/omnibirds'
 
 const scoreGreen = '🟩'
 const scoreYellow = '🟨'
 const scoreRed = '🟥'
 
 const results = [
-  // h
-  { project: 'Hydro Whales Mining Club', slug: 'hydro-whales', researcher: PrivateSniper, points: { good: 4, bad: 0 }, score: 10 }
+  // H
+  hwmc, // Hydro Whales
+  // O
+  omni,
 ]
 
 const Research: NextPage = () => {
