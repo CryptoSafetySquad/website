@@ -20,6 +20,9 @@ const AdBlock: NextPage = () => {
           <li><img src='/images/guide/discord-desktop-user-settings-server-dms.png' /></li>
         </ul>
 
+        <h3>Mobile</h3>
+        <p>The steps for mobile are similar however you click your avatar in the navigation panel at the bottom, then privacy and safety from there.</p>
+
         <h2 className='text-secondary'>Step 2 - Turn off DMs for any servers you have already joined</h2>
         <h3>Desktop</h3>
         <ul>
@@ -28,6 +31,10 @@ const AdBlock: NextPage = () => {
           <li>Untick &quot;Allow direct messages from server members&quot;. and click Done.</li>
           <li><img src='/images/guide/discord-desktop-privacy-settings-server-dms.png' /></li>
         </ul>
+
+        <h3>Mobile</h3>
+        <p>Similar to desktop, from the server list you can long tap the server icon or click the three dots, then scroll down the popup panel and untick "Allow Direct Messages".</p>
+        
       </div>
     </>
   )
