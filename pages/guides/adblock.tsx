@@ -26,29 +26,15 @@ const AdBlock: NextPage = () => {
       <p className='mb-8'>Click apply changes and the lists filters should now be applied in the browser.</p>
       {/* <Discussion slug='guides/adblock' title='AdBlocking' /> */}
     </>
-  );
-  const pageProps = {
-    title,
-    content,
-    slug: 'guides/adblock'
-  }
-
-  return (
-    <Page {...pageProps} />
   )
 
   return (
-    <div>
-      <Head>
-        <title>Crypto Safety Squad | Home</title>
-        <meta name="description" content="A community project dedicated to onboarding new users safely into CryptoCurrencies." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className='max-w-7xl m-auto py-4 px-2 md:py-12 md:px-4 bg-dark rounded-md'>
-        
-      </main>
-    </div>
+    <Page {...{
+      title,
+      content,
+      slug: 'guides/adblock',
+      description: 'A security guide to use adblocking features of ublock origin to help secure browsers'
+    }} />
   )
 }
 
