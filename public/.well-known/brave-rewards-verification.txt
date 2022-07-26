@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: cryptosafetysquad.netlify.app
+Token: 124edc441e11336dab92f1d682275c1d0159e361f1d536cda3b80703a995a1b9
