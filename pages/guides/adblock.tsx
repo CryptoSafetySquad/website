@@ -22,6 +22,8 @@ const AdBlock: NextPage = () => {
         </ol>
         <p><span className='string'>https://raw.githubusercontent.com/MetaGamersGuild/ublock-filters/main/crypto.txt</span></p>
         <p className='mb-8'>Click apply changes and the lists filters should now be applied in the browser, uBo will now automatically keep this list up to date regularly.</p>
+        <p>Note: uBlock does also include a lot of other filter lists out of the box, if you dont wan&apos;t to use any of these you can simply untick them, I personally keep them all active.</p>
+        <p>I hope you found this guide useful and that it helps keep you that little bit more secure in your crypto journey.</p>
         {/* <Discussion slug='guides/adblock' title='AdBlocking' /> */}
       </div>
     </>
