@@ -5,11 +5,10 @@ import Image from 'next/image'
 interface PageComponentProps {
     title?: string;
     slug?: string;
-    children?: any;
+    children?: React.ReactNode;
 }
 
-const Page: NextPage = (props: PageComponentProps) => {
-  const { title, slug, children } = props
+const Page = ({ title, slug, children }: PageComponentProps) => {
   return (
     <div>
       <Head>

@@ -27,8 +27,15 @@ const AdBlock: NextPage = () => {
       {/* <Discussion slug='guides/adblock' title='AdBlocking' /> */}
     </>
   );
+  const pageProps = {
+    title,
+    content,
+    slug: 'guides/adblock'
+  }
 
-  return <Page title={title} slug='guides/adblock'>{content}</Page>
+  return (
+    <Page {...pageProps} />
+  )
 
   return (
     <div>
