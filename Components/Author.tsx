@@ -30,14 +30,17 @@ const AuthorComponent = ({ nickname, content, fullname, image, socials }: Author
 
   return (
     <div>
-      <div className='author'>
+      <div className='author grid grid-cols-[30%,1fr] xl:grid-cols-1 gap-4'>
         {image && <img src={image} />}
-        <h2>{fullname} {fullname && nickname && `aka `} {nickname}</h2>
-        {socials && socials.linkedin && <a className='link-small' href={socials.linkedin} target='_blank' rel='noopener noreferrer'>LinkedIn</a>}
-        
-        <div className='mt-4'>
-          {content}
+        <div className='pr-4 xl:pr-0'>
+          <h2>{fullname} {fullname && nickname && `aka `} {nickname}</h2>
+          {socials && socials.linkedin && <a className='link-small' href={socials.linkedin} target='_blank' rel='noopener noreferrer'>LinkedIn</a>}
+          
+          <div className='mt-4'>
+            {content}
+          </div>
         </div>
+        
         <JsonLd json={jsonLdData} />
       </div>
     </div>
