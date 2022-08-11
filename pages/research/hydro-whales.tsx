@@ -39,6 +39,7 @@ const HydroWhales: NextPage = () => {
   const content = (
     <>
       <div className='guide'>
+        <img className='mb-4' src='/images/logos/hwmc_os_logo.png' />
         <Disclaimer />
         TLDR: Overall Rating: 🟩 ({score}) Excellent
         <p>TLDR: What is this about?: A passive income focused community, powered by bitcoin mining and community voted investments.</p>
