@@ -89,7 +89,7 @@ a {
   padding: 0.5rem;
 }
 
-.table .center {
+.table .center, .table .centre, .table.centre, .table.center {
   text-align: center;
 }
 
@@ -106,6 +106,9 @@ a {
     font-weight: 600;
     font-style: italic;
     letter-spacing: 0.05rem;
+  }
+  .card {
+    background: var(--bg-darker);
   }
   .text-secondary {
     color: var(--text-secondary-dark);

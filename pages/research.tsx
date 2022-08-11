@@ -18,31 +18,33 @@ const results = [
 const Research: NextPage = () => {
   const title = 'Research'
   const content = (
-    <>
-      <table className='table'>
-        <thead>
-          <tr>
-            <th>Project</th>
-            <th>Researched By</th>
-            <th>Good Points</th>
-            <th>Red Flags?</th>
-            <th>Researchers Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            results.map(item => <tr key={item.project}>
-                <td><a href={`/research/${item.slug}`}>{item.project}</a></td>
-                <td className='center'>{item.researcher.nickname}</td>
-                <td className='center'>{item.points.good}</td>
-                <td className='center'>{item.points.bad}</td>
-                <td className='center'>{item.score > 8 ? scoreGreen : item.score > 4 ? scoreYellow : scoreRed } {item.score}</td>
-              </tr>
-            )
-          }
-        </tbody>
-      </table>
-    </>
+    <div className='grid grid-cols-2 gap-4'>
+      {
+        results.map(item => 
+          <div className='card p-2' key={item.slug}>
+            <a className='text-lg' href={`/research/${item.slug}`}>{item.project}</a>
+            <div className='text-sm'>
+              <span>Researcher: </span>
+              <span>{item.researcher.nickname}</span>
+            </div>
+            <div>
+              <table className='table centre cells-centred'>
+                <tr>
+                  <td>Good</td>
+                  <td>Bad</td>
+                  <td>Score</td>
+                </tr>
+                <tr>
+                  <td>{item.points.good}</td>
+                  <td>{item.points.bad}</td>
+                  <td>{item.score > 8 ? scoreGreen : item.score > 4 ? scoreYellow : scoreRed } {item.score}</td>
+                </tr>
+              </table>
+            </div>  
+          </div>
+        )
+      }
+    </div>
   )
 
   return (
