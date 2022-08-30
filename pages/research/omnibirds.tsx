@@ -56,7 +56,6 @@ const OmniBirds: NextPage = () => {
           {redFlags.length === 0 && <li>{tick} None found for this project.</li>}
         </ul>
         <h2 className='text-secondary'>Potential Risks</h2>
-        <p>{warn} As with any crypto project, the underlying assets (BTC) could decrease in price, so your rewards for being a holder are not gauranteed to be stable consistently.</p>
       </div>
     </>
   )
