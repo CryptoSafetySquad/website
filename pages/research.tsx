@@ -29,16 +29,18 @@ const Research: NextPage = () => {
             </div>
             <div>
               <table className='table centre cells-centred'>
-                <tr>
-                  <td>Good</td>
-                  <td>Bad</td>
-                  <td>Score</td>
-                </tr>
-                <tr>
-                  <td>{item.points.good}</td>
-                  <td>{item.points.bad}</td>
-                  <td>{item.score > 8 ? scoreGreen : item.score > 4 ? scoreYellow : scoreRed } {item.score}</td>
-                </tr>
+                <tbody>
+                  <tr>
+                    <td>Good</td>
+                    <td>Bad</td>
+                    <td>Score</td>
+                  </tr>
+                  <tr>
+                    <td>{item.points.good}</td>
+                    <td>{item.points.bad}</td>
+                    <td>{item.score > 8 ? scoreGreen : item.score > 4 ? scoreYellow : scoreRed } {item.score}</td>
+                  </tr>
+                </tbody>
               </table>
             </div>  
           </div>
