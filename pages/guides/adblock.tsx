@@ -35,7 +35,8 @@ const AdBlock: NextPage = () => {
       content,
       slug: 'guides/adblock',
       author: PrivateSniper,
-      description: 'A security guide to use adblocking features of ublock origin to help secure browsers'
+      description: 'A security guide to use adblocking features of ublock origin to help secure browsers',
+      withCommenting: true
     }} />
   )
 }

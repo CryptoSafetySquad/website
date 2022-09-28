@@ -1,16 +1,18 @@
 import Head from 'next/head'
 import { AuthorProps, default as Author } from './Author'
 import Navbar from './Navbar'
+import Discussion from './Discussion';
 
-interface PageComponentProps {
+export interface PageComponentProps {
   title: string;
   slug: string;
   description: string;
   content: React.ReactNode;
   author?: AuthorProps;
+  withCommenting?: boolean;
 }
 
-const Page = ({ title, slug, content, description, author }: PageComponentProps) => {
+const Page = ({ title, slug, content, description, author, withCommenting }: PageComponentProps) => {
   return (
     <div>
       <Head>
@@ -33,7 +35,11 @@ const Page = ({ title, slug, content, description, author }: PageComponentProps)
             </aside>
           )}
         </div>
-        {/* <Discussion slug='guides/adblock' title='AdBlocking' /> */}
+        {
+          withCommenting === true && (
+            <Discussion slug={slug} title={title} />
+          )
+        }
       </main>
     </div>
   )
