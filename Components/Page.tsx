@@ -22,7 +22,7 @@ const Page = ({ title, slug, content, description, author }: PageComponentProps)
 
       <main className='max-w-7xl m-auto py-4 px-2 md:py-12 md:px-4 bg-dark rounded-md'>
         <h1 className='mt-6 mb-12'>{title}</h1>
-        <div className='xl:grid grid-cols-[70%,1fr] gap-4'>
+        <div className='xl:grid grid-cols-[70%,1fr] gap-8'>
           <div>
             {content}
           </div>
