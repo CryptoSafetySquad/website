@@ -29,9 +29,8 @@
   --primary-text: hsl(0, 0%, 7%);
   --primary-text-2: hsl(0, 0%, 23%);
   --link: hsl(224, 100%, 40%);
-  --text-secondary-dark: hsl(69, 100%, 47%);
-  --text-danger-dark: rgb(231, 28, 28);
-  --text-warn-dark: rgb(217, 231, 28);
+  --text-danger: rgb(231, 28, 28);
+  --text-warn: rgb(217, 231, 28);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,6 +40,7 @@
     --bg-lighter: hsl(225, 100%, 9%);
     --text: hsl(0, 0%, 93%);
     --link: hsl(187, 90%, 52%);
+    --text-secondary: hsl(69, 100%, 47%);
   }
 
   html {
@@ -79,6 +79,10 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
 }
 
 .author {
@@ -146,20 +150,19 @@ a {
   text-decoration: underline;
 }
 
+.warn {
+  color: var(--text-warn);
+}
+.danger {
+  color: var(--text-danger);
+}
+
 /* @media (prefers-color-scheme: dark) {
   .card {
     background: var(--bg-darker);
   }
-  .text-secondary {
-    color: var(--text-secondary-dark);
-  }
   .guide .string {
     background-color: var(--bg-darker);
   }
-  .warn {
-    color: var(--text-warn-dark);
-  }
-  .danger {
-    color: var(--text-danger-dark);
-  }
+  
 } */
