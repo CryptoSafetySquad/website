@@ -3,6 +3,7 @@ import Page from '../Components/Page'
 
 const projects = [
   {name: 'Hydro Whales Mining Club', slug: 'hydro-whales'},
+  {name: 'Project 79', slug: 'project79'},
   {name: 'OMNIBirds', slug: 'omnibirds'},
 ]
 
