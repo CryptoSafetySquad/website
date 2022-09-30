@@ -29,16 +29,6 @@ const Research = () => {
     { key:'whitepaper', content: 'Full whitepaper' },
     { key:'wayback', content: (<>Website content is captured in <ExternalLink href='https://web.archive.org/web/20220711192706/https://www.hydrowhalesclub.com/' text='wayback machine' /></>) }
   ]
-  
-  const redFlags = []
-  
-  const overview = {
-    project: 'Hydro Whales Mining Club',
-    slug: 'hydro-whales',
-    researcher: PrivateSniper,
-    points: { good: goodPoints.length, bad: redFlags.length },
-    score: HydroWhalesResearch.score
-  }
 
   const researchContent = (
     <div className='guide'>
