@@ -1,76 +1,30 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-
-const guides = [
-  {
-    url: '/guides/adblock',
-    title: 'Guide: AdBlock',
-    description: 'Improve browser security by blocking known bad websites.'
-  },
-  {
-    url: '/general-tips',
-    title: 'Guide: General Safety Tips',
-    description: 'Some tips that will become second nature over time.'
-  },
-  {
-    url: '/guides/discorddm',
-    title: 'Guide: Discord: Server DMs',
-    description: 'Disable server DMs (reduces spam bots).'
-  },
-  {
-    url: '/research',
-    title: 'Project Research',
-    description: 'Some project research by members of our community staff.'
-  }
-]
+import Navbar from '../Components/Navbar'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Crypto Safety Squad | Home</title>
         <meta name="description" content="A community project dedicated to onboarding new users safely into CryptoCurrencies." />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Crypto Safety Squad
+      <Navbar />
+
+      <main>
+        <h1 className='text-6xl text-center mt-16'>
+          About Crypto Safety Squad
         </h1>
 
-        <p className={styles.description}>
-          Community dedicated to safely onboarding new users to the world of Crypto and providing ongoing support
+        <p className='px-16 mt-16 mb-8 text-2xl max-w-2xl m-auto'>
+          Our mission is to provide information and resources to help keep our members and visitors safe while interacting with crypto currency and making good yield investments.
         </p>
 
-        <div className={styles.grid}>
-          {
-            guides.map(card => (
-              <a key={card.url} href={card.url} className={styles.card}>
-                <p className={`${styles.cardTitle} mb-2`}>{card.title}</p>
-                <p>{card.description}</p>
-              </a>
-            ))
-          }
-        </div>
+        <p className='px-16 p-4 text-xl max-w-2xl m-auto'>
+          Use the navigation at the top of the page to explore our site
+        </p>
       </main>
-
-      <div className='flex' style={{position: 'fixed', bottom: '1rem', right: '1rem'}}>
-        <a
-          href='https://discord.gg/2R7JETvAsc'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='mr-4'
-        >
-          <img src='/images/icons/discord.svg' width='48' height='48' />
-        </a>
-        <a
-          href='https://github.com/CryptoSafetySquad'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <img src='/images/icons/github.svg' width='48' height='48' />
-        </a>
-      </div>
     </div>
   )
 }

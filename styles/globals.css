@@ -22,29 +22,55 @@
 
 :root {
   --bg-dark: hsl(225, 100%, 7%);
-  --bg-darker: hsl(225, 100%, 5%);
   --bg-light: hsl(0, 0%, 93%);
-  --link-dark: hsl(187, 90%, 52%);
+  --bg: hsl(0, 0%, 97%);
+  --bg-darker: hsl(0, 0%, 85%);
+  --bg-lighter: hsl(0, 0%, 98%);
+  --primary-text: hsl(0, 0%, 7%);
+  --primary-text-2: hsl(0, 0%, 23%);
+  --link: hsl(224, 100%, 40%);
   --text-secondary-dark: hsl(69, 100%, 47%);
   --text-danger-dark: rgb(231, 28, 28);
   --text-warn-dark: rgb(217, 231, 28);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: hsl(225, 100%, 7%);
+    --bg-darker: hsl(225, 100%, 5%);
+    --bg-lighter: hsl(225, 100%, 9%);
+    --text: hsl(0, 0%, 93%);
+    --link: hsl(187, 90%, 52%);
+  }
+
+  html {
+    color-scheme: dark;
+  }
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
 
 body {
-  background: var(--bg-light);
+  background: var(--bg);
+  color: var(--text);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a {
+  color: var(--link);
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.05rem;
 }
 
 .link-small {
@@ -93,20 +119,34 @@ a {
   text-align: center;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: var(--bg-dark);
-  }
-  a {
-    color: var(--link-dark);
-    font-weight: 600;
-    font-style: italic;
-    letter-spacing: 0.05rem;
-  }
+.tabs ul {
+  @apply flex;
+}
+
+.tabs li {
+  @apply mr-1 px-4 py-2;
+}
+
+.tabs li {
+  background: var(--bg-darker);
+}
+
+.tabs li.is-active {
+  color: var(--primary-text-2);
+  background: var(--bg);
+}
+
+.tabs li a {
+  font-weight: 400;
+}
+
+.tabs li.is-active {
+  font-weight: 600;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+/* @media (prefers-color-scheme: dark) {
   .card {
     background: var(--bg-darker);
   }
@@ -122,4 +162,4 @@ a {
   .danger {
     color: var(--text-danger-dark);
   }
-}
+} */

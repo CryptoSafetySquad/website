@@ -1,5 +1,14 @@
 import React from 'react'
 
+interface TabbedContentItem {
+  content: any;
+  title: string;
+}
+
+interface TabbedContentProps {
+  content: TabbedContentItem[]
+}
+
 /**
  * TabbedContent
  *
@@ -9,7 +18,7 @@ import React from 'react'
  * @param {any} props.content[].content - Tab content.
  */
 export class TabbedContent extends React.Component {
-  constructor (props) {
+  constructor (props: TabbedContentProps) {
     super(props)
     this.state = {
       activeTab: this.setDefaultTab()
