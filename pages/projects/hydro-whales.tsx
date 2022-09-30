@@ -8,6 +8,7 @@ import Disclaimer from '../../Components/Research/Disclaimer'
 import answers from '../../data/projects/hydrowhales/answers'
 import Answers from '../../Components/Answers'
 import Header from '../../Components/Project/Header'
+import HydroWhalesResearch from '../../data/projects/hydrowhales/research'
 
 const doxxed = () => {
   return (
@@ -45,7 +46,7 @@ const Research = () => {
     <div className='guide'>
       <img className='mb-4' src='/images/logos/hwmc_os_logo.png' />
       <Disclaimer />
-      TLDR: Overall Rating: 🟩 ({score}) Excellent
+      TLDR: Overall Rating: 🟩 ({HydroWhalesResearch.score}) Excellent
       <p>TLDR: What is this about?: A passive income focused community, powered by bitcoin mining and community voted investments.</p>
       <h2 className='text-secondary'>Links</h2>
       <ul>
