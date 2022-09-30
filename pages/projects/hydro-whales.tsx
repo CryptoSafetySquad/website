@@ -22,8 +22,6 @@ const Research = () => {
   const tick = '✅'
   const warn = '⚠️'
 
-  const score = 10
-
   const author = PrivateSniper
   const goodPoints = [
     { key: 'doxxed', content: doxxed() },
@@ -39,7 +37,7 @@ const Research = () => {
     slug: 'hydro-whales',
     researcher: PrivateSniper,
     points: { good: goodPoints.length, bad: redFlags.length },
-    score
+    score: HydroWhalesResearch.score
   }
 
   const researchContent = (
