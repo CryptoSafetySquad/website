@@ -92,10 +92,10 @@ const NewsContent = () => {
 const HydroWhales: NextPage = () => {
   const title = 'Hydro Whales Mining Club'
   const tabs = [
-    {
-      title: 'News',
-      content: <NewsContent />
-    },
+    // {
+    //   title: 'News',
+    //   content: <NewsContent />
+    // },
     {
       title: 'Research',
       content: <Research />
