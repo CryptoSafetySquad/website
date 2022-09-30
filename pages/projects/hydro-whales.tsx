@@ -5,6 +5,7 @@ import ExternalLink from '../../Components/ExternalLink'
 import TabbedContent from '../../Components/TabbedContent'
 import AuthorComponent from '../../Components/Author'
 import Disclaimer from '../../Components/Research/Disclaimer'
+import answers from '../../data/projects/hydrowhales/answers'
 
 const doxxed = () => {
   return (
@@ -116,6 +117,19 @@ const HydroWhales: NextPage = () => {
     {
       title: 'Research',
       content: <Research />
+    },
+    {
+      title: 'FAQs',
+      content: (
+        <>
+          {answers.map(qa => {
+            return <div className='grid grid-cols-[60%_1fr]' key={qa.question}>
+              <span>{qa.question}</span>
+              <span>{qa.answer}</span>
+            </div>
+          })}
+        </>
+      )
     }
   ]
 
