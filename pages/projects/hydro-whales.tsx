@@ -67,7 +67,7 @@ const Research = () => {
   )
 
   return (
-    <main className='max-w-7xl m-auto py-4 px-2 md:py-12 md:px-4 bg-dark rounded-md'>
+    <main className='max-w-7xl m-auto bg-dark rounded-md'>
       <div className='xl:grid grid-cols-[70%,1fr] gap-16'>
         <div>
           <h1 className='mb-6'>Hydro Whales Research by PrivateSniper</h1>
@@ -80,11 +80,6 @@ const Research = () => {
           </aside>
         )}
       </div>
-      {/* {
-        withCommenting === true && (
-          <Discussion slug={slug} title={title} />
-        )
-      } */}
     </main>
   )
 }
