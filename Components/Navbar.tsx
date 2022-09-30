@@ -8,6 +8,7 @@ const Navbar = () => (
     <div>
       <Link href='/guides'><a className='mr-8'>Guides</a></Link>
       <Link href='/projects'><a className='mr-8'>Projects</a></Link>
+      <Link href='/general-tips'><a className='mr-8'>General Tips</a></Link>
     </div>
     <div className='flex ml-auto mr-16'>
     <a
