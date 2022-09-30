@@ -6,6 +6,7 @@ import TabbedContent from '../../Components/TabbedContent'
 import AuthorComponent from '../../Components/Author'
 import Disclaimer from '../../Components/Research/Disclaimer'
 import Link from 'next/link'
+import Header from '../../Components/Project/Header'
 
 const doxxed = () => {
   return (
@@ -63,7 +64,7 @@ const NewsContent = () => {
     <>
     {
       news.map((entry, index) => {
-        return <div key={`news-item-${index}`}>{entry.date} - {entry.content}</div>
+        return <div className='mb-2' key={`news-item-${index}`}>{entry.date} - {entry.content}</div>
       })
     }
     </>
@@ -94,7 +95,8 @@ const Project79: NextPage = () => {
       title,
       content,
       slug: 'projects/project79',
-      description: 'Project 79'
+      description: 'Project 79',
+      header: <Header name={title} website='https://www.project79.com/' />
     }} />
   )
 }
