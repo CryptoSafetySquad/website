@@ -57,13 +57,13 @@ const Research = () => {
 
 const NewsContent = () => {
   const news = [
-    { date: '', content: '' }
+    { date: '29/09/2022', content: '1st Sacrifice earnings of 6.8%, plus new dashboard launched' }
   ]
   return (
     <>
     {
       news.map((entry, index) => {
-        return <div key={`news-item-${index}`}>{entry.content}</div>
+        return <div key={`news-item-${index}`}>{entry.date} - {entry.content}</div>
       })
     }
     </>
@@ -75,11 +75,7 @@ const Project79: NextPage = () => {
   const tabs = [
     {
       title: 'News',
-      content: (
-        <>
-          
-        </>
-      )
+      content: <NewsContent />
     },
     {
       title: 'Research',
