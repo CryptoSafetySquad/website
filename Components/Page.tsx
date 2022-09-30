@@ -13,6 +13,8 @@ export interface PageComponentProps {
 }
 
 const Page = ({ title, slug, content, description, author, withCommenting }: PageComponentProps) => {
+  const contentClasses = author ? 'grid-cols-[70%,1fr]' : 'grid-cols-[100%]'
+
   return (
     <div>
       <Head>
@@ -23,7 +25,7 @@ const Page = ({ title, slug, content, description, author, withCommenting }: Pag
       <Navbar />
 
       <main className='max-w-7xl m-auto py-4 px-2 md:py-12 md:px-4 bg-dark rounded-md'>
-        <div className='xl:grid grid-cols-[70%,1fr] gap-16'>
+        <div className={`xl:grid ${contentClasses} gap-16`}>
           <div>
             <h1 className='mt-6 mb-12'>{`${title}`}</h1>
             {content}
