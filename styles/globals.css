@@ -135,6 +135,7 @@ a {
 
 .tabs li {
   background: var(--bg-darker);
+  cursor: pointer;
 }
 
 .tabs li.is-active {
@@ -150,6 +151,7 @@ a {
   font-weight: 600;
   font-style: italic;
   text-decoration: underline;
+  cursor: default;
 }
 
 .warn {
@@ -157,6 +159,10 @@ a {
 }
 .danger {
   color: var(--text-danger);
+}
+
+h1 {
+  line-height: 1.5rem;
 }
 
 /* @media (prefers-color-scheme: dark) {

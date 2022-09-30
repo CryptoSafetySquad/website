@@ -103,6 +103,21 @@ const NewsContent = () => {
   )
 }
 
+const Header = () => {
+  const linkIcon = <img className='ml-4 mr-2' src='/images/icons/external.svg' height='20' width='20' />
+  const openseaIcon = <img className='mr-2' src='/images/icons/opensea.svg' height='22' width='22' />
+
+  return (
+    <div>
+      <h1 className='flex'>
+        HydroWhales Mining Club
+        <ExternalLink href='https://www.hydrowhalesclub.com/'>{linkIcon}</ExternalLink>
+        <ExternalLink href='https://opensea.io/collection/hydro-whales-mining-club-official'>{openseaIcon}</ExternalLink>
+      </h1>
+    </div>
+  )
+}
+
 const HydroWhales: NextPage = () => {
   const title = 'Hydro Whales Mining Club'
   const tabs = [
@@ -144,7 +159,8 @@ const HydroWhales: NextPage = () => {
       title,
       content,
       slug: 'projects/hydro-whales',
-      description: 'Hydro Whales Mining Club'
+      description: 'Hydro Whales Mining Club',
+      header: <Header />
     }} />
   )
 }
