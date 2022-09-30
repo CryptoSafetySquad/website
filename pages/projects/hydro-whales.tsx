@@ -7,6 +7,7 @@ import AuthorComponent from '../../Components/Author'
 import Disclaimer from '../../Components/Research/Disclaimer'
 import answers from '../../data/projects/hydrowhales/answers'
 import Answers from '../../Components/Answers'
+import Header from '../../Components/Project/Header'
 
 const doxxed = () => {
   return (
@@ -99,31 +100,12 @@ const NewsContent = () => {
   )
 }
 
-const Header = () => {
-  const linkIcon = <img className='ml-4 mr-2' src='/images/icons/external.svg' height='20' width='20' />
-  const openseaIcon = <img className='mr-2' src='/images/icons/opensea.svg' height='22' width='22' />
-
-  return (
-    <div>
-      <h1 className='flex'>
-        HydroWhales Mining Club
-        <ExternalLink href='https://www.hydrowhalesclub.com/'>{linkIcon}</ExternalLink>
-        <ExternalLink href='https://opensea.io/collection/hydro-whales-mining-club-official'>{openseaIcon}</ExternalLink>
-      </h1>
-    </div>
-  )
-}
-
 const HydroWhales: NextPage = () => {
   const title = 'Hydro Whales Mining Club'
   const tabs = [
     {
       title: 'News',
-      content: (
-        <>
-          
-        </>
-      )
+      content: <NewsContent />
     },
     {
       title: 'Research',
@@ -147,7 +129,13 @@ const HydroWhales: NextPage = () => {
       content,
       slug: 'projects/hydro-whales',
       description: 'Hydro Whales Mining Club',
-      header: <Header />
+      header: (
+        <Header
+          name='Hydro Whales Mining Club'
+          opensea='https://opensea.io/collection/hydro-whales-mining-club-official'
+          website='https://www.hydrowhalesclub.com/'
+        />
+      )
     }} />
   )
 }
