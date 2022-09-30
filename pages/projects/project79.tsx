@@ -47,12 +47,10 @@ const Research = () => {
   )
 
   return (
-    <main className='max-w-7xl m-auto py-4 px-2 md:py-12 md:px-4 bg-dark rounded-md'>
-      <div>
-        <h1 className='mb-6'>Project 79 Research</h1>
-        {researchContent}
-      </div>
-    </main>
+    <div>
+      <h1 className='mb-6'>Project 79 Research</h1>
+      {researchContent}
+    </div>
   )
 }
 
