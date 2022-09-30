@@ -30,7 +30,8 @@
   --primary-text-2: hsl(0, 0%, 23%);
   --link: hsl(224, 100%, 40%);
   --text-danger: rgb(231, 28, 28);
-  --text-warn: rgb(217, 231, 28);
+  --text-warn: rgb(109, 116, 0);
+  --text-secondary: hsl(277, 69%, 50%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,6 +42,7 @@
     --text: hsl(0, 0%, 93%);
     --link: hsl(187, 90%, 52%);
     --text-secondary: hsl(69, 100%, 47%);
+    --text-warn: rgb(217, 231, 28);
   }
 
   html {
