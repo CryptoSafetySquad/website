@@ -39,7 +39,7 @@ const Page = ({ title, slug, content, description, author, withCommenting }: Pag
         </div>
         {
           withCommenting === true && (
-            <Discussion slug={slug} title={title} />
+            <Discussion slug={slug} title={`${title}`} />
           )
         }
       </main>
