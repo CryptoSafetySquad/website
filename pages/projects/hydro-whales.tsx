@@ -9,6 +9,7 @@ import answers from '../../data/projects/hydrowhales/answers'
 import Answers from '../../Components/Answers'
 import Header from '../../Components/Project/Header'
 import HydroWhalesResearch from '../../data/projects/hydrowhales/research'
+import Link from 'next/link'
 
 const doxxed = () => {
   return (
@@ -103,6 +104,17 @@ const HydroWhales: NextPage = () => {
     {
       title: 'FAQs',
       content: <Answers qa={answers} />
+    },
+    {
+      title: 'Related Projects',
+      content: (
+        <>
+          <ul>
+            <li><Link href='/projects/project79'><a>Project 79</a></Link> - Gold Arbitrage</li>
+            <li>Ocean Money - Banking Services</li>
+          </ul>
+        </>
+      )
     }
   ]
 

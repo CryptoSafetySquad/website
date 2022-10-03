@@ -79,6 +79,14 @@ const Project79: NextPage = () => {
     {
       title: 'Research',
       content: <Research />
+    },
+    {
+      title: 'Related Projects',
+      content: (
+        <>
+          <Link href='/projects/hydro-whales'><a>Hydro Whales Mining Club</a></Link>
+        </>
+      )
     }
   ]
 
