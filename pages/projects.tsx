@@ -2,9 +2,9 @@ import type { NextPage } from 'next'
 import Page from '../Components/Page'
 
 const projects = [
-  {name: 'Hydro Whales Mining Club', slug: 'hydro-whales', type: 'Utility, NFT, Passive Income'},
-  {name: 'Project 79', slug: 'project79', type: 'Utility, Passive Income'},
-  {name: 'OMNIBirds', slug: 'omnibirds', type: 'Utility, Passive Income'},
+  {name: 'Hydro Whales Mining Club', slug: 'hydro-whales', type: 'Utility, NFT, Passive Income', blockchain: 'Ethereum'},
+  {name: 'Project 79', slug: 'project79', type: 'Utility, Passive Income', blockchain: 'Ethereum'},
+  {name: 'OMNIBirds', slug: 'omnibirds', type: 'Utility, Passive Income', blockchain: 'Ethereum'},
 ]
 
 const Projects: NextPage = () => {
@@ -15,7 +15,7 @@ const Projects: NextPage = () => {
         <tr>
           <th>Project</th>
           <th>Type</th>
-          <th></th>
+          <th>Blockchain</th>
         </tr>
       </thead>
       <tbody>
@@ -24,6 +24,7 @@ const Projects: NextPage = () => {
           <tr key={project.slug}>
             <td><a href={`/projects/${project.slug}`}>{project.name}</a></td>
             <td>{project.type}</td>
+            <td>{project.blockchain}</td>
           </tr>
         )
       }
