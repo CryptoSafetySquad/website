@@ -14,7 +14,7 @@ const Referrals: NextPage = () => {
   const content = (
     <>
       <p>For some referrals we may make some bonus commissions, or you may make some, or both, using our links is a way to support our authors for providing this free resource.</p>
-      <h2>Exchanges</h2>
+      <h2 className='text-secondary'>Exchanges</h2>
       {
         exchanges.map((e) => (
           <>
@@ -24,7 +24,7 @@ const Referrals: NextPage = () => {
           </>
         ))
       }
-      <h2>Trading Platforms</h2>
+      <h2 className='text-secondary'>Trading Platforms</h2>
       {
         trading.map((t) => (
           <>
@@ -34,6 +34,16 @@ const Referrals: NextPage = () => {
           </>
         ))
       }
+      <h2 className='text-secondary'>Author donations</h2>
+      <p>If you would like to donate any funds to our authors they would be very appreciative.</p>
+      <div className='grid grid-cols-3'>
+        <div>
+          <h2>PrivateSniper</h2>
+          <p>Eth: 0xF311fFe5b49fdE6BdED1342694EDdD7C9003a922</p>
+          <p>DAG: DAG1cEpoaS89M64Z8hX3nBMoy6cUdosAaA3d8prQ</p>
+          <p>KDA: k:d285c44d0601663a7e45212e040a4d133ce644107dda61f21488ecfd1ef827f9</p>
+        </div>
+      </div>
     </>
   )
 
