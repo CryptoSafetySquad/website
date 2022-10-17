@@ -83,9 +83,9 @@ const Project79: NextPage = () => {
     {
       title: 'Related Projects',
       content: (
-        <>
-          <Link href='/projects/hydro-whales'><a>Hydro Whales Mining Club</a></Link>
-        </>
+        <ul>
+          <li><Link href='/projects/hydro-whales'><a>Hydro Whales Mining Club</a></Link></li>
+        </ul>
       )
     }
   ]

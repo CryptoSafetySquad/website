@@ -111,7 +111,7 @@ const HydroWhales: NextPage = () => {
         <>
           <ul>
             <li><Link href='/projects/project79'><a>Project 79</a></Link> - Gold Arbitrage</li>
-            <li>Ocean Money - Banking Services</li>
+            <li><Link href='/projects/ocean-money'><a>Ocean Money</a></Link> - Banking Services</li>
           </ul>
         </>
       )
