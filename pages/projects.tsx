@@ -2,23 +2,33 @@ import type { NextPage } from 'next'
 import Page from '../Components/Page'
 
 const projects = [
-  {name: 'Hydro Whales Mining Club', slug: 'hydro-whales'},
-  {name: 'Project 79', slug: 'project79'},
-  {name: 'OMNIBirds', slug: 'omnibirds'},
+  {name: 'Hydro Whales Mining Club', slug: 'hydro-whales', type: 'Utility, NFT, Passive Income'},
+  {name: 'Project 79', slug: 'project79', type: 'Utility, Passive Income'},
+  {name: 'OMNIBirds', slug: 'omnibirds', type: 'Utility, Passive Income'},
 ]
 
 const Projects: NextPage = () => {
   const title = 'Projects'
   const content = (
-    <div className='grid grid-cols-2 gap-4'>
+    <table className='table'>
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>Type</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
       {
         projects.map(project => 
-          <div className='card p-2' key={project.slug}>
-            <a className='text-lg' href={`/projects/${project.slug}`}>{project.name}</a>
-          </div>
+          <tr key={project.slug}>
+            <td><a href={`/projects/${project.slug}`}>{project.name}</a></td>
+            <td>{project.type}</td>
+          </tr>
         )
       }
-    </div>
+      </tbody>
+    </table>
   )
 
   return (
