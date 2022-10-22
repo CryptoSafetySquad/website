@@ -17,6 +17,7 @@ export interface AuthorProps {
   wallets?: {
     btc?: string;
     eth?: string;
+    sol?: string;
   }
 }
 
@@ -49,6 +50,7 @@ const AuthorComponent = ({ nickname, content, fullname, image, socials, wallets 
               <p>If you would like to tip the author:</p>
               {wallets.btc && <p className='break-words'>Btc: <span className='text-secondary'>{wallets.btc}</span></p>}
               {wallets.eth && <p className='break-words'>Eth: <span className='text-secondary'>{wallets.eth}</span></p>}
+              {wallets.sol && <p className='break-words'>Sol: <span className='text-secondary'>{wallets.sol}</span></p>}
             </>
           ) : null}
         </div>
