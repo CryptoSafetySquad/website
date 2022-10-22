@@ -14,9 +14,13 @@ export interface AuthorProps {
   },
   guidesCount?: number;
   researchCount?: number;
+  wallets?: {
+    btc?: string;
+    eth?: string;
+  }
 }
 
-const AuthorComponent = ({ nickname, content, fullname, image, socials }: AuthorProps) => {
+const AuthorComponent = ({ nickname, content, fullname, image, socials, wallets }: AuthorProps) => {
   const jsonLdData: any = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -39,6 +43,14 @@ const AuthorComponent = ({ nickname, content, fullname, image, socials }: Author
           <div className='mt-4'>
             {content}
           </div>
+
+          {wallets && (wallets.btc || wallets.eth) ? (
+            <>
+              <p>If you would like to tip the author:</p>
+              {wallets.btc && <p className='break-words'>Btc: {wallets.btc}</p>}
+              {wallets.eth && <p className='break-words'>Eth: {wallets.eth}</p>}
+            </>
+          ) : null}
         </div>
         
         <JsonLd json={jsonLdData} />
