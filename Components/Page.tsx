@@ -11,10 +11,12 @@ export interface PageComponentProps {
   content: React.ReactNode;
   author?: AuthorProps;
   withCommenting?: boolean;
+  sidebarContent?: React.ReactNode;
 }
 
-const Page = ({ title, slug, content, description, author, withCommenting, header }: PageComponentProps) => {
-  const contentClasses = author ? 'grid-cols-[70%,1fr] gap-16' : 'grid-cols-[100%]'
+const Page = ({ title, slug, content, description, author, withCommenting, header, sidebarContent }: PageComponentProps) => {
+  const hasSidebar = author || sidebarContent;
+  const contentClasses = hasSidebar ? 'grid-cols-[70%,1fr] gap-16' : 'grid-cols-[100%]'
 
   return (
     <div>
@@ -38,17 +40,25 @@ const Page = ({ title, slug, content, description, author, withCommenting, heade
           : (
             <div>
               <h1 className='mt-6 mb-12'>{`${title}`}</h1>
-              
             </div>
           )
         }
 
         <div className={`xl:grid ${contentClasses}`}>
-          {content}
-          {author && (
+          <div>
+            {content}
+          </div>
+          {hasSidebar && (
             <aside>
-              <h2 className='mb-2'>About the author</h2>
-              <Author {...author} />
+              {
+                author && (
+                  <>
+                    <h2 className='mb-2'>About the author</h2>
+                    <Author {...author} />
+                  </>
+                )
+              }
+              {sidebarContent}
             </aside>
           )}
           </div>

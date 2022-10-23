@@ -6,6 +6,7 @@ import TabbedContent from '../../Components/TabbedContent'
 import AuthorComponent from '../../Components/Author'
 import Disclaimer from '../../Components/Research/Disclaimer'
 import answers from '../../data/projects/hydrowhales/answers'
+import { officialVideos, communityVideos } from '../../data/projects/hydrowhales/videos'
 import Answers from '../../Components/Answers'
 import Header from '../../Components/Project/Header'
 import HydroWhalesResearch from '../../data/projects/hydrowhales/research'
@@ -101,22 +102,56 @@ const HydroWhales: NextPage = () => {
       title: 'Research',
       content: <Research />
     },
-    {
-      title: 'FAQs',
-      content: <Answers qa={answers} />
-    },
-    {
-      title: 'Related Projects',
-      content: (
-        <>
-          <ul>
-            <li><Link href='/projects/project79'><a>Project 79</a></Link> - Gold Arbitrage</li>
-            <li><Link href='/projects/ocean-money'><a>Ocean Money</a></Link> - Banking Services</li>
-          </ul>
-        </>
-      )
-    }
   ]
+
+  if (officialVideos.length > 0) {
+    tabs.push({
+      title: 'Official Videos',
+      content: (
+        <div className='grid grid-cols-3 gap-4'>
+          {officialVideos.map(video => (
+            <div key={video.youtubeSlug}>
+            <iframe  width='100%' height='200' src={`https://www.youtube.com/embed/${video.youtubeSlug}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            {video.title}
+          </div>
+          ))}
+        </div>
+      )
+    })
+  }
+
+  if (communityVideos.length > 0) {
+    tabs.push({
+      title: 'Community Videos',
+      content: (
+        <div className='grid grid-cols-3 gap-4'>
+          {communityVideos.map(video => (
+            <div key={video.youtubeSlug}>
+            <iframe width='100%' height='200' src={`https://www.youtube.com/embed/${video.youtubeSlug}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            {video.title}
+          </div>
+          ))}
+        </div>
+      )
+    })
+  }
+
+  tabs.push({
+    title: 'FAQs',
+    content: <Answers qa={answers} />
+  })
+
+  tabs.push({
+    title: 'Related Projects',
+    content: (
+      <>
+        <ul>
+          <li><Link href='/projects/project79'><a>Project 79</a></Link> - Gold Arbitrage</li>
+          <li><Link href='/projects/ocean-money'><a>Ocean Money</a></Link> - Banking Services</li>
+        </ul>
+      </>
+    )
+  })
 
   const content = (
     <>

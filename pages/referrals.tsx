@@ -39,9 +39,8 @@ const Referrals: NextPage = () => {
       <div className='grid grid-cols-3'>
         <div>
           <h2>PrivateSniper</h2>
-          <p>Eth: 0xF311fFe5b49fdE6BdED1342694EDdD7C9003a922</p>
-          <p>DAG: DAG1cEpoaS89M64Z8hX3nBMoy6cUdosAaA3d8prQ</p>
-          <p>KDA: k:d285c44d0601663a7e45212e040a4d133ce644107dda61f21488ecfd1ef827f9</p>
+          <p>Btc: <span className='text-secondary'>bc1q9hzu2hwe5g0c7mks4jd0nzm65qle62njdu7zcg</span></p>
+          <p>Eth: <span className='text-secondary'>0xF311fFe5b49fdE6BdED1342694EDdD7C9003a922</span></p>
         </div>
       </div>
     </>
