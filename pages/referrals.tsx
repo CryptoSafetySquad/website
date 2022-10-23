@@ -15,25 +15,29 @@ const Referrals: NextPage = () => {
     <>
       <p>For some referrals we may make some bonus commissions, or you may make some, or both, using our links is a way to support our authors for providing this free resource.</p>
       <h2 className='text-secondary'>Exchanges</h2>
-      {
-        exchanges.map((e) => (
-          <>
-            <a href={e.href} target='_blank' rel='noopener noreferrer'>
-              {e.name}
-            </a>
-          </>
-        ))
-      }
+      <ul>
+        {
+          exchanges.map((e) => (
+            <li key={e.name}>
+              <a href={e.href} target='_blank' rel='noopener noreferrer'>
+                {e.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
       <h2 className='text-secondary'>Trading Platforms</h2>
-      {
-        trading.map((t) => (
-          <>
-            <a href={t.href} target='_blank' rel='noopener noreferrer'>
-              {t.name}
-            </a>
-          </>
-        ))
-      }
+      <ul>
+        {
+          trading.map((t) => (
+            <li key={t.name}>
+              <a href={t.href} target='_blank' rel='noopener noreferrer'>
+                {t.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
       <h2 className='text-secondary'>Author donations</h2>
       <p>If you would like to donate any funds to our authors they would be very appreciative.</p>
       <div className='grid grid-cols-3'>
