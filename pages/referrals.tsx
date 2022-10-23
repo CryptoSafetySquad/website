@@ -14,6 +14,7 @@ const Referrals: NextPage = () => {
   const content = (
     <>
       <p>For some referrals we may make some bonus commissions, or you may make some, or both, using our links is a way to support our authors for providing this free resource.</p>
+
       <h2 className='text-secondary'>Exchanges</h2>
       <ul>
         {
@@ -26,6 +27,7 @@ const Referrals: NextPage = () => {
           ))
         }
       </ul>
+
       <h2 className='text-secondary'>Trading Platforms</h2>
       <ul>
         {
@@ -38,6 +40,7 @@ const Referrals: NextPage = () => {
           ))
         }
       </ul>
+
       <h2 className='text-secondary'>Author donations</h2>
       <p>If you would like to donate any funds to our authors they would be very appreciative.</p>
       <div className='grid grid-cols-3'>
