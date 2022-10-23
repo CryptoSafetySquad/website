@@ -111,7 +111,7 @@ const HydroWhales: NextPage = () => {
         <div className='grid grid-cols-3 gap-4'>
           {officialVideos.map(video => (
             <div key={video.youtubeSlug}>
-            <iframe  width='100%' height='200' src={`https://www.youtube.com/embed/${video.youtubeSlug}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe  width='100%' height='200' src={`https://www.youtube.com/embed/${video.youtubeSlug}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             {video.title}
           </div>
           ))}
@@ -127,7 +127,7 @@ const HydroWhales: NextPage = () => {
         <div className='grid grid-cols-3 gap-4'>
           {communityVideos.map(video => (
             <div key={video.youtubeSlug}>
-            <iframe width='100%' height='200' src={`https://www.youtube.com/embed/${video.youtubeSlug}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width='100%' height='200' src={`https://www.youtube.com/embed/${video.youtubeSlug}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             {video.title}
           </div>
           ))}
