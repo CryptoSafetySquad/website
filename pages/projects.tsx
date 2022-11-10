@@ -5,7 +5,7 @@ const projects = [
   {name: 'Hydro Whales Mining Club', slug: 'hydro-whales', type: 'Utility, NFT, Passive Income', blockchain: 'Ethereum'},
   {name: 'Project 79', slug: 'project79', type: 'Utility, Passive Income', blockchain: 'Ethereum'},
   {name: 'OMNIBirds', slug: 'omnibirds', type: 'Utility, Passive Income', blockchain: 'Ethereum'},
-  {name: 'AceMiners', slug: 'aceminers', type: 'Utility, Passive Income', blockchain: 'Ethereum'},
+  {name: 'Ace Miners NFT', slug: 'aceminers', type: 'Utility, Passive Income', blockchain: 'Ethereum'},
 ]
 
 const Projects: NextPage = () => {
