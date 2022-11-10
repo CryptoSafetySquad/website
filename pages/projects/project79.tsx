@@ -45,8 +45,10 @@ const NewsContent = () => {
 }
 
 const StatsContent = () => {
+  // Compile TVL data
   const tvlData: { labels: string[]; data: number[] } = { labels: [], data: [] }
   tvl.forEach(value => { tvlData.labels.push(value.label); tvlData.data.push(value.tvl) })
+  // Compile earnings data
   const earningsData: { labels: string[]; data: number[] } = { labels: [], data: [] }
   earnings.forEach(value => { earningsData.labels.push(value.label); earningsData.data.push(value.percent) })
 
