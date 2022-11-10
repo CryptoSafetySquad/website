@@ -1,12 +1,36 @@
 import type { NextPage } from 'next'
+import { Line } from 'react-chartjs-2';
+import Link from 'next/link'
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+
 import Page from '../../Components/Page'
-import PrivateSniper from '../../data/authors/PrivateSniper'
 import ExternalLink from '../../Components/ExternalLink'
 import TabbedContent from '../../Components/TabbedContent'
 import AuthorComponent from '../../Components/Author'
 import Disclaimer from '../../Components/Research/Disclaimer'
-import Link from 'next/link'
 import Header from '../../Components/Project/Header'
+import PrivateSniper from '../../data/authors/PrivateSniper'
+import earnings from '../../data/projects/project79/earnings'
+import tvl from '../../data/projects/project79/tvl'
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 const doxxed = () => {
   return (
@@ -56,7 +80,9 @@ const Research = () => {
 
 const NewsContent = () => {
   const news = [
-    { date: '29/09/2022', content: '1st Sacrifice earnings of 6.8%, plus new dashboard launched' }
+    { date: '4/11/2022', content: '3rd sacrifice period closed, TVL $7.1m' },
+    { date: '24/10/2022', content: '2nd Sacrifice earnings of 6.4%' },
+    { date: '26/09/2022', content: '1st Sacrifice earnings of 6.8%, plus new dashboard launched' }
   ]
   return (
     <>
@@ -69,12 +95,76 @@ const NewsContent = () => {
   )
 }
 
+const StatsContent = () => {
+  const tvlData = { labels: [], data: [] }
+  tvl.forEach(value => { tvlData.labels.push(value.label); tvlData.data.push(value.tvl) })
+  const earningsData = { labels: [], data: [] }
+  earnings.forEach(value => { earningsData.labels.push(value.label); earningsData.data.push(value.percent) })
+
+  const chartHeight = '250px'
+
+  return (
+    <>
+      <h2 className='text-gold'>Earnings</h2>
+      {/* Earnings */}
+      <div style={{ height: chartHeight }}>
+        <Line
+          // datasetIdKey='id'
+          options={{
+            maintainAspectRatio: false
+          }}
+          data={{
+            labels: earningsData.labels,
+            datasets: [
+              {
+                label: 'Earnings',
+                data: earningsData.data,
+                borderColor: '#b49b68',
+                backgroundColor: '#b49b68',
+              }
+            ],
+          }}
+        />
+      </div>
+
+      {/* TVL */}
+      <h2 className='text-gold'>TVL</h2>
+      <div style={{ height: chartHeight }}>
+        <Line
+          // datasetIdKey='id'
+          options={{
+            maintainAspectRatio: false
+          }}
+          data={{
+            labels: tvlData.labels,
+            datasets: [
+              {
+                label: 'TVL',
+                data: tvlData.data,
+                borderColor: '#b49b68',
+                backgroundColor: '#b49b68',
+              }
+            ],
+          }}
+        />
+      </div>
+    </>
+  )
+  
+
+  return 
+}
+
 const Project79: NextPage = () => {
   const title = 'Project 79'
   const tabs = [
     {
       title: 'News',
       content: <NewsContent />
+    },
+    {
+      title: 'Stats',
+      content: <StatsContent />
     },
     {
       title: 'Research',

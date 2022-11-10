@@ -1,0 +1,6 @@
+const tvl = [
+  { label: 'Oct 22', date: '2022-10-06', tvl: 4800000 },
+  { label: 'Nov 22', date: '2022-11-04', tvl: 7108109 }
+]
+
+export default tvl
