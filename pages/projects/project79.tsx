@@ -90,22 +90,22 @@ const StatsContent = () => {
     <>
       {/* Earnings */}
       <div className='card'>
-        <h2 className='text-gold'>Earnings</h2>
+        <h2 className='dark:text-gold'>Earnings</h2>
         <P79Chart
           labels={earningsData.labels}
           title='Earnings'
           data={earningsData.data}
         />
         <div className='flex justify-between'>
-        <span className='text-gold'>Average: {average(earningsData.data)}%</span>
-        <span className='text-gold'>Latest: {earningsData.data[earningsData.data.length - 1]}%</span>
+        <span className='dark:text-gold'>Average: {average(earningsData.data)}%</span>
+        <span className='dark:text-gold'>Latest: {earningsData.data[earningsData.data.length - 1]}%</span>
         </div>
         
       </div>
     
       {/* TVL */}
       <div className='card'>
-        <h2 className='text-gold'>TVL</h2>
+        <h2 className='dark:text-gold'>TVL</h2>
         <P79Chart
           labels={tvlData.labels}
           title='TVL'
@@ -123,14 +123,14 @@ const Project79: NextPage = () => {
     <>
       <div className='grid gap-2 grid-cols-[3fr_1fr]'>
         <div className='card'>
-          <h2 className='text-gold'>News</h2>
+          <h2 className='dark:text-gold'>News</h2>
           <NewsContent />
         </div>
         <div>
           <StatsContent />
 
           <div className='card'>
-          <h2 className='text-gold'>Related Projects</h2>
+          <h2 className='dark:text-gold'>Related Projects</h2>
             <ul>
               <li><Link href='/projects/hydro-whales'><a>Hydro Whales Mining Club</a></Link></li>
             </ul>
@@ -148,7 +148,7 @@ const Project79: NextPage = () => {
       slug: 'projects/project79',
       description: 'Project 79',
       header: <Header
-        className='text-gold'
+        className='dark:text-gold'
         name={title}
         website='https://www.project79.com/'
         description={<p>A <Link href='/projects/hydro-whales'><a>HydroWhales</a></Link> launchpad project</p>}

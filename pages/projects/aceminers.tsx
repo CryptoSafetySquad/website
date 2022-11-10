@@ -101,7 +101,7 @@ const StatsContent = () => {
     
       {/* TVL
       <div className='card'>
-        <h2 className='text-gold'>TVL</h2>
+        <h2>TVL</h2>
         <P79Chart
           labels={tvlData.labels}
           title='TVL'
