@@ -102,7 +102,7 @@ const Project79: NextPage = () => {
       content,
       slug: 'projects/project79',
       description: 'Project 79',
-      header: <Header name={title} website='https://www.project79.com/' />
+      header: <Header className='text-gold' name={title} website='https://www.project79.com/' />
     }} />
   )
 }

@@ -5,7 +5,11 @@ module.exports = {
     "./Components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        gold: '#b49b68'
+      }
+    },
   },
   plugins: [],
 }
