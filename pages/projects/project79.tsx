@@ -61,7 +61,12 @@ const StatsContent = () => {
           <Line
             // datasetIdKey='id'
             options={{
-              maintainAspectRatio: false
+              maintainAspectRatio: false,
+              scales: {
+                y: {
+                    beginAtZero: true
+                }
+              }
             }}
             data={{
               labels: earningsData.labels,
@@ -85,7 +90,12 @@ const StatsContent = () => {
           <Line
             // datasetIdKey='id'
             options={{
-              maintainAspectRatio: false
+              maintainAspectRatio: false,
+              scales: {
+                y: {
+                    beginAtZero: true
+                }
+              }
             }}
             data={{
               labels: tvlData.labels,
