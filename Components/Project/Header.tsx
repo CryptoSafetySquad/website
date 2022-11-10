@@ -9,8 +9,8 @@ interface ProjectHeaderProps {
 }
 
 const Header = ({ className, name, website, opensea, description }: ProjectHeaderProps) => {
-  const linkIcon = <img className='mr-2' src='/images/icons/external.svg' height='20' width='20' />
-  const openseaIcon = <img className='mr-2' src='/images/icons/opensea.svg' height='22' width='22' />
+  const linkIcon = <img alt='Website Link' className='mr-2' src='/images/icons/external.svg' height='20' width='20' />
+  const openseaIcon = <img alt='OpenSea Link' className='mr-2' src='/images/icons/opensea.svg' height='22' width='22' />
 
   return (
     <div>
