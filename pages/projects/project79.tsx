@@ -27,6 +27,10 @@ ChartJS.register(
   Legend
 );
 
+function average(nums: number[]) {
+  return nums.reduce((a, b) => (a + b)) / nums.length;
+}
+
 const NewsContent = () => {
   const news = [
     { date: '4/11/2022', content: '3rd sacrifice period closed, TVL $7.1m' },
@@ -53,7 +57,7 @@ const P79Chart = ({ labels, data, title}: { labels: any[], data: any, title: str
           maintainAspectRatio: false,
           scales: {
             y: {
-                beginAtZero: true
+              beginAtZero: true
             }
           }
         }}
@@ -81,8 +85,6 @@ const StatsContent = () => {
   const earningsData: { labels: string[]; data: number[] } = { labels: [], data: [] }
   earnings.forEach(value => { earningsData.labels.push(value.label); earningsData.data.push(value.percent) })
 
-  const chartHeight = '175px'
-
   return (
     <>
       {/* Earnings */}
@@ -93,6 +95,7 @@ const StatsContent = () => {
           title='Earnings'
           data={earningsData.data}
         />
+        <span className='text-gold'>Average: {average(earningsData.data)}% - Latest: {earningsData.data[earningsData.data.length - 1]}%</span>
       </div>
     
       {/* TVL */}
