@@ -113,7 +113,7 @@ const StatsContent = () => {
 }
 
 const AceMiners: NextPage = () => {
-  const title = 'AceMiners'
+  const title = 'Ace Miners NFT'
 
   const content = (
     <>
@@ -134,11 +134,12 @@ const AceMiners: NextPage = () => {
       title,
       content,
       slug: 'projects/aceminers',
-      description: 'AceMiners',
+      description: 'Ace Miners NFT',
       header: <Header
         name={title}
         website='https://aceminersnft.io/'
         opensea='https://opensea.io/collection/aceminersnft'
+        description={(<>LTC and KDA mining NFT - Also has a Phase 2 NFT @<a href='https://opensea.io/collection/aceminersnftp2' target='_blank' rel='noopener noreferrer'>OpenSea</a></>)}
       />
     }} />
   )
