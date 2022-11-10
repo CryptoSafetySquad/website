@@ -151,7 +151,7 @@ const Project79: NextPage = () => {
         className='text-gold'
         name={title}
         website='https://www.project79.com/'
-        description={<p>A <Link href='/projects/hydro-whales'><a>HydroWhales Mining Club</a></Link> launchpad project</p>}
+        description={<p>A <Link href='/projects/hydro-whales'><a>HydroWhales</a></Link> launchpad project</p>}
       />
     }} />
   )
