@@ -165,6 +165,11 @@ h1 {
   line-height: 1.5rem;
 }
 
+.card {
+  background: rgba(0,0,0,0.5);
+  @apply p-2 mb-4 rounded;
+}
+
 /* @media (prefers-color-scheme: dark) {
   .card {
     background: var(--bg-darker);

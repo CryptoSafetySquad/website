@@ -101,58 +101,60 @@ const StatsContent = () => {
   const earningsData = { labels: [], data: [] }
   earnings.forEach(value => { earningsData.labels.push(value.label); earningsData.data.push(value.percent) })
 
-  const chartHeight = '250px'
+  const chartHeight = '175px'
 
   return (
     <>
-      <h2 className='text-gold'>Earnings</h2>
       {/* Earnings */}
-      <div style={{ height: chartHeight }}>
-        <Line
-          // datasetIdKey='id'
-          options={{
-            maintainAspectRatio: false
-          }}
-          data={{
-            labels: earningsData.labels,
-            datasets: [
-              {
-                label: 'Earnings',
-                data: earningsData.data,
-                borderColor: '#b49b68',
-                backgroundColor: '#b49b68',
-              }
-            ],
-          }}
-        />
+      <div className='card'>
+        <h2 className='text-gold'>Earnings</h2>
+        <div style={{ height: chartHeight }}>
+          <Line
+            // datasetIdKey='id'
+            options={{
+              maintainAspectRatio: false
+            }}
+            data={{
+              labels: earningsData.labels,
+              datasets: [
+                {
+                  label: 'Earnings',
+                  data: earningsData.data,
+                  borderColor: '#b49b68',
+                  backgroundColor: '#b49b68',
+                }
+              ],
+            }}
+          />
+        </div>
       </div>
-
+    
       {/* TVL */}
-      <h2 className='text-gold'>TVL</h2>
-      <div style={{ height: chartHeight }}>
-        <Line
-          // datasetIdKey='id'
-          options={{
-            maintainAspectRatio: false
-          }}
-          data={{
-            labels: tvlData.labels,
-            datasets: [
-              {
-                label: 'TVL',
-                data: tvlData.data,
-                borderColor: '#b49b68',
-                backgroundColor: '#b49b68',
-              }
-            ],
-          }}
-        />
+      <div className='card'>
+        <h2 className='text-gold'>TVL</h2>
+        <div style={{ height: chartHeight }}>
+          <Line
+            // datasetIdKey='id'
+            options={{
+              maintainAspectRatio: false
+            }}
+            data={{
+              labels: tvlData.labels,
+              datasets: [
+                {
+                  label: 'TVL',
+                  data: tvlData.data,
+                  borderColor: '#b49b68',
+                  backgroundColor: '#b49b68',
+                }
+              ],
+            }}
+          />
+        </div>
       </div>
+      
     </>
   )
-  
-
-  return 
 }
 
 const Project79: NextPage = () => {
@@ -163,26 +165,29 @@ const Project79: NextPage = () => {
       content: <NewsContent />
     },
     {
-      title: 'Stats',
-      content: <StatsContent />
-    },
-    {
       title: 'Research',
       content: <Research />
-    },
-    {
-      title: 'Related Projects',
-      content: (
-        <ul>
-          <li><Link href='/projects/hydro-whales'><a>Hydro Whales Mining Club</a></Link></li>
-        </ul>
-      )
     }
   ]
 
   const content = (
     <>
-      <TabbedContent content={tabs} />
+      <div className='grid gap-2 grid-cols-[4fr_1fr]'>
+        <div className='card'>
+          <TabbedContent content={tabs} />
+        </div>
+        <div>
+          <StatsContent />
+
+          <div className='card'>
+            <h2>Related Projects</h2>
+            <ul>
+              <li><Link href='/projects/hydro-whales'><a>Hydro Whales Mining Club</a></Link></li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
     </>
   )
 
