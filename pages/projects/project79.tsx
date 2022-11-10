@@ -45,9 +45,9 @@ const NewsContent = () => {
 }
 
 const StatsContent = () => {
-  const tvlData = { labels: [], data: [] }
+  const tvlData: { labels: string[]; data: number[] } = { labels: [], data: [] }
   tvl.forEach(value => { tvlData.labels.push(value.label); tvlData.data.push(value.tvl) })
-  const earningsData = { labels: [], data: [] }
+  const earningsData: { labels: string[]; data: number[] } = { labels: [], data: [] }
   earnings.forEach(value => { earningsData.labels.push(value.label); earningsData.data.push(value.percent) })
 
   const chartHeight = '175px'
