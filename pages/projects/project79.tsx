@@ -95,7 +95,11 @@ const StatsContent = () => {
           title='Earnings'
           data={earningsData.data}
         />
-        <span className='text-gold'>Average: {average(earningsData.data)}% - Latest: {earningsData.data[earningsData.data.length - 1]}%</span>
+        <div className='flex justify-between'>
+        <span className='text-gold'>Average: {average(earningsData.data)}%</span>
+        <span className='text-gold'>Latest: {earningsData.data[earningsData.data.length - 1]}%</span>
+        </div>
+        
       </div>
     
       {/* TVL */}
