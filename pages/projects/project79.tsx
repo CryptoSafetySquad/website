@@ -56,11 +56,6 @@ const P79Chart = ({ labels, data, title}: { labels: any[], data: any, title: str
       <Line
         options={{
           maintainAspectRatio: false,
-          scales: {
-            y: {
-              beginAtZero: true
-            }
-          }
         }}
         data={{
           labels: labels,
