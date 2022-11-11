@@ -251,6 +251,7 @@ const HydroWhales: NextPage = () => {
           name='Hydro Whales Mining Club'
           opensea='https://opensea.io/collection/hydro-whales-mining-club-official'
           website='https://www.hydrowhalesclub.com/'
+          twitter='HydroWhalesClub'
         />
       )
     }} />

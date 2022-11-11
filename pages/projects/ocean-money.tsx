@@ -61,6 +61,8 @@ const OceanMoney: NextPage = () => {
       header: (
         <Header
           name='Ocean Money'
+          twitter='OceanMoney_'
+          website='https://www.ocean.money/'
         />
       )
     }} />

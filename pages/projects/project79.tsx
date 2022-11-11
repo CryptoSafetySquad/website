@@ -150,6 +150,7 @@ const Project79: NextPage = () => {
         name={title}
         website='https://www.project79.com/'
         description={<p>A <Link href='/projects/hydro-whales'><a>HydroWhales</a></Link> launchpad project</p>}
+        twitter='Project79Gold'
       />
     }} />
   )
