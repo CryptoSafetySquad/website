@@ -6,23 +6,15 @@ import Sam from '../../data/people/SamPitman'
 
 const SamPitman: NextPage = () => {
 
-  const tabs = [
-    {
-      title: 'Projects',
-      content: (
-        <>
-          <p><Link href='/projects/hydro-whales'><a>HydroWhales Mining Club</a></Link></p>
-          <p><Link href='/projects/project79'><a>Project 79</a></Link></p>
-          <p><Link href='/projects/ocean-money'><a>Ocean Money</a></Link></p>
-        </>
-      )
-    }
-  ]
-
   const title = 'People: Sam Pitman'
   const content = (
     <>
-      <TabbedContent content={tabs}></TabbedContent>
+      <div className='card'>
+        <h1 className='mb-4'>Projects</h1>
+        <p><Link href='/projects/hydro-whales'><a>HydroWhales Mining Club</a></Link></p>
+        <p><Link href='/projects/project79'><a>Project 79</a></Link></p>
+        <p><Link href='/projects/ocean-money'><a>Ocean Money</a></Link></p>
+      </div>
     </>
   )
 
@@ -35,12 +27,14 @@ const SamPitman: NextPage = () => {
       sidebarContent: (
         <>
         {Sam.socials.discord && (
-            <div className='flex'>
+            <div className='card flex'>
               <img className='mr-2' src='/images/icons/discord.svg' width='24' height='24' alt='Discord Username:' />
               {Sam.socials.discord}
             </div>
         )}
-        <a href='https://www.hydrowhalesclub.com/#team' target='_blank' rel='noopener noreferrer'>HydroWhales Team</a>
+          <div className='card'>
+            <a href='https://www.hydrowhalesclub.com/#team' target='_blank' rel='noopener noreferrer'>HydroWhales Team</a>
+          </div>
         </>
       )
     }} />
