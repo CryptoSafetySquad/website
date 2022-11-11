@@ -153,7 +153,7 @@ const StatsContent = () => {
   }
   // Compile earnings data
   const earningsData: { labels: string[]; data: number[] } = { labels: [], data: [] }
-  earnings.forEach(value => { earningsData.labels.push(value.label); earningsData.data.push(value.percent) })
+  earnings.forEach(entry => { earningsData.labels.push(entry.label); earningsData.data.push(entry.value) })
 
   return (
     <>
