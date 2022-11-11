@@ -7,15 +7,15 @@ import Link from 'next/link'
 
 const NewsContent = () => {
   const news = [
-    { date: '', content: '' }
+    { date: '02/10/2022', content: 'Ocean Money announced on hydro whales discord' }
   ]
   return (
     <>
-    {
-      news.map((entry, index) => {
-        return <div key={`news-item-${index}`}>{entry.content}</div>
-      })
-    }
+      {
+        news.map((entry, index) => {
+          return <p className='mb-0 text-sm' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
+        })
+      }
     </>
   )
 }
@@ -23,30 +23,32 @@ const NewsContent = () => {
 const OceanMoney: NextPage = () => {
   const title = 'Ocean Money'
   const tabs = [
-    // {
-    //   title: 'News',
-    //   content: <NewsContent />
-    // },
+    {
+      title: 'News',
+      content: <NewsContent />
+    },
     // {
     //   title: 'FAQs',
     //   content: <Answers qa={answers} />
     // },
-    {
-      title: 'Related Projects',
-      content: (
-        <>
-          <ul>
-            <li><Link href='/projects/hydro-whales'><a>Hydro Whales Mining Club</a></Link></li>
-            <li><Link href='/projects/project79'><a>Project 79</a></Link> - Gold Arbitrage</li>
-          </ul>
-        </>
-      )
-    }
   ]
 
   const content = (
     <>
-      <TabbedContent content={tabs} />
+      <div className='grid gap-2 grid-cols-[3fr_1fr]'>
+        <div className='card'>
+          <TabbedContent content={tabs} />
+        </div>
+        <div>
+          <div className='card'>
+            <h2 className='mb-2'>Related Projects</h2>
+            <ul>
+            <li><Link href='/projects/hydro-whales'><a>Hydro Whales Mining Club</a></Link></li>
+            <li><Link href='/projects/project79'><a>Project 79</a></Link> - Gold Arbitrage</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </>
   )
 

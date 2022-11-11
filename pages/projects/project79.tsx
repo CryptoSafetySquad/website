@@ -36,15 +36,17 @@ const NewsContent = () => {
     { date: '4/11/2022', content: '3rd sacrifice period closed, TVL $7.1m' },
     { date: '29/10/2022', content: (<>James Pelton AMA - <a href='https://www.youtube.com/watch?v=zpd8L2rlLgg' rel='noopener noreferrer' target='_blank'>AMA with Project 79: Making 6%/month With Actual Revenue</a></>) },
     { date: '24/10/2022', content: '2nd Sacrifice earnings of 6.4%' },
-    { date: '26/09/2022', content: (<>1st Sacrifice earnings of 6.8%, plus new <a href='https://sacrifice.project79.com/' rel='noreferrer noopener' target='_blank'>sacrifice dashboard</a> launched</>) }
+    { date: '26/09/2022', content: (<>1st Sacrifice earnings of 6.8%, plus new <a href='https://sacrifice.project79.com/' rel='noreferrer noopener' target='_blank'>sacrifice dashboard</a> launched</>) },
+    { date: '13/09/2022', content: 'P79 discord launched' },
+    { date: '02/08/2022', content: 'Project 79 announced!' },
   ]
   return (
     <>
-    {
-      news.map((entry, index) => {
-        return <p className='mb-0 text-sm' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
-      })
-    }
+      {
+        news.map((entry, index) => {
+          return <p className='mb-0 text-sm' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
+        })
+      }
     </>
   )
 }
@@ -125,9 +127,10 @@ const Project79: NextPage = () => {
           <StatsContent />
 
           <div className='card'>
-            <h2 className='dark:text-gold'>Related Projects</h2>
+            <h2 className='dark:text-gold mb-2'>Related Projects</h2>
             <ul>
               <li><Link href='/projects/hydro-whales'><a>Hydro Whales Mining Club</a></Link></li>
+              <li><Link href='/projects/ocean-money'><a>Ocean Money</a></Link></li>
             </ul>
           </div>
           

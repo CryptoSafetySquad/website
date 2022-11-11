@@ -86,11 +86,11 @@ const NewsContent = () => {
   ]
   return (
     <>
-    {
-      news.map((entry, index) => {
-        return <p className='mb-0 text-sm' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
-      })
-    }
+      {
+        news.map((entry, index) => {
+          return <p className='mb-0 text-sm' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
+        })
+      }
     </>
   )
 }
