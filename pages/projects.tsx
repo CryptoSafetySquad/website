@@ -2,11 +2,11 @@ import type { NextPage } from 'next'
 import Page from '../Components/Page'
 
 const projects = [
-  {name: 'Hydro Whales Mining Club', slug: 'hydro-whales', type: 'Utility, NFT, Passive Income', blockchain: 'Ethereum'},
-  {name: 'Project 79', slug: 'project79', type: 'Utility, Passive Income', blockchain: 'Ethereum'},
+  {name: 'Hydro Whales Mining Club', slug: 'hydro-whales', type: 'NFT: Utility, Passive Income', blockchain: 'Ethereum'},
+  {name: 'Project 79', slug: 'project79', type: 'Passive Income', blockchain: 'Ethereum'},
   {name: 'Ocean Money', slug: 'ocean-money', type: 'Banking Services, Crypto Services', blockchain: 'N/A'},
-  {name: 'OMNIBirds', slug: 'omnibirds', type: 'Utility, Passive Income', blockchain: 'Ethereum'},
-  {name: 'Ace Miners NFT', slug: 'aceminers', type: 'Utility, Passive Income', blockchain: 'Ethereum'},
+  {name: 'OMNIBirds', slug: 'omnibirds', type: 'NFT: Utility, Passive Income', blockchain: 'Ethereum'},
+  {name: 'Ace Miners NFT', slug: 'aceminers', type: 'NFT: Utility, Passive Income', blockchain: 'Ethereum'},
 ]
 
 const Projects: NextPage = () => {
