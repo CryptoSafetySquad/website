@@ -1,11 +1,9 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
-import Page from '../../Components/Page'
-import TabbedContent from '../../Components/TabbedContent'
 import Adam from '../../data/people/AdamDignan'
+import Person from '../../Components/Person'
 
 const AdamDignan: NextPage = () => {
-  const title = 'People: Adam Dignan'
   const content = (
     <>
       <div className='card'>
@@ -18,19 +16,13 @@ const AdamDignan: NextPage = () => {
   )
 
   return (
-    <Page {...{
-      title,
+    <Person {...{
+      person: Adam,
+      name: 'Adam Dignan',
       slug: 'adam-dignan',
       content,
-      description: 'Adam Dignan',
       sidebarContent: (
         <>
-        {Adam.socials.discord && (
-          <div className='card flex'>
-            <img className='mr-2' src='/images/icons/discord.svg' width='24' height='24'  alt='Discord Username:' />
-            {Adam.socials.discord}
-          </div>
-        )}
           <div className='card'>
             <a href='https://www.hydrowhalesclub.com/#team' target='_blank' rel='noopener noreferrer'>HydroWhales Team</a>
           </div>
