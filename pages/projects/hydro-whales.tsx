@@ -78,13 +78,15 @@ const Research = () => {
 
 const NewsContent = () => {
   const news = [
-    { date: '', content: '' }
+    { date: '09/10/2022', content: '1000 ETH OpenSea Traded Volume' },
+    { date: '02/10/2022', content: 'Ocean Money announced!' },
+    { date: '16/08/2022', content: '305 S19 Pro miners live, hashrate over 34 Ph/s' },
   ]
   return (
     <>
     {
       news.map((entry, index) => {
-        return <div key={`news-item-${index}`}>{entry.content}</div>
+        return <p className='mb-0 text-sm' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
       })
     }
     </>
@@ -94,10 +96,10 @@ const NewsContent = () => {
 const HydroWhales: NextPage = () => {
   const title = 'Hydro Whales Mining Club'
   const tabs = [
-    // {
-    //   title: 'News',
-    //   content: <NewsContent />
-    // },
+    {
+      title: 'News',
+      content: <NewsContent />
+    },
     {
       title: 'Research',
       content: <Research />
@@ -141,21 +143,22 @@ const HydroWhales: NextPage = () => {
     content: <Answers qa={answers} />
   })
 
-  tabs.push({
-    title: 'Related Projects',
-    content: (
-      <>
-        <ul>
-          <li><Link href='/projects/project79'><a>Project 79</a></Link> - Gold Arbitrage</li>
-          <li><Link href='/projects/ocean-money'><a>Ocean Money</a></Link> - Banking Services</li>
-        </ul>
-      </>
-    )
-  })
-
   const content = (
     <>
-      <TabbedContent content={tabs} />
+      <div className='grid gap-2 grid-cols-[3fr_1fr]'>
+        <div className='card'>
+          <TabbedContent content={tabs} />
+        </div>
+        <div>
+          <div className='card'>
+            <h2 className='mb-2'>Related Projects</h2>
+            <ul>
+              <li><Link href='/projects/project79'><a>Project 79</a></Link> - Gold Arbitrage</li>
+              <li><Link href='/projects/ocean-money'><a>Ocean Money</a></Link> - Banking Services</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </>
   )
 

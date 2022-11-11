@@ -125,7 +125,7 @@ const Project79: NextPage = () => {
           <StatsContent />
 
           <div className='card'>
-          <h2 className='dark:text-gold'>Related Projects</h2>
+            <h2 className='dark:text-gold'>Related Projects</h2>
             <ul>
               <li><Link href='/projects/hydro-whales'><a>Hydro Whales Mining Club</a></Link></li>
             </ul>
