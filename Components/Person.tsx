@@ -1,8 +1,14 @@
-import type { NextPage } from 'next'
-import Link from 'next/link'
 import Page from './Page'
 
-const Person = ({ name, content, slug, person, sidebarContent }) => {
+interface PersonPageProps {
+  name: string;
+  content: any;
+  slug: string;
+  person: any;
+  sidebarContent?: any;
+}
+
+const Person = ({ name, content, slug, person, sidebarContent }: PersonPageProps) => {
   const title = `People: ${name}`
 
   return (
