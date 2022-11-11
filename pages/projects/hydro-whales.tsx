@@ -1,16 +1,40 @@
 import type { NextPage } from 'next'
+import Link from 'next/link'
+import { Line } from 'react-chartjs-2';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+
 import Page from '../../Components/Page'
 import PrivateSniper from '../../data/authors/PrivateSniper'
 import ExternalLink from '../../Components/ExternalLink'
 import TabbedContent from '../../Components/TabbedContent'
 import AuthorComponent from '../../Components/Author'
 import Disclaimer from '../../Components/Research/Disclaimer'
-import answers from '../../data/projects/hydrowhales/answers'
-import { officialVideos, communityVideos } from '../../data/projects/hydrowhales/videos'
 import Answers from '../../Components/Answers'
 import Header from '../../Components/Project/Header'
+
+import { officialVideos, communityVideos } from '../../data/projects/hydrowhales/videos'
+import answers from '../../data/projects/hydrowhales/answers'
+import earnings from '../../data/projects/hydrowhales/earnings'
 import HydroWhalesResearch from '../../data/projects/hydrowhales/research'
-import Link from 'next/link'
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 const doxxed = () => {
   return (
@@ -96,6 +120,56 @@ const NewsContent = () => {
   )
 }
 
+const HWChart = ({ labels, data, title}: { labels: any[], data: any, title: string; }) => {
+  const chartHeight = '175px'
+  return (
+    <div style={{ height: chartHeight }}>
+      <Line
+        options={{
+          maintainAspectRatio: false,
+        }}
+        data={{
+          labels: labels,
+          datasets: [
+            {
+              label: title,
+              data: data,
+              // borderColor: '#b49b68',
+              // backgroundColor: '#b49b68',
+            }
+          ],
+        }}
+      />
+    </div>
+  )
+}
+
+const StatsContent = () => {
+  if (earnings.length === 0) {
+    return (
+      <>
+      </>
+    )
+  }
+  // Compile earnings data
+  const earningsData: { labels: string[]; data: number[] } = { labels: [], data: [] }
+  earnings.forEach(value => { earningsData.labels.push(value.label); earningsData.data.push(value.percent) })
+
+  return (
+    <>
+      {/* Earnings */}
+      <div className='card'>
+        <h2>Earnings</h2>
+        <HWChart
+          labels={earningsData.labels}
+          title='Earnings'
+          data={earningsData.data}
+        />
+      </div>
+    </>
+  )
+}
+
 const HydroWhales: NextPage = () => {
   const title = 'Hydro Whales Mining Club'
   const tabs = [
@@ -153,6 +227,7 @@ const HydroWhales: NextPage = () => {
           <TabbedContent content={tabs} />
         </div>
         <div>
+          <StatsContent />
           <div className='card'>
             <h2 className='mb-2'>Related Projects</h2>
             <ul>
