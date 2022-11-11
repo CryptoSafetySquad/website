@@ -81,6 +81,8 @@ const NewsContent = () => {
     { date: '09/10/2022', content: '1000 ETH OpenSea Traded Volume' },
     { date: '02/10/2022', content: 'Ocean Money announced!' },
     { date: '16/08/2022', content: '305 S19 Pro miners live, hashrate over 34 Ph/s' },
+    { date: '02/08/2022', content: 'Project 79 announced!' },
+    { date: '21/07/2022', content: 'Final mint completed' },
   ]
   return (
     <>
