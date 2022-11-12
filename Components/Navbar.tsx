@@ -19,14 +19,14 @@ const Navbar = () => (
         rel='noopener noreferrer'
         className='mr-4'
       >
-        <img src='/images/icons/discord.svg' width='24' height='24' />
+        <img alt='discord' src='/images/icons/discord.svg' width='24' height='24' />
       </a>
       <a
         href='https://github.com/CryptoSafetySquad'
         target='_blank'
         rel='noopener noreferrer'
       >
-        <img src='/images/icons/github.svg' width='24' height='24' />
+        <img alt='github' src='/images/icons/github.svg' width='24' height='24' />
       </a>
     </div>
   </div>
