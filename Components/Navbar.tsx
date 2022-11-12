@@ -1,18 +1,18 @@
 import Link from "next/link"
 
 const Navbar = () => (
-  <div className='p-4 flex'>
+  <div className='p-2 md:p-4 flex flex-col md:flex-row'>
     <div className='xl:ml-16 mr-4 xl:mr-16'>
       <Link href='/'><a>Crypto Safety Squad</a></Link>
     </div>
-    <div>
+    <div className='flex flex-col md:flex-row'>
       <Link href='/guides'><a className='mr-8'>Guides</a></Link>
       <Link href='/projects'><a className='mr-8'>Projects</a></Link>
       <Link href='/general-tips'><a className='mr-8'>General Tips</a></Link>
       <Link href='/referrals'><a className='mr-8'>Referrals</a></Link>
       <Link href='/videos'><a className='mr-8'>Video&apos;s</a></Link>
     </div>
-    <div className='flex ml-auto mr-4 xl:mr-16'>
+    <div className='sm:flex md:ml-auto mr-4 xl:mr-16 hidden'>
       <a
         href='https://discord.gg/2R7JETvAsc'
         target='_blank'
