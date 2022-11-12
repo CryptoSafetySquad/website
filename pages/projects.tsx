@@ -15,26 +15,19 @@ const Projects: NextPage = () => {
     <>
       <p>The projects here are just those we have done some research into, the content herein does not constitute financial advice</p>
       <p>Please do your own research before investing, we can take no responsibility for the performance of any investments you make.</p>
-      <table className='table'>
-        <thead>
-          <tr>
-            <th>Project</th>
-            <th>Type</th>
-            <th>Blockchain</th>
-          </tr>
-        </thead>
-        <tbody>
-        {
-          projects.map(project => 
-            <tr key={project.slug}>
-              <td><a href={`/projects/${project.slug}`}>{project.name}</a></td>
-              <td>{project.type}</td>
-              <td>{project.blockchain}</td>
-            </tr>
-          )
-        }
-        </tbody>
-      </table>
+      <div className='grid gap-2 md:gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+      {
+        projects.map(project => 
+          <div className='card' key={project.slug}>
+            <p><a href={`/projects/${project.slug}`}>{project.name}</a></p>
+            <div className='flex justify-between'>
+              <span>{project.type}</span>
+              <span>{project.blockchain == 'N/A' ? `` : `Chain: ${project.blockchain}`}</span>
+            </div>
+          </div>
+        )
+      }
+      </div>
     </>
   )
 
