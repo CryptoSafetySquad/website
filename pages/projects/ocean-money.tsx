@@ -35,7 +35,7 @@ const OceanMoney: NextPage = () => {
 
   const content = (
     <>
-      <div className='grid gap-2 grid-cols-[3fr_1fr]'>
+      <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
         <div className='card'>
           <TabbedContent content={tabs} />
         </div>
