@@ -187,7 +187,7 @@ const HydroWhales: NextPage = () => {
     tabs.push({
       title: 'Official Videos',
       content: (
-        <div className='grid grid-cols-3 gap-4'>
+        <div className='grid md:grid-cols-3 gap-4'>
           {officialVideos.map(video => (
             <div key={video.youtubeSlug}>
             <iframe  width='100%' height='200' src={`https://www.youtube.com/embed/${video.youtubeSlug}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
@@ -203,7 +203,7 @@ const HydroWhales: NextPage = () => {
     tabs.push({
       title: 'Community Videos',
       content: (
-        <div className='grid grid-cols-3 gap-4'>
+        <div className='grid md:grid-cols-3 gap-4'>
           {communityVideos.map(video => (
             <div key={video.youtubeSlug}>
             <iframe width='100%' height='200' src={`https://www.youtube.com/embed/${video.youtubeSlug}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
@@ -222,7 +222,7 @@ const HydroWhales: NextPage = () => {
 
   const content = (
     <>
-      <div className='grid gap-2 grid-cols-[3fr_1fr]'>
+      <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
         <div className='card'>
           <TabbedContent content={tabs} />
         </div>
