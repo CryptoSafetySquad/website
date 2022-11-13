@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 
 const Navbar = () => (
@@ -19,14 +20,14 @@ const Navbar = () => (
         rel='noopener noreferrer'
         className='mr-4'
       >
-        <img alt='discord' src='/images/icons/discord.svg' width='24' height='24' />
+        <Image src='/images/icons/discord.svg' width='24' height='24' alt='discord' />
       </a>
       <a
         href='https://github.com/CryptoSafetySquad'
         target='_blank'
         rel='noopener noreferrer'
       >
-        <img alt='github' src='/images/icons/github.svg' width='24' height='24' />
+        <Image alt='github' src='/images/icons/github.svg' width='24' height='24' />
       </a>
     </div>
   </div>
