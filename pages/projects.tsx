@@ -1,12 +1,13 @@
 import type { NextPage } from 'next'
+import Image from 'next/image'
 import Page from '../Components/Page'
 
 const projects = [
-  {name: 'Hydro Whales Mining Club', slug: 'hydro-whales', type: 'NFT: Utility, Passive Income', blockchain: 'Ethereum'},
+  {name: 'Hydro Whales Mining Club', slug: 'hydro-whales', type: 'NFT: Utility, Passive Income', blockchain: 'Ethereum', banner: 'https://i.seadn.io/gae/rgToigCSJptmZH_aXssvgDJ7JLtSL0QqjfncgOgoNwjaZxOeS7qD5p6CB1Pdp1P3cUlouqnfQUCe2_ux_lljAc1GcVSLhBueuuelSnY?auto=format&w=1920'},
   {name: 'Project 79', slug: 'project79', type: 'Passive Income', blockchain: 'Ethereum'},
   {name: 'Ocean Money', slug: 'ocean-money', type: 'Banking Services, Crypto Services', blockchain: 'N/A'},
-  {name: 'OMNIBirds', slug: 'omnibirds', type: 'NFT: Utility, Passive Income', blockchain: 'Ethereum'},
-  {name: 'Ace Miners NFT', slug: 'aceminers', type: 'NFT: Utility, Passive Income', blockchain: 'Ethereum'},
+  {name: 'OMNIBirds', slug: 'omnibirds', type: 'NFT: Utility, Passive Income', blockchain: 'Ethereum', banner: 'https://i.seadn.io/gcs/files/e66305d2587c0ea7e29d7c1c1cd3cae5.png?auto=format&w=1920'},
+  {name: 'Ace Miners NFT', slug: 'aceminers', type: 'NFT: Utility, Passive Income', blockchain: 'Ethereum', banner: 'https://i.seadn.io/gcs/files/f59537bf481f49ad3d97a8de0ac164d0.png?auto=format&w=1920'},
 ]
 
 const Projects: NextPage = () => {
@@ -19,6 +20,17 @@ const Projects: NextPage = () => {
       {
         projects.map(project => 
           <div className='card' key={project.slug}>
+            {
+              project.banner && 
+                <div style={{
+                  height: '120px',
+                  backgroundImage: `url(${project.banner})`,
+                  backgroundPosition: 'center center',
+                  backgroundSize: 'cover',
+                  borderRadius: '4px'
+                }}>
+                </div>
+            }
             <p><a href={`/projects/${project.slug}`}>{project.name}</a></p>
             <div className='flex justify-between'>
               <span>{project.type}</span>
