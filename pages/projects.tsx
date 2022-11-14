@@ -11,24 +11,26 @@ const Projects: NextPage = () => {
       <div className='grid gap-2 md:gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
       {
         projects.map(project => 
-          <div className='card' key={project.slug}>
-            {
-              project.bannerImage && 
-                <div style={{
-                  height: '120px',
-                  backgroundImage: `url(${project.bannerImage})`,
-                  backgroundPosition: 'center center',
-                  backgroundSize: 'cover',
-                  borderRadius: '4px'
-                }}>
-                </div>
-            }
-            <p><a href={`/projects/${project.slug}`}>{project.name}</a></p>
-            <div className='flex justify-between'>
-              <span>{project.type}</span>
-              <span>{project.blockchain == 'N/A' ? `` : `Chain: ${project.blockchain}`}</span>
+          project.slug && (
+            <div className='card' key={project.slug}>
+              {
+                project.bannerImage && 
+                  <div style={{
+                    height: '120px',
+                    backgroundImage: `url(${project.bannerImage})`,
+                    backgroundPosition: 'center center',
+                    backgroundSize: 'cover',
+                    borderRadius: '4px'
+                  }}>
+                  </div>
+              }
+              <p><a href={`/projects/${project.slug}`}>{project.name}</a></p>
+              <div className='flex justify-between'>
+                <span>{project.type}</span>
+                <span>{project.blockchain == 'N/A' ? `` : `Chain: ${project.blockchain}`}</span>
+              </div>
             </div>
-          </div>
+          )
         )
       }
       </div>

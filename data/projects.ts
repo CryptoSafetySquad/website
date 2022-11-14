@@ -1,6 +1,6 @@
 interface Project {
   bannerImage?: string;
-  slug: string;
+  slug?: string;
   type: string;
   blockchain?: Blockchains | string;
   name: string;
@@ -23,6 +23,16 @@ export const AceMinersNFT: Project = {
   bannerImage: 'https://i.seadn.io/gcs/files/f59537bf481f49ad3d97a8de0ac164d0.png?auto=format&w=1920',
   website: 'https://aceminersnft.io/',
   opensea: 'https://opensea.io/collection/aceminersnft',
+}
+
+export const BoredApeYachtClub: Project = {
+  name: 'Bored Ape Yacht Club',
+  blockchain: Blockchains.Ethereum,
+  // slug: 'boredapeyachtclub', // disable slug while page has no material content
+  opensea: 'https://opensea.io/collection/boredapeyachtclub',
+  type: 'NFT: Utility',
+  website: 'https://boredapeyachtclub.com/',
+  bannerImage: 'https://i.seadn.io/gae/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs?auto=format&w=1920'
 }
 
 export const HydroWhalesMiningClub: Project = {
@@ -66,6 +76,7 @@ export const Project79: Project = {
 
 const projects = [
   AceMinersNFT,
+  BoredApeYachtClub,
   HydroWhalesMiningClub,
   OceanMoney,
   OMNIBirds,

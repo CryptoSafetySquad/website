@@ -15,6 +15,7 @@ import {
 import Page from '../../Components/Page'
 import Header from '../../Components/Project/Header'
 import earnings from '../../data/projects/aceminers/earnings'
+import { BoredApeYachtClub as Project } from '../../data/projects'
 
 ChartJS.register(
   CategoryScale,
@@ -135,12 +136,7 @@ const BoredApeYachtClub: NextPage = () => {
       content,
       slug: 'projects/boredapeyachtclub',
       description: 'Bored Ape Yacht Club',
-      header: <Header
-        name={title}
-        website='https://boredapeyachtclub.com/'
-        opensea='https://opensea.io/collection/boredapeyachtclub'
-        // description={(<></>)}
-      />
+      header: <Header {...Project} />
     }} />
   )
 }
