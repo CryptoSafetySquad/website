@@ -15,6 +15,7 @@ import {
 import Page from '../../Components/Page'
 import Header from '../../Components/Project/Header'
 import earnings from '../../data/projects/aceminers/earnings'
+import { AceMinersNFT } from '../../data/projects'
 
 ChartJS.register(
   CategoryScale,
@@ -136,11 +137,8 @@ const AceMiners: NextPage = () => {
       slug: 'projects/aceminers',
       description: 'Ace Miners NFT',
       header: <Header
-        name={title}
-        website='https://aceminersnft.io/'
-        opensea='https://opensea.io/collection/aceminersnft'
         description={(<>LTC and KDA mining NFT - Also has a Phase 2 NFT @<a href='https://opensea.io/collection/aceminersnftp2' target='_blank' rel='noopener noreferrer'>OpenSea</a></>)}
-        bannerImage='https://i.seadn.io/gcs/files/f59537bf481f49ad3d97a8de0ac164d0.png?auto=format&w=1920'
+        {...AceMinersNFT}
       />
     }} />
   )

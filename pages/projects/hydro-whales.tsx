@@ -25,6 +25,7 @@ import { officialVideos, communityVideos } from '../../data/projects/hydrowhales
 import answers from '../../data/projects/hydrowhales/answers'
 import earnings from '../../data/projects/hydrowhales/earnings'
 import HydroWhalesResearch from '../../data/projects/hydrowhales/research'
+import { HydroWhalesMiningClub } from '../../data/projects'
 
 ChartJS.register(
   CategoryScale,
@@ -246,15 +247,7 @@ const HydroWhales: NextPage = () => {
       content,
       slug: 'projects/hydro-whales',
       description: 'Hydro Whales Mining Club',
-      header: (
-        <Header
-          name='Hydro Whales Mining Club'
-          opensea='https://opensea.io/collection/hydro-whales-mining-club-official'
-          website='https://www.hydrowhalesclub.com/'
-          twitter='HydroWhalesClub'
-          bannerImage='https://i.seadn.io/gae/rgToigCSJptmZH_aXssvgDJ7JLtSL0QqjfncgOgoNwjaZxOeS7qD5p6CB1Pdp1P3cUlouqnfQUCe2_ux_lljAc1GcVSLhBueuuelSnY?auto=format&w=1920'
-        />
-      )
+      header: <Header {...HydroWhalesMiningClub} />
     }} />
   )
 }

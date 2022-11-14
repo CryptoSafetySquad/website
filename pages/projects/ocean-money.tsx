@@ -4,6 +4,7 @@ import TabbedContent from '../../Components/TabbedContent'
 import Answers from '../../Components/Answers'
 import Header from '../../Components/Project/Header'
 import Link from 'next/link'
+import { OceanMoney as Project } from '../../data/projects' 
 
 const NewsContent = () => {
   const news = [
@@ -58,14 +59,7 @@ const OceanMoney: NextPage = () => {
       content,
       slug: 'projects/ocean-money',
       description: 'Ocean Money',
-      header: (
-        <Header
-          name='Ocean Money'
-          twitter='OceanMoney_'
-          website='https://www.ocean.money/'
-          bannerImage='https://www.ocean.money/_next/image?url=%2Fimages%2Fblog-1.png&w=1920&q=75'
-        />
-      )
+      header: <Header {...Project} />
     }} />
   )
 }
