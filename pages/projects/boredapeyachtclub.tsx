@@ -35,7 +35,7 @@ const NewsContent = () => {
     // { date: '4/11/2022', content: '3rd sacrifice period closed, TVL $7.1m' },
     // { date: '29/10/2022', content: (<>James Pelton AMA - <a href='https://www.youtube.com/watch?v=zpd8L2rlLgg' rel='noopener noreferrer' target='_blank'>AMA with Project 79: Making 6%/month With Actual Revenue</a></>) },
     // { date: '24/10/2022', content: '2nd Sacrifice earnings of 6.4%' },
-    { date: '20/10/2022', content: '1st payout to P1 holders ~$16' }
+    // { date: '20/10/2022', content: '1st payout to P1 holders ~$16' }
   ]
   return (
     <>
@@ -112,8 +112,8 @@ const StatsContent = () => {
   )
 }
 
-const AceMiners: NextPage = () => {
-  const title = 'Ace Miners NFT'
+const BoredApeYachtClub: NextPage = () => {
+  const title = 'Bored Ape Yacht Club'
 
   const content = (
     <>
@@ -122,9 +122,9 @@ const AceMiners: NextPage = () => {
           <h2 className=''>News</h2>
           <NewsContent />
         </div>
-        <div>
+        {/* <div>
           <StatsContent />
-        </div>
+        </div> */}
       </div>
     </>
   )
@@ -133,17 +133,16 @@ const AceMiners: NextPage = () => {
     <Page {...{
       title,
       content,
-      slug: 'projects/aceminers',
-      description: 'Ace Miners NFT',
+      slug: 'projects/boredapeyachtclub',
+      description: 'Bored Ape Yacht Club',
       header: <Header
         name={title}
-        website='https://aceminersnft.io/'
-        opensea='https://opensea.io/collection/aceminersnft'
-        description={(<>LTC and KDA mining NFT - Also has a Phase 2 NFT @<a href='https://opensea.io/collection/aceminersnftp2' target='_blank' rel='noopener noreferrer'>OpenSea</a></>)}
-        bannerImage='https://i.seadn.io/gcs/files/f59537bf481f49ad3d97a8de0ac164d0.png?auto=format&w=1920'
+        website='https://boredapeyachtclub.com/'
+        opensea='https://opensea.io/collection/boredapeyachtclub'
+        // description={(<></>)}
       />
     }} />
   )
 }
 
-export default AceMiners
+export default BoredApeYachtClub

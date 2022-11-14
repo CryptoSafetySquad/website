@@ -252,6 +252,7 @@ const HydroWhales: NextPage = () => {
           opensea='https://opensea.io/collection/hydro-whales-mining-club-official'
           website='https://www.hydrowhalesclub.com/'
           twitter='HydroWhalesClub'
+          bannerImage='https://i.seadn.io/gae/rgToigCSJptmZH_aXssvgDJ7JLtSL0QqjfncgOgoNwjaZxOeS7qD5p6CB1Pdp1P3cUlouqnfQUCe2_ux_lljAc1GcVSLhBueuuelSnY?auto=format&w=1920'
         />
       )
     }} />

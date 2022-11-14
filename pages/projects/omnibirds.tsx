@@ -5,6 +5,7 @@ import ExternalLink from '../../Components/ExternalLink'
 import TabbedContent from '../../Components/TabbedContent'
 import AuthorComponent from '../../Components/Author'
 import Disclaimer from '../../Components/Research/Disclaimer'
+import Header from '../../Components/Project/Header'
 
 const doxxed = () => {
   return (
@@ -126,7 +127,14 @@ const OMNIBirds: NextPage = () => {
       title,
       content,
       slug: 'projects/omnibirds',
-      description: 'OMNIBirds'
+      description: 'OMNIBirds',
+      header: <Header
+        bannerImage='https://i.seadn.io/gcs/files/e66305d2587c0ea7e29d7c1c1cd3cae5.png?auto=format&w=1920'
+        opensea='https://opensea.io/collection/omnibirds-official'
+        website='https://www.omnibirds.com/'
+        twitter='OMNIBirds'
+        name='OMNI Birds'
+      />
     }} />
   )
 }

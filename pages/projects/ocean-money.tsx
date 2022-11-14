@@ -63,6 +63,7 @@ const OceanMoney: NextPage = () => {
           name='Ocean Money'
           twitter='OceanMoney_'
           website='https://www.ocean.money/'
+          bannerImage='https://www.ocean.money/_next/image?url=%2Fimages%2Fblog-1.png&w=1920&q=75'
         />
       )
     }} />
