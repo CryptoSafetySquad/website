@@ -20,14 +20,18 @@ const Ethereum: NextPage = () => {
 
         <div className='card'>
           <h2 className='mb-2'>DEXs (Token Swap)</h2>
-          <p><ExternalLink href='https://app.uniswap.org/' text='UniSwap' /></p>
-          <p><ExternalLink href='https://pancakeswap.finance/' text='PancakeSwap' /></p>
+          <div className='grid grid-cols-2 gap-2'>
+            <ExternalLink href='https://app.uniswap.org/' text='UniSwap' />
+            <ExternalLink href='https://pancakeswap.finance/' text='PancakeSwap' />
+          </div>
         </div>
 
         <div className='card'>
           <h2 className='mb-2'>NFT Marketplaces</h2>
-          <p><ExternalLink href='https://opensea.io/' text='OpenSea' /></p>
-          <p><ExternalLink href='https://x2y2.io/' text='X2Y2' /></p>
+          <div className='grid grid-cols-2 gap-2'>
+            <ExternalLink href='https://opensea.io/' text='OpenSea' />
+            <ExternalLink href='https://x2y2.io/' text='X2Y2' />
+          </div>
         </div>
 
         <div className='card'>
