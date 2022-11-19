@@ -7,7 +7,7 @@ const Binance: NextPage = () => {
   const title = 'Binance'
   const content = (
     <>
-      <p className='mb-4'>None of the information on this page is financial advise, do your own research before investing in any protocols.</p>
+      <p className='mb-4'>None of the information on this page is financial advice, do your own research before investing in any protocols.</p>
       <div className='grid grid-cols-3 gap-2'>
         <div className='card'>
           <h2 className='mb-2'>Block Explorer</h2>
