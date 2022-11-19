@@ -10,6 +10,7 @@ const Navbar = () => (
       <Link href='/guides'><a className='mr-8 mb-2 md:mb-0'>Guides</a></Link>
       <Link href='/projects'><a className='mr-8 mb-2 md:mb-0'>Projects</a></Link>
       <Link href='/general-tips'><a className='mr-8 mb-2 md:mb-0'>General Tips</a></Link>
+      <Link href='/ecosystems'><a className='mr-8 mb-2 md:mb-0'>Ecosystems</a></Link>
       <Link href='/referrals'><a className='mr-8 mb-2 md:mb-0'>Referrals</a></Link>
       <Link href='/videos'><a className='mr-8 mb-2 md:mb-0'>Video&apos;s</a></Link>
     </div>
