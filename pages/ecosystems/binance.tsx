@@ -7,6 +7,7 @@ const Binance: NextPage = () => {
   const title = 'Binance'
   const content = (
     <>
+      <p className='mb-4'>None of the information on this page is financial advise, do your own research before investing in any protocols.</p>
       <div className='grid grid-cols-3 gap-2'>
         <div className='card'>
           <h2 className='mb-2'>Block Explorer</h2>
@@ -15,7 +16,9 @@ const Binance: NextPage = () => {
 
         <div className='card'>
           <h2 className='mb-2'>Exchanges (Centralised)</h2>
-          <p><ExternalLink href='https://www.kucoin.com/r/rf/rJQQK1S' text='KuCoin' /></p>
+          <div className='grid grid-cols-2 gap-2'>
+            <ExternalLink href='https://www.kucoin.com/r/rf/rJQQK1S' text='KuCoin' />
+          </div>
         </div>
 
         <div className='card'>
