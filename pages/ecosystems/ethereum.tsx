@@ -6,7 +6,7 @@ import ExternalLink from '../../Components/ExternalLink'
 const Ethereum: NextPage = () => {
   const title = 'Ethereum'
   const content = (
-    <div className='grid grid-cols-3 gap-2'>
+    <div className='grid md:grid-cols-3 gap-2'>
       <div className='card'>
         <h2 className='mb-2'>Block Explorer</h2>
         <p><ExternalLink href='https://etherscan.io' text='Etherscan' /></p>

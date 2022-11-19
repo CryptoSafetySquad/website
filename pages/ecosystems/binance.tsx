@@ -8,7 +8,7 @@ const Binance: NextPage = () => {
   const content = (
     <>
       <p className='mb-4'>None of the information on this page is financial advice, do your own research before investing in any protocols.</p>
-      <div className='grid grid-cols-3 gap-2'>
+      <div className='grid md:grid-cols-3 gap-2'>
         <div className='card'>
           <h2 className='mb-2'>Block Explorer</h2>
           <p><ExternalLink href='https://bscscan.com/' text='BscScan' /></p>
