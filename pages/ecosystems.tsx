@@ -8,6 +8,7 @@ const l1ecos: any[] = [
   // { name: 'Avalanche', slug: 'avalanche' },
   // { name: 'Solana', slug: 'solana' },
   { name: 'Binance', slug: 'binance' },
+  { name: 'Polygon', slug: 'polygon' },
   // { name: '', slug: '' },
   // { name: '', slug: '' },
 ]
