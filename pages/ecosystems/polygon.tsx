@@ -25,6 +25,7 @@ const Polygon: NextPage = () => {
           <h2 className='mb-2'>DEXs (Token Swap)</h2>
           <div className='grid grid-cols-2 gap-2'>
             <ExternalLink href='https://quickswap.exchange/' text='QuickSwap' />
+            <ExternalLink href='https://app.uniswap.org/' text='UniSwap' />
           </div>
         </div>
 
