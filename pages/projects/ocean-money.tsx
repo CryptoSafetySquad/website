@@ -4,12 +4,10 @@ import TabbedContent from '../../Components/TabbedContent'
 import Answers from '../../Components/Answers'
 import Header from '../../Components/Project/Header'
 import Link from 'next/link'
-import { OceanMoney as Project } from '../../data/projects' 
+import { OceanMoney as Project } from '../../data/projects'
+import news from '../../data/projects/oceanmoney/news'
 
 const NewsContent = () => {
-  const news = [
-    { date: '02/10/2022', content: 'Ocean Money announced on hydro whales discord' }
-  ]
   return (
     <>
       {
