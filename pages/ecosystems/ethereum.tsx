@@ -22,6 +22,7 @@ const Ethereum: NextPage = () => {
         <div className='grid grid-cols-2 gap-2'>
           <ExternalLink href='https://app.uniswap.org/' text='UniSwap' />
           <ExternalLink href='https://pancakeswap.finance/' text='PancakeSwap' />
+          <ExternalLink href='https://apeswap.finance/' text='ApeSwap' />
         </div>
       </div>
 

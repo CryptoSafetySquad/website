@@ -27,6 +27,7 @@ const Binance: NextPage = () => {
             <ExternalLink href='https://app.uniswap.org/' text='UniSwap' />
             <ExternalLink href='https://pancakeswap.finance/' text='PancakeSwap' />
             <ExternalLink href='https://www.aequinox.exchange/#/' text='Aequinox' />
+            <ExternalLink href='https://apeswap.finance/' text='ApeSwap' />
           </div>
         </div>
 
