@@ -2,11 +2,8 @@ import { AuthorProps } from '../../Components/Author'
 
 const PrivateSniper: AuthorProps = {
   nickname: 'PrivateSniper',
-  fullname: 'David Craig',
+  fullname: 'David',
   image: '/images/authors/PrivateSniper.png',
-  socials: {
-    linkedin: 'https://www.linkedin.com/in/davidcraig86/'
-  },
   content: (
     <>
       <p>David started with crypto in 2021.</p>
