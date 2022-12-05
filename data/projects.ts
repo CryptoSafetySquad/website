@@ -71,7 +71,8 @@ export const Project79: Project = {
   name: 'Project 79',
   slug: 'project79',
   type: 'Passive Income',
-  blockchain: 'Ethereum'
+  blockchain: 'Ethereum',
+  bannerImage: 'https://pbs.twimg.com/media/FdBHe8kaMAEk8_2?format=jpg&name=4096x4096'
 }
 
 const projects = [
