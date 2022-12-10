@@ -5,7 +5,7 @@ import Page from '../Components/Page'
 const l1ecos: any[] = [
   // { name: 'Bitcoin', slug: 'bitcoin' },
   { name: 'Ethereum', slug: 'ethereum' },
-  // { name: 'Avalanche', slug: 'avalanche' },
+  { name: 'Avalanche', slug: 'avalanche' },
   // { name: 'Solana', slug: 'solana' },
   { name: 'Binance', slug: 'binance' },
   { name: 'Polygon', slug: 'polygon' },
