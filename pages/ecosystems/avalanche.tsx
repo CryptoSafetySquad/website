@@ -31,6 +31,7 @@ const Avalanche: NextPage = () => {
         <div className='card'>
           <h2 className='mb-2'>DeFI (Decentralised Finance)</h2>
           <div className='grid grid-cols-2 gap-2'>
+            <ExternalLink href='https://yieldwolf.finance/' text='YieldWolf' />
           </div>
         </div>
 

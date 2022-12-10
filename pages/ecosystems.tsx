@@ -13,8 +13,8 @@ const l1ecos: any[] = [
 ]
 const ethl2ecos: any[] = [
   { name: 'Polygon', slug: 'polygon' },
-  // { name: 'Optimism', slug: 'optimism' },
-  // { name: 'Arbitrum', slug: 'arbitrum' },
+  { name: 'Optimism', slug: 'optimism' },
+  { name: 'Arbitrum', slug: 'arbitrum' },
 ]
 
 const Ecosystems: NextPage = () => {
