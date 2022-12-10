@@ -6,13 +6,13 @@ const l1ecos: any[] = [
   // { name: 'Bitcoin', slug: 'bitcoin' },
   { name: 'Ethereum', slug: 'ethereum' },
   { name: 'Binance', slug: 'binance' },
-  { name: 'Polygon', slug: 'polygon' },
   { name: 'Solana', slug: 'solana' },
   { name: 'Avalanche', slug: 'avalanche' },
   // { name: '', slug: '' },
   // { name: '', slug: '' },
 ]
 const ethl2ecos: any[] = [
+  { name: 'Polygon', slug: 'polygon' },
   // { name: 'Optimism', slug: 'optimism' },
   // { name: 'Arbitrum', slug: 'arbitrum' },
 ]
@@ -36,7 +36,7 @@ const Ecosystems: NextPage = () => {
       }
       </div>
 
-      {/* <h2 className='mb-2 mt-4'>Ethereum Layer 2</h2>
+      <h2 className='mb-2 mt-4'>Ethereum Layer 2</h2>
       <div className='grid grid-cols-4 gap-2'>
       {
         ethl2ecos.map(eco => {
@@ -47,7 +47,7 @@ const Ecosystems: NextPage = () => {
           )
         })
       }
-      </div> */}
+      </div>
     </>
   )
 
