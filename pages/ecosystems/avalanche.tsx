@@ -36,8 +36,16 @@ const Avalanche: NextPage = () => {
         </div>
 
         <div className='card'>
-          <h2 className='mb-2'>Protocols</h2>
+          <h2 className='mb-2'>Projects / Protocols</h2>
           <div className='grid grid-cols-2 gap-2'>
+            <ExternalLink href='https://grapefinance.app/' text='Grape Finance' />
+          </div>
+        </div>
+
+        <div className='card'>
+          <h2 className='mb-2'>&quot;Dead&quot; Projects / Protocols</h2>
+          <div className='grid grid-cols-2 gap-2'>
+            
           </div>
         </div>
       </div>
