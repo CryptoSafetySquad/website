@@ -40,6 +40,13 @@ const Ethereum: NextPage = () => {
           <ExternalLink href='https://app.beefy.com/' text='Beefy' />
         </div>
       </div>
+
+      <div className='card'>
+        <h2 className='mb-2'>Stake/Yield Generation</h2>
+        <div className='grid grid-cols-2 gap-2'>
+          <ExternalLink href='https://midas.investments/' text='Midas Investments' />
+        </div>
+      </div>
     </div>
   )
 
