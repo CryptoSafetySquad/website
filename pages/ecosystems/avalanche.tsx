@@ -3,8 +3,8 @@ import type { NextPage } from 'next'
 import Page from '../../Components/Page'
 import ExternalLink from '../../Components/ExternalLink'
 
-const Binance: NextPage = () => {
-  const title = 'Binance'
+const Avalanche: NextPage = () => {
+  const title = 'Avalanche'
   const content = (
     <>
       <p className='mb-4'>None of the information on this page is financial advice, do your own research before investing in any protocols.</p>
@@ -47,10 +47,10 @@ const Binance: NextPage = () => {
     <Page {...{
       title,
       content,
-      slug: 'ecosystems/binance',
-      description: 'Binance'
+      slug: 'ecosystems/avalanche',
+      description: 'Avalanche'
     }} />
   )
 }
 
-export default Binance
+export default Avalanche
