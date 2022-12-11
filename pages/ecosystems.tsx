@@ -3,12 +3,12 @@ import Link from 'next/link'
 import Page from '../Components/Page'
 
 const l1ecos: any[] = [
-  // { name: 'Bitcoin', slug: 'bitcoin' },
+  { name: 'Bitcoin', slug: 'bitcoin' },
   { name: 'Ethereum', slug: 'ethereum' },
   { name: 'Binance', slug: 'binance' },
   { name: 'Solana', slug: 'solana' },
   { name: 'Avalanche', slug: 'avalanche' },
-  // { name: '', slug: '' },
+  { name: 'Kadena', slug: 'kadena' },
   // { name: '', slug: '' },
 ]
 const ethl2ecos: any[] = [
