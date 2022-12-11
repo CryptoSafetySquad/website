@@ -40,7 +40,7 @@ const Kadena: NextPage = () => {
         <div className='card'>
           <h2 className='mb-2'>Projects / Protocols</h2>
           <div className='grid grid-cols-2 gap-2'>
-            
+            <ExternalLink href='https://kdamining.club/' text='Kadena Mining Club' />
           </div>
         </div>
 
