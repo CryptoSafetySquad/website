@@ -3,15 +3,14 @@ import type { NextPage } from 'next'
 import Page from '../../Components/Page'
 import ExternalLink from '../../Components/ExternalLink'
 
-const Solana: NextPage = () => {
-  const title = 'Solana'
+const Constellation: NextPage = () => {
+  const title = 'Constellation'
   const content = (
     <div className='grid md:grid-cols-3 gap-2'>
       <div className='card'>
-        <h2 className='mb-2'>Block Explorer</h2>
+        <h2 className='mb-2'>Block Explorers</h2>
         <div className='grid grid-cols-2 gap-2'>
-            <ExternalLink href='https://explorer.solana.com/' text='Solana Explorer' />
-            <ExternalLink href='https://solscan.io/' text='Solscan' />
+
         </div>
       </div>
 
@@ -23,21 +22,12 @@ const Solana: NextPage = () => {
         </div>
       </div>
 
+      
+
       <div className='card'>
         <h2 className='mb-2'>DEXs (Token Swap)</h2>
         <div className='grid grid-cols-2 gap-2'>
-        </div>
-      </div>
-
-      <div className='card'>
-        <h2 className='mb-2'>NFT Marketplaces</h2>
-        <div className='grid grid-cols-2 gap-2'>
-        </div>
-      </div>
-
-      <div className='card'>
-        <h2 className='mb-2'>DeFI (Decentralised Finance)</h2>
-        <div className='grid grid-cols-2 gap-2'>
+          <ExternalLink href='https://lattice.is/dashboard' text='Lattice' />
         </div>
       </div>
     </div>
@@ -47,10 +37,10 @@ const Solana: NextPage = () => {
     <Page {...{
       title,
       content,
-      slug: 'ecosystems/solana',
-      description: 'Solana'
+      slug: 'ecosystems/constellation',
+      description: 'Constellation'
     }} />
   )
 }
 
-export default Solana
+export default Constellation

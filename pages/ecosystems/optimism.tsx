@@ -13,7 +13,10 @@ const Optimism: NextPage = () => {
 
       <div className='card'>
         <h2 className='mb-2'>Exchanges (Centralised)</h2>
-        <p><ExternalLink href='https://www.kucoin.com/r/rf/rJQQK1S' text='KuCoin' /></p>
+        <div className='grid grid-cols-2 gap-2'>
+          <ExternalLink href='https://www.kucoin.com/r/rf/rJQQK1S' text='KuCoin' />
+          <ExternalLink href='https://www.gate.io/signup/11213076' text='Gate.io' />
+        </div>
       </div>
 
       <div className='card'>

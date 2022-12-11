@@ -10,8 +10,8 @@ const Bitcoin: NextPage = () => {
       <div className='card'>
         <h2 className='mb-2'>Block Explorers</h2>
         <div className='grid grid-cols-2 gap-2'>
-            <ExternalLink href='https://mempool.space/' text='mempool.space' />
-            <ExternalLink href='https://www.blockchain.com/explorer' text='Blockchain.com Explorer' />
+          <ExternalLink href='https://mempool.space/' text='mempool.space' />
+          <ExternalLink href='https://www.blockchain.com/explorer' text='Blockchain.com Explorer' />
         </div>
       </div>
 
