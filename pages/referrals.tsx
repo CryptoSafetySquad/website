@@ -9,6 +9,9 @@ const Referrals: NextPage = () => {
 
       <h2 className='text-secondary mb-2'>Exchanges</h2>
       <div className='grid grid-cols-4 gap-2'>
+        <a className='mb-2' href='https://www.binance.com/en/activity/referral-entry/CPA?fromActivityPage=true&ref=CPA_00Z6XZLBQ0' target='_blank' rel='noopener noreferrer'>
+          <img style={{height: '30px'}} alt='Binance' src='/images/logos/binance.svg' />
+        </a>
         <a className='mb-2' href='https://www.kucoin.com/r/rf/rJQQK1S' target='_blank' rel='noopener noreferrer'>
           <picture>
             <img alt='KuCoin' src='https://assets.staticimg.com/cms/media/1lB3PkckFDyfxz6VudCEACBeRRBi6sQQ7DDjz0yWM.svg' />
