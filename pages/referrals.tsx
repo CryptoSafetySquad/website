@@ -17,10 +17,12 @@ const Referrals: NextPage = () => {
             <img alt='KuCoin' src='https://assets.staticimg.com/cms/media/1lB3PkckFDyfxz6VudCEACBeRRBi6sQQ7DDjz0yWM.svg' />
           </picture>
         </a>
+        <a href='https://www.gate.io/signup/11213076' target='_blank' rel='noopener noreferrer'>
+          <img style={{height: '30px'}} src='https://www.gate.io/images/logo/open_sesame_night.png?v=4' />
+        </a>
         <a className='mb-2 flex' href='https://coinbase.com/join/craig_hcc?src=referral-link' target='_blank' rel='noopener noreferrer'>
           Coinbase
         </a>
-        <a href='https://www.gate.io/signup/11213076' target='_blank' rel='noopener noreferrer'>Gate.io</a>
       </div>
 
       <h2 className='text-secondary mt-4 mb-2'>Trading Platforms</h2>
