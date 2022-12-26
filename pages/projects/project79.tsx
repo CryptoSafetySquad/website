@@ -77,7 +77,12 @@ const StatsContent = () => {
   const earningsData: { labels: string[]; data: number[] } = { labels: [], data: [] }
   earnings.forEach(value => { earningsData.labels.push(value.label); earningsData.data.push(value.percent) })
 
-  const dollarIcon = <img className='mr-2' height='12' width='12' src='/images/icons/gold/dollar-sign.svg' role='presentation' alt='' />
+  const dollarIcon = (
+    <>
+      <img className='mr-2 hidden dark:inline-block' height='12' width='12' src='/images/icons/gold/dollar-sign.svg' role='presentation' alt='' />
+      <img className='mr-2 inline-block dark:hidden' height='12' width='12' src='/images/icons/dollar-sign.svg' role='presentation' alt='' />
+    </>
+  )
 
   return (
     <>
