@@ -86,11 +86,18 @@ const StatsContent = () => {
   const earningsData: { labels: string[]; data: number[] } = { labels: [], data: [] }
   earnings.forEach(value => { earningsData.labels.push(value.label); earningsData.data.push(value.amount) })
 
+  const dollarIcon = (
+    <>
+      <img className='hidden dark:inline-block mr-2' height='12' width='12' src='/images/icons/white/dollar-sign.svg' role='presentation' alt='' />
+      <img className='mr-2 inline-block dark:hidden' height='12' width='12' src='/images/icons/dollar-sign.svg' role='presentation' alt='' />
+    </>
+  )
+
   return (
     <>
       {/* Earnings */}
       <div className='card'>
-        <h2>Earnings</h2>
+        <h2>{dollarIcon} Earnings</h2>
         <Chart
           labels={earningsData.labels}
           title='Earnings'
