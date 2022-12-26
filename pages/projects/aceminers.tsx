@@ -17,6 +17,7 @@ import Header from '../../Components/Project/Header'
 import earnings from '../../data/projects/aceminers/earnings'
 import { AceMinersNFT } from '../../data/projects'
 import news from '../../data/projects/aceminers/news'
+import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon';
 
 ChartJS.register(
   CategoryScale,
@@ -33,12 +34,7 @@ function average(nums: number[]) {
 }
 
 const NewsContent = () => {
-  const newsIcon = (
-    <>
-      <img className='hidden dark:inline-block mr-2' height='20' width='20' src='/images/icons/white/newspaper.svg' role='presentation' alt='' />
-      <img className='mr-2 inline-block dark:hidden' height='20' width='20' src='/images/icons/newspaper.svg' role='presentation' alt='' />
-    </>
-  )
+  const newsIcon = <ModeSwitchingIcon filename='newspaper' size={20} />
   
   return (
     <>
@@ -86,12 +82,7 @@ const StatsContent = () => {
   const earningsData: { labels: string[]; data: number[] } = { labels: [], data: [] }
   earnings.forEach(value => { earningsData.labels.push(value.label); earningsData.data.push(value.amount) })
 
-  const dollarIcon = (
-    <>
-      <img className='hidden dark:inline-block mr-2' height='12' width='12' src='/images/icons/white/dollar-sign.svg' role='presentation' alt='' />
-      <img className='mr-2 inline-block dark:hidden' height='12' width='12' src='/images/icons/dollar-sign.svg' role='presentation' alt='' />
-    </>
-  )
+  const dollarIcon = <ModeSwitchingIcon size={12} filename='dollar-sign' />
 
   return (
     <>

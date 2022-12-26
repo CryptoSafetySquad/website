@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 
 import Page from '../../Components/Page'
 import ExternalLink from '../../Components/ExternalLink'
+import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
 
 const Ethereum: NextPage = () => {
   const title = 'Ethereum'
@@ -56,6 +57,14 @@ const Ethereum: NextPage = () => {
   return (
     <Page {...{
       title,
+      header: (
+        <>
+          <h1 className='flex'>
+            <ModeSwitchingIcon filename='ethereum' size={16} />
+            Ethereum
+          </h1>
+        </>
+      ),
       content,
       slug: 'ecosystems/ethereum',
       description: 'Ethereum'

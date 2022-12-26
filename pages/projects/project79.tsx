@@ -18,6 +18,7 @@ import earnings from '../../data/projects/project79/earnings'
 import tvl from '../../data/projects/project79/tvl'
 import news from '../../data/projects/project79/news'
 import Percentage from '../../Components/Percentage';
+import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon';
 
 ChartJS.register(
   CategoryScale,
@@ -77,12 +78,7 @@ const StatsContent = () => {
   const earningsData: { labels: string[]; data: number[] } = { labels: [], data: [] }
   earnings.forEach(value => { earningsData.labels.push(value.label); earningsData.data.push(value.percent) })
 
-  const dollarIcon = (
-    <>
-      <img className='mr-2 hidden dark:inline-block' height='12' width='12' src='/images/icons/gold/dollar-sign.svg' role='presentation' alt='' />
-      <img className='mr-2 inline-block dark:hidden' height='12' width='12' src='/images/icons/dollar-sign.svg' role='presentation' alt='' />
-    </>
-  )
+  const dollarIcon = <ModeSwitchingIcon filename='dollar-sign' size={12} scheme='gold' />
 
   return (
     <>
@@ -116,12 +112,7 @@ const StatsContent = () => {
 
 const Project79: NextPage = () => {
   const title = 'Project 79'
-  const newsIcon = (
-    <>
-      <img className='hidden dark:inline-block mr-2' height='20' width='20' src='/images/icons/gold/newspaper.svg' role='presentation' alt='' />
-      <img className='mr-2 inline-block dark:hidden' height='20' width='20' src='/images/icons/newspaper.svg' role='presentation' alt='' />
-    </>
-  )
+  const newsIcon = <ModeSwitchingIcon filename='newspaper' size={20} scheme='gold' />
 
   const content = (
     <>
