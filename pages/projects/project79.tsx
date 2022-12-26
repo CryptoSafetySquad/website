@@ -110,12 +110,13 @@ const StatsContent = () => {
 
 const Project79: NextPage = () => {
   const title = 'Project 79'
+  const newsIcon = <img className='mr-2' height='20' width='20' src='/images/icons/gold/newspaper.svg' role='presentation' alt='' />
 
   const content = (
     <>
       <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
         <div className='card'>
-          <h2 className='dark:text-gold'>News</h2>
+          <h2 className='dark:text-gold flex'>{newsIcon} News</h2>
           <NewsContent />
         </div>
         <div>
