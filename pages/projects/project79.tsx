@@ -76,11 +76,13 @@ const StatsContent = () => {
   const earningsData: { labels: string[]; data: number[] } = { labels: [], data: [] }
   earnings.forEach(value => { earningsData.labels.push(value.label); earningsData.data.push(value.percent) })
 
+  const dollarIcon = <img className='mr-2' height='12' width='12' src='/images/icons/gold/dollar-sign.svg' role='presentation' alt='' />
+
   return (
     <>
       {/* Earnings */}
       <div className='card'>
-        <h2 className='dark:text-gold'>Earnings</h2>
+        <h2 className='dark:text-gold flex'>{dollarIcon} Earnings</h2>
         <P79Chart
           labels={earningsData.labels}
           title='Earnings'
@@ -95,7 +97,7 @@ const StatsContent = () => {
     
       {/* TVL */}
       <div className='card'>
-        <h2 className='dark:text-gold'>TVL</h2>
+        <h2 className='dark:text-gold flex'>{dollarIcon} TVL</h2>
         <P79Chart
           labels={tvlData.labels}
           title='TVL'
@@ -126,7 +128,6 @@ const Project79: NextPage = () => {
               <li><Link href='/projects/ocean-money'><a>Ocean Money</a></Link></li>
             </ul>
           </div>
-          
         </div>
       </div>
     </>
