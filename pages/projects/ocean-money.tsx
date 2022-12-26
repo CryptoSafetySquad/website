@@ -7,14 +7,10 @@ import Answers from '../../Components/Answers'
 import Header from '../../Components/Project/Header'
 import { OceanMoney as Project } from '../../data/projects'
 import news from '../../data/projects/oceanmoney/news'
+import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
 
 const NewsContent = () => {
-  const newsIcon = (
-    <>
-      <img className='hidden dark:inline-block mr-2' height='20' width='20' src='/images/icons/white/newspaper.svg' role='presentation' alt='' />
-      <img className='mr-2 inline-block dark:hidden' height='20' width='20' src='/images/icons/newspaper.svg' role='presentation' alt='' />
-    </>
-  )
+  const newsIcon = <ModeSwitchingIcon filename='newspaper' size={20} />
 
   return (
     <>
