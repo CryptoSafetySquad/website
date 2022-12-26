@@ -1,4 +1,5 @@
 const news = [
+  { date: '24/12/2022', content: 'The sacrifice will open on 29 December 2022 12:00 ❄️ The sacrifice will close on 6 January 2023 12:00 ☃️' },
   { date: '25/11/2022', content: 'Next sacrifice period will also support BSC' },
   { date: '25/11/2022', content: '3rd Sacrifice earnings: 6.5%' },
   { date: '04/11/2022', content: '3rd sacrifice period closed, TVL $7.1m' },
