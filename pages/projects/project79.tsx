@@ -116,7 +116,12 @@ const StatsContent = () => {
 
 const Project79: NextPage = () => {
   const title = 'Project 79'
-  const newsIcon = <img className='mr-2' height='20' width='20' src='/images/icons/gold/newspaper.svg' role='presentation' alt='' />
+  const newsIcon = (
+    <>
+      <img className='hidden dark:inline-block mr-2' height='20' width='20' src='/images/icons/gold/newspaper.svg' role='presentation' alt='' />
+      <img className='mr-2 inline-block dark:hidden' height='20' width='20' src='/images/icons/newspaper.svg' role='presentation' alt='' />
+    </>
+  )
 
   const content = (
     <>
