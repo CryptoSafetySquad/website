@@ -33,14 +33,21 @@ function average(nums: number[]) {
 }
 
 const NewsContent = () => {
+  const newsIcon = (
+    <>
+      <img className='hidden dark:inline-block mr-2' height='20' width='20' src='/images/icons/white/newspaper.svg' role='presentation' alt='' />
+      <img className='mr-2 inline-block dark:hidden' height='20' width='20' src='/images/icons/newspaper.svg' role='presentation' alt='' />
+    </>
+  )
   
   return (
     <>
-    {
-      news.map((entry, index) => {
-        return <p className='mb-0 text-sm' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
-      })
-    }
+      <h2 className='mb-2'>{newsIcon} News</h2>
+      {
+        news.map((entry, index) => {
+          return <p className='mb-0 text-sm' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
+        })
+      }
     </>
   )
 }
@@ -116,7 +123,6 @@ const AceMiners: NextPage = () => {
     <>
       <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
         <div className='card'>
-          <h2 className=''>News</h2>
           <NewsContent />
         </div>
         <div>
