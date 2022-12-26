@@ -9,8 +9,16 @@ import { OceanMoney as Project } from '../../data/projects'
 import news from '../../data/projects/oceanmoney/news'
 
 const NewsContent = () => {
+  const newsIcon = (
+    <>
+      <img className='hidden dark:inline-block mr-2' height='20' width='20' src='/images/icons/white/newspaper.svg' role='presentation' alt='' />
+      <img className='mr-2 inline-block dark:hidden' height='20' width='20' src='/images/icons/newspaper.svg' role='presentation' alt='' />
+    </>
+  )
+
   return (
     <>
+      <h2 className='mb-2'>{newsIcon} News</h2>
       {
         news.map((entry, index) => {
           return <p className='mb-0 text-sm' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
@@ -22,22 +30,22 @@ const NewsContent = () => {
 
 const OceanMoney: NextPage = () => {
   const title = 'Ocean Money'
-  const tabs = [
-    {
-      title: 'News',
-      content: <NewsContent />
-    },
-    // {
-    //   title: 'FAQs',
-    //   content: <Answers qa={answers} />
-    // },
-  ]
+  // const tabs = [
+  //   {
+  //     title: 'News',
+  //     content: <NewsContent />
+  //   },
+  //   // {
+  //   //   title: 'FAQs',
+  //   //   content: <Answers qa={answers} />
+  //   // },
+  // ]
 
   const content = (
     <>
       <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
         <div className='card'>
-          <TabbedContent content={tabs} />
+          <NewsContent />
         </div>
         <div>
           <div className='card'>
