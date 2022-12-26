@@ -17,6 +17,7 @@ import Header from '../../Components/Project/Header'
 import earnings from '../../data/projects/project79/earnings'
 import tvl from '../../data/projects/project79/tvl'
 import news from '../../data/projects/project79/news'
+import Percentage from '../../Components/Percentage';
 
 ChartJS.register(
   CategoryScale,
@@ -28,7 +29,7 @@ ChartJS.register(
   Legend
 );
 
-function average(nums: number[]) {
+function average(nums: number[]): number {
   return nums.reduce((a, b) => (a + b)) / nums.length;
 }
 
@@ -89,8 +90,8 @@ const StatsContent = () => {
           data={earningsData.data}
         />
         <div className='flex justify-between'>
-        <span className='dark:text-gold'>Average: {average(earningsData.data)}%</span>
-        <span className='dark:text-gold'>Latest: {earningsData.data[earningsData.data.length - 1]}%</span>
+        <span className='dark:text-gold'>Average: {Percentage(average(earningsData.data))}</span>
+        <span className='dark:text-gold'>Latest: {Percentage(earningsData.data[earningsData.data.length - 1])}</span>
         </div>
         
       </div>
