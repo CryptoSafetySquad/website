@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 
 import Page from '../../Components/Page'
 import ExternalLink from '../../Components/ExternalLink'
+import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
 
 const Bitcoin: NextPage = () => {
   const title = 'Bitcoin'
@@ -28,6 +29,12 @@ const Bitcoin: NextPage = () => {
   return (
     <Page {...{
       title,
+      header: (
+        <h1 className='flex'>
+          <ModeSwitchingIcon filename='bitcoin' size={24} />
+          Bitcoin
+        </h1>
+      ),
       content,
       slug: 'ecosystems/bitcoin',
       description: 'Bitcoin'

@@ -118,7 +118,7 @@ const Project79: NextPage = () => {
     <>
       <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
         <div className='card'>
-          <h2 className='dark:text-gold flex'>{newsIcon} News</h2>
+          <h2 className='dark:text-gold flex mb-2'>{newsIcon} News</h2>
           <NewsContent />
         </div>
         <div>
