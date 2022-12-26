@@ -1,9 +1,10 @@
 import type { NextPage } from 'next'
+import Link from 'next/link'
+
 import Page from '../../Components/Page'
 import TabbedContent from '../../Components/TabbedContent'
 import Answers from '../../Components/Answers'
 import Header from '../../Components/Project/Header'
-import Link from 'next/link'
 import { OceanMoney as Project } from '../../data/projects'
 import news from '../../data/projects/oceanmoney/news'
 
