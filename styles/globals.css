@@ -170,6 +170,14 @@ h1 {
   @apply p-2 mb-2 rounded;
 }
 
+.card.with-img {
+  @apply p-0 rounded;
+  overflow: hidden;
+}
+.card.with-img .content {
+  @apply p-2;
+}
+
 /* @media (prefers-color-scheme: dark) {
   .card {
     background: var(--bg-darker);

@@ -75,13 +75,24 @@ export const Project79: Project = {
   bannerImage: 'https://pbs.twimg.com/media/FdBHe8kaMAEk8_2?format=jpg&name=4096x4096'
 }
 
-const projects = [
-  AceMinersNFT,
-  BoredApeYachtClub,
-  HydroWhalesMiningClub,
-  OceanMoney,
-  OMNIBirds,
-  Project79,
-]
+export const StableFund: Project = {
+  name: 'StableFund',
+  slug: 'stablefund',
+  type: 'Passive Income'
+}
+
+const projects = {
+  bluechip: [
+    AceMinersNFT,
+    BoredApeYachtClub,
+    HydroWhalesMiningClub,
+    OceanMoney,
+    OMNIBirds,
+    Project79,
+  ],
+  rugpulled: [
+    StableFund
+  ]
+}
 
 export default projects
