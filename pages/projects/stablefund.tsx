@@ -30,10 +30,10 @@ const Stablefund: NextPage = () => {
       <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
         <main>
           <div className='card'>
-            <h2><ModeSwitchingIcon filename='flag' scheme='red' /> Red Flags</h2>
+            <h2 style={{color: '#f71f1f'}}><ModeSwitchingIcon filename='flag' scheme='red' /> Red Flags</h2>
             <ul>
-              <li>Undoxxed</li>
-              <li><a href='https://find-and-update.company-information.service.gov.uk/company/14099508' target='_blank' rel='noopener noreferrer'>Registered UK business</a> BUT not <a href={FCA}>FCA</a> regulated</li>
+              <li>&bull; Undoxxed</li>
+              <li>&bull; <a href='https://find-and-update.company-information.service.gov.uk/company/14099508' target='_blank' rel='noopener noreferrer'>Registered UK business</a> BUT not <a href={FCA}>FCA</a> regulated</li>
               <li></li>
             </ul>
           </div>
