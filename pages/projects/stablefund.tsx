@@ -39,7 +39,7 @@ const Stablefund: NextPage = () => {
             </ul>
           </div>
           <div className='card'>
-            <h2 className=''>{newsIcon} News</h2>
+            <h2 className='mb-2'>{newsIcon} News</h2>
             <NewsContent />
           </div>
         </main>
