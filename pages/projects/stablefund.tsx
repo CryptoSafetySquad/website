@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 
 import Page from '../../Components/Page'
 import { StableFund as Project } from '../../data/projects'
+import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
 
 const NewsContent = () => {
   const news: any[] = [
@@ -29,7 +30,7 @@ const Stablefund: NextPage = () => {
       <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
         <main>
           <div className='card'>
-            <h2>Red Flags</h2>
+            <h2><ModeSwitchingIcon filename='flag' scheme='red' /> Red Flags</h2>
             <ul>
               <li>Undoxxed</li>
               <li><a href='https://find-and-update.company-information.service.gov.uk/company/14099508' target='_blank' rel='noopener noreferrer'>Registered UK business</a> BUT not <a href={FCA}>FCA</a> regulated</li>
