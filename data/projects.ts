@@ -32,7 +32,8 @@ export const BoredApeYachtClub: Project = {
   opensea: 'https://opensea.io/collection/boredapeyachtclub',
   type: 'NFT: Utility',
   website: 'https://boredapeyachtclub.com/',
-  bannerImage: 'https://i.seadn.io/gae/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs?auto=format&w=1920'
+  bannerImage: 'https://i.seadn.io/gae/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs?auto=format&w=1920',
+  twitter: 'BoredApeYC'
 }
 
 export const HydroWhalesMiningClub: Project = {
