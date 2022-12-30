@@ -37,6 +37,17 @@ const Projects: NextPage = () => {
       }
       </div>
       <h2 className='mb-2 text-orange dark:text-orange-darkmode'>Risky Projects</h2>
+      <div className='grid gap-2 md:gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-4'>
+      {
+        projects.risky.map(project => 
+          project.slug && (
+            <div className='card' key={project.slug}>
+              <a href={`/projects/${project.slug}`}>{project.name}</a>
+            </div>
+          )
+        )
+      }
+      </div>
       <h2 className='mb-2 text-red dark:text-red-darkmode'>Rug Pulled Projects</h2>
       <div className='grid gap-2 md:gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-4'>
       {

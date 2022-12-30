@@ -81,6 +81,12 @@ export const StableFund: Project = {
   type: 'Passive Income'
 }
 
+export const DRIP: Project = {
+  name: 'DRIP',
+  slug: 'drip',
+  type: 'Passive Income'
+}
+
 const projects = {
   bluechip: [
     AceMinersNFT,
@@ -89,6 +95,9 @@ const projects = {
     OceanMoney,
     OMNIBirds,
     Project79,
+  ],
+  risky: [
+    DRIP
   ],
   rugpulled: [
     StableFund
