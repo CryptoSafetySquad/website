@@ -48,6 +48,8 @@ const Stablefund: NextPage = () => {
             <h2>Domains</h2>
             <p>sfusd.io</p>
             <p>stablefund.app</p>
+            <p>stableone.io</p>
+            <p>srockettoken.io</p>
           </div>
           <div className='card'>
             <h2>Contracts / Tokens</h2>
