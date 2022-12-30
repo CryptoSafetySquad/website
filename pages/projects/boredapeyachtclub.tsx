@@ -33,13 +33,14 @@ function average(nums: number[]) {
 
 const NewsContent = () => {
   const news: any[] = [
-    // { date: '4/11/2022', content: '' },
+    // { date: '30/12/2022', content: (<></>) },
     // { date: '29/10/2022', content: () },
     // { date: '24/10/2022', content: '' },
     // { date: '20/10/2022', content: '' }
   ]
   return (
     <>
+    <a href='https://news.yuga.com/' target='_blank' rel='noopener noreferrer'>News (Official)</a>
     {
       news.map((entry, index) => {
         return <p className='mb-0 text-sm' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
