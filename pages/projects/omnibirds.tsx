@@ -7,6 +7,7 @@ import AuthorComponent from '../../Components/Author'
 import Disclaimer from '../../Components/Research/Disclaimer'
 import Header from '../../Components/Project/Header'
 import { OMNIBirds as Project } from '../../data/projects'
+import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
 
 const doxxed = () => {
   return (
@@ -87,16 +88,19 @@ const Research = () => {
 
 const NewsContent = () => {
   const news = [
-    { date: '', content: '' }
+    { date: '28/10/2022', content: 'NFT holders receive another payout in USDC on Ethereum blockchain.' }
   ]
+  const newsIcon = <ModeSwitchingIcon filename='newspaper' size={20} scheme='white' />
+
   return (
-    <>
+    <div className='card'>
+      <h2 className='mb-2'>{newsIcon} News</h2>
     {
       news.map((entry, index) => {
-        return <div key={`news-item-${index}`}>{entry.content}</div>
+        return <p className='mb-0 text-sm' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
       })
     }
-    </>
+    </div>
   )
 }
 
@@ -105,11 +109,7 @@ const OMNIBirds: NextPage = () => {
   const tabs = [
     {
       title: 'News',
-      content: (
-        <>
-          
-        </>
-      )
+      content: <NewsContent />
     },
     {
       title: 'Research',
@@ -118,9 +118,17 @@ const OMNIBirds: NextPage = () => {
   ]
 
   const content = (
-    <>
-      <TabbedContent content={tabs} />
-    </>
+    <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
+      <main>
+        <TabbedContent content={tabs} />
+      </main>
+      <aside>
+        <div className='card'>
+          <h2 className='mb-2'>Contracts / Addresses</h2>
+          <p>Wallet: <a target='_blank' rel='noopener noreferrer' href='https://etherscan.io/address/0x30b767ef4a5c83ede9a370355208b018689b405a'>Payouts</a></p>
+        </div>
+      </aside>
+    </div>
   )
 
   return (
