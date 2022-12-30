@@ -78,13 +78,15 @@ export const Project79: Project = {
 export const StableFund: Project = {
   name: 'StableFund',
   slug: 'stablefund',
-  type: 'Passive Income'
+  type: 'Passive Income',
+  blockchain: 'Polygon'
 }
 
 export const DRIP: Project = {
   name: 'DRIP',
   slug: 'drip',
-  type: 'Passive Income'
+  type: 'Passive Income',
+  blockchain: 'Binance'
 }
 
 const projects = {
@@ -93,8 +95,10 @@ const projects = {
     BoredApeYachtClub,
     HydroWhalesMiningClub,
     OceanMoney,
-    OMNIBirds,
     Project79,
+  ],
+  average: [
+    OMNIBirds,
   ],
   risky: [
     DRIP

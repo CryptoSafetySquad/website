@@ -8,10 +8,39 @@ const Projects: NextPage = () => {
     <>
       <p>The projects here are just those we have done some research into, the content herein does not constitute financial advice</p>
       <p>Please do your own research before investing, we can take no responsibility for the performance of any investments you make.</p>
+      <p>Ratings are of course subjective, your opinion may differ.</p>
       <h2 className='mb-2 text-green dark:text-green-darkmode'>Highly Rated Projects</h2>
       <div className='grid gap-2 md:gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-4'>
       {
         projects.bluechip.map(project => 
+          project.slug && (
+            <div className='card with-img' key={project.slug}>
+              {
+                project.bannerImage && 
+                  <div style={{
+                    height: '120px',
+                    backgroundImage: `url(${project.bannerImage})`,
+                    backgroundPosition: 'center center',
+                    backgroundSize: 'cover'
+                  }}>
+                  </div>
+              }
+              <div className='content'>
+                <p><a href={`/projects/${project.slug}`}>{project.name}</a></p>
+                <div className='flex justify-between'>
+                  <span>{project.type}</span>
+                  <span>{project.blockchain == 'N/A' ? `` : `Chain: ${project.blockchain}`}</span>
+                </div>
+              </div>
+            </div>
+          )
+        )
+      }
+      </div>
+      <h2 className='mb-2 text-blue dark:text-blue-darkmode'>Average Projects</h2>
+      <div className='grid gap-2 md:gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-4'>
+      {
+        projects.average.map(project => 
           project.slug && (
             <div className='card with-img' key={project.slug}>
               {
