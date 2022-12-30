@@ -88,7 +88,8 @@ const Research = () => {
 
 const NewsContent = () => {
   const news = [
-    { date: '28/10/2022', content: 'NFT holders receive another payout in USDC on Ethereum blockchain.' }
+    { date: '28/10/2022', content: 'NFT holders receive another payout in USDC on Ethereum blockchain.' },
+    { date: '27/09/2022', content: 'NFT holders receive first payout in USDC on Ethereum blockchain.' }
   ]
   const newsIcon = <ModeSwitchingIcon filename='newspaper' size={20} scheme='white' />
 
