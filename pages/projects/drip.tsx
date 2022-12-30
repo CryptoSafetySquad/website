@@ -30,9 +30,15 @@ const Drip: NextPage = () => {
       <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
         <main>
           <div className='card'>
-            <h2 style={{color: '#f71f1f'}} className='mb-2'><ModeSwitchingIcon filename='flag' scheme='red' /> Red Flags</h2>
+            <h2 className='mb-2 text-red dark:text-red-darkmode'><ModeSwitchingIcon filename='flag' scheme='red' /> Red Flags</h2>
             <ul>
               <li>&bull; Undoxxed</li>
+            </ul>
+          </div>
+          <div className='card'>
+            <h2 className='mb-2 text-orange dark:text-orange'><ModeSwitchingIcon filename='warning' scheme='orange' /> Warnings</h2>
+            <ul>
+              <li>&bull; DRIP token has historically trended down, see <a href='https://coinmarketcap.com/currencies/drip-network/' target='_blank' rel='noopener noreferrer'>CMC</a></li>
             </ul>
           </div>
           <div className='card'>

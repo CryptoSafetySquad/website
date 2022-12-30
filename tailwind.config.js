@@ -17,7 +17,7 @@ module.exports = {
           darkmode: '#f1ab2a'
         },
         red: {
-          default: '#950c0c',
+          DEFAULT: '#950c0c',
           darkmode: '#f71f1f'
         },
       }
