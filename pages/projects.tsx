@@ -8,7 +8,7 @@ const Projects: NextPage = () => {
     <>
       <p>The projects here are just those we have done some research into, the content herein does not constitute financial advice</p>
       <p>Please do your own research before investing, we can take no responsibility for the performance of any investments you make.</p>
-      <h2 className='mb-2'>Highly Rated Projects</h2>
+      <h2 className='mb-2 text-green dark:text-green-darkmode'>Highly Rated Projects</h2>
       <div className='grid gap-2 md:gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-4'>
       {
         projects.bluechip.map(project => 
@@ -36,8 +36,8 @@ const Projects: NextPage = () => {
         )
       }
       </div>
-      <h2>Risky Projects</h2>
-      <h2>Rug Pulled Projects</h2>
+      <h2 className='mb-2'>Risky Projects</h2>
+      <h2 className='mb-2 text-red dark:text-red-darkmode'>Rug Pulled Projects</h2>
       <div className='grid gap-2 md:gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-4'>
       {
         projects.rugpulled.map(project => 

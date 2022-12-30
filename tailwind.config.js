@@ -7,7 +7,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        gold: '#b49b68'
+        gold: '#b49b68',
+        green: {
+          DEFAULT: '#009300',
+          darkmode: '#29ff29'
+        },
+        orange: {
+          DEFAULT: '#cf8b0d',
+          darkmode: '#f1ab2a'
+        },
+        red: {
+          default: '#950c0c',
+          darkmode: '#f71f1f'
+        },
       }
     },
   },
