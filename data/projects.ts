@@ -12,7 +12,8 @@ interface Project {
 enum Blockchains {
   Ethereum = 'Ethereum',
   Avalanche = 'Avalanche',
-
+  Binance = 'Binance',
+  Polygon = 'Polygon', // ETH L2
 }
 
 export const AceMinersNFT: Project = {
@@ -61,7 +62,7 @@ export const OMNIBirds: Project = {
   name: 'OMNI Birds',
   slug: 'omnibirds',
   type: 'NFT: Utility, Passive Income',
-  blockchain: 'Ethereum',
+  blockchain: Blockchains.Ethereum,
   opensea: 'https://opensea.io/collection/omnibirds-official',
   website: 'https://www.omnibirds.com/',
   bannerImage: 'https://i.seadn.io/gcs/files/e66305d2587c0ea7e29d7c1c1cd3cae5.png?auto=format&w=1920',
@@ -72,7 +73,7 @@ export const Project79: Project = {
   name: 'Project 79',
   slug: 'project79',
   type: 'Passive Income',
-  blockchain: 'Ethereum',
+  blockchain: Blockchains.Ethereum,
   bannerImage: 'https://pbs.twimg.com/media/FdBHe8kaMAEk8_2?format=jpg&name=4096x4096'
 }
 
@@ -80,14 +81,14 @@ export const StableFund: Project = {
   name: 'StableFund',
   slug: 'stablefund',
   type: 'Passive Income',
-  blockchain: 'Polygon'
+  blockchain: Blockchains.Polygon
 }
 
 export const DRIP: Project = {
   name: 'DRIP',
   slug: 'drip',
   type: 'Passive Income',
-  blockchain: 'Binance'
+  blockchain: Blockchains.Binance
 }
 
 const projects = {
