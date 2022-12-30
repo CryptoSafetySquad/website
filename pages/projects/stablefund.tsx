@@ -35,6 +35,7 @@ const Stablefund: NextPage = () => {
             <ul>
               <li>&bull; Undoxxed</li>
               <li>&bull; <a href='https://find-and-update.company-information.service.gov.uk/company/14099508' target='_blank' rel='noopener noreferrer'>Registered UK business</a> BUT not <a href={FCA}>FCA</a> regulated</li>
+              <li>&bull; Website creates and stores wallet private keys</li>
               <li></li>
             </ul>
           </div>
