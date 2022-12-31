@@ -2,7 +2,7 @@ interface Project {
   bannerImage?: string;
   slug?: string;
   type: string;
-  blockchain?: Blockchains | string;
+  blockchain?: Blockchains | Blockchains[] | string;
   name: string;
   opensea?: string;
   twitter?: string;
@@ -52,7 +52,6 @@ export const OceanMoney: Project = {
   name: 'Ocean Money',
   slug: 'ocean-money',
   type: 'Banking Services, Crypto Services',
-  blockchain: 'N/A',
   website: 'https://www.ocean.money/',
   bannerImage: 'https://www.ocean.money/_next/image?url=%2Fimages%2Fblog-1.png&w=1920&q=75',
   twitter: 'OceanMoney_'
@@ -73,7 +72,7 @@ export const Project79: Project = {
   name: 'Project 79',
   slug: 'project79',
   type: 'Passive Income',
-  blockchain: Blockchains.Ethereum,
+  blockchain: [Blockchains.Ethereum, Blockchains.Binance],
   bannerImage: 'https://pbs.twimg.com/media/FdBHe8kaMAEk8_2?format=jpg&name=4096x4096'
 }
 

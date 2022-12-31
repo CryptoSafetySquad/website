@@ -59,7 +59,18 @@ const Projects: NextPage = () => {
                 <p><a href={`/projects/${project.slug}`}>{project.name}</a></p>
                 <div className='flex justify-between'>
                   <span>{project.type}</span>
-                  <span>{project.blockchain == 'N/A' ? `` : (<><span className='mr-1'>Chain: {project.blockchain}</span><BlochainIcon blockchain={project.blockchain} /></>)}</span>
+                  <span>{
+                  project.blockchain
+                    ? (
+                      <>{
+                        (typeof project.blockchain === "string")
+                          ? <BlochainIcon blockchain={project.blockchain} />
+                          : project.blockchain.map((chain: string) => { return <BlochainIcon key={chain} blockchain={chain} /> })
+                        }
+                      </>
+                      )
+                    : null
+                  }</span>
                 </div>
               </div>
             </div>
