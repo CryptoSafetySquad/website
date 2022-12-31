@@ -80,7 +80,7 @@ export const StableFund: Project = {
   name: 'StableFund',
   slug: 'stablefund',
   type: 'Passive Income',
-  blockchain: Blockchains.Polygon
+  blockchain: [Blockchains.Polygon, Blockchains.Binance]
 }
 
 export const DRIP: Project = {

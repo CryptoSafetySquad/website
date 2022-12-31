@@ -2,34 +2,43 @@ import type { NextPage } from 'next'
 import Page from '../Components/Page'
 import projects from '../data/projects'
 
-const BlochainIcon = ({ blockchain }: { blockchain: string | undefined; }) => {
+const BlochainIcon = ({ blockchain }: { blockchain: string | string[] | undefined; }) => {
   console.log(blockchain)
   if (!blockchain) {
     return null
   }
 
-  let iconSrc = ''
-  let height = 20
-  let width = 20
-  switch (blockchain) {
-    case 'Ethereum':
-      iconSrc='/images/logos/eth-diamond-purple.png'
-      width = 14
-      break;
-    case 'Binance':
-      iconSrc='/images/icons/brand/binance.svg'
-      break;
-    case 'Polygon':
-      iconSrc='/images/logos/polygon.png'
-      break;
-    default:
-      console.log(blockchain);
-      break;
+  function parseIcon(chain: string) {
+    let iconSrc = ''
+    let height = 20
+    let width = 20
+    switch (chain) {
+      case 'Ethereum':
+        iconSrc='/images/logos/eth-diamond-purple.png'
+        width = 14
+        break;
+      case 'Binance':
+        iconSrc='/images/icons/brand/binance.svg'
+        break;
+      case 'Polygon':
+        iconSrc='/images/logos/polygon.png'
+        break;
+      default:
+        break;
+    }
+  
+    return (
+      <img className={`mr-2 ml-auto`} style={{maxHeight: `${height}px`, width: `${width}px`, display: 'inline-block'}} src={iconSrc} width='20' height='20' />
+    )
   }
 
-  return (
-    <img className={`mr-2 ml-auto`} style={{maxHeight: `${height}px`, width: `${width}px`, display: 'inline-block'}} src={iconSrc} width='20' height='20' />
-  )
+  if (typeof (blockchain) == "string") {
+    return parseIcon(blockchain)
+  }
+  if (typeof (blockchain) == "object") {
+    return (<>{blockchain.map(b => parseIcon(b))}</>)
+  }
+  return null
 }
 
 const Projects: NextPage = () => {
@@ -59,18 +68,7 @@ const Projects: NextPage = () => {
                 <p><a href={`/projects/${project.slug}`}>{project.name}</a></p>
                 <div className='flex justify-between'>
                   <span>{project.type}</span>
-                  <span>{
-                  project.blockchain
-                    ? (
-                      <>{
-                        (typeof project.blockchain === "string")
-                          ? <BlochainIcon blockchain={project.blockchain} />
-                          : project.blockchain.map((chain: string) => { return <BlochainIcon key={chain} blockchain={chain} /> })
-                        }
-                      </>
-                      )
-                    : null
-                  }</span>
+                  <span>{project.blockchain && <BlochainIcon blockchain={project.blockchain} />}</span>
                 </div>
               </div>
             </div>
@@ -98,7 +96,7 @@ const Projects: NextPage = () => {
                 <p><a href={`/projects/${project.slug}`}>{project.name}</a></p>
                 <div className='flex justify-between'>
                   <span>{project.type}</span>
-                  <span>{project.blockchain == 'N/A' ? `` : (<>Chain: {project.blockchain}<BlochainIcon blockchain={project.blockchain} /></>)}</span>
+                  <span>{project.blockchain && <BlochainIcon blockchain={project.blockchain} />}</span>
                 </div>
               </div>
             </div>
@@ -112,7 +110,7 @@ const Projects: NextPage = () => {
         projects.risky.map(project => 
           project.slug && (
             <div className='card' key={project.slug}>
-              <a className='flex' href={`/projects/${project.slug}`}>{project.name} {project.blockchain && <BlochainIcon blockchain={project.blockchain} />}</a>
+              <a className='flex justify-between' href={`/projects/${project.slug}`}>{project.name} <div>{project.blockchain && <BlochainIcon blockchain={project.blockchain} />}</div></a>
             </div>
           )
         )
@@ -124,7 +122,7 @@ const Projects: NextPage = () => {
         projects.rugpulled.map(project => 
           project.slug && (
             <div className='card' key={project.slug}>
-              <a className='flex' href={`/projects/${project.slug}`}>{project.name} {project.blockchain && <BlochainIcon blockchain={project.blockchain} />}</a>
+              <a className='flex justify-between' href={`/projects/${project.slug}`}>{project.name} <div>{project.blockchain && <BlochainIcon blockchain={project.blockchain} />}</div></a>
             </div>
           )
         )
