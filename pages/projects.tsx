@@ -41,92 +41,72 @@ const BlochainIcon = ({ blockchain }: { blockchain: string | string[] | undefine
   return null
 }
 
+const projectCardList = (projects) => {
+  return projects.map((project) => (
+    project.slug && (
+      <div className='card with-img with-bg bordered' key={project.slug}>
+        {
+          project.bannerImage && 
+            <div style={{
+              height: '120px',
+              backgroundImage: `url(${project.bannerImage})`,
+              backgroundPosition: 'center center',
+              backgroundSize: 'cover'
+            }}>
+            </div>
+        }
+        <div className='content'>
+          <p className='text-sm'><a href={`/projects/${project.slug}`}>{project.name}</a></p>
+          <div className='flex justify-between'>
+            <span className='text-sm'>{project.type}</span>
+            <span className='text-sm'>{project.blockchain && <BlochainIcon blockchain={project.blockchain} />}</span>
+          </div>
+        </div>
+      </div>
+    )
+  ))
+}
+
+const projectSimpleCardList = (projects: any, cardClass?: string) => {
+  return projects.map((project: any) => (
+    project.slug && (
+      <div className={`card with-bg`} key={project.slug}>
+        <a className={`flex ${cardClass} text-xs justify-between`} href={`/projects/${project.slug}`}>{project.name} <div>{project.blockchain && <BlochainIcon blockchain={project.blockchain} />}</div></a>
+      </div>
+    )
+  ))
+}
+
 const Projects: NextPage = () => {
   const title = 'Projects'
   const content = (
     <>
-      <p>The projects here are just those we have done some research into, the content herein does not constitute financial advice</p>
-      <p>Please do your own research before investing, we can take no responsibility for the performance of any investments you make.</p>
-      <p>Ratings are of course subjective, your opinion may differ.</p>
-      <h2 className='mb-2 text-green dark:text-green-darkmode'>Highly Rated Projects</h2>
+      <p className='text-sm'>The projects here are just those we have done some research into, the content herein does not constitute financial advice</p>
+      <p className='text-sm'>Please do your own research before investing, we can take no responsibility for the performance of any investments you make.</p>
+      <p className='text-sm'>Ratings are of course subjective, your opinion may differ.</p>
+      <h2 className='text-lg my-4 text-green dark:text-green-darkmode'>Highly Rated Projects</h2>
       <div className='grid gap-2 md:gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-4'>
-      {
-        projects.bluechip.map(project => 
-          project.slug && (
-            <div className='card with-img' key={project.slug}>
-              {
-                project.bannerImage && 
-                  <div style={{
-                    height: '120px',
-                    backgroundImage: `url(${project.bannerImage})`,
-                    backgroundPosition: 'center center',
-                    backgroundSize: 'cover'
-                  }}>
-                  </div>
-              }
-              <div className='content'>
-                <p><a href={`/projects/${project.slug}`}>{project.name}</a></p>
-                <div className='flex justify-between'>
-                  <span>{project.type}</span>
-                  <span>{project.blockchain && <BlochainIcon blockchain={project.blockchain} />}</span>
-                </div>
-              </div>
-            </div>
-          )
-        )
-      }
+        {
+          projectCardList(projects.bluechip)
+        }
       </div>
-      <h2 className='mb-2 text-blue dark:text-blue-darkmode'>Average Projects</h2>
+      <h2 className='my-4 text-lg text-blue dark:text-blue-darkmode'>Average Projects</h2>
       <div className='grid gap-2 md:gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-4'>
-      {
-        projects.average.map(project => 
-          project.slug && (
-            <div className='card with-img' key={project.slug}>
-              {
-                project.bannerImage && 
-                  <div style={{
-                    height: '120px',
-                    backgroundImage: `url(${project.bannerImage})`,
-                    backgroundPosition: 'center center',
-                    backgroundSize: 'cover'
-                  }}>
-                  </div>
-              }
-              <div className='content'>
-                <p><a href={`/projects/${project.slug}`}>{project.name}</a></p>
-                <div className='flex justify-between'>
-                  <span>{project.type}</span>
-                  <span>{project.blockchain && <BlochainIcon blockchain={project.blockchain} />}</span>
-                </div>
-              </div>
-            </div>
-          )
-        )
-      }
+        {
+          projectCardList(projects.average)
+        }
       </div>
-      <h2 className='mb-2 text-orange dark:text-orange-darkmode'>Risky Projects</h2>
-      <div className='grid gap-2 md:gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-4'>
-      {
-        projects.risky.map(project => 
-          project.slug && (
-            <div className='card' key={project.slug}>
-              <a className='flex justify-between' href={`/projects/${project.slug}`}>{project.name} <div>{project.blockchain && <BlochainIcon blockchain={project.blockchain} />}</div></a>
-            </div>
-          )
-        )
-      }
+      <h2 className='my-4 text-lg text-orange dark:text-orange-darkmode'>Risky Projects</h2>
+      <div className='grid gap-2 md:gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mb-4'>
+        {
+          projectSimpleCardList(projects.risky, 'warn')
+        }
       </div>
-      <h2 className='mb-2 text-red dark:text-red-darkmode'>Rug Pulled Projects</h2>
-      <div className='grid gap-2 md:gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-4'>
-      {
-        projects.rugpulled.map(project => 
-          project.slug && (
-            <div className='card' key={project.slug}>
-              <a className='flex justify-between' href={`/projects/${project.slug}`}>{project.name} <div>{project.blockchain && <BlochainIcon blockchain={project.blockchain} />}</div></a>
-            </div>
-          )
-        )
-      }
+      <h2 className='my-4 text-lg text-red dark:text-red-darkmode'>Rug Pulled Projects</h2>
+      <div className='grid gap-2 md:gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mb-4'>
+        {
+          projectSimpleCardList(projects.rugpulled, 'danger')
+        }
       </div>
     </>
   )

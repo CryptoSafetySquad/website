@@ -19,7 +19,7 @@ const Page = ({ title, slug, content, description, author, withCommenting, heade
   const contentClasses = hasSidebar ? 'grid-cols-[70%,1fr] gap-16' : 'grid-cols-[100%]'
 
   return (
-    <div className='home h-full' style={{
+    <div className='h-full' style={{
       minHeight: '100vh',
       backgroundImage: 'var(--bg-image)',
       backgroundSize: 'cover',
@@ -44,7 +44,7 @@ const Page = ({ title, slug, content, description, author, withCommenting, heade
           )
           : (
             <div>
-              <h1 className='mt-6 mb-12'>{`${title}`}</h1>
+              <h1 className='text-lg mt-6 mb-12'>{`${title}`}</h1>
             </div>
           )
         }

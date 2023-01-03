@@ -13,7 +13,7 @@ const NewsContent = () => {
     <>
     {
       news.map((entry, index) => {
-        return <p className='mb-0 text-sm' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
+        return <p className='mb-2 text-xs' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
       })
     }
     </>
@@ -33,10 +33,10 @@ const Stablefund: NextPage = () => {
           <div className='card'>
             <h2 style={{color: '#f71f1f'}} className='mb-2'><ModeSwitchingIcon filename='flag' scheme='red' /> Red Flags</h2>
             <ul>
-              <li>&bull; Undoxxed</li>
-              <li>&bull; <a href='https://find-and-update.company-information.service.gov.uk/company/14099508' target='_blank' rel='noopener noreferrer'>Registered UK business</a> BUT not <a href={FCA}>FCA</a> regulated</li>
-              <li>&bull; Website creates and stores wallet private keys</li>
-              <li>&bull; (Subjective) Cult-like (probably bots) atmosphere in social media chats.</li>
+              <li className='text-xs mb-2'>&bull; Undoxxed</li>
+              <li className='text-xs mb-2'>&bull; <a href='https://find-and-update.company-information.service.gov.uk/company/14099508' target='_blank' rel='noopener noreferrer'>Registered UK business</a> BUT not <a href={FCA}>FCA</a> regulated</li>
+              <li className='text-xs mb-2'>&bull; Website creates and stores wallet private keys</li>
+              <li className='text-xs mb-2'>&bull; (Subjective) Cult-like (probably bots) atmosphere in social media chats.</li>
             </ul>
           </div>
           <div className='card'>
@@ -46,16 +46,16 @@ const Stablefund: NextPage = () => {
         </main>
         <aside>
           <div className='card'>
-            <h2>Domains</h2>
-            <p>sfusd.io</p>
-            <p>stablefund.app</p>
-            <p>stableone.io</p>
-            <p>srockettoken.io</p>
+            <h2 className='mb-2'>Domains</h2>
+            <p className='text-xs'>sfusd.io</p>
+            <p className='text-xs'>stablefund.app</p>
+            <p className='text-xs'>stableone.io</p>
+            <p className='text-xs'>srockettoken.io</p>
           </div>
           <div className='card'>
-            <h2>Contracts / Tokens</h2>
-            <p>Token: <a target='_blank' rel='noopener noreferrer' href='https://polygonscan.com/token/0x93fee753b548b4cf93c41ada062f80de12710db8'>SFUSD</a> (Polygon)</p>
-            <p>Token: <a target='_blank' rel='noopener noreferrer' href='https://polygonscan.com/token/0x94788309d420ad9f9f16d79fc13ab74de83f85f7'>SROCKET</a> (Polygon)</p>
+            <h2 className='mb-2'>Contracts / Tokens</h2>
+            <p className='text-xs'>Token: <a target='_blank' rel='noopener noreferrer' href='https://polygonscan.com/token/0x93fee753b548b4cf93c41ada062f80de12710db8'>SFUSD</a> (Polygon)</p>
+            <p className='text-xs'>Token: <a target='_blank' rel='noopener noreferrer' href='https://polygonscan.com/token/0x94788309d420ad9f9f16d79fc13ab74de83f85f7'>SROCKET</a> (Polygon)</p>
           </div>
         </aside>
       </div>

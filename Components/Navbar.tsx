@@ -1,18 +1,30 @@
 import Image from "next/image"
 import Link from "next/link"
+import { Roboto_Mono } from '@next/font/google'
+
+const RobotoMono = Roboto_Mono({
+  weight: '100'
+})
+
+const links = [
+  { href: '/guides', text: 'Guides' },
+  { href: '/projects', text: 'Projects' },
+  { href: '/general-tips', text: 'General Tips' },
+  { href: '/ecosystems', text: 'Ecosystems' },
+  { href: '/referrals', text: 'Referrals' },
+  { href: '/videos', text: 'Videos' },
+
+]
 
 const Navbar = () => (
-  <nav className='p-2 md:p-4 flex flex-col md:flex-row'>
-    <div className='xl:ml-16 mr-4 xl:mr-16 mb-4 md:mb-0'>
-      <Link href='/'><a>Crypto Safety Squad</a></Link>
+  <nav className={`${RobotoMono.className} p-2 md:p-4 flex flex-col md:flex-row`}>
+    <div className='xl:ml-16 mr-8 xl:mr-16 mb-4 md:mb-0'>
+      <Link className='text-sm' href='/'>Crypto Safety Squad</Link>
     </div>
     <div className='flex flex-col md:flex-row'>
-      <Link href='/guides'><a className='mr-8 mb-2 md:mb-0'>Guides</a></Link>
-      <Link href='/projects'><a className='mr-8 mb-2 md:mb-0'>Projects</a></Link>
-      <Link href='/general-tips'><a className='mr-8 mb-2 md:mb-0'>General Tips</a></Link>
-      <Link href='/ecosystems'><a className='mr-8 mb-2 md:mb-0'>Ecosystems</a></Link>
-      <Link href='/referrals'><a className='mr-8 mb-2 md:mb-0'>Referrals</a></Link>
-      <Link href='/videos'><a className='mr-8 mb-2 md:mb-0'>Video&apos;s</a></Link>
+      {
+        links.map(l => <Link key={l.href} className='mr-4 mb-2 text-sm md:mb-0' href={l.href}>{l.text}</Link>)  
+      }
     </div>
     <div className='sm:flex md:ml-auto mr-4 xl:mr-16 hidden'>
       <a

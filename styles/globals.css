@@ -2,15 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  /* font-size: 16px; */
+}
+
 @layer base {
   h1 {
-    @apply text-2xl;
+    /* @apply text-lg; */
   }
   h2 {
-    @apply text-xl;
   }
   h3 {
-    @apply text-lg;
   }
   p {
     @apply mb-2;
@@ -65,6 +67,13 @@ body, nav {
   color: var(--text);
 }
 
+nav a {
+  /* font-size: 0.625rem !important; */
+  font-size: 0.625rem !important;
+  line-height: 24px !important;
+  @apply align-bottom;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -72,7 +81,6 @@ a {
 
 a {
   color: var(--link);
-  font-weight: 600;
   font-style: italic;
   letter-spacing: 0.05rem;
 }
@@ -178,6 +186,16 @@ h1 {
   @apply p-2;
 }
 
+.card.warn {
+  border: 1px solid var(--text-warn);
+  border-radius: 0;
+}
+
+.card.danger {
+  border: 1px solid var(--text-danger);
+  border-radius: 0;
+}
+
 @media (prefers-color-scheme: dark) {
   /* .card {
     background: rgba(0,0,0,0.3);
@@ -188,5 +206,13 @@ h1 {
 
   .home main {
     text-shadow: 3px 3px 4px #000;
+  }
+
+  .card.bordered {
+    border: 1px solid #000;
+  }
+
+  .card.with-bg {
+    background-color: var(--bg);
   }
 }

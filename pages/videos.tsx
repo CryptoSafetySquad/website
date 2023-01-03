@@ -15,7 +15,7 @@ const Videos: NextPage = () => {
       {
           videos.map(video => 
             <div className='card' key={video.url}>
-              <p><a href={video.url} rel='noopener noreferrer' target='_blank'>{video.title}</a></p>
+              <p className='text-sm'><a href={video.url} rel='noopener noreferrer' target='_blank'>{video.title}</a></p>
               <span className='text-sm'>{video.category}</span>
             </div>
           )

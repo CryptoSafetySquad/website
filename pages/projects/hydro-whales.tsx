@@ -62,25 +62,25 @@ const Research = () => {
     <div className='guide'>
       <img className='mb-4' src='/images/logos/hwmc_os_logo.png' />
       <Disclaimer />
-      TLDR: Overall Rating: 🟩 ({HydroWhalesResearch.score}) Excellent
-      <p>TLDR: What is this about?: A passive income focused community, powered by bitcoin mining and community voted investments.</p>
+      <p className='text-sm'>TLDR: Overall Rating: 🟩 ({HydroWhalesResearch.score}) Excellent</p>
+      <p className='text-sm'>TLDR: What is this about?: A passive income focused community, powered by bitcoin mining and community voted investments.</p>
       <h2 className='text-secondary'>Links</h2>
       <ul>
-        <li>Official Website: <ExternalLink href='https://www.hydrowhalesclub.com/' /></li>
-        <li>Official Dashboard: <ExternalLink href='https://dashboard.hydrowhalesclub.com/' /></li>
-        <li>OpenSea: <ExternalLink href='https://opensea.io/collection/hydro-whales-mining-club-official' /></li>
-        <li><ExternalLink href='https://discord.gg/hydrowhales' text='Discord' /></li>
+        <li className='text-sm'>Official Website: <ExternalLink href='https://www.hydrowhalesclub.com/' /></li>
+        <li className='text-sm'>Official Dashboard: <ExternalLink href='https://dashboard.hydrowhalesclub.com/' /></li>
+        <li className='text-sm'>OpenSea: <ExternalLink href='https://opensea.io/collection/hydro-whales-mining-club-official' /></li>
+        <li className='text-sm'><ExternalLink href='https://discord.gg/hydrowhales' text='Discord' /></li>
       </ul>
       <h2 className='text-secondary'>Good Factors</h2>
       <ul>
-        {goodPoints.map(good => (<li key={good.key}>{tick}{good.content}</li>))}
+        {goodPoints.map(good => (<li  className='text-sm' key={good.key}>{tick}{good.content}</li>))}
       </ul>
       <h2 className='text-secondary'>Red Flags?</h2>
       <ul>
-        <li>{tick} None found for this project.</li>
+        <li className='text-sm'>{tick} None found for this project.</li>
       </ul>
       <h2 className='text-secondary'>Potential Risks</h2>
-      <p>{warn} As with any crypto project, the underlying assets (BTC) could decrease in price, so your rewards for being a holder are not gauranteed to be stable consistently.</p>
+      <p className='text-sm'>{warn} As with any crypto project, the underlying assets (BTC) could decrease in price, so your rewards for being a holder are not gauranteed to be stable consistently.</p>
     </div>
   )
 
@@ -107,7 +107,7 @@ const NewsContent = () => {
     <>
       {
         news.map((entry, index) => {
-          return <p className='mb-0 text-sm' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
+          return <p className='mb-2 text-xs' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
         })
       }
     </>
@@ -225,8 +225,8 @@ const HydroWhales: NextPage = () => {
           <div className='card'>
             <h2 className='mb-2'>Related Projects</h2>
             <ul>
-              <li><Link href='/projects/project79'><a>Project 79</a></Link> - Gold Arbitrage</li>
-              <li><Link href='/projects/ocean-money'><a>Ocean Money</a></Link> - Banking Services</li>
+              <li className='text-xs'><Link href='/projects/project79'>Project 79</Link> - Gold Arbitrage</li>
+              <li className='text-xs'><Link href='/projects/ocean-money'>Ocean Money</Link> - Banking Services</li>
             </ul>
           </div>
         </div>

@@ -39,7 +39,7 @@ const NewsContent = () => {
     <>
       {
         news.map((entry, index) => {
-          return <p className='mb-0 text-sm' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
+          return <p className='mb-2 text-xs' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
         })
       }
     </>
@@ -127,8 +127,8 @@ const Project79: NextPage = () => {
           <div className='card'>
             <h2 className='dark:text-gold mb-2'>Related Projects</h2>
             <ul>
-              <li><Link href='/projects/hydro-whales'><a>Hydro Whales Mining Club</a></Link></li>
-              <li><Link href='/projects/ocean-money'><a>Ocean Money</a></Link></li>
+              <li><Link href='/projects/hydro-whales'>Hydro Whales Mining Club</Link></li>
+              <li><Link href='/projects/ocean-money'>Ocean Money</Link></li>
             </ul>
           </div>
         </div>
@@ -146,7 +146,7 @@ const Project79: NextPage = () => {
         className='dark:text-gold'
         name={title}
         website='https://www.project79.com/'
-        description={<p>A <Link href='/projects/hydro-whales'><a>HydroWhales</a></Link> launchpad project</p>}
+        description={<p>A <Link href='/projects/hydro-whales'>HydroWhales</Link> launchpad project</p>}
         twitter='Project79Gold'
       />
     }} />

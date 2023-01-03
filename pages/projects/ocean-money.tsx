@@ -47,8 +47,8 @@ const OceanMoney: NextPage = () => {
           <div className='card'>
             <h2 className='mb-2'>Related Projects</h2>
             <ul>
-            <li><Link href='/projects/hydro-whales'><a>Hydro Whales Mining Club</a></Link></li>
-            <li><Link href='/projects/project79'><a>Project 79</a></Link> - Gold Arbitrage</li>
+            <li><Link href='/projects/hydro-whales'>Hydro Whales Mining Club</Link></li>
+            <li><Link href='/projects/project79'>Project 79</Link> - Gold Arbitrage</li>
             </ul>
           </div>
         </div>

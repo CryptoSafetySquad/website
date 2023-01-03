@@ -98,7 +98,7 @@ const NewsContent = () => {
       <h2 className='mb-2'>{newsIcon} News</h2>
     {
       news.map((entry, index) => {
-        return <p className='mb-0 text-sm' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
+        return <p className='mb-2 text-xs' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
       })
     }
     </div>
