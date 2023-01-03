@@ -4,7 +4,12 @@ import Navbar from '../Components/Navbar'
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className='home h-full' style={{
+      minHeight: '100vh',
+      backgroundImage: 'var(--bg-image)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center center'
+    }}>
       <Head>
         <title>Crypto Safety Squad | Home</title>
         <meta name="description" content="A community project dedicated to onboarding new users safely into CryptoCurrencies." />
@@ -12,8 +17,10 @@ const Home: NextPage = () => {
 
       <Navbar />
 
-      <main>
-        <h1 className='text-6xl text-center mt-16'>
+      <main className='h-full py-16' style={{
+        // background: 'rgba(0,0,0,0.2)',
+      }}>
+        <h1 className='text-6xl text-center'>
           About Crypto Safety Squad
         </h1>
 

@@ -38,7 +38,7 @@ const Referrals: NextPage = () => {
         <div className='card'>
           <h2>PrivateSniper</h2>
           <p>Btc: <span className='text-secondary'>bc1q9hzu2hwe5g0c7mks4jd0nzm65qle62njdu7zcg</span></p>
-          <p>Eth: <span className='text-secondary'>0xF311fFe5b49fdE6BdED1342694EDdD7C9003a922</span></p>
+          <p>Eth: <span className='text-secondary'>0xdC386A6A27C6D21D1eDC96Ba8b427FbA545c1E1B</span></p>
         </div>
       </div>
     </>

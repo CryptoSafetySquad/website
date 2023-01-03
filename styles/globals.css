@@ -24,11 +24,12 @@
   --bg-dark: hsl(225, 100%, 7%);
   --bg-light: hsl(0, 0%, 93%);
   --bg: hsl(0, 0%, 97%);
+  --bg-image: url('/images/bg-whale-light.jpg');
   --bg-darker: hsl(0, 0%, 85%);
   --bg-lighter: hsl(0, 0%, 98%);
   --primary-text: hsl(0, 0%, 7%);
   --primary-text-2: hsl(0, 0%, 23%);
-  --link: hsl(224, 100%, 40%);
+  --link: hsl(207, 100%, 20%);
   --text-danger: rgb(231, 28, 28);
   --text-warn: rgb(109, 116, 0);
   --text-secondary: hsl(277, 69%, 50%);
@@ -37,6 +38,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: hsl(225, 100%, 7%);
+    --bg-image: url('/images/bg-whale-dark.jpg');
     --bg-darker: hsl(225, 100%, 5%);
     --bg-lighter: hsl(225, 100%, 9%);
     --text: hsl(0, 0%, 93%);
@@ -58,7 +60,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
 
-body {
+body, nav {
   background: var(--bg);
   color: var(--text);
 }
@@ -140,7 +142,7 @@ a {
 
 .tabs li.is-active {
   color: var(--primary-text-2);
-  background: var(--bg);
+  background: unset;
 }
 
 .tabs li a {
@@ -149,8 +151,6 @@ a {
 
 .tabs li.is-active {
   font-weight: 600;
-  font-style: italic;
-  text-decoration: underline;
   cursor: default;
 }
 
@@ -166,7 +166,7 @@ h1 {
 }
 
 .card {
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.1);
   @apply p-2 mb-2 rounded;
 }
 
@@ -178,12 +178,15 @@ h1 {
   @apply p-2;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  .card {
-    background: var(--bg-darker);
-  }
+@media (prefers-color-scheme: dark) {
+  /* .card {
+    background: rgba(0,0,0,0.3);
+  } */
   .guide .string {
     background-color: var(--bg-darker);
   }
-  
-} */
+
+  .home main {
+    text-shadow: 3px 3px 4px #000;
+  }
+}

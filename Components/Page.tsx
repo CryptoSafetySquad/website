@@ -19,7 +19,12 @@ const Page = ({ title, slug, content, description, author, withCommenting, heade
   const contentClasses = hasSidebar ? 'grid-cols-[70%,1fr] gap-16' : 'grid-cols-[100%]'
 
   return (
-    <div>
+    <div className='home h-full' style={{
+      minHeight: '100vh',
+      backgroundImage: 'var(--bg-image)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'left top'
+    }}>
       <Head>
         <title>Crypto Safety Squad | {`${title}`}</title>
         <meta name="description" content={description} />
@@ -52,10 +57,10 @@ const Page = ({ title, slug, content, description, author, withCommenting, heade
             <aside>
               {
                 author && (
-                  <>
+                  <div className='card'>
                     <h2 className='mb-2'>About the author</h2>
                     <Author {...author} />
-                  </>
+                  </div>
                 )
               }
               {sidebarContent}

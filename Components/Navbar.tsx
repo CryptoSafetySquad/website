@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 const Navbar = () => (
-  <div className='p-2 md:p-4 flex flex-col md:flex-row'>
+  <nav className='p-2 md:p-4 flex flex-col md:flex-row'>
     <div className='xl:ml-16 mr-4 xl:mr-16 mb-4 md:mb-0'>
       <Link href='/'><a>Crypto Safety Squad</a></Link>
     </div>
@@ -31,7 +31,7 @@ const Navbar = () => (
         <Image alt='github' src='/images/icons/github.svg' width='24' height='24' />
       </a>
     </div>
-  </div>
+  </nav>
 )
 
 export default Navbar
