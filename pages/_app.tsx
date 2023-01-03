@@ -2,7 +2,9 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { Roboto_Mono } from '@next/font/google'
 
-const RobotoMono = Roboto_Mono()
+const RobotoMono = Roboto_Mono({
+  weight: ["100", "200", "400", "600"]
+})
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

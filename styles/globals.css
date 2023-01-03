@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
 html {
   /* font-size: 16px; */
 }
@@ -79,7 +83,6 @@ a {
 
 a {
   color: var(--link);
-  font-style: italic;
   letter-spacing: 0.05rem;
 }
 
@@ -147,12 +150,14 @@ a {
 }
 
 .tabs li.is-active {
-  color: var(--primary-text-2);
+  /* color: var(--primary-text-2); */
+  text-decoration: underline;
   background: unset;
+  font-weight: 300 !important;
 }
 
 .tabs li a {
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 
 .tabs li.is-active {
