@@ -29,7 +29,7 @@ const Ecosystems: NextPage = () => {
       {
         l1ecos.map(eco => {
           return (
-            <div key={eco.slug} className='card'>
+            <div key={eco.slug} className='card with-bg'>
               <Link href={`/ecosystems/${eco.slug}`}>{eco.name}</Link>
             </div>
           )
@@ -42,7 +42,7 @@ const Ecosystems: NextPage = () => {
       {
         ethl2ecos.map(eco => {
           return (
-            <div key={eco.slug} className='card'>
+            <div key={eco.slug} className='card with-bg'>
               <Link href={`/ecosystems/${eco.slug}`}>{eco.name}</Link>
             </div>
           )
