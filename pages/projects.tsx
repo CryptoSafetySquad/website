@@ -30,7 +30,7 @@ const BlochainIcon = ({ blockchain }: { blockchain: string | string[] | undefine
     }
   
     return (
-      <img className={`ml-2 ml-auto`} style={{maxHeight: `${height}px`, width: `${width}px`, display: 'inline-block'}} src={iconSrc} width='20' height='20' />
+      <img className={`ml-2`} style={{maxHeight: `${height}px`, width: `${width}px`, display: 'inline-block'}} src={iconSrc} width='20' height='20' />
     )
   }
 
