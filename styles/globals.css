@@ -35,7 +35,7 @@ html {
   --bg-lighter: hsl(0, 0%, 98%);
   --primary-text: hsl(0, 0%, 7%);
   --primary-text-2: hsl(0, 0%, 23%);
-  --link: hsl(207, 100%, 20%);
+  --link: hsl(225, 100%, 20%);
   --text-danger: rgb(231, 28, 28);
   --text-warn: rgb(109, 116, 0);
   --text-secondary: hsl(277, 69%, 50%);
@@ -48,7 +48,7 @@ html {
     --bg-darker: hsl(225, 100%, 5%);
     --bg-lighter: hsl(225, 100%, 9%);
     --text: hsl(0, 0%, 93%);
-    --link: hsl(187, 90%, 52%);
+    --link: hsl(225, 100%, 80%);
     --text-secondary: hsl(69, 100%, 47%);
     --text-warn: rgb(217, 231, 28);
   }

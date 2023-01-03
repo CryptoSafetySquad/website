@@ -3,6 +3,7 @@ import { useState } from 'react'
 
 import Page from '../Components/Page'
 import projects, { type Project } from '../data/projects'
+import styles from '../styles/projects.module.css'
 
 const BlochainIcon = ({ blockchain }: { blockchain: string | string[] | undefined; }) => {
   if (!blockchain) {
@@ -45,7 +46,7 @@ const BlochainIcon = ({ blockchain }: { blockchain: string | string[] | undefine
 const projectCardList = (projects: Project[]) => {
   return projects.map((project) => (
     project.slug && (
-      <div className='card with-img with-bg bordered' key={project.slug}>
+      <div className={`card with-img with-bg bordered`} key={project.slug}>
         {
           project.bannerImage && 
             <div style={{
@@ -59,7 +60,7 @@ const projectCardList = (projects: Project[]) => {
         <div className='content'>
           <p className='text-sm'><a href={`/projects/${project.slug}`}>{project.name}</a></p>
           <div className='flex justify-between'>
-            <span className='text-sm'>{project.type}</span>
+            <span className={`text-sm ${styles.tags}`}>{project.type}</span>
             <span className='text-sm'>{project.blockchain && <BlochainIcon blockchain={project.blockchain} />}</span>
           </div>
         </div>

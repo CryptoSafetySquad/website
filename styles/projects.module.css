@@ -1,0 +1,9 @@
+.tags {
+  font-size: 0.7em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tags {
+    color: hsl(225, 60%, 40%);
+  }
+}
