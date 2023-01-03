@@ -68,9 +68,7 @@ body, nav {
 }
 
 nav a {
-  /* font-size: 0.625rem !important; */
-  font-size: 0.625rem !important;
-  line-height: 24px !important;
+  font-weight: 400;
   @apply align-bottom;
 }
 

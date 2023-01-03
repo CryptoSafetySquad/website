@@ -1,4 +1,4 @@
-interface Project {
+export interface Project {
   bannerImage?: string;
   slug?: string;
   type: string;

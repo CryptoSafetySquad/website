@@ -2,10 +2,9 @@ import type { NextPage } from 'next'
 import { useState } from 'react'
 
 import Page from '../Components/Page'
-import projects from '../data/projects'
+import projects, { type Project } from '../data/projects'
 
 const BlochainIcon = ({ blockchain }: { blockchain: string | string[] | undefined; }) => {
-  console.log(blockchain)
   if (!blockchain) {
     return null
   }
@@ -43,7 +42,7 @@ const BlochainIcon = ({ blockchain }: { blockchain: string | string[] | undefine
   return null
 }
 
-const projectCardList = (projects: any[]) => {
+const projectCardList = (projects: Project[]) => {
   return projects.map((project) => (
     project.slug && (
       <div className='card with-img with-bg bordered' key={project.slug}>
@@ -69,7 +68,7 @@ const projectCardList = (projects: any[]) => {
   ))
 }
 
-const projectSimpleCardList = (projects: any[], cardClass?: string) => {
+const projectSimpleCardList = (projects: Project[], cardClass?: string) => {
   return projects.map((project: any) => (
     project.slug && (
       <div className={`card with-bg`} key={project.slug}>
