@@ -1,4 +1,6 @@
 import type { NextPage } from 'next'
+import { useState } from 'react'
+
 import Page from '../Components/Page'
 import projects from '../data/projects'
 
@@ -41,7 +43,7 @@ const BlochainIcon = ({ blockchain }: { blockchain: string | string[] | undefine
   return null
 }
 
-const projectCardList = (projects) => {
+const projectCardList = (projects: any[]) => {
   return projects.map((project) => (
     project.slug && (
       <div className='card with-img with-bg bordered' key={project.slug}>
@@ -67,7 +69,7 @@ const projectCardList = (projects) => {
   ))
 }
 
-const projectSimpleCardList = (projects: any, cardClass?: string) => {
+const projectSimpleCardList = (projects: any[], cardClass?: string) => {
   return projects.map((project: any) => (
     project.slug && (
       <div className={`card with-bg`} key={project.slug}>
@@ -79,11 +81,14 @@ const projectSimpleCardList = (projects: any, cardClass?: string) => {
 
 const Projects: NextPage = () => {
   const title = 'Projects'
+  const [showRisky, setShowRisky] = useState(false)
+  const [showRugged, setShowRugged] = useState(false)
+
   const content = (
     <>
-      <p className='text-sm'>The projects here are just those we have done some research into, the content herein does not constitute financial advice</p>
-      <p className='text-sm'>Please do your own research before investing, we can take no responsibility for the performance of any investments you make.</p>
-      <p className='text-sm'>Ratings are of course subjective, your opinion may differ.</p>
+      <p className='text-xs'>The projects here are just those we have done some research into, the content herein does not constitute financial advice</p>
+      <p className='text-xs'>Please do your own research before investing, we can take no responsibility for the performance of any investments you make.</p>
+      <p className='text-xs'>Ratings are of course mostly subjective, your opinion may differ.</p>
       <h2 className='text-lg my-4 text-green dark:text-green-darkmode'>Highly Rated Projects</h2>
       <div className='grid gap-2 md:gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-4'>
         {
