@@ -89,6 +89,10 @@ const Projects: NextPage = () => {
       <p className='text-xs'>The projects here are just those we have done some research into, the content herein does not constitute financial advice</p>
       <p className='text-xs'>Please do your own research before investing, we can take no responsibility for the performance of any investments you make.</p>
       <p className='text-xs'>Ratings are of course mostly subjective, your opinion may differ.</p>
+      <div className='card'>
+        <p className='text-xs'>Include high risk?: <input type='checkbox' defaultChecked={showRisky} onChange={() => {setShowRisky(!showRisky)}} /> Include Rug pulled?: <input type='checkbox' defaultChecked={showRugged} onChange={() => setShowRugged(!showRugged)} /></p>
+      </div>
+      
       <h2 className='text-lg my-4 text-green dark:text-green-darkmode'>Highly Rated Projects</h2>
       <div className='grid gap-2 md:gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-4'>
         {
@@ -101,18 +105,31 @@ const Projects: NextPage = () => {
           projectCardList(projects.average)
         }
       </div>
-      <h2 className='my-4 text-lg text-orange dark:text-orange-darkmode'>Risky Projects</h2>
-      <div className='grid gap-2 md:gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mb-4'>
-        {
-          projectSimpleCardList(projects.risky, 'warn')
-        }
-      </div>
-      <h2 className='my-4 text-lg text-red dark:text-red-darkmode'>Rug Pulled Projects</h2>
-      <div className='grid gap-2 md:gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mb-4'>
-        {
-          projectSimpleCardList(projects.rugpulled, 'danger')
-        }
-      </div>
+      {
+        showRisky && (
+          <>
+            <h2 className='my-4 text-lg text-orange dark:text-orange-darkmode'>Risky Projects</h2>
+            <div className='grid gap-2 md:gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mb-4'>
+              {
+                projectSimpleCardList(projects.risky, 'warn')
+              }
+            </div>
+          </>
+        )
+      }
+      {
+        showRugged && (
+          <>
+            <h2 className='my-4 text-lg text-red dark:text-red-darkmode'>Rug Pulled Projects</h2>
+            <div className='grid gap-2 md:gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mb-4'>
+              {
+                projectSimpleCardList(projects.rugpulled, 'danger')
+              }
+            </div>
+          </>
+        )
+      }
+      
     </>
   )
 
