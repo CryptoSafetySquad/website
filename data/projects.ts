@@ -11,6 +11,7 @@ export interface Project {
 
 enum Blockchains {
   Ethereum = 'Ethereum',
+  Bitcoin = 'Bitcoin',
   Avalanche = 'Avalanche',
   Binance = 'Binance',
   Polygon = 'Polygon', // ETH L2
@@ -83,6 +84,13 @@ export const StableFund: Project = {
   blockchain: [Blockchains.Polygon, Blockchains.Binance]
 }
 
+export const YieldNodes: Project = {
+  name: 'YieldNodes',
+  slug: 'yieldnodes',
+  type: 'Passive Income',
+  blockchain: [Blockchains.Ethereum, Blockchains.Bitcoin]
+}
+
 export const DRIP: Project = {
   name: 'DRIP',
   slug: 'drip',
@@ -103,6 +111,9 @@ const projects = {
   ],
   risky: [
     DRIP
+  ],
+  failed: [
+    YieldNodes
   ],
   rugpulled: [
     StableFund
