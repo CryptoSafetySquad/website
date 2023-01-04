@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 
 import Page from '../../Components/Page'
-import { StableFund as Project } from '../../data/projects'
+import { YieldNodes as Project } from '../../data/projects'
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
 
 const NewsContent = () => {
