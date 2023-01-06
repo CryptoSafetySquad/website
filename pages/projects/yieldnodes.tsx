@@ -47,6 +47,7 @@ const YieldNodes: NextPage = () => {
         <aside>
           <div className='card'>
             <h2 className='mb-2'>Domains</h2>
+            <p>yieldnodes.com</p>
           </div>
           <div className='card'>
             <h2 className='mb-2'>Contracts / Tokens</h2>
