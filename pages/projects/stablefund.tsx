@@ -51,7 +51,7 @@ const Stablefund: NextPage = () => {
             <p className='text-xs'>stablefund.app</p>
             <p className='text-xs'>stableone.io</p>
             <p className='text-xs'>srockettoken.io</p>
-            <p className="text-xs">sdragonsden.io/</p>
+            <p className="text-xs">sdragonsden.io</p>
           </div>
           <div className='card'>
             <h2 className='mb-2'>Contracts / Tokens</h2>
