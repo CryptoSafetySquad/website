@@ -6,8 +6,8 @@ const answers: Answer[] = [
     answer: 'Ethereum'
   },
   {
-    question: 'What is the HydroWhales token?',
-    answer: 'TBD'
+    question: 'When will the first payment be?',
+    answer: 'Feb 1st 2023'
   }
 ]
 
