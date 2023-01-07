@@ -8,6 +8,10 @@ const answers: Answer[] = [
   {
     question: 'When will the first payment be?',
     answer: 'Feb 1st 2023'
+  },
+  {
+    question: 'How much will the first payment be?',
+    answer: 'Currently unknown'
   }
 ]
 
