@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 
 import Page from '../../Components/Page'
-import { StableFund as Project } from '../../data/projects'
+import { YieldRobot as Project } from '../../data/projects'
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
 
 
@@ -24,7 +24,7 @@ const NewsContent = () => {
 const newsIcon = <ModeSwitchingIcon filename='newspaper' size={20} />
 
 const YieldRobot: NextPage = () => {
-  const title = 'YieldRobot (Ultra High Risk: Rug Pull)'
+  const title = 'YieldRobot (Ultra High Risk)'
 
   const content = (
     <>
@@ -33,8 +33,18 @@ const YieldRobot: NextPage = () => {
           <div className='card'>
             <h2 style={{color: '#f71f1f'}} className='mb-2'><ModeSwitchingIcon filename='flag' scheme='red' /> Red Flags</h2>
             <ul>
-              <li className='text-xs mb-2'>&bull; Undoxxed</li>
+              <li className='text-xs mb-2'>&bull; Team not doxxed!</li>
               <li className='text-xs mb-2'>&bull; Unrealistic long-term daily rewards</li>
+              <li className='text-xs mb-2'>&bull; 3% &quot;Development Fee&quot; (tax) - Very common in ponzi schemes</li>
+              <li className='text-xs mb-2'>&bull; 8% referral bonus, build ponzi scheme faster!</li>
+              <li className='text-xs mb-2'>&bull; Quote: &quot;We are not worried about KYC, we are worried about regulations.&quot;</li>
+              <li className='text-xs mb-2'>&bull; &quot;Audit&quot; from watchdogs could be seen as misleading (subjective).</li>
+            </ul>
+          </div>
+          <div className='card'>
+            <h2 className='mb-2'><ModeSwitchingIcon filename='flag' /> Green Flags</h2>
+            <ul>
+              <li className='text-xs mb-2'>&bull; Contract code is fully published</li>
             </ul>
           </div>
           <div className='card'>

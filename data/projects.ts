@@ -84,6 +84,13 @@ export const StableFund: Project = {
   blockchain: [Blockchains.Polygon, Blockchains.Binance]
 }
 
+export const YieldRobot: Project = {
+  name: 'YieldRobot',
+  slug: 'yieldrobot',
+  type: 'Passive Income',
+  blockchain: Blockchains.Binance
+}
+
 export const YieldNodes: Project = {
   name: 'YieldNodes',
   slug: 'yieldnodes',
@@ -110,7 +117,8 @@ const projects = {
     OMNIBirds,
   ],
   risky: [
-    DRIP
+    DRIP,
+    YieldRobot
   ],
   failed: [
     YieldNodes
