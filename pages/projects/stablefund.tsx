@@ -36,6 +36,7 @@ const Stablefund: NextPage = () => {
               <li className='text-xs mb-2'>&bull; Undoxxed</li>
               <li className='text-xs mb-2'>&bull; <a href='https://find-and-update.company-information.service.gov.uk/company/14099508' target='_blank' rel='noopener noreferrer'>Registered UK business</a> BUT not <a href={FCA}>FCA</a> regulated</li>
               <li className='text-xs mb-2'>&bull; Website creates and stores wallet private keys</li>
+              <li className='text-xs mb-2'>&bull; Unrealistic long-term daily rewards</li>
               <li className='text-xs mb-2'>&bull; (Subjective) Cult-like (probably bots) atmosphere in social media chats.</li>
             </ul>
           </div>
