@@ -7,6 +7,7 @@ import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
 
 const NewsContent = () => {
   const news: any[] = [
+    { date: '07/01/2023', content: (<>CryptoSafetySquad: <a href='https://www.youtube.com/watch?v=_eLpirvCewU' target='_blank' rel='noopener noreferrer'>research video</a></>) },
     { date: '07/01/2023', content: (<>Featured on James Pelton&apos;s channel - <a href='https://www.youtube.com/watch?v=eR6Ub8gTOVo' rel='noopener noreferrer' target='_blank'>video</a></>) },
     // { date: '25/10/2022', content: () },
   ]
