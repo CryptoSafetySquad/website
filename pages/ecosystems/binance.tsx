@@ -50,7 +50,14 @@ const Binance: NextPage = () => {
         </div>
 
         <div className='card'>
-          <h2 className='mb-2'>&quot;Dead&quot; Projects / Protocols</h2>
+          <h2>NFT Marketplaces</h2>
+          <div className='grid grid-cols-2 gap-2'>
+            <ExternalLink href='https://www.alphashares.io/' text='Alpha Shares' />
+          </div>
+        </div>
+
+        <div className='card'>
+          <h2 className='mb-2'>&quot;Risky&quot; Projects / Protocols</h2>
           <div className='grid grid-cols-2 gap-2'>
             <ExternalLink href='https://drip.community/' text='DRIP' />
           </div>

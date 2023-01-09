@@ -30,6 +30,13 @@ const Avalanche: NextPage = () => {
         </div>
 
         <div className='card'>
+          <h2 className='mb-2'>NFT Marketplaces</h2>
+          <div className='grid grid-cols-2 gap-2'>
+            <ExternalLink href='https://www.alphashares.io/' text='Alpha Shares' />
+          </div>
+        </div>
+
+        <div className='card'>
           <h2 className='mb-2'>DeFI (Decentralised Finance)</h2>
           <div className='grid grid-cols-2 gap-2'>
             <ExternalLink href='https://yieldwolf.finance/' text='YieldWolf' />
@@ -40,13 +47,6 @@ const Avalanche: NextPage = () => {
           <h2 className='mb-2'>Projects / Protocols</h2>
           <div className='grid grid-cols-2 gap-2'>
             <ExternalLink href='https://grapefinance.app/' text='Grape Finance' />
-          </div>
-        </div>
-
-        <div className='card'>
-          <h2 className='mb-2'>&quot;Dead&quot; Projects / Protocols</h2>
-          <div className='grid grid-cols-2 gap-2'>
-            
           </div>
         </div>
       </div>

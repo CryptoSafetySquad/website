@@ -10,6 +10,7 @@ const l1ecos: any[] = [
   { name: 'Avalanche', slug: 'avalanche' },
   { name: 'Kadena', slug: 'kadena' },
   { name: 'Constellation', slug: 'constellation' },
+  { name: 'Fantom', slug: 'fantom' },
   // { name: '', slug: '' },
 ]
 const ethl2ecos: any[] = [

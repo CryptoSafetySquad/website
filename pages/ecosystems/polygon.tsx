@@ -32,6 +32,13 @@ const Polygon: NextPage = () => {
         </div>
 
         <div className='card'>
+          <h2 className='mb-2'>NFT Marketplaces</h2>
+          <div className='grid grid-cols-2 gap-2'>
+            <ExternalLink href='https://www.alphashares.io/' text='Alpha Shares' />
+          </div>
+        </div>
+
+        <div className='card'>
           <h2 className='mb-2'>DeFI (Decentralised Finance)</h2>
           <div className='grid grid-cols-2 gap-2'>
             <ExternalLink href='https://magik.farm/#/polygon' text='Magik' />
