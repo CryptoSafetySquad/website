@@ -3,6 +3,7 @@ import Page from '../Components/Page'
 
 const videos = [
   // {url: '', title: '', category: '', date: ''},
+  {url: 'https://www.youtube.com/watch?v=_eLpirvCewU', title: 'CryptoSafe - YieldRobot Red Flags', category: 'Project Research', date: '2023-01-07'},
   {url: 'https://www.youtube.com/watch?v=VmjpigjKz9k', title: 'CryptoSafe - Common Hacks: Fake mint website', category: 'Common Scams', date: '2022-11-11'},
   {url: 'https://www.youtube.com/watch?v=MC6us9pon3I', title: 'CryptoSafe - StableFund Research and Red Flags', category: 'Project Research', date: '2022-10-25'},
 ]
