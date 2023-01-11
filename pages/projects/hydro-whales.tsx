@@ -128,8 +128,6 @@ const HWChart = ({ labels, data, title}: { labels: any[], data: any, title: stri
             {
               label: title,
               data: data,
-              // borderColor: '#b49b68',
-              // backgroundColor: '#b49b68',
             }
           ],
         }}
@@ -228,6 +226,12 @@ const HydroWhales: NextPage = () => {
               <li className='text-xs'><Link href='/projects/project79'>Project 79</Link> - Gold Arbitrage</li>
               <li className='text-xs'><Link href='/projects/ocean-money'>Ocean Money</Link> - Banking Services</li>
             </ul>
+          </div>
+
+          <div className='card'>
+            <h2 className='mb-2'>Wallets</h2>
+            <p className='text-xs'>Community Wallet: <ExternalLink href='https://www.blockchain.com/explorer/addresses/eth/0x3f85C11A8Db617E9a78c75Bdb12919D1F0a092ec' text='0x3f8-092ec'></ExternalLink></p>
+            <p className='text-xs'>Project Development: <ExternalLink href='https://www.blockchain.com/explorer/addresses/eth/0xa8c1B1a70bBFF30449A932aB238f95AaA1b33a03' text='0xa8c-33a03'></ExternalLink></p>
           </div>
         </div>
       </div>
