@@ -99,7 +99,7 @@ const StatsContent = () => {
     
       {/* TVL */}
       <div className='card'>
-        <h2 className='dark:text-gold flex'>{dollarIcon} TVL</h2>
+        <h2 className='dark:text-gold flex'>{dollarIcon} TVL (Sacrifice Model)</h2>
         <P79Chart
           labels={tvlData.labels}
           title='TVL'
