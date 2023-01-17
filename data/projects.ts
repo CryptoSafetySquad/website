@@ -105,6 +105,13 @@ export const DRIP: Project = {
   blockchain: Blockchains.Binance
 }
 
+export const EMPMoney: Project = {
+  name: 'EMP',
+  slug: 'empmoney',
+  type: 'Passive Income',
+  blockchain: Blockchains.Binance
+}
+
 const projects = {
   bluechip: [
     AceMinersNFT,
@@ -115,16 +122,17 @@ const projects = {
   ],
   average: [
     OMNIBirds,
+    EMPMoney
   ],
   risky: [
     DRIP,
-    YieldRobot
   ],
   failed: [
     YieldNodes
   ],
   rugpulled: [
-    StableFund
+    StableFund,
+    YieldRobot
   ]
 }
 
