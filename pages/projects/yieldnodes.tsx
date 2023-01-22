@@ -6,7 +6,7 @@ import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
 
 const NewsContent = () => {
   const news: any[] = [
-    // { date: '27/12/2022', content: (<>StableFund v2 rug pulls - <a href='https://www.youtube.com/watch?v=fT3u-Mm2GTE' rel='noopener noreferrer' target='_blank'>Rug reaction video</a></>) },
+    { date: '21/01/2023', content: (<><a href='https://www.youtube.com/watch?v=WloTzNdx8hI' rel='noopener noreferrer' target='_blank'>YNP Update video</a></>) },
     { date: '11/10/2022', content: (<>Email announcing &quot;YieldNodes Pro&quot; restructuring.</>) },
   ]
   return (
