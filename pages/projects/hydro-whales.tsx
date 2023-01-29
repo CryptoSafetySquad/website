@@ -142,7 +142,7 @@ const StatsContent = ({ project }: { project: Project }) => {
 
   // Compile earnings data
   const earningsData: { labels: string[]; data: number[] } = { labels: [], data: [] }
-  project.earnings.forEach((entry: EarningsEntry) => { earningsData.labels.push(entry.label); earningsData.data.push(entry.value) })
+  project.earnings.forEach((entry: EarningsEntry) => { earningsData.labels.push(entry.label); earningsData.data.push(entry.amount) })
 
   return (
     <>
