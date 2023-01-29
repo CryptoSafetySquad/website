@@ -25,7 +25,7 @@ import HydroWhalesResearch from '../../data/projects/hydrowhales/research'
 import { HydroWhalesMiningClub } from '../../data/projects/hydrowhales/hydrowhales'
 import Sidebar from '../../Components/Project/Sidebar';
 
-import { earningsEntry } from '../../types/EarningsEntry';
+import { EarningsEntry } from '../../types/EarningsEntry';
 import type { Project } from '../../types/project';
 import type { NewsEntry } from '../../types/newsEntry';
 
@@ -142,7 +142,7 @@ const StatsContent = ({ project }: { project: Project }) => {
 
   // Compile earnings data
   const earningsData: { labels: string[]; data: number[] } = { labels: [], data: [] }
-  project.earnings.forEach((entry: earningsEntry) => { earningsData.labels.push(entry.label); earningsData.data.push(entry.value) })
+  project.earnings.forEach((entry: EarningsEntry) => { earningsData.labels.push(entry.label); earningsData.data.push(entry.value) })
 
   return (
     <>

@@ -1,6 +1,6 @@
-import type { earningsEntry } from "../../../types/EarningsEntry";
+import type { EarningsEntry } from "../../../types/EarningsEntry";
 
-const earnings: earningsEntry[] = [
+const earnings: EarningsEntry[] = [
   { label: 'Oct 22', date: '2022-10-20', amount: 16 }
 ]
 
