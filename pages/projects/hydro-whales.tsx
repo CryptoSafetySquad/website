@@ -25,7 +25,7 @@ import HydroWhalesResearch from '../../data/projects/hydrowhales/research'
 import { HydroWhalesMiningClub } from '../../data/projects/hydrowhales/hydrowhales'
 import Sidebar from '../../Components/Project/Sidebar';
 
-import { earningsEntry } from '../../types/earningsEntry';
+import { earningsEntry } from '../../types/EarningsEntry';
 import type { Project } from '../../types/project';
 import type { NewsEntry } from '../../types/newsEntry';
 

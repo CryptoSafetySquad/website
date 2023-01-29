@@ -1,4 +1,4 @@
-import type { earningsEntry } from "../../../types/earningsEntry";
+import type { earningsEntry } from "../../../types/EarningsEntry";
 
 const earnings: earningsEntry[] = [
   // { label: 'Sep 22', date: '2022-09-26', amount: 6.8 },
