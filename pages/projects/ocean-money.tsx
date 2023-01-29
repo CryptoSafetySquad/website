@@ -7,7 +7,7 @@ import Answers from '../../Components/Answers'
 import Header from '../../Components/Project/Header'
 import { OceanMoney as Project } from '../../data/projects/oceanmoney/oceanmoney'
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
-import { NewsEntry } from '../../types/newsEntry'
+import { NewsEntry } from '../../types/NewsEntry'
 
 const NewsContent = () => {
   const newsIcon = <ModeSwitchingIcon filename='newspaper' size={20} />

@@ -6,7 +6,7 @@ import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
 import { StableFund as Project } from '../../data/projects/stablefund/stablefund'
 
 import type { NextPage } from 'next'
-import type { NewsEntry } from '../../types/newsEntry'
+import type { NewsEntry } from '../../types/NewsEntry'
 
 const NewsContent = () => {
   return (

@@ -5,7 +5,7 @@ import Contracts from '../../Components/Project/Contracts'
 
 import { YieldRobot as Project } from '../../data/projects/yieldrobot/yieldrobot'
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
-import { NewsEntry } from '../../types/newsEntry'
+import { NewsEntry } from '../../types/NewsEntry'
 import RedFlagCard from '../../Components/Project/RedFlagCard'
 
 

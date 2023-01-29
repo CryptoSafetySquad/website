@@ -1,4 +1,4 @@
-import { NewsEntry } from "../../../types/newsEntry"
+import { NewsEntry } from "../../../types/NewsEntry"
 
 export const news: NewsEntry[] = [
   { date: '17/01/2023', content: (<>YieldRobot Rugpulls claims to have been &quot;hacked&quot;</>) },

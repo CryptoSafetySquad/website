@@ -4,7 +4,7 @@ import Page from '../../Components/Page'
 import { DRIP as Project } from '../../data/projects/drip/drip'
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
 import Sidebar from '../../Components/Project/Sidebar'
-import { NewsEntry } from '../../types/newsEntry'
+import { NewsEntry } from '../../types/NewsEntry'
 import RedFlagCard from '../../Components/Project/RedFlagCard'
 
 const NewsContent = () => {
