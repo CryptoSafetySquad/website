@@ -5,9 +5,9 @@ import Page from '../../Components/Page'
 import TabbedContent from '../../Components/TabbedContent'
 import Answers from '../../Components/Answers'
 import Header from '../../Components/Project/Header'
-import { OceanMoney as Project } from '../../data/projects'
-import news from '../../data/projects/oceanmoney/news'
+import { OceanMoney as Project } from '../../data/projects/oceanmoney/oceanmoney'
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
+import { NewsEntry } from '../../types/newsEntry'
 
 const NewsContent = () => {
   const newsIcon = <ModeSwitchingIcon filename='newspaper' size={20} />
@@ -16,7 +16,7 @@ const NewsContent = () => {
     <>
       <h2 className='mb-2'>{newsIcon} News</h2>
       {
-        news.map((entry, index) => {
+        Project.news.map((entry: NewsEntry, index: number) => {
           return <p className='mb-0 text-sm' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
         })
       }
@@ -40,18 +40,18 @@ const OceanMoney: NextPage = () => {
   const content = (
     <>
       <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
-        <div className='card'>
+        <main className='card'>
           <NewsContent />
-        </div>
-        <div>
+        </main>
+        <aside>
           <div className='card'>
             <h2 className='mb-2'>Related Projects</h2>
             <ul>
-            <li><Link href='/projects/hydro-whales'>Hydro Whales Mining Club</Link></li>
-            <li><Link href='/projects/project79'>Project 79</Link> - Gold Arbitrage</li>
+              <li><Link href='/projects/hydro-whales'>Hydro Whales Mining Club</Link></li>
+              <li><Link href='/projects/project79'>Project 79</Link> - Gold Arbitrage</li>
             </ul>
           </div>
-        </div>
+        </aside>
       </div>
     </>
   )

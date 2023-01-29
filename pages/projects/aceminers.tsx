@@ -13,11 +13,13 @@ import {
 } from 'chart.js';
 
 import Page from '../../Components/Page'
+import Contracts from '../../Components/Project/Contracts';
 import Header from '../../Components/Project/Header'
 import earnings from '../../data/projects/aceminers/earnings'
-import { AceMinersNFT } from '../../data/projects'
+import { AceMinersNFT as Project } from '../../data/projects/aceminers/aceminers';
 import news from '../../data/projects/aceminers/news'
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon';
+import Sidebar from '../../Components/Project/Sidebar';
 
 ChartJS.register(
   CategoryScale,
@@ -123,9 +125,9 @@ const AceMiners: NextPage = () => {
         <div className='card'>
           <NewsContent />
         </div>
-        <div>
+        <Sidebar project={Project}>
           <StatsContent />
-        </div>
+        </Sidebar>
       </div>
     </>
   )
@@ -138,7 +140,7 @@ const AceMiners: NextPage = () => {
       description: 'Ace Miners NFT',
       header: <Header
         description={(<>LTC and KDA mining NFT - Also has a Phase 2 NFT @<a href='https://opensea.io/collection/aceminersnftp2' target='_blank' rel='noopener noreferrer'>OpenSea</a></>)}
-        {...AceMinersNFT}
+        {...Project}
       />
     }} />
   )

@@ -14,8 +14,11 @@ import {
 
 import Page from '../../Components/Page'
 import Header from '../../Components/Project/Header'
-import news from '../../data/projects/emp/news'
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon';
+import Sidebar from '../../Components/Project/Sidebar';
+
+import news from '../../data/projects/emp/news'
+import { EMPMoney as Project } from '../../data/projects';
 
 ChartJS.register(
   CategoryScale,
@@ -78,6 +81,8 @@ const EmpMoney: NextPage = () => {
           <h2 className='dark:text-gold flex mb-2'>{newsIcon} News</h2>
           <NewsContent />
         </div>
+        <Sidebar project={Project}>
+        </Sidebar>
       </div>
     </>
   )

@@ -1,22 +1,24 @@
 import type { NextPage } from 'next'
 
 import Page from '../../Components/Page'
-import { StableFund as Project } from '../../data/projects'
+import { DRIP as Project } from '../../data/projects/drip/drip'
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
+import Sidebar from '../../Components/Project/Sidebar'
+import { NewsEntry } from '../../types/newsEntry'
+import RedFlagCard from '../../Components/Project/RedFlagCard'
 
 const NewsContent = () => {
-  const news: any[] = [
-    // { date: '27/12/2022', content: (<>StableFund v2 rug pulls - <a href='https://www.youtube.com/watch?v=fT3u-Mm2GTE' rel='noopener noreferrer' target='_blank'>Rug reaction video</a></>) },
-    // { date: '25/10/2022', content: (<>StableFund v1 rug pulls? - <a href='https://www.youtube.com/watch?v=MC6us9pon3I' rel='noopener noreferrer' target='_blank'>Research video</a></>) },
-  ]
+  if (!Project.news || Project.news.length === 0) { return null }
+
   return (
-    <>
-    {
-      news.map((entry, index) => {
+    <div className='card'>
+      <h2 className='mb-2'>{newsIcon} News</h2>
+      {
+      Project.news.map((entry: NewsEntry, index: number) => {
         return <p className='mb-0 text-sm' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
       })
     }
-    </>
+    </div>
   )
 }
 
@@ -29,33 +31,21 @@ const Drip: NextPage = () => {
     <>
       <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
         <main>
-          <div className='card'>
-            <h2 className='mb-2 text-red dark:text-red-darkmode'><ModeSwitchingIcon filename='flag' scheme='red' /> Red Flags</h2>
-            <ul>
-              <li>&bull; Undoxxed</li>
-            </ul>
-          </div>
+          <RedFlagCard redflags={Project.redflags} />
           <div className='card'>
             <h2 className='mb-2 text-orange dark:text-orange'><ModeSwitchingIcon filename='warning' scheme='orange' /> Warnings</h2>
             <ul>
               <li>&bull; DRIP token has historically trended down, see <a href='https://coinmarketcap.com/currencies/drip-network/' target='_blank' rel='noopener noreferrer'>CMC</a></li>
             </ul>
           </div>
-          <div className='card'>
-            <h2 className='mb-2'>{newsIcon} News</h2>
-            <NewsContent />
-          </div>
+          <NewsContent />
         </main>
-        <aside>
+        <Sidebar project={Project}>
           <div className='card'>
             <h2>Domains</h2>
-            <p>drip.community</p>
+            {Project.domains?.map(domain => <p key={domain} className='text-xs'>{domain}</p>)}
           </div>
-          <div className='card'>
-            <h2>Contracts / Tokens</h2>
-            <p>Token: <a href='https://bscscan.com/address/0x20f663cea80face82acdfa3aae6862d246ce0333' rel='noopener noreferrer'>DRIP</a></p>
-          </div>
-        </aside>
+        </Sidebar>
       </div>
     </>
   )

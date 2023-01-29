@@ -1,13 +1,16 @@
 import type { NextPage } from 'next'
+
 import Page from '../../Components/Page'
-import PrivateSniper from '../../data/authors/PrivateSniper'
 import ExternalLink from '../../Components/ExternalLink'
 import TabbedContent from '../../Components/TabbedContent'
 import AuthorComponent from '../../Components/Author'
+import Sidebar from '../../Components/Project/Sidebar'
 import Disclaimer from '../../Components/Research/Disclaimer'
 import Header from '../../Components/Project/Header'
-import { OMNIBirds as Project } from '../../data/projects'
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
+
+import { OMNIBirds as Project } from '../../data/projects'
+import PrivateSniper from '../../data/authors/PrivateSniper'
 
 const doxxed = () => {
   return (
@@ -123,12 +126,7 @@ const OMNIBirds: NextPage = () => {
       <main>
         <TabbedContent content={tabs} />
       </main>
-      <aside>
-        <div className='card'>
-          <h2 className='mb-2'>Contracts / Addresses</h2>
-          <p>Wallet: <a target='_blank' rel='noopener noreferrer' href='https://etherscan.io/address/0x30b767ef4a5c83ede9a370355208b018689b405a'>Payouts</a></p>
-        </div>
-      </aside>
+      <Sidebar project={Project} />
     </div>
   )
 

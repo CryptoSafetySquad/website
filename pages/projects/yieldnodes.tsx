@@ -1,8 +1,9 @@
 import type { NextPage } from 'next'
 
 import Page from '../../Components/Page'
-import { YieldNodes as Project } from '../../data/projects'
+import { YieldNodes as Project } from '../../data/projects/yieldnodes/yieldnodes'
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
+import RedFlagCard from '../../Components/Project/RedFlagCard'
 
 const NewsContent = () => {
   const news: any[] = [
@@ -20,7 +21,6 @@ const NewsContent = () => {
   )
 }
 
-const FCA = 'https://www.fca.org.uk/'
 const newsIcon = <ModeSwitchingIcon filename='newspaper' size={20} />
 
 const YieldNodes: NextPage = () => {
@@ -30,15 +30,7 @@ const YieldNodes: NextPage = () => {
     <>
       <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
         <main>
-          <div className='card'>
-            <h2 style={{color: '#f71f1f'}} className='mb-2'><ModeSwitchingIcon filename='flag' scheme='red' /> Red Flags</h2>
-            <ul>
-              <li className='text-xs mb-2'>&bull; Lots of &quot;pointless&quot; coins being masternoded to generate profit but with no real use cases.</li>
-              {/* <li className='text-xs mb-2'>&bull; Undoxxed</li>
-              <li className='text-xs mb-2'>&bull; Website creates and stores wallet private keys</li>
-              <li className='text-xs mb-2'>&bull; (Subjective) Cult-like (probably bots) atmosphere in social media chats.</li> */}
-            </ul>
-          </div>
+          <RedFlagCard redflags={Project.redflags} />
           <div className='card'>
             <h2 className='mb-2'>{newsIcon} News</h2>
             <NewsContent />

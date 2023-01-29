@@ -1,31 +1,13 @@
-export interface Project {
-  bannerImage?: string;
-  slug?: string;
-  type: string;
-  blockchain?: Blockchains | Blockchains[] | string;
-  name: string;
-  opensea?: string;
-  twitter?: string;
-  website?: string;
-}
+import type { Project } from "../types/project";
+import { Blockchains } from "../enums/blockchains";
 
-enum Blockchains {
-  Ethereum = 'Ethereum',
-  Bitcoin = 'Bitcoin',
-  Avalanche = 'Avalanche',
-  Binance = 'Binance',
-  Polygon = 'Polygon', // ETH L2
-}
-
-export const AceMinersNFT: Project = {
-  name: 'Ace Miners NFT',
-  slug: 'aceminers',
-  type: 'NFT: Utility, Passive Income',
-  blockchain: 'Ethereum',
-  bannerImage: 'https://i.seadn.io/gcs/files/f59537bf481f49ad3d97a8de0ac164d0.png?auto=format&w=1920',
-  website: 'https://aceminersnft.io/',
-  opensea: 'https://opensea.io/collection/aceminersnft',
-}
+import AceMinersNFT from "./projects/aceminers/aceminers";
+import DRIP from "./projects/drip/drip";
+import HydroWhalesMiningClub from "./projects/hydrowhales/hydrowhales";
+import OceanMoney from "./projects/oceanmoney/oceanmoney";
+import StableFund from "./projects/stablefund/stablefund";
+import YieldNodes from "./projects/yieldnodes/yieldnodes";
+import YieldRobot from "./projects/yieldrobot/yieldrobot";
 
 export const BoredApeYachtClub: Project = {
   name: 'Bored Ape Yacht Club',
@@ -38,26 +20,6 @@ export const BoredApeYachtClub: Project = {
   twitter: 'BoredApeYC'
 }
 
-export const HydroWhalesMiningClub: Project = {
-  name: 'Hydro Whales Mining Club',
-  slug: 'hydro-whales',
-  type: 'NFT: Utility, Passive Income',
-  blockchain: Blockchains.Ethereum,
-  bannerImage: 'https://i.seadn.io/gae/rgToigCSJptmZH_aXssvgDJ7JLtSL0QqjfncgOgoNwjaZxOeS7qD5p6CB1Pdp1P3cUlouqnfQUCe2_ux_lljAc1GcVSLhBueuuelSnY?auto=format&w=1920',
-  opensea: 'https://opensea.io/collection/hydro-whales-mining-club-official',
-  twitter: 'HydroWhalesClub',
-  website: 'https://www.hydrowhalesclub.com/'
-}
-
-export const OceanMoney: Project = {
-  name: 'Ocean Money',
-  slug: 'ocean-money',
-  type: 'Banking Services, Crypto Services',
-  website: 'https://www.ocean.money/',
-  bannerImage: 'https://www.ocean.money/_next/image?url=%2Fimages%2Fblog-1.png&w=1920&q=75',
-  twitter: 'OceanMoney_'
-}
-
 export const OMNIBirds: Project = {
   name: 'OMNI Birds',
   slug: 'omnibirds',
@@ -66,7 +28,10 @@ export const OMNIBirds: Project = {
   opensea: 'https://opensea.io/collection/omnibirds-official',
   website: 'https://www.omnibirds.com/',
   bannerImage: 'https://i.seadn.io/gcs/files/e66305d2587c0ea7e29d7c1c1cd3cae5.png?auto=format&w=1920',
-  twitter: 'OMNIBirds'
+  twitter: 'OMNIBirds',
+  wallets: [
+    { name: 'Payouts', contract: '0x30b767ef4a5c83ede9a370355208b018689b405a', short: '0x30...b405a', explorerUrl: 'https://etherscan.io/address/0x30b767ef4a5c83ede9a370355208b018689b405a', blockchain: 'ethereum' }
+  ]
 }
 
 export const Project79: Project = {
@@ -77,39 +42,22 @@ export const Project79: Project = {
   bannerImage: 'https://pbs.twimg.com/media/FdBHe8kaMAEk8_2?format=jpg&name=4096x4096'
 }
 
-export const StableFund: Project = {
-  name: 'StableFund',
-  slug: 'stablefund',
-  type: 'Passive Income',
-  blockchain: [Blockchains.Polygon, Blockchains.Binance]
-}
-
-export const YieldRobot: Project = {
-  name: 'YieldRobot',
-  slug: 'yieldrobot',
-  type: 'Passive Income',
-  blockchain: Blockchains.Binance
-}
-
-export const YieldNodes: Project = {
-  name: 'YieldNodes',
-  slug: 'yieldnodes',
-  type: 'Passive Income',
-  blockchain: [Blockchains.Ethereum, Blockchains.Bitcoin]
-}
-
-export const DRIP: Project = {
-  name: 'DRIP',
-  slug: 'drip',
-  type: 'Passive Income',
-  blockchain: Blockchains.Binance
-}
-
 export const EMPMoney: Project = {
   name: 'EMP',
   slug: 'empmoney',
   type: 'Passive Income',
-  blockchain: Blockchains.Binance
+  blockchain: Blockchains.Binance,
+  tokens: [
+    { name: 'EMP', contract: '0x3b248cefa87f836a4e6f6d6c9b42991b88dc1d58', blockchain: 'BSC', short: '0x3b...1d58', explorerUrl: 'https://bscscan.com/token/0x3b248cefa87f836a4e6f6d6c9b42991b88dc1d58' },
+    { name: 'ESHARE', contract: '0xDB20F6A8665432CE895D724b417f77EcAC956550', blockchain: 'BSC', short: '0xDB...6550', explorerUrl: 'https://bscscan.com/token/0xDB20F6A8665432CE895D724b417f77EcAC956550' }
+  ],
+  contracts: [
+    { name: 'EMP Detonator', contract: '0xa9ea52d60111073e34fad966c03f70684e5b205d', blockchain: 'BSC', short: '0xa9...205d', explorerUrl: 'https://bscscan.com/address/0xa9ea52d60111073e34fad966c03f70684e5b205d' },
+  ],
+  nfts: [
+    { name: 'Sentinel Squadron NFT', contract: '0xd689af61148cb91e286d0d4e92d67120e35c37b8', blockchain: 'BSC', short: '0xd6...37b8', explorerUrl: 'https://bscscan.com/address/0xd689af61148cb91e286d0d4e92d67120e35c37b8' },
+    { name: 'Detonator Defender NFT', contract: '0x6df246a1e0064169518da5d1e1905e37410e8694', blockchain: 'BSC', short: '0x6d...8694', explorerUrl: 'https://bscscan.com/address/0x6df246a1e0064169518da5d1e1905e37410e8694' },
+  ]
 }
 
 const projects = {

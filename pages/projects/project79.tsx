@@ -14,11 +14,14 @@ import {
 
 import Page from '../../Components/Page'
 import Header from '../../Components/Project/Header'
-import earnings from '../../data/projects/project79/earnings'
-import tvl from '../../data/projects/project79/tvl'
-import news from '../../data/projects/project79/news'
 import Percentage from '../../Components/Percentage';
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon';
+import Sidebar from '../../Components/Project/Sidebar';
+import { Project79 as Project } from '../../data/projects';
+
+import tvl from '../../data/projects/project79/tvl'
+import earnings from '../../data/projects/project79/earnings'
+import news from '../../data/projects/project79/news'
 
 ChartJS.register(
   CategoryScale,
@@ -121,9 +124,8 @@ const Project79: NextPage = () => {
           <h2 className='dark:text-gold flex mb-2'>{newsIcon} News</h2>
           <NewsContent />
         </div>
-        <div>
+        <Sidebar project={Project}>
           <StatsContent />
-
           <div className='card'>
             <h2 className='dark:text-gold mb-2'>Related Projects</h2>
             <ul>
@@ -131,7 +133,7 @@ const Project79: NextPage = () => {
               <li><Link href='/projects/ocean-money'>Ocean Money</Link></li>
             </ul>
           </div>
-        </div>
+        </Sidebar>
       </div>
     </>
   )

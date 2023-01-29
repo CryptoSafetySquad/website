@@ -1,8 +1,4 @@
-interface earningsEntry {
-  label: string;
-  date: string;
-  amount: number;
-}
+import type { earningsEntry } from "../../../types/earningsEntry";
 
 const earnings: earningsEntry[] = [
   { label: 'Oct 22', date: '2022-10-20', amount: 16 }

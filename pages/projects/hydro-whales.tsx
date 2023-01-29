@@ -20,13 +20,14 @@ import AuthorComponent from '../../Components/Author'
 import Disclaimer from '../../Components/Research/Disclaimer'
 import Answers from '../../Components/Answers'
 import Header from '../../Components/Project/Header'
-import news from '../../data/projects/hydrowhales/news';
 
-import { officialVideos, communityVideos } from '../../data/projects/hydrowhales/videos'
-import answers from '../../data/projects/hydrowhales/answers'
-import earnings from '../../data/projects/hydrowhales/earnings'
 import HydroWhalesResearch from '../../data/projects/hydrowhales/research'
-import { HydroWhalesMiningClub } from '../../data/projects'
+import { HydroWhalesMiningClub } from '../../data/projects/hydrowhales/hydrowhales'
+import Sidebar from '../../Components/Project/Sidebar';
+
+import { earningsEntry } from '../../types/earningsEntry';
+import type { Project } from '../../types/project';
+import type { NewsEntry } from '../../types/newsEntry';
 
 ChartJS.register(
   CategoryScale,
@@ -106,7 +107,7 @@ const NewsContent = () => {
   return (
     <>
       {
-        news.map((entry, index) => {
+        HydroWhalesMiningClub.news.map((entry: NewsEntry, index: number) => {
           return <p className='mb-2 text-xs' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
         })
       }
@@ -136,16 +137,12 @@ const HWChart = ({ labels, data, title}: { labels: any[], data: any, title: stri
   )
 }
 
-const StatsContent = () => {
-  if (earnings.length === 0) {
-    return (
-      <>
-      </>
-    )
-  }
+const StatsContent = ({ project }: { project: Project }) => {
+  if (!project.earnings) { return null }
+
   // Compile earnings data
   const earningsData: { labels: string[]; data: number[] } = { labels: [], data: [] }
-  earnings.forEach(entry => { earningsData.labels.push(entry.label); earningsData.data.push(entry.value) })
+  project.earnings.forEach((entry: earningsEntry) => { earningsData.labels.push(entry.label); earningsData.data.push(entry.value) })
 
   return (
     <>
@@ -175,12 +172,12 @@ const HydroWhales: NextPage = () => {
     },
   ]
 
-  if (officialVideos.length > 0) {
+  if (HydroWhalesMiningClub.officialVideos) {
     tabs.push({
       title: 'Official Videos',
       content: (
         <div className='grid md:grid-cols-3 gap-4'>
-          {officialVideos.map(video => (
+          {HydroWhalesMiningClub.officialVideos.map(video => (
             <div key={video.youtubeSlug}>
             <iframe  width='100%' height='200' src={`https://www.youtube.com/embed/${video.youtubeSlug}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             {video.title}
@@ -191,12 +188,12 @@ const HydroWhales: NextPage = () => {
     })
   }
 
-  if (communityVideos.length > 0) {
+  if (HydroWhalesMiningClub.communityVideos) {
     tabs.push({
       title: 'Community Videos',
       content: (
         <div className='grid md:grid-cols-3 gap-4'>
-          {communityVideos.map(video => (
+          {HydroWhalesMiningClub.communityVideos.map(video => (
             <div key={video.youtubeSlug}>
             <iframe width='100%' height='200' src={`https://www.youtube.com/embed/${video.youtubeSlug}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             {video.title}
@@ -207,19 +204,21 @@ const HydroWhales: NextPage = () => {
     })
   }
 
-  tabs.push({
-    title: 'FAQs',
-    content: <Answers qa={answers} />
-  })
+  if (HydroWhalesMiningClub.answers) {
+    tabs.push({
+      title: 'FAQs',
+      content: <Answers qa={HydroWhalesMiningClub.answers} />
+    })
+  }
 
   const content = (
     <>
       <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
-        <div className='card'>
+        <main className='card'>
           <TabbedContent content={tabs} />
-        </div>
-        <div>
-          <StatsContent />
+        </main>
+        <Sidebar project={HydroWhalesMiningClub}>
+          <StatsContent project={HydroWhalesMiningClub} />
           <div className='card'>
             <h2 className='mb-2'>Related Projects</h2>
             <ul>
@@ -227,13 +226,7 @@ const HydroWhales: NextPage = () => {
               <li className='text-xs'><Link href='/projects/ocean-money'>Ocean Money</Link> - Banking Services</li>
             </ul>
           </div>
-
-          <div className='card'>
-            <h2 className='mb-2'>Wallets</h2>
-            <p className='text-xs'>Community Wallet: <ExternalLink href='https://www.blockchain.com/explorer/addresses/eth/0x3f85C11A8Db617E9a78c75Bdb12919D1F0a092ec' text='0x3f8-092ec'></ExternalLink></p>
-            <p className='text-xs'>Project Development: <ExternalLink href='https://www.blockchain.com/explorer/addresses/eth/0xa8c1B1a70bBFF30449A932aB238f95AaA1b33a03' text='0xa8c-33a03'></ExternalLink></p>
-          </div>
-        </div>
+        </Sidebar>
       </div>
     </>
   )
