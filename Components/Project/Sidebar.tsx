@@ -1,5 +1,5 @@
 import ExternalLink from "../ExternalLink"
-import type { Project } from "../../data/projects";
+import type { Project } from "../../types/project";
 import Contracts from "./Contracts";
 
 interface ProjectSidebarProps {
