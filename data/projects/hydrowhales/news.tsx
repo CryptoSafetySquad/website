@@ -1,4 +1,4 @@
-import type { NewsEntry } from "../../../types/newsEntry"
+import type { NewsEntry } from "../../../types/NewsEntry"
 
 const news: NewsEntry[] = [
   { date: '07/01/2023', content: 'P79 adds $93,000 to Hydro Whales treasury from Dec 22-Jan 23 period.' },
