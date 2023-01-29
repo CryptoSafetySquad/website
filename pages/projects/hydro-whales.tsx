@@ -27,7 +27,7 @@ import Sidebar from '../../Components/Project/Sidebar';
 
 import { EarningsEntry } from '../../types/EarningsEntry';
 import type { Project } from '../../types/project';
-import type { NewsEntry } from '../../types/newsEntry';
+import type { NewsEntry } from '../../types/NewsEntry';
 
 ChartJS.register(
   CategoryScale,
