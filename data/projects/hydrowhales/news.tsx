@@ -1,6 +1,7 @@
 import type { NewsEntry } from "../../../types/NewsEntry"
 
 const news: NewsEntry[] = [
+  { date: '01/02/2023', content: '1st Claimable earnings: $10 USDC, 0.000435 wBTC' },
   { date: '07/01/2023', content: 'P79 adds $93,000 to Hydro Whales treasury from Dec 22-Jan 23 period.' },
   { date: '07/01/2023', content: 'Accouncements: NFT Vault and Escrow platform:  beta begin end of Jan for whales, public live mid feb.' },
   { date: '01/12/2022', content: '1st Feb first payout date confirmed by Sam' },
