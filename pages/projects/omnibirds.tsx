@@ -22,7 +22,6 @@ const doxxed = () => {
 
 const Research = () => {
   const tick = '✅'
-  const warn = '⚠️'
 
   const author = PrivateSniper
 
@@ -32,8 +31,6 @@ const Research = () => {
   ]
 
   const redFlags = []
-
-  const score = 10
 
   const researchContent = (
     <div className='guide'>
@@ -72,17 +69,13 @@ const Research = () => {
           </aside>
         )}
       </div>
-      {/* {
-        withCommenting === true && (
-          <Discussion slug={slug} title={title} />
-        )
-      } */}
     </main>
   )
 }
 
 const NewsContent = () => {
   const news = [
+    { date: '07/12/2022', content: 'Bird holder announcement, NFTs will no longer be paying out rewards.' },
     { date: '28/10/2022', content: 'NFT holders receive another payout in USDC on Ethereum blockchain.' },
     { date: '27/09/2022', content: 'NFT holders receive first payout in USDC on Ethereum blockchain.' }
   ]
