@@ -69,13 +69,13 @@ const projects = {
     Project79,
   ],
   average: [
-    OMNIBirds,
     EMPMoney
   ],
   risky: [
     DRIP,
   ],
   failed: [
+    OMNIBirds,
     YieldNodes
   ],
   rugpulled: [
