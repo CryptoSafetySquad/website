@@ -17,7 +17,7 @@ const Header = ({ className, name, website, opensea, description, twitter, banne
 
   return (
     <div>
-      {bannerImage && <div className='mb-4' style={{ height: '400px', backgroundSize: 'cover', backgroundImage: `url(${bannerImage})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center' }}></div>}
+      {bannerImage && <div className='mb-4 rounded-md' style={{ height: '400px', backgroundSize: 'cover', backgroundImage: `url(${bannerImage})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center' }}></div>}
       <h1 className={`flex ${className} mb-2`}>
         <span className='mr-4'>{name}</span>
         {website && <ExternalLink href={`${website}`}>{linkIcon}</ExternalLink>}
