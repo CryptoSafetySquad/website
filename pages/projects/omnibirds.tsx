@@ -35,14 +35,6 @@ const Research = () => {
 
   const score = 10
 
-  const overview = {
-    project: 'OMNI Birds',
-    slug: 'omnibirds',
-    researcher: PrivateSniper,
-    points: { good: goodPoints.length, bad: redFlags.length },
-    score
-  }
-
   const researchContent = (
     <div className='guide'>
       <Disclaimer />
