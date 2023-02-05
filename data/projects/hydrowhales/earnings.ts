@@ -1,8 +1,7 @@
 import type { EarningsEntry } from "../../../types/EarningsEntry";
 
 const earnings: EarningsEntry[] = [
-  // { label: 'Sep 22', date: '2022-09-26', amount: 6.8 },
-  // { label: 'Oct 22', date: '2022-10-24', amount: 6.4 }
+  { label: '1 Feb 23', date: '2023-02-01', amount: 20.00, notes: '$10 USDC, 0.000435 wBTC' },
 ]
 
 export default earnings
