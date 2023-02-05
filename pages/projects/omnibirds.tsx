@@ -30,6 +30,10 @@ const Research = () => {
     { key:'whitepaper', content: 'Full whitepaper' },
   ]
 
+  const risks = [
+    { key: 'failure', content: 'Software may not be as widely adopted in the market or fail to meet its funding goals.' },
+  ]
+
   const redFlags = []
 
   const researchContent = (
@@ -52,6 +56,9 @@ const Research = () => {
         {redFlags.length === 0 && <li>{tick} None found for this project.</li>}
       </ul>
       <h2 className='text-secondary'>Potential Risks</h2>
+      <ul>
+        {risks.map(risk => (<li key={risk.key}>{risk.content}</li>))}
+      </ul>
     </div>
   )
 
