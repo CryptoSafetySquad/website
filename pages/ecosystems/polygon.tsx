@@ -35,6 +35,7 @@ const Polygon: NextPage = () => {
           <h2 className='mb-2'>NFT Marketplaces</h2>
           <div className='grid grid-cols-2 gap-2'>
             <ExternalLink href='https://www.alphashares.io/' text='Alpha Shares' />
+            <ExternalLink href='https://magiceden.io/' text='Magic Eden' />
           </div>
         </div>
 

@@ -32,6 +32,7 @@ const Solana: NextPage = () => {
       <div className='card'>
         <h2 className='mb-2'>NFT Marketplaces</h2>
         <div className='grid grid-cols-2 gap-2'>
+          <ExternalLink href='https://magiceden.io/' text='Magic Eden' />
         </div>
       </div>
 

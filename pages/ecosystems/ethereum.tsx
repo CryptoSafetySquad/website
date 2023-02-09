@@ -36,6 +36,7 @@ const Ethereum: NextPage = () => {
           <ExternalLink href='https://opensea.io/' text='OpenSea' />
           <ExternalLink href='https://x2y2.io/' text='X2Y2' />
           <ExternalLink href='https://www.alphashares.io/' text='Alpha Shares' />
+          <ExternalLink href='https://magiceden.io/' text='Magic Eden' />
         </div>
       </div>
 
