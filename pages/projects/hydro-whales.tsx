@@ -26,9 +26,9 @@ import HydroWhalesResearch from '../../data/projects/hydrowhales/research'
 import { HydroWhalesMiningClub } from '../../data/projects/hydrowhales/hydrowhales'
 import Sidebar from '../../Components/Project/Sidebar';
 
-import { EarningsEntry } from '../../types/EarningsEntry';
 import type { Project } from '../../types/project';
 import type { NewsEntry } from '../../types/NewsEntry';
+import type { HydroWhaleEarningsEntry } from '../../data/projects/hydrowhales/earnings';
 
 ChartJS.register(
   CategoryScale,
@@ -155,7 +155,7 @@ const StatsContent = ({ project }: { project: Project }) => {
 
   // Compile earnings data
   const earningsData: { labels: string[]; wbtc: number[]; usdc: number[]; total: number[]; } = { labels: [], wbtc: [], usdc: [], total: [] }
-  project.earnings.forEach((entry: EarningsEntry) => {
+  project.earnings.forEach((entry: HydroWhaleEarningsEntry) => {
     earningsData.labels.push(entry.label);
     earningsData.usdc.push(entry.usdc);
     earningsData.wbtc.push(entry.wbtc);

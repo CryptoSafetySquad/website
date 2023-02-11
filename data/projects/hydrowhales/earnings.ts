@@ -1,4 +1,4 @@
-type HydroWhaleEarningsEntry = {
+export type HydroWhaleEarningsEntry = {
   label: string;
   date: string;
   usdc: number;
