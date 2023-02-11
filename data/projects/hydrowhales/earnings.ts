@@ -2,7 +2,7 @@ type HydroWhaleEarningsEntry = {
   label: string;
   date: string;
   usdc: number;
-  wBTC: number;
+  wbtc: number;
   notes?: string;
   amount?: number;
 }
