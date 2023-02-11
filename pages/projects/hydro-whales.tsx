@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
-import { Line } from 'react-chartjs-2';
+import { Line, Bar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -10,6 +10,7 @@ import {
   Title,
   Tooltip,
   Legend,
+  BarElement
 } from 'chart.js';
 
 import Page from '../../Components/Page'
@@ -34,6 +35,7 @@ ChartJS.register(
   LinearScale,
   PointElement,
   LineElement,
+  BarElement,
   Title,
   Tooltip,
   Legend
@@ -119,7 +121,7 @@ const HWChart = ({ labels, data, title}: { labels: any[], data: any, title: stri
   const chartHeight = '175px'
   return (
     <div style={{ height: chartHeight }}>
-      <Line
+      <Bar
         options={{
           maintainAspectRatio: false,
         }}
@@ -127,8 +129,19 @@ const HWChart = ({ labels, data, title}: { labels: any[], data: any, title: stri
           labels: labels,
           datasets: [
             {
-              label: title,
-              data: data,
+              label: 'Total ($)',
+              data: data.total,
+              backgroundColor: 'rgba(100, 100, 255, 0.4)'
+            },
+            {
+              label: 'USDC',
+              data: data.usdc,
+              backgroundColor: 'rgba(0, 255, 0, 0.4)'
+            },
+            {
+              label: 'wBTC ($)',
+              data: data.wbtc,
+              backgroundColor: 'rgba(255, 255, 0, 0.4)'
             }
           ],
         }}
@@ -141,8 +154,13 @@ const StatsContent = ({ project }: { project: Project }) => {
   if (!project.earnings) { return null }
 
   // Compile earnings data
-  const earningsData: { labels: string[]; data: number[] } = { labels: [], data: [] }
-  project.earnings.forEach((entry: EarningsEntry) => { earningsData.labels.push(entry.label); earningsData.data.push(entry.amount) })
+  const earningsData: { labels: string[]; wbtc: number[]; usdc: number[]; total: number[]; } = { labels: [], wbtc: [], usdc: [], total: [] }
+  project.earnings.forEach((entry: EarningsEntry) => {
+    earningsData.labels.push(entry.label);
+    earningsData.usdc.push(entry.usdc);
+    earningsData.wbtc.push(entry.wbtc);
+    earningsData.total.push(entry.wbtc + entry.usdc);
+  })
 
   return (
     <>
@@ -152,7 +170,7 @@ const StatsContent = ({ project }: { project: Project }) => {
         <HWChart
           labels={earningsData.labels}
           title='Earnings'
-          data={earningsData.data}
+          data={earningsData}
         />
       </div>
     </>
