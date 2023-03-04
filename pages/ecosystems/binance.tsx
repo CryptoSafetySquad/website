@@ -39,6 +39,7 @@ const Binance: NextPage = () => {
             <ExternalLink href='https://magik.farm/#/bsc' text='Magik' />
             <ExternalLink href='https://autofarm.network/' text='Autofarm' />
             <ExternalLink href='https://yieldwolf.finance/' text='YieldWolf' />
+            <ExternalLink href='https://dexvaults.com/' text='dexVaults+' />
           </div>
         </div>
 

@@ -40,6 +40,7 @@ const Fantom: NextPage = () => {
         <h2 className='mb-2'>DeFI (Decentralised Finance)</h2>
         <div className='grid grid-cols-2 gap-2'>
           <ExternalLink href='https://app.beefy.com/' text='Beefy' />
+          <ExternalLink href='https://dexvaults.com/' text='dexVaults+' />
         </div>
       </div>
     </div>
