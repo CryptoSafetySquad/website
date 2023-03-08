@@ -8,7 +8,9 @@ const earnings: p79EarningsEntry[] = [
   { label: 'Sep 22', date: '2022-09-26', percent: 6.8 },
   { label: 'Oct 22', date: '2022-10-24', percent: 6.4 },
   { label: 'Nov 22', date: '2022-11-26', percent: 6.5 },
-  { label: 'Dec 22', date: '2022-12-28', percent: 6.7 }
+  { label: 'Dec 22', date: '2022-12-28', percent: 6.7 },
+  { label: 'Jan 23', date: '2022-01-28', percent: 6.4 },
+  { label: 'Feb 23', date: '2023-02-26', percent: 5.9 }
 ]
 
 export default earnings
