@@ -28,7 +28,6 @@ import { HydroWhalesMiningClub } from '../../data/projects/hydrowhales/hydrowhal
 import Sidebar from '../../Components/Project/Sidebar';
 
 import type { Project } from '../../types/project';
-import type { NewsEntry } from '../../types/NewsEntry';
 import type { HydroWhaleEarningsEntry } from '../../data/projects/hydrowhales/earnings';
 
 ChartJS.register(
@@ -113,24 +112,32 @@ const HWChart = ({ labels, data, title}: { labels: any[], data: any, title: stri
       <Bar
         options={{
           maintainAspectRatio: false,
+          scales: {
+            x: {
+              stacked: true,
+            },
+            y: {
+              stacked: true,
+            }
+          }
         }}
         data={{
           labels: labels,
           datasets: [
+            // {
+            //   label: 'Total ($)',
+            //   data: data.total,
+            //   backgroundColor: 'rgba(100, 100, 255, 0.4)'
+            // },
             {
-              label: 'Total ($)',
-              data: data.total,
-              backgroundColor: 'rgba(100, 100, 255, 0.4)'
+              label: 'wBTC ($)',
+              data: data.wbtc,
+              backgroundColor: 'rgba(255, 255, 0, 0.4)'
             },
             {
               label: 'USDC',
               data: data.usdc,
               backgroundColor: 'rgba(0, 255, 0, 0.4)'
-            },
-            {
-              label: 'wBTC ($)',
-              data: data.wbtc,
-              backgroundColor: 'rgba(255, 255, 0, 0.4)'
             }
           ],
         }}
