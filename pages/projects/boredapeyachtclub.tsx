@@ -14,7 +14,7 @@ import {
 
 import Page from '../../Components/Page'
 import Header from '../../Components/Project/Header'
-import earnings from '../../data/projects/aceminers/earnings'
+// import earnings from '../../data/projects/aceminers/earnings'
 import { BoredApeYachtClub as Project } from '../../data/projects'
 
 ChartJS.register(
@@ -82,7 +82,7 @@ const Chart = ({ labels, data, title}: { labels: any[], data: any, title: string
 const StatsContent = () => {
   // Compile earnings data
   const earningsData: { labels: string[]; data: number[] } = { labels: [], data: [] }
-  earnings.forEach(value => { earningsData.labels.push(value.label); earningsData.data.push(value.amount) })
+  // earnings.forEach(value => { earningsData.labels.push(value.label); earningsData.data.push(value.amount) })
 
   return (
     <>
