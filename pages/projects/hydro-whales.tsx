@@ -28,7 +28,6 @@ import { HydroWhalesMiningClub } from '../../data/projects/hydrowhales/hydrowhal
 import Sidebar from '../../Components/Project/Sidebar';
 
 import type { Project } from '../../types/project';
-import type { HydroWhaleEarningsEntry } from '../../data/projects/hydrowhales/earnings';
 import type { EarningsEntry } from '../../types/EarningsEntry';
 
 ChartJS.register(
