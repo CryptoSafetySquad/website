@@ -17,8 +17,9 @@ import Header from '../../Components/Project/Header'
 import Percentage from '../../Components/Percentage';
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon';
 import Sidebar from '../../Components/Project/Sidebar';
-import { Project79 as Project } from '../../data/projects';
+import NewsListing from '../../Components/NewsListing';
 
+import { Project79 as Project } from '../../data/projects';
 import tvl from '../../data/projects/project79/tvl'
 import earnings from '../../data/projects/project79/earnings'
 import news from '../../data/projects/project79/news'
@@ -35,18 +36,6 @@ ChartJS.register(
 
 function average(nums: number[]): number {
   return nums.reduce((a, b) => (a + b)) / nums.length;
-}
-
-const NewsContent = () => {
-  return (
-    <>
-      {
-        news.map((entry, index) => {
-          return <p className='mb-2 text-xs' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
-        })
-      }
-    </>
-  )
 }
 
 const P79Chart = ({ labels, data, title}: { labels: any[], data: any, title: string; }) => {
@@ -122,7 +111,7 @@ const Project79: NextPage = () => {
       <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
         <div className='card'>
           <h2 className='dark:text-gold flex mb-2'>{newsIcon} News</h2>
-          <NewsContent />
+          <NewsListing newsEntries={news} />
         </div>
         <Sidebar project={Project}>
           <StatsContent />

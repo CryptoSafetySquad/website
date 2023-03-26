@@ -21,6 +21,7 @@ import AuthorComponent from '../../Components/Author'
 import Disclaimer from '../../Components/Research/Disclaimer'
 import Answers from '../../Components/Answers'
 import Header from '../../Components/Project/Header'
+import NewsListing from '../../Components/NewsListing';
 
 import HydroWhalesResearch from '../../data/projects/hydrowhales/research'
 import { HydroWhalesMiningClub } from '../../data/projects/hydrowhales/hydrowhales'
@@ -105,18 +106,6 @@ const Research = () => {
   )
 }
 
-const NewsContent = () => {
-  return (
-    <>
-      {
-        HydroWhalesMiningClub.news.map((entry: NewsEntry, index: number) => {
-          return <p className='mb-2 text-xs' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
-        })
-      }
-    </>
-  )
-}
-
 const HWChart = ({ labels, data, title}: { labels: any[], data: any, title: string; }) => {
   const chartHeight = '175px'
   return (
@@ -182,7 +171,7 @@ const HydroWhales: NextPage = () => {
   const tabs = [
     {
       title: 'News',
-      content: <NewsContent />
+      content: <NewsListing newsEntries={HydroWhalesMiningClub.news} />
     },
     {
       title: 'Research',

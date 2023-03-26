@@ -1,8 +1,11 @@
 import type { NewsEntry } from "../../../types/NewsEntry"
 
 const news: NewsEntry[] = [
-  { date: '01/02/2023', content: 'March claimable earnings: $13 USDC, 0.000424 wBTC' },
-  { date: '01/02/2023', content: '1st claimable earnings: $10 USDC, 0.000435 wBTC' },
+  { date: '20/03/2023', content: 'AceMiners NFT purchase proposal passed' },
+  { date: '13/03/2023', content: (<>Proposal: transition rewards to Polygon <a href='https://snapshot.org/#/hydrowhales.eth/proposal/0x125242229981e4b694aff075a13434c8e37b59d726a89bd434affbebf274be4c' target='
+  '>Snapshot</a> ✔️</>) },
+  { date: '01/02/2023', content: (<>March claimable earnings: <span className='reward usdc'>$13 USDC</span>, <span className='reward wbtc'>0.000424 wBTC</span></>) },
+  { date: '01/02/2023', content: (<>1st claimable earnings: <span className='reward usdc'>$10 USDC</span>, <span className='reward wbtc'>0.000435 wBTC</span></>) },
   { date: '07/01/2023', content: 'P79 adds $93,000 to Hydro Whales treasury from Dec 22-Jan 23 period.' },
   { date: '07/01/2023', content: 'Accouncements: NFT Vault and Escrow platform:  beta begin end of Jan for whales, public live mid feb.' },
   { date: '01/12/2022', content: '1st Feb first payout date confirmed by Sam' },

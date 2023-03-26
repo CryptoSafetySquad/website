@@ -218,4 +218,7 @@ h1 {
   .card.with-bg {
     background-color: var(--bg);
   }
+
+  .reward.usdc { @apply text-green-600; }
+  .reward.wbtc { @apply text-yellow-300; }
 }
