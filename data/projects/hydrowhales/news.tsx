@@ -6,7 +6,7 @@ const news: NewsEntry[] = [
   '>Snapshot</a> ✔️</>) },
   { date: '01/02/2023', content: (<>March claimable earnings: <span className='reward usdc'>$13 USDC</span>, <span className='reward wbtc'>0.000424 wBTC</span></>) },
   { date: '01/02/2023', content: (<>1st claimable earnings: <span className='reward usdc'>$10 USDC</span>, <span className='reward wbtc'>0.000435 wBTC</span></>) },
-  { date: '07/01/2023', content: 'P79 adds $93,000 to Hydro Whales treasury from Dec 22-Jan 23 period.' },
+  { date: '07/01/2023', content: (<>P79 adds <span className='reward usd'>$93,000</span> to Hydro Whales treasury from Dec 22-Jan 23 period.</>) },
   { date: '07/01/2023', content: 'Accouncements: NFT Vault and Escrow platform:  beta begin end of Jan for whales, public live mid feb.' },
   { date: '01/12/2022', content: '1st Feb first payout date confirmed by Sam' },
   { date: '09/10/2022', content: '1000 ETH OpenSea Traded Volume' },

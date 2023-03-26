@@ -219,6 +219,10 @@ h1 {
     background-color: var(--bg);
   }
 
-  .reward.usdc { @apply text-green-600; }
-  .reward.wbtc { @apply text-yellow-300; }
+  .reward.usd,
+  .reward.usdc,
+  .reward.usdt {
+    @apply text-green-600;
+  }
+  .reward.wbtc { color: #FF9500; }
 }
