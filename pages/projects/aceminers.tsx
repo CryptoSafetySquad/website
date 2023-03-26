@@ -15,11 +15,14 @@ import {
 import Page from '../../Components/Page'
 import Contracts from '../../Components/Project/Contracts';
 import Header from '../../Components/Project/Header'
+import Sidebar from '../../Components/Project/Sidebar';
+import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon';
+import NewsListing from '../../Components/NewsListing';
+
 import earnings from '../../data/projects/aceminers/earnings'
 import { AceMinersNFT as Project } from '../../data/projects/aceminers/aceminers';
 import news from '../../data/projects/aceminers/news'
-import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon';
-import Sidebar from '../../Components/Project/Sidebar';
+
 
 ChartJS.register(
   CategoryScale,
@@ -37,15 +40,11 @@ function average(nums: number[]) {
 
 const NewsContent = () => {
   const newsIcon = <ModeSwitchingIcon filename='newspaper' size={20} />
-  
+
   return (
     <>
       <h2 className='mb-2'>{newsIcon} News</h2>
-      {
-        news.map((entry, index) => {
-          return <p className='mb-0 text-sm' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
-        })
-      }
+      <NewsListing newsEntries={news} />
     </>
   )
 }
