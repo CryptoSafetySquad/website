@@ -184,6 +184,8 @@ const StatsContent = ({ project }: { project: Project }) => {
     earningsData.labels.push(entry.label);
     earningsData.ethereum.usdc.push(entry.ethereum?.usdc || 0);
     earningsData.ethereum.wbtc.push(entry.ethereum?.wbtc || 0);
+    earningsData.polygon.usdc.push(entry.polygon?.usdc || 0);
+    earningsData.polygon.wbtc.push(entry.polygon?.wbtc || 0);
     earningsData.total.push((entry.ethereum?.wbtc || 0) + (entry.ethereum?.usdc || 0));
   })
 

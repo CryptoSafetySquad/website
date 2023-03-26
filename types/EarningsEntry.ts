@@ -15,6 +15,7 @@ export type EarningsEntry = {
   }
   polygon?: {
     weth?: number;
+    wbtc?: number;
     usdc?: number;
     usdt?: number;
   };
