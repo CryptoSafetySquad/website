@@ -29,6 +29,7 @@ import Sidebar from '../../Components/Project/Sidebar';
 
 import type { Project } from '../../types/project';
 import type { HydroWhaleEarningsEntry } from '../../data/projects/hydrowhales/earnings';
+import type { EarningsEntry } from '../../types/EarningsEntry';
 
 ChartJS.register(
   CategoryScale,
@@ -130,14 +131,40 @@ const HWChart = ({ labels, data, title}: { labels: any[], data: any, title: stri
             //   backgroundColor: 'rgba(100, 100, 255, 0.4)'
             // },
             {
-              label: 'wBTC ($)',
-              data: data.wbtc,
-              backgroundColor: 'rgba(255, 255, 0, 0.4)'
+              label: 'wBTC (Eth) ($)',
+              data: data.ethereum.wbtc,
+              backgroundColor: '#FF9500',
+              borderColor: '#fff',
+              borderWidth: 2,
+              borderRadius: 0,
+              stack: 'Ethereum ERC-20'
             },
             {
-              label: 'USDC',
-              data: data.usdc,
-              backgroundColor: 'rgba(0, 255, 0, 0.4)'
+              label: 'USDC (Eth)',
+              data: data.ethereum.usdc,
+              backgroundColor: 'rgba(0, 255, 0, 0.4)',
+              borderColor: '#fff',
+              borderWidth: 2,
+              borderRadius: 0,
+              stack: 'Ethereum ERC-20'
+            },
+            {
+              label: 'wBTC (Poly) ($)',
+              data: data.polygon.wbtc,
+              borderColor: '#2f1a52', // Polygon Purple
+              borderWidth: 2,
+              borderRadius: 0,
+              backgroundColor: '#FF9500',
+              stack: 'Polygon'
+            },
+            {
+              label: 'USDC (Poly)',
+              data: data.polygon.usdc,
+              borderColor: '#2f1a52', // Polygon Purple
+              borderWidth: 2,
+              borderRadius: 0,
+              backgroundColor: 'rgba(0, 255, 0, 0.4)',
+              stack: 'Polygon'
             }
           ],
         }}
@@ -150,12 +177,14 @@ const StatsContent = ({ project }: { project: Project }) => {
   if (!project.earnings) { return null }
 
   // Compile earnings data
-  const earningsData: { labels: string[]; wbtc: number[]; usdc: number[]; total: number[]; } = { labels: [], wbtc: [], usdc: [], total: [] }
-  project.earnings.forEach((entry: HydroWhaleEarningsEntry) => {
+  const earningsData: { labels: string[]; ethereum: { wbtc: number[]; usdc: number[]; }; polygon: { wbtc: number[]; usdc: number[]; }; total: number[]; } = {
+    labels: [], ethereum: { wbtc: [], usdc: [] }, polygon: { wbtc: [], usdc: [] }, total: []
+  }
+  project.earnings.forEach((entry: EarningsEntry) => {
     earningsData.labels.push(entry.label);
-    earningsData.usdc.push(entry.usdc);
-    earningsData.wbtc.push(entry.wbtc);
-    earningsData.total.push(entry.wbtc + entry.usdc);
+    earningsData.ethereum.usdc.push(entry.ethereum?.usdc || 0);
+    earningsData.ethereum.wbtc.push(entry.ethereum?.wbtc || 0);
+    earningsData.total.push((entry.ethereum?.wbtc || 0) + (entry.ethereum?.usdc || 0));
   })
 
   return (
