@@ -77,28 +77,28 @@ const Chart = ({ labels, data, title}: { labels: any[], data: any, title: string
               borderRadius: 0,
               borderColor: '#2f1a52', // Polygon Purple
               backgroundColor: '#fff',
-              stack: 'SingleReward'
-            },
-            {
-              label: 'KDA',
-              data: data.kda,
-              // borderColor: '#2f1a52',
-              backgroundColor: '#ED098F', // KDA Pink
-              stack: 'Multi'
+              stack: 'Bluechip'
             },
             {
               label: 'LTC',
               data: [],
               borderColor: '',
               backgroundColor: '#88cbf5',
-              stack: 'Multi'
+              stack: 'Bluechip'
+            },
+            {
+              label: 'KDA',
+              data: data.kda,
+              // borderColor: '#2f1a52',
+              backgroundColor: '#ED098F', // KDA Pink
+              stack: 'Altcoin'
             },
             {
               label: 'Nervos',
               data: [],
               borderColor: '',
               backgroundColor: '#18efb1',
-              stack: 'Multi'
+              stack: 'Altcoin'
             }
           ],
         }}
