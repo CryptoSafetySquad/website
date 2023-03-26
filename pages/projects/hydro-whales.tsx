@@ -134,19 +134,19 @@ const HWChart = ({ labels, data, title}: { labels: any[], data: any, title: stri
               label: 'wBTC (Eth) ($)',
               data: data.ethereum.wbtc,
               backgroundColor: '#FF9500',
-              borderColor: '#fff',
-              borderWidth: 2,
-              borderRadius: 0,
-              stack: 'Ethereum ERC-20'
+              // borderColor: '#fff',
+              borderWidth: 0,
+              // borderRadius: 0,
+              stack: 'Primary', // 'Bluechip'
             },
             {
               label: 'USDC (Eth)',
               data: data.ethereum.usdc,
               backgroundColor: 'rgba(0, 255, 0, 0.4)',
-              borderColor: '#fff',
-              borderWidth: 2,
-              borderRadius: 0,
-              stack: 'Ethereum ERC-20'
+              // borderColor: '#fff',
+              borderWidth: 0,
+              // borderRadius: 0,
+              stack: 'Primary', // 'Stablecoin'
             },
             {
               label: 'wBTC (Poly) ($)',
@@ -155,7 +155,7 @@ const HWChart = ({ labels, data, title}: { labels: any[], data: any, title: stri
               borderWidth: 2,
               borderRadius: 0,
               backgroundColor: '#FF9500',
-              stack: 'Polygon'
+              stack: 'Primary', // 'Bluechip'
             },
             {
               label: 'USDC (Poly)',
@@ -164,7 +164,7 @@ const HWChart = ({ labels, data, title}: { labels: any[], data: any, title: stri
               borderWidth: 2,
               borderRadius: 0,
               backgroundColor: 'rgba(0, 255, 0, 0.4)',
-              stack: 'Polygon'
+              stack: 'Primary', // 'Stablecoin'
             }
           ],
         }}
