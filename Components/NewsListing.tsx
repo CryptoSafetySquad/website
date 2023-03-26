@@ -8,8 +8,8 @@ const NewsListing = ({ newsEntries }: { newsEntries: NewsEntry[] }) => {
         {
           newsEntries.map((entry: NewsEntry, index: number) => {
             return <tr key={`news-item-${index}`}>
-              <td className='text-xs px-2 py-1 align-top'>{entry.date}</td>
-              <td className='text-xs px-2 py-1'>{entry.content}</td>
+              <td className='text-xs pr-2 pb-2 align-top'>{entry.date}</td>
+              <td className='text-xs pl-2 pb-2'>{entry.content}</td>
             </tr>
           })
         }
