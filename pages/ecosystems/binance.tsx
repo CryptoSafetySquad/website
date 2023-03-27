@@ -3,6 +3,33 @@ import type { NextPage } from 'next'
 import Page from '../../Components/Page'
 import ExternalLink from '../../Components/ExternalLink'
 
+const data = {
+  centralisedExchanges: [
+    { name: 'KuCoin', link: 'https://www.kucoin.com/r/rf/rJQQK1S' },
+    { name: 'Gate.io', link: 'https://www.gate.io/signup/11213076' },
+  ],
+  decentralisedExchanges: [
+    { name: 'UniSwap', link: 'https://app.uniswap.org/' },
+    { name: 'PancakeSwap', link: 'https://pancakeswap.finance/' },
+    { name: 'Aequinox', link: 'https://www.aequinox.exchange/#/' },
+    { name: 'ApeSwap', link: 'https://apeswap.finance/' },
+    { name: 'Thena', link: 'https://thena.fi/' }
+  ],
+  defi: [
+    { name: 'Beefy', link: 'https://app.beefy.com/' },
+    { name: 'Magik', link: 'https://magik.farm/#/bsc' },
+    { name: 'Autofarm', link: 'https://autofarm.network/' },
+    { name: 'YieldWolf', link: 'https://yieldwolf.finance/' },
+    { name: 'dexVaults+', link: 'https://dexvaults.com/' },
+  ],
+  protocols: [
+    { name: 'EMP Money', link: 'https://emp.money/' },
+  ],
+  nftMarketplaces: [
+    { name: 'Alpha Shares', link: 'https://www.alphashares.io/' },
+  ]
+}
+
 const Binance: NextPage = () => {
   const title = 'Binance'
   const content = (
@@ -17,43 +44,45 @@ const Binance: NextPage = () => {
         <div className='card'>
           <h2 className='mb-2'>Exchanges (Centralised)</h2>
           <div className='grid grid-cols-2 gap-2'>
-            <ExternalLink href='https://www.kucoin.com/r/rf/rJQQK1S' text='KuCoin' />
-            <ExternalLink href='https://www.gate.io/signup/11213076' text='Gate.io' />
+          {
+            data.centralisedExchanges.map(cex => <ExternalLink key={cex.name} href={cex.link} text={cex.name} />)
+          }
           </div>
         </div>
 
         <div className='card'>
           <h2 className='mb-2'>DEXs (Token Swap)</h2>
           <div className='grid grid-cols-2 gap-2'>
-            <ExternalLink href='https://app.uniswap.org/' text='UniSwap' />
-            <ExternalLink href='https://pancakeswap.finance/' text='PancakeSwap' />
-            <ExternalLink href='https://www.aequinox.exchange/#/' text='Aequinox' />
-            <ExternalLink href='https://apeswap.finance/' text='ApeSwap' />
+          {
+            data.decentralisedExchanges.map(dex => <ExternalLink key={dex.name} href={dex.link} text={dex.name} />)
+          }
           </div>
         </div>
 
         <div className='card'>
           <h2 className='mb-2'>DeFI (Decentralised Finance)</h2>
           <div className='grid grid-cols-2 gap-2'>
-            <ExternalLink href='https://app.beefy.com/' text='Beefy' />
-            <ExternalLink href='https://magik.farm/#/bsc' text='Magik' />
-            <ExternalLink href='https://autofarm.network/' text='Autofarm' />
-            <ExternalLink href='https://yieldwolf.finance/' text='YieldWolf' />
-            <ExternalLink href='https://dexvaults.com/' text='dexVaults+' />
+          {
+            data.defi.map(df => <ExternalLink key={df.name} href={df.link} text={df.name} />)
+          }
           </div>
         </div>
 
         <div className='card'>
           <h2 className='mb-2'>Projects / Protocols</h2>
           <div className='grid grid-cols-2 gap-2'>
-            <ExternalLink href='https://emp.money/' text='EMP Money' />
+          {
+            data.protocols.map(p => <ExternalLink key={p.name} href={p.link} text={p.name} />)
+          }
           </div>
         </div>
 
         <div className='card'>
           <h2>NFT Marketplaces</h2>
           <div className='grid grid-cols-2 gap-2'>
-            <ExternalLink href='https://www.alphashares.io/' text='Alpha Shares' />
+          {
+            data.nftMarketplaces.map(n => <ExternalLink key={n.name} href={n.link} text={n.name} />)
+          }
           </div>
         </div>
 
