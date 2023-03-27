@@ -21,11 +21,14 @@ const ethl2ecos: any[] = [
   { name: 'Optimism', slug: 'optimism', marketCap: 645197784, lastUpdated: '27/03/2023' },
 ]
 
+const lastUpdated = '27/03/2023'
+
 const Ecosystems: NextPage = () => {
   const title = 'Ecosystems'
   const content = (
     <>
       <p>If you are interested in any particular ecosystem you can follow the links below to deep dive and learn more about projects/tools etc in that space.</p>
+      <p>Market Caps last updated: {lastUpdated}</p>
 
       <h2 className='mb-2 mt-4'>Layer 1</h2>
       <div className='grid grid-cols-4 gap-2 py-2'>
