@@ -1,24 +1,17 @@
 import type { NextPage } from 'next'
+import type { EcosystemLink } from '../../types/EcosystemLink'
 
-import Page from '../../Components/Page'
-import ExternalLink from '../../Components/ExternalLink'
 import EcosystemPage from '../../Components/EcosystemPage'
+import exchanges from '../../data/exchanges'
 
-const data = {
+
+
+const data: { [key: string]: EcosystemLink[] } = {
   explorers: [
     { name: 'BscScan', link: '', },
   ],
-  centralisedExchanges: [
-    { name: 'KuCoin', link: 'https://www.kucoin.com/r/rf/rJQQK1S' },
-    { name: 'Gate.io', link: 'https://www.gate.io/signup/11213076' },
-  ],
-  decentralisedExchanges: [
-    { name: 'UniSwap', link: 'https://app.uniswap.org/' },
-    { name: 'PancakeSwap', link: 'https://pancakeswap.finance/' },
-    { name: 'Aequinox', link: 'https://www.aequinox.exchange/#/' },
-    { name: 'ApeSwap', link: 'https://apeswap.finance/' },
-    { name: 'Thena', link: 'https://thena.fi/' }
-  ],
+  centralisedExchanges: [],
+  decentralisedExchanges: [],
   defi: [
     { name: 'Beefy', link: 'https://app.beefy.com/' },
     { name: 'Magik', link: 'https://magik.farm/#/bsc' },
@@ -36,6 +29,14 @@ const data = {
     { name: 'DRIP', link: 'https://drip.community/' },
   ]
 }
+
+data.centralisedExchanges.push(exchanges.kucoin)
+data.centralisedExchanges.push(exchanges.gateio)
+data.decentralisedExchanges.push(exchanges.uniswap)
+data.decentralisedExchanges.push(exchanges.pancakeswap)
+data.decentralisedExchanges.push({ name: 'Aequinox', link: 'https://www.aequinox.exchange/#/' })
+data.decentralisedExchanges.push({ name: 'ApeSwap', link: 'https://apeswap.finance/' })
+data.decentralisedExchanges.push({ name: 'Thena', link: 'https://thena.fi/' })
 
 const Binance: NextPage = () => {
   return <EcosystemPage name='Binance' slug='binance' data={data} />
