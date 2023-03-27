@@ -2,8 +2,12 @@ import type { NextPage } from 'next'
 
 import Page from '../../Components/Page'
 import ExternalLink from '../../Components/ExternalLink'
+import EcosystemPage from '../../Components/EcosystemPage'
 
 const data = {
+  explorers: [
+    { name: 'BscScan', link: '', },
+  ],
   centralisedExchanges: [
     { name: 'KuCoin', link: 'https://www.kucoin.com/r/rf/rJQQK1S' },
     { name: 'Gate.io', link: 'https://www.gate.io/signup/11213076' },
@@ -27,83 +31,14 @@ const data = {
   ],
   nftMarketplaces: [
     { name: 'Alpha Shares', link: 'https://www.alphashares.io/' },
+  ],
+  riskyProjects: [
+    { name: 'DRIP', link: 'https://drip.community/' },
   ]
 }
 
 const Binance: NextPage = () => {
-  const title = 'Binance'
-  const content = (
-    <>
-      <p className='mb-4'>None of the information on this page is financial advice, do your own research before investing in any protocols.</p>
-      <div className='grid md:grid-cols-3 gap-2'>
-        <div className='card'>
-          <h2 className='mb-2'>Block Explorer</h2>
-          <p><ExternalLink href='https://bscscan.com/' text='BscScan' /></p>
-        </div>
-
-        <div className='card'>
-          <h2 className='mb-2'>Exchanges (Centralised)</h2>
-          <div className='grid grid-cols-2 gap-2'>
-          {
-            data.centralisedExchanges.map(cex => <ExternalLink key={cex.name} href={cex.link} text={cex.name} />)
-          }
-          </div>
-        </div>
-
-        <div className='card'>
-          <h2 className='mb-2'>DEXs (Token Swap)</h2>
-          <div className='grid grid-cols-2 gap-2'>
-          {
-            data.decentralisedExchanges.map(dex => <ExternalLink key={dex.name} href={dex.link} text={dex.name} />)
-          }
-          </div>
-        </div>
-
-        <div className='card'>
-          <h2 className='mb-2'>DeFI (Decentralised Finance)</h2>
-          <div className='grid grid-cols-2 gap-2'>
-          {
-            data.defi.map(df => <ExternalLink key={df.name} href={df.link} text={df.name} />)
-          }
-          </div>
-        </div>
-
-        <div className='card'>
-          <h2 className='mb-2'>Projects / Protocols</h2>
-          <div className='grid grid-cols-2 gap-2'>
-          {
-            data.protocols.map(p => <ExternalLink key={p.name} href={p.link} text={p.name} />)
-          }
-          </div>
-        </div>
-
-        <div className='card'>
-          <h2>NFT Marketplaces</h2>
-          <div className='grid grid-cols-2 gap-2'>
-          {
-            data.nftMarketplaces.map(n => <ExternalLink key={n.name} href={n.link} text={n.name} />)
-          }
-          </div>
-        </div>
-
-        <div className='card'>
-          <h2 className='mb-2'>&quot;Risky&quot; Projects / Protocols</h2>
-          <div className='grid grid-cols-2 gap-2'>
-            <ExternalLink href='https://drip.community/' text='DRIP' />
-          </div>
-        </div>
-      </div>
-    </>
-  )
-
-  return (
-    <Page {...{
-      title,
-      content,
-      slug: 'ecosystems/binance',
-      description: 'Binance'
-    }} />
-  )
+  return <EcosystemPage name='Binance' slug='binance' data={data} />
 }
 
 export default Binance
