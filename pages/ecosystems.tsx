@@ -4,24 +4,25 @@ import Page from '../Components/Page'
 import marketCap from '../functions/marketCap'
 
 const l1ecos: any[] = [
-  { name: 'Bitcoin', slug: 'bitcoin', marketCap: 523083932145, lastUpdated: '27/03/2023' },
-  { name: 'Ethereum', slug: 'ethereum', marketCap: 209702870880, lastUpdated: '27/03/2023' },
-  { name: 'Binance', slug: 'binance', marketCap: 48787711611, lastUpdated: '27/03/2023' },
-  { name: 'Solana', slug: 'solana', marketCap: 7635818672, lastUpdated: '27/03/2023' },
-  { name: 'Avalanche', slug: 'avalanche', marketCap: 5379728801, lastUpdated: '27/03/2023' },
+  { name: 'Bitcoin', slug: 'bitcoin', marketCap: 540115865088, lastUpdated: '09/04/2023' },
+  { name: 'Ethereum', slug: 'ethereum', marketCap: 221519687844, lastUpdated: '09/04/2023' },
+  { name: 'Binance', slug: 'binance', marketCap: 49069307443, lastUpdated: '27/03/2023' },
+  { name: 'Solana', slug: 'solana', marketCap: 7812135314, lastUpdated: '27/03/2023' },
+  { name: 'Avalanche', slug: 'avalanche', marketCap: 5660089337, lastUpdated: '27/03/2023' },
+  { name: 'Monero', slug: 'monero', marketCap: 2907148559, lastUpdated: '27/03/2023' },
   { name: 'Fantom', slug: 'fantom', marketCap: 1151938313, lastUpdated: '27/03/2023' },
   { name: 'Kadena', slug: 'kadena', marketCap: 204180499, lastUpdated: '27/03/2023' },
+  { name: 'Canto', slug: 'canto', marketCap: 308341147, lastUpdated: '09/04/2023' },
   { name: 'Nervos', slug: 'nervos', marketCap: 190951046, lastUpdated: '27/03/2023' },
   { name: 'Constellation', slug: 'constellation', marketCap: 62617251, lastUpdated: '27/03/2023' },
-  { name: 'Monero', slug: 'monero', marketCap: 2860827463, lastUpdated: '27/03/2023' },
 ]
 const ethl2ecos: any[] = [
-  { name: 'Polygon', slug: 'polygon', marketCap: 9451552471, lastUpdated: '27/03/2023' },
-  { name: 'Arbitrum', slug: 'arbitrum', marketCap: 1516361415, lastUpdated: '27/03/2023' },
-  { name: 'Optimism', slug: 'optimism', marketCap: 645197784, lastUpdated: '27/03/2023' },
+  { name: 'Polygon', slug: 'polygon', marketCap: 10000741025, lastUpdated: '09/04/2023' },
+  { name: 'Arbitrum', slug: 'arbitrum', marketCap: 1474265907, lastUpdated: '09/04/2023' },
+  { name: 'Optimism', slug: 'optimism', marketCap: 701913699, lastUpdated: '09/04/2023' },
 ]
 
-const lastUpdated = '27/03/2023'
+const lastUpdated = '09/04/2023'
 
 const Ecosystems: NextPage = () => {
   const title = 'Ecosystems'

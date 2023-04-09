@@ -1,19 +1,11 @@
 import Page from "./Page"
-import { NextPage } from "next"
 import ExternalLink from "./ExternalLink"
 
-const EcosystemCard = ({title, datapoint}: any) => {
-  return (
-    <div className='card'>
-      <h2 className='mb-2'>{title}</h2>
-      {
-        datapoint.map((p: any) => <ExternalLink key={p.name} text={p.name} href={p.link} />)
-      }
-    </div>
-  )
+const TokenDisplay = ({ name, cmc }: { name: string; cmc?: string; }) => {
+  return cmc ? <ExternalLink href={cmc} text={name} /> : (<>{name}</>)
 }
 
-const EcosystemPage = ({ name, slug, data }: { name: string; slug: string; data: any }) => {
+const EcosystemPage = ({ name, slug, data, metadata }: { name: string; slug?: string; data: any; metadata?: any; }) => {
   const title = name
 
   const sections = [
@@ -29,6 +21,9 @@ const EcosystemPage = ({ name, slug, data }: { name: string; slug: string; data:
 
   const content = (
     <>
+      {metadata && metadata.token && (
+        <p>Native Token: <TokenDisplay {...metadata.token} /></p>
+      )}
       <p className='mb-4'>None of the information on this page is financial advice, do your own research before investing in any protocols.</p>
       <div className='grid md:grid-cols-3 gap-2'>
         {sections.map(section => {
@@ -38,7 +33,7 @@ const EcosystemPage = ({ name, slug, data }: { name: string; slug: string; data:
                 <h2 className='mb-2'>{section.title}</h2>
                 <div className='grid grid-cols-2 gap-2'>
                 {
-                  data[section.name].map((cex: any) => <ExternalLink key={cex.name} href={cex.link} text={cex.name} />)
+                  data[section.name].map((entry: any) => <ExternalLink key={entry.name} href={entry.link} text={entry.name} />)
                 }
                 </div>
               </div>
@@ -53,7 +48,7 @@ const EcosystemPage = ({ name, slug, data }: { name: string; slug: string; data:
     <Page {...{
       title,
       content,
-      slug: `ecosystems/${slug}`,
+      slug: `ecosystems/${slug || name.toLocaleLowerCase()}`,
       description: title
     }} />
   )

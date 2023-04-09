@@ -2,30 +2,33 @@ import type { NextPage } from 'next'
 
 import { EcosystemLink } from '../../types/EcosystemLink'
 
-import Page from '../../Components/Page'
-import ExternalLink from '../../Components/ExternalLink'
 import EcosystemPage from '../../Components/EcosystemPage'
 
 import exchanges from '../../data/exchanges'
 import marketplaces from '../../data/marketplaces'
+import wallets from '../../data/wallets'
 
 const data: { [key: string]: EcosystemLink[] } = {
   explorers: [
     { name: 'Solana Explorer', link: 'https://explorer.solana.com/', },
-    { name: 'Solscan', link: 'https://solscan.io/', },
+    { name: 'SolScan', link: 'https://solscan.io/', },
   ],
-  centralisedExchanges: [],
+  centralisedExchanges: [
+    exchanges.kucoin,
+    exchanges.gateio
+  ],
   // decentralisedExchanges: [],
   // defi: [],
   // protocols: [],
-  nftMarketplaces: [],
+  nftMarketplaces: [
+    marketplaces.magiceden
+  ],
   // riskyProjects: [],
-  // wallets: []
+  wallets: [
+    wallets.phantom,
+    wallets.exodus,
+  ]
 }
-
-data.centralisedExchanges.push(exchanges.kucoin)
-data.centralisedExchanges.push(exchanges.gateio)
-data.nftMarketplaces.push(marketplaces.magiceden)
 
 const Solana: NextPage = () => {
   return <EcosystemPage name='Solana' slug='solana' data={data} />
