@@ -32,16 +32,18 @@ const EcosystemPage = ({ name, slug, data }: { name: string; slug: string; data:
       <p className='mb-4'>None of the information on this page is financial advice, do your own research before investing in any protocols.</p>
       <div className='grid md:grid-cols-3 gap-2'>
         {sections.map(section => {
-          return data[section.name] && (
-            <div className='card'>
-              <h2 className='mb-2'>{section.title}</h2>
-              <div className='grid grid-cols-2 gap-2'>
-              {
-                data[section.name].map((cex: any) => <ExternalLink key={cex.name} href={cex.link} text={cex.name} />)
-              }
+          if (data[section.name] && data[section.name].length > 0) {
+            return data[section.name] && (
+              <div className='card'>
+                <h2 className='mb-2'>{section.title}</h2>
+                <div className='grid grid-cols-2 gap-2'>
+                {
+                  data[section.name].map((cex: any) => <ExternalLink key={cex.name} href={cex.link} text={cex.name} />)
+                }
+                </div>
               </div>
-            </div>
-          )
+            )
+          }
         })}
       </div>
     </>
