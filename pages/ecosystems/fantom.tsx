@@ -11,7 +11,10 @@ const data: { [key: string]: EcosystemLink[] } = {
   explorers: [
     { name: 'FTMScan', link: 'https://ftmscan.com/' },
   ],
-  centralisedExchanges: [],
+  centralisedExchanges: [
+    exchanges.kucoin,
+    exchanges.gateio,
+  ],
   decentralisedExchanges: [
     { name: 'SpookySwap', link: 'https://spooky.fi/#/' },
     { name: 'SpiritSwap', link: 'https://swap.spiritswap.finance/' },
@@ -27,8 +30,6 @@ const data: { [key: string]: EcosystemLink[] } = {
     marketplaces.alphaShares,
   ]
 }
-data.centralisedExchanges.push(exchanges.kucoin)
-data.centralisedExchanges.push(exchanges.gateio)
 
 const metadata = {
   token: {
