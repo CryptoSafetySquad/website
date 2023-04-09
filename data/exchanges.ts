@@ -3,6 +3,8 @@ const exchanges = {
   gateio: { name: 'Gate.io', link: 'https://www.gate.io/signup/11213076', type: 'Centralised' },
   uniswap: { name: 'UniSwap', link: 'https://app.uniswap.org/', type: 'Decentralised' },
   pancakeswap: { name: 'PancakeSwap', link: 'https://pancakeswap.finance/', type: 'Decentralised' },
+
+  apeswap: { name: 'ApeSwap', link: 'https://apeswap.finance/' },
   // _: { name: '', link: '', type: 'Decentralised' },
   // _: { name: '', link: '', type: 'Decentralised' },
   // _: { name: '', link: '', type: 'Decentralised' },
