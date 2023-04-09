@@ -13,7 +13,7 @@ const l1ecos: any[] = [
   { name: 'Kadena', slug: 'kadena', marketCap: 204180499, lastUpdated: '27/03/2023' },
   { name: 'Nervos', slug: 'nervos', marketCap: 190951046, lastUpdated: '27/03/2023' },
   { name: 'Constellation', slug: 'constellation', marketCap: 62617251, lastUpdated: '27/03/2023' },
-  // { name: 'Monero', slug: 'monero', marketCap: 2860827463, lastUpdated: '27/03/2023' },
+  { name: 'Monero', slug: 'monero', marketCap: 2860827463, lastUpdated: '27/03/2023' },
 ]
 const ethl2ecos: any[] = [
   { name: 'Polygon', slug: 'polygon', marketCap: 9451552471, lastUpdated: '27/03/2023' },

@@ -1,7 +1,21 @@
 import type { NextPage } from 'next'
+import { EcosystemLink } from '../../types/EcosystemLink'
 
 import Page from '../../Components/Page'
 import ExternalLink from '../../Components/ExternalLink'
+
+const data: { [key: string]: EcosystemLink[] } = {
+  explorers: [
+    { name: '', link: '', },
+  ],
+  centralisedExchanges: [],
+  decentralisedExchanges: [],
+  defi: [],
+  protocols: [],
+  nftMarketplaces: [],
+  riskyProjects: [],
+  wallets: []
+}
 
 const Arbitrum: NextPage = () => {
   const title = 'Arbitrum'
