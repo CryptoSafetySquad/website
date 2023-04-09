@@ -6,6 +6,7 @@ import EcosystemPage from '../../Components/EcosystemPage'
 import exchanges from '../../data/exchanges'
 import marketplaces from '../../data/marketplaces'
 import defi from '../../data/defi'
+import wallets from '../../data/wallets'
 
 const data: { [key: string]: EcosystemLink[] } = {
   explorers: [
@@ -16,12 +17,13 @@ const data: { [key: string]: EcosystemLink[] } = {
   defi: [],
   protocols: [
     { name: 'EMP Money', link: 'https://emp.money/' },
+    { name: 'MDB (Make Defi Better)', link: 'https://www.mdb.fund/' },
   ],
-  nftMarketplaces: [
-  ],
+  nftMarketplaces: [],
   riskyProjects: [
     { name: 'DRIP', link: 'https://drip.community/' },
-  ]
+  ],
+  wallets: []
 }
 
 data.centralisedExchanges.push(exchanges.kucoin)
@@ -37,6 +39,9 @@ data.defi.push(defi.beefy)
 data.defi.push(defi.magik)
 data.defi.push(defi.yieldwolf)
 data.defi.push(defi.dexVaults)
+data.wallets.push(wallets.metamask)
+data.wallets.push(wallets.rabby)
+data.wallets.push(wallets.trustwallet)
 
 const Binance: NextPage = () => {
   return <EcosystemPage name='Binance' slug='binance' data={data} />
