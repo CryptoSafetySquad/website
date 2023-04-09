@@ -21,8 +21,15 @@ const EcosystemPage = ({ name, slug, data, metadata }: { name: string; slug?: st
 
   const content = (
     <>
-      {metadata && metadata.token && (
-        <p>Native Token: <TokenDisplay {...metadata.token} /></p>
+      {metadata && (
+        <div className="card">
+        {metadata.website && (
+          <ExternalLink href={metadata.website} text='Official Website' />
+        )}
+        {metadata.token && (
+          <p>Native Token: <TokenDisplay {...metadata.token} /></p>
+        )}
+        </div>
       )}
       <p className='mb-4'>None of the information on this page is financial advice, do your own research before investing in any protocols.</p>
       <div className='grid md:grid-cols-3 gap-2'>

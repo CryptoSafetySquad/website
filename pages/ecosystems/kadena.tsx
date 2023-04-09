@@ -3,6 +3,10 @@ import type { NextPage } from 'next'
 import Page from '../../Components/Page'
 import ExternalLink from '../../Components/ExternalLink'
 
+const metadata = {
+  website: 'https://kadena.io/'
+}
+
 const Kadena: NextPage = () => {
   const title = 'Kadena'
   const content = (

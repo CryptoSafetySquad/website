@@ -44,7 +44,8 @@ const metadata = {
   token: {
     name: 'ETH',
     cmc: 'https://coinmarketcap.com/currencies/ethereum/'
-  }
+  },
+  website: 'https://ethereum.org'
 }
 
 const Ethereum: NextPage = () => {
