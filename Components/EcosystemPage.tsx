@@ -17,6 +17,7 @@ const EcosystemPage = ({ name, slug, data }: { name: string; slug: string; data:
   const title = name
 
   const sections = [
+    { name: 'wallets', title: 'Wallets' },
     { name: 'explorers', title: 'Block Explorer' },
     { name: 'centralisedExchanges', title: 'Exchanges (Centralised)' },
     { name: 'decentralisedExchanges', title: 'DEXs (Token Swap)' },
