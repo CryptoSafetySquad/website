@@ -1,59 +1,44 @@
 import type { NextPage } from 'next'
+import type { EcosystemLink } from '../../types/EcosystemLink'
 
-import Page from '../../Components/Page'
-import ExternalLink from '../../Components/ExternalLink'
-import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
+import EcosystemPage from '../../Components/EcosystemPage'
+import exchanges from '../../data/exchanges'
+import wallets from '../../data/wallets'
+import marketplaces from '../../data/marketplaces'
+import defi from '../../data/defi'
+
+const data: { [key: string]: EcosystemLink[] } = {
+  explorers: [
+    { name: 'FTMScan', link: 'https://ftmscan.com/' },
+  ],
+  centralisedExchanges: [],
+  decentralisedExchanges: [
+    { name: 'SpookySwap', link: 'https://spooky.fi/#/' },
+    { name: 'SpiritSwap', link: 'https://swap.spiritswap.finance/' },
+  ],
+  defi: [
+    defi.beefy,
+    defi.dexVaults,
+  ],
+  wallets: [
+    wallets.trustwallet,
+  ],
+  nftMarketplaces: [
+    marketplaces.alphaShares,
+  ]
+}
+data.centralisedExchanges.push(exchanges.kucoin)
+data.centralisedExchanges.push(exchanges.gateio)
+
+const metadata = {
+  token: {
+    name: 'FTM',
+    cmc: 'https://coinmarketcap.com/currencies/fantom/',
+  }
+}
 
 const Fantom: NextPage = () => {
-  const title = 'Fantom'
-  const content = (
-    <div className='grid md:grid-cols-3 gap-2'>
-      <div className='card'>
-        <h2 className='mb-2'>Block Explorer</h2>
-        <p><ExternalLink href='https://ftmscan.com/' text='FTMScan' /></p>
-      </div>
-
-      <div className='card'>
-        <h2 className='mb-2'>Exchanges (Centralised)</h2>
-        <div className='grid grid-cols-2 gap-2'>
-          <ExternalLink href='https://www.kucoin.com/r/rf/rJQQK1S' text='KuCoin' />
-          <ExternalLink href='https://www.gate.io/signup/11213076' text='Gate.io' />
-        </div>
-      </div>
-
-      <div className='card'>
-        <h2 className='mb-2'>DEXs (Token Swap)</h2>
-        <div className='grid grid-cols-2 gap-2'>
-          <ExternalLink href='https://spooky.fi/#/' text='SpookySwap' />
-          <ExternalLink href='https://swap.spiritswap.finance/' text='SpiritSwap' />
-        </div>
-      </div>
-
-      <div className='card'>
-        <h2 className='mb-2'>NFT Marketplaces</h2>
-        <div className='grid grid-cols-2 gap-2'>
-          <ExternalLink href='https://www.alphashares.io/' text='Alpha Shares' />
-        </div>
-      </div>
-
-      <div className='card'>
-        <h2 className='mb-2'>DeFI (Decentralised Finance)</h2>
-        <div className='grid grid-cols-2 gap-2'>
-          <ExternalLink href='https://app.beefy.com/' text='Beefy' />
-          <ExternalLink href='https://dexvaults.com/' text='dexVaults+' />
-        </div>
-      </div>
-    </div>
-  )
-
-  return (
-    <Page {...{
-      title,
-      content,
-      slug: 'ecosystems/fantom',
-      description: 'Fantom'
-    }} />
-  )
+  return <EcosystemPage name='Fantom' data={data} metadata={metadata} />
 }
 
 export default Fantom
