@@ -35,13 +35,17 @@ const EcosystemPage = ({ name, slug, data, metadata }: { name: string; slug?: st
       <p className='mb-4 warn'>None of the information on this page is financial advice, do your own research before investing in any protocols.</p>
       <div className='grid md:grid-cols-3 gap-2'>
         {sections.map(section => {
+          let linkClass = '';
+          if (section.name === 'riskyProjects') {
+            linkClass = 'danger'
+          }
           if (data[section.name] && data[section.name].length > 0) {
             return data[section.name] && (
               <div className='card bordered'>
                 <h2 className={`mb-2 ${tokenClass}`}>{section.title}</h2>
                 <div className='grid grid-cols-2 gap-2'>
                 {
-                  data[section.name].map((entry: any) => <ExternalLink key={entry.name} href={entry.link} text={entry.name} />)
+                  data[section.name].map((entry: any) => <ExternalLink className={linkClass ?? null} key={entry.name} href={entry.link} text={entry.name} />)
                 }
                 </div>
               </div>
