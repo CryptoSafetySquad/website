@@ -5,6 +5,7 @@ const exchanges = {
   pancakeswap: { name: 'PancakeSwap', link: 'https://pancakeswap.finance/', type: 'Decentralised' },
 
   apeswap: { name: 'ApeSwap', link: 'https://apeswap.finance/' },
+  quickswap: { name: 'QuickSwap', link: 'https://quickswap.exchange/' },
   // _: { name: '', link: '', type: 'Decentralised' },
   // _: { name: '', link: '', type: 'Decentralised' },
   // _: { name: '', link: '', type: 'Decentralised' },

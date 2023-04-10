@@ -30,8 +30,20 @@ const data: { [key: string]: EcosystemLink[] } = {
   ]
 }
 
+const metadata = {
+  token: {
+    name: 'SOL',
+    cmc: 'https://coinmarketcap.com/currencies/solana/',
+  }
+}
+
 const Solana: NextPage = () => {
-  return <EcosystemPage name='Solana' slug='solana' data={data} />
+  return <EcosystemPage
+    name='Solana'
+    slug='solana'
+    data={data}
+    metadata={metadata}
+  />
 }
 
 export default Solana

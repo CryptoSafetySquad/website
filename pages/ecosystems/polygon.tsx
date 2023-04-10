@@ -1,69 +1,55 @@
 import type { NextPage } from 'next'
+import type { EcosystemLink } from '../../types/EcosystemLink'
 
 import Page from '../../Components/Page'
 import ExternalLink from '../../Components/ExternalLink'
+import EcosystemPage from '../../Components/EcosystemPage'
+
+import exchanges from '../../data/exchanges'
+import wallets from '../../data/wallets'
+import defi from '../../data/defi'
+import marketplaces from '../../data/marketplaces'
+
+const data: { [key: string]: EcosystemLink[] } = {
+  explorers: [
+    { link: 'https://polygonscan.com/', name: 'PolygonScan' }
+  ],
+  centralisedExchanges: [
+    exchanges.kucoin,
+    exchanges.gateio,
+  ],
+  decentralisedExchanges: [
+    exchanges.apeswap,
+    exchanges.uniswap,
+    exchanges.quickswap,
+  ],
+  defi: [
+    defi.yieldwolf,
+    defi.magik,
+  ],
+  protocols: [],
+  nftMarketplaces: [
+    marketplaces.alphaShares,
+    marketplaces.magiceden,
+  ],
+  riskyProjects: [],
+  wallets: [
+  ]
+}
+
+const metadata = {
+  token: {
+    name: 'MATIC',
+    cmc: 'https://coinmarketcap.com/currencies/polygon/'
+  }
+}
 
 const Polygon: NextPage = () => {
-  const title = 'Polygon'
-  const content = (
-    <>
-      <p className='mb-4'>None of the information on this page is financial advice, do your own research before investing in any protocols.</p>
-      <div className='grid md:grid-cols-3 gap-2'>
-        <div className='card'>
-          <h2 className='mb-2'>Block Explorer</h2>
-          <p><ExternalLink href='https://polygonscan.com/' text='PolygonScan' /></p>
-        </div>
-
-        <div className='card'>
-          <h2 className='mb-2'>Exchanges (Centralised)</h2>
-          <div className='grid grid-cols-2 gap-2'>
-            <ExternalLink href='https://www.kucoin.com/r/rf/rJQQK1S' text='KuCoin' />
-            <ExternalLink href='https://www.gate.io/signup/11213076' text='Gate.io' />
-          </div>
-        </div>
-
-        <div className='card'>
-          <h2 className='mb-2'>DEXs (Token Swap)</h2>
-          <div className='grid grid-cols-2 gap-2'>
-            <ExternalLink href='https://quickswap.exchange/' text='QuickSwap' />
-            <ExternalLink href='https://app.uniswap.org/' text='UniSwap' />
-            <ExternalLink href='https://apeswap.finance/' text='ApeSwap' />
-          </div>
-        </div>
-
-        <div className='card'>
-          <h2 className='mb-2'>NFT Marketplaces</h2>
-          <div className='grid grid-cols-2 gap-2'>
-            <ExternalLink href='https://www.alphashares.io/' text='Alpha Shares' />
-            <ExternalLink href='https://magiceden.io/' text='Magic Eden' />
-          </div>
-        </div>
-
-        <div className='card'>
-          <h2 className='mb-2'>DeFI (Decentralised Finance)</h2>
-          <div className='grid grid-cols-2 gap-2'>
-            <ExternalLink href='https://magik.farm/#/polygon' text='Magik' />
-            <ExternalLink href='https://yieldwolf.finance/' text='YieldWolf' />
-          </div>
-        </div>
-
-        <div className='card'>
-          <h2 className='mb-2'>Protocols</h2>
-          <div className='grid grid-cols-2 gap-2'>
-          </div>
-        </div>
-      </div>
-    </>
-  )
-
-  return (
-    <Page {...{
-      title,
-      content,
-      slug: 'ecosystems/polygon',
-      description: 'Polygon'
-    }} />
-  )
+  return <EcosystemPage
+    name='Polygon'
+    data={data}
+    metadata={metadata}
+  />
 }
 
 export default Polygon
