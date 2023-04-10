@@ -17,6 +17,7 @@ const data: { [key: string]: EcosystemLink[] } = {
 }
 
 const metadata = {
+  website: 'https://www.getmonero.org/',
   token: {
     name: 'XMR',
     cmc: 'https://coinmarketcap.com/currencies/monero/'
