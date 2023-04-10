@@ -53,6 +53,8 @@ export const EMPMoney: Project = {
   ],
   contracts: [
     { name: 'EMP Detonator', contract: '0xa9ea52d60111073e34fad966c03f70684e5b205d', blockchain: 'BSC', short: '0xa9...205d', explorerUrl: 'https://bscscan.com/address/0xa9ea52d60111073e34fad966c03f70684e5b205d' },
+    { name: 'EMP Detonator Defender Claim', contract: '0x53d1eed48bb9de30e268bc6d7bfb7665e097d3c3', blockchain: 'BSC', short: '0x53...d3c3', explorerUrl: 'https://bscscan.com/address/0x53d1eed48bb9de30e268bc6d7bfb7665e097d3c3' },
+    { name: 'EMP Sentinel Squadron Claim', contract: '0x693c755d752c22920f20df4166e6067ada53ea5a', blockchain: 'BSC', short: '0x69...ea5a', explorerUrl: 'https://bscscan.com/address/0x693c755d752c22920f20df4166e6067ada53ea5a' },
   ],
   nfts: [
     { name: 'Sentinel Squadron NFT', contract: '0xd689af61148cb91e286d0d4e92d67120e35c37b8', blockchain: 'BSC', short: '0xd6...37b8', explorerUrl: 'https://bscscan.com/address/0xd689af61148cb91e286d0d4e92d67120e35c37b8' },
