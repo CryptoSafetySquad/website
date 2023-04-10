@@ -26,8 +26,21 @@ const data: { [key: string]: EcosystemLink[] } = {
   wallets: []
 }
 
+const metadata = {
+  website: 'https://arbitrum.io/',
+  token: {
+    name: 'ARB',
+    cmc: 'https://coinmarketcap.com/currencies/arbitrum/'
+  }
+}
+
 const Arbitrum: NextPage = () => {
-  return <EcosystemPage data={data} name='Arbitrum' slug='arbitrum' />
+  return <EcosystemPage
+    data={data}
+    name='Arbitrum'
+    slug='arbitrum'
+    metadata={metadata}
+  />
 }
 
 export default Arbitrum

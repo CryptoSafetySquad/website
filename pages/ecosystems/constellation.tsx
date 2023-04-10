@@ -27,6 +27,7 @@ const data: { [key: string]: EcosystemLink[] } = {
 }
 
 const metadata = {
+  website: 'https://constellationnetwork.io/',
   token: {
     name: 'DAG',
     cmc: 'https://coinmarketcap.com/currencies/constellation/'

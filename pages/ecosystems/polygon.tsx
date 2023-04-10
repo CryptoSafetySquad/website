@@ -38,6 +38,7 @@ const data: { [key: string]: EcosystemLink[] } = {
 }
 
 const metadata = {
+  website: 'https://polygon.technology/',
   token: {
     name: 'MATIC',
     cmc: 'https://coinmarketcap.com/currencies/polygon/'

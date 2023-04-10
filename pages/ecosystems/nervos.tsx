@@ -23,6 +23,7 @@ const data: { [key: string]: EcosystemLink[] } = {
 }
 
 const metadata = {
+  website: 'https://www.nervos.org/',
   token: {
     name: 'CKB',
     cmc: 'https://coinmarketcap.com/currencies/nervos-network/'

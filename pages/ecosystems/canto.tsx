@@ -26,6 +26,7 @@ const data: { [key: string]: EcosystemLink[] } = {
 }
 
 const metadata = {
+  website: 'https://canto.io/',
   token: {
     name: 'CANTO',
     cmc: 'https://coinmarketcap.com/currencies/canto/'

@@ -29,6 +29,7 @@ const data: { [key: string]: EcosystemLink[] } = {
 }
 
 const metadata = {
+  website: 'https://www.optimism.io/',
   token: {
     name: 'OP',
     cmc: 'https://coinmarketcap.com/currencies/optimism-ethereum/'

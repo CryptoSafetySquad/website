@@ -32,6 +32,7 @@ const data: { [key: string]: EcosystemLink[] } = {
 }
 
 const metadata = {
+  website: 'https://fantom.foundation/',
   token: {
     name: 'FTM',
     cmc: 'https://coinmarketcap.com/currencies/fantom/',
