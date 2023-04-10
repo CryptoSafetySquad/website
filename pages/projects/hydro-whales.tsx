@@ -141,7 +141,7 @@ const HWChart = ({ labels, data, title}: { labels: any[], data: any, title: stri
             {
               label: 'USDC (Eth)',
               data: data.ethereum.usdc,
-              backgroundColor: 'rgba(0, 255, 0, 0.4)',
+              backgroundColor: '#2775CA',
               // borderColor: '#fff',
               borderWidth: 0,
               // borderRadius: 0,
@@ -162,7 +162,7 @@ const HWChart = ({ labels, data, title}: { labels: any[], data: any, title: stri
               borderColor: '#2f1a52', // Polygon Purple
               borderWidth: 2,
               borderRadius: 0,
-              backgroundColor: 'rgba(0, 255, 0, 0.4)',
+              backgroundColor: '#2775CA',
               stack: 'Primary', // 'Stablecoin'
             }
           ],

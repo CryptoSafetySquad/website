@@ -10,7 +10,8 @@ module.exports = {
         gold: '#b49b68',
         blue: {
           DEFAULT: '#126fd1',
-          darkmode: '#3e9dff'
+          darkmode: '#3e9dff',
+          usdc: '#2775CA',
         },
         green: {
           DEFAULT: '#009300',
