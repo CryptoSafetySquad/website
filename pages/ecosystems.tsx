@@ -8,6 +8,7 @@ const l1ecos: any[] = [
   { name: 'Ethereum', slug: 'ethereum', marketCap: 221519687844, lastUpdated: '09/04/2023', token: 'eth' },
   { name: 'Binance', slug: 'binance', marketCap: 49069307443, lastUpdated: '27/03/2023', token: 'bnb' },
   { name: 'Solana', slug: 'solana', marketCap: 7812135314, lastUpdated: '27/03/2023', token: 'sol' },
+  // { name: 'Litecoin', slug: 'litecoin', marketCap: 6823904572, lastUpdated: '', token: 'ltc' },
   { name: 'Avalanche', slug: 'avalanche', marketCap: 5660089337, lastUpdated: '27/03/2023', token: 'avax' },
   { name: 'Monero', slug: 'monero', marketCap: 2907148559, lastUpdated: '27/03/2023', token: 'xmr' },
   { name: 'Fantom', slug: 'fantom', marketCap: 1151938313, lastUpdated: '27/03/2023', token: 'ftm' },

@@ -34,6 +34,7 @@ module.exports = {
           ckb: '#18efb1',
           canto: '#06fc99',
           dag: '#1552EF',
+          ltc: '#88cbf5',
           ftm: '#1969ff',
           kda: '#ED098F',
           matic: '#9A60FF',

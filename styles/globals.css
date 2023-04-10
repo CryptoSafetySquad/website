@@ -243,3 +243,4 @@ h1 {
 .text-xmr { @apply text-currency-xmr; }
 .text-dag { @apply text-currency-dag; }
 .text-sol { @apply text-currency-sol; }
+.text-ltc { @apply text-currency-ltc; }
