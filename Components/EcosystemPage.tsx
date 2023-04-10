@@ -16,6 +16,8 @@ const EcosystemPage = ({ name, slug, data, metadata }: { name: string; slug?: st
     { name: 'nftMarketplaces', title: 'NFT Marketplaces' },
     { name: 'defi', title: 'DeFI (Decentralised Finance)' },
     { name: 'protocols', title: 'Projects / Protocols' },
+    { name: 'launchpads', title: 'Launchpads' },
+    { name: 'gaming', title: 'Gaming' },
     { name: 'riskyProjects', title: (<>&quot;Risky&quot; Projects / Protocols</>) },
   ]
 
