@@ -11,7 +11,6 @@ module.exports = {
         blue: {
           DEFAULT: '#126fd1',
           darkmode: '#3e9dff',
-          usdc: '#2775CA',
         },
         green: {
           DEFAULT: '#009300',
@@ -25,6 +24,24 @@ module.exports = {
           DEFAULT: '#950c0c',
           darkmode: '#f71f1f'
         },
+        currency: {
+          DEFAULT: '#ececec',
+          arb: '#28a0f0',
+          avax: '#e84142',
+          btc: '#FF9500',
+          bnb: '#f0b90b',
+          eth: '#ECEFF0',
+          ckb: '#18efb1',
+          canto: '#06fc99',
+          dag: '#1552EF',
+          ftm: '#1969ff',
+          kda: '#ED098F',
+          matic: '#9A60FF',
+          op: '#ff0420',
+          sol: '#19FB9B',
+          usdc: '#2775CA',
+          xmr: '#d26e2b',
+        }
       }
     },
   },

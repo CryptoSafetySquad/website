@@ -58,7 +58,7 @@ const metadata = {
 
 const Binance: NextPage = () => {
   return <EcosystemPage
-    name='Binance'
+    name='BNB Chain (formerly BSC [Binance Smart Chain])'
     slug='binance'
     data={data}
     metadata={metadata}

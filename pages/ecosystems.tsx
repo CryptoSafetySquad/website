@@ -4,22 +4,22 @@ import Page from '../Components/Page'
 import marketCap from '../functions/marketCap'
 
 const l1ecos: any[] = [
-  { name: 'Bitcoin', slug: 'bitcoin', marketCap: 540115865088, lastUpdated: '09/04/2023' },
-  { name: 'Ethereum', slug: 'ethereum', marketCap: 221519687844, lastUpdated: '09/04/2023' },
-  { name: 'Binance', slug: 'binance', marketCap: 49069307443, lastUpdated: '27/03/2023' },
-  { name: 'Solana', slug: 'solana', marketCap: 7812135314, lastUpdated: '27/03/2023' },
-  { name: 'Avalanche', slug: 'avalanche', marketCap: 5660089337, lastUpdated: '27/03/2023' },
-  { name: 'Monero', slug: 'monero', marketCap: 2907148559, lastUpdated: '27/03/2023' },
-  { name: 'Fantom', slug: 'fantom', marketCap: 1151938313, lastUpdated: '27/03/2023' },
-  { name: 'Kadena', slug: 'kadena', marketCap: 204180499, lastUpdated: '27/03/2023' },
-  { name: 'Canto', slug: 'canto', marketCap: 308341147, lastUpdated: '09/04/2023' },
-  { name: 'Nervos', slug: 'nervos', marketCap: 190951046, lastUpdated: '27/03/2023' },
-  { name: 'Constellation', slug: 'constellation', marketCap: 62617251, lastUpdated: '27/03/2023' },
+  { name: 'Bitcoin', slug: 'bitcoin', marketCap: 540115865088, lastUpdated: '09/04/2023', token: 'btc' },
+  { name: 'Ethereum', slug: 'ethereum', marketCap: 221519687844, lastUpdated: '09/04/2023', token: 'eth' },
+  { name: 'Binance', slug: 'binance', marketCap: 49069307443, lastUpdated: '27/03/2023', token: 'bnb' },
+  { name: 'Solana', slug: 'solana', marketCap: 7812135314, lastUpdated: '27/03/2023', token: 'sol' },
+  { name: 'Avalanche', slug: 'avalanche', marketCap: 5660089337, lastUpdated: '27/03/2023', token: 'avax' },
+  { name: 'Monero', slug: 'monero', marketCap: 2907148559, lastUpdated: '27/03/2023', token: 'xmr' },
+  { name: 'Fantom', slug: 'fantom', marketCap: 1151938313, lastUpdated: '27/03/2023', token: 'ftm' },
+  { name: 'Kadena', slug: 'kadena', marketCap: 204180499, lastUpdated: '27/03/2023', token: 'kda' },
+  { name: 'Canto', slug: 'canto', marketCap: 308341147, lastUpdated: '09/04/2023', token: 'canto' },
+  { name: 'Nervos', slug: 'nervos', marketCap: 190951046, lastUpdated: '27/03/2023', token: 'ckb' },
+  { name: 'Constellation', slug: 'constellation', marketCap: 62617251, lastUpdated: '27/03/2023', token: 'dag' },
 ]
 const ethl2ecos: any[] = [
-  { name: 'Polygon', slug: 'polygon', marketCap: 10000741025, lastUpdated: '09/04/2023' },
-  { name: 'Arbitrum', slug: 'arbitrum', marketCap: 1474265907, lastUpdated: '09/04/2023' },
-  { name: 'Optimism', slug: 'optimism', marketCap: 701913699, lastUpdated: '09/04/2023' },
+  { name: 'Polygon', slug: 'polygon', marketCap: 10000741025, lastUpdated: '09/04/2023', token: 'matic' },
+  { name: 'Arbitrum', slug: 'arbitrum', marketCap: 1474265907, lastUpdated: '09/04/2023', token: 'arb' },
+  { name: 'Optimism', slug: 'optimism', marketCap: 701913699, lastUpdated: '09/04/2023', token: 'op' },
 ]
 
 const lastUpdated = '09/04/2023'
@@ -37,7 +37,7 @@ const Ecosystems: NextPage = () => {
         l1ecos.map(eco => {
           return (
             <div key={eco.slug} className='card with-bg'>
-              <Link className='flex justify-between' href={`/ecosystems/${eco.slug}`}><span>{eco.name}</span><span className='text-xs'>{marketCap(eco.marketCap)}</span></Link>
+              <Link className={`flex justify-between text-${eco.token || 'white'}`} href={`/ecosystems/${eco.slug}`}><span>{eco.name}</span><span className='text-xs'>{marketCap(eco.marketCap)}</span></Link>
             </div>
           )
         })
@@ -50,7 +50,7 @@ const Ecosystems: NextPage = () => {
         ethl2ecos.map(eco => {
           return (
             <div key={eco.slug} className='card with-bg'>
-              <Link className='flex justify-between' href={`/ecosystems/${eco.slug}`}><span>{eco.name}</span><span className='text-xs'>{marketCap(eco.marketCap)}</span></Link>
+              <Link className={`flex justify-between text-${eco.token || 'white'}`} href={`/ecosystems/${eco.slug}`}><span>{eco.name}</span><span className='text-xs'>{marketCap(eco.marketCap)}</span></Link>
             </div>
           )
         })

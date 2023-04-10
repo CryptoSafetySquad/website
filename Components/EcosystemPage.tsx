@@ -1,8 +1,8 @@
 import Page from "./Page"
 import ExternalLink from "./ExternalLink"
 
-const TokenDisplay = ({ name, cmc }: { name: string; cmc?: string; }) => {
-  return cmc ? <ExternalLink href={cmc} text={name} /> : (<>{name}</>)
+const TokenDisplay = ({ name, cmc, className }: { name: string; cmc?: string; className?: string; }) => {
+  return cmc ? <ExternalLink className={className} href={cmc} text={name} /> : (<>{name}</>)
 }
 
 const EcosystemPage = ({ name, slug, data, metadata }: { name: string; slug?: string; data: any; metadata?: any; }) => {
@@ -21,25 +21,24 @@ const EcosystemPage = ({ name, slug, data, metadata }: { name: string; slug?: st
     { name: 'riskyProjects', title: (<>&quot;Risky&quot; Projects / Protocols</>) },
   ]
 
+  let tokenClass = metadata?.token?.name ? `text-${metadata.token.name.toLocaleLowerCase()}` : ''
+
   const content = (
     <>
       {metadata && (
-        <div className="card">
-        {metadata.website && (
-          <ExternalLink href={metadata.website} text='Official Website' />
-        )}
+        <div>
         {metadata.token && (
-          <p>Native Token: <TokenDisplay {...metadata.token} /></p>
+          <p>Native Token: <TokenDisplay className={tokenClass} {...metadata.token} /></p>
         )}
         </div>
       )}
-      <p className='mb-4'>None of the information on this page is financial advice, do your own research before investing in any protocols.</p>
+      <p className='mb-4 warn'>None of the information on this page is financial advice, do your own research before investing in any protocols.</p>
       <div className='grid md:grid-cols-3 gap-2'>
         {sections.map(section => {
           if (data[section.name] && data[section.name].length > 0) {
             return data[section.name] && (
-              <div className='card'>
-                <h2 className='mb-2'>{section.title}</h2>
+              <div className='card bordered'>
+                <h2 className={`mb-2 ${tokenClass}`}>{section.title}</h2>
                 <div className='grid grid-cols-2 gap-2'>
                 {
                   data[section.name].map((entry: any) => <ExternalLink key={entry.name} href={entry.link} text={entry.name} />)
@@ -53,9 +52,20 @@ const EcosystemPage = ({ name, slug, data, metadata }: { name: string; slug?: st
     </>
   )
 
+  const linkIcon = <img alt='Website Link' className='mr-2' src='/images/icons/external.svg' height='20' width='20' />
+
+  const header = (
+    <h1 className={`${tokenClass} flex`}>
+      {name} {metadata?.website && (
+        <a className='ml-4' href={metadata.website}>{linkIcon}</a>
+      )}
+    </h1>
+  )
+
   return (
     <Page {...{
       title,
+      header,
       content,
       slug: `ecosystems/${slug || name.toLocaleLowerCase()}`,
       description: title
