@@ -48,8 +48,21 @@ const data: { [key: string]: EcosystemLink[] } = {
   ]
 }
 
+const metadata = {
+  website: 'https://www.bnbchain.org/',
+  token: {
+    name: 'BNB',
+    cmc: 'https://coinmarketcap.com/currencies/bnb/'
+  }
+}
+
 const Binance: NextPage = () => {
-  return <EcosystemPage name='Binance' slug='binance' data={data} />
+  return <EcosystemPage
+    name='Binance'
+    slug='binance'
+    data={data}
+    metadata={metadata}
+  />
 }
 
 export default Binance
