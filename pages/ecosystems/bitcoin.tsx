@@ -24,8 +24,20 @@ const data: { [key: string]: EcosystemLink[] } = {
   ],
 }
 
+const metadata = {
+  token: {
+    name: 'BTC',
+    cmc: 'https://coinmarketcap.com/currencies/bitcoin/',
+  }
+}
+
 const Bitcoin: NextPage = () => {
-  return <EcosystemPage name='Bitcoin' slug='bitcoin' data={data} />
+  return <EcosystemPage
+    name='Bitcoin'
+    slug='bitcoin'
+    data={data}
+    metadata={metadata}
+  />
 }
 
 export default Bitcoin
