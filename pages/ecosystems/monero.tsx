@@ -6,16 +6,30 @@ import exchanges from '../../data/exchanges'
 import wallets from '../../data/wallets'
 
 const data: { [key: string]: EcosystemLink[] } = {
-  centralisedExchanges: [],
+  centralisedExchanges: [
+    exchanges.kucoin,
+    exchanges.gateio,
+  ],
   decentralisedExchanges: [],
-  wallets: [],
+  wallets: [
+    wallets.cakewallet
+  ],
 }
-data.centralisedExchanges.push(exchanges.kucoin)
-data.centralisedExchanges.push(exchanges.gateio)
-data.wallets.push(wallets.cakewallet)
+
+const metadata = {
+  token: {
+    name: 'XMR',
+    cmc: 'https://coinmarketcap.com/currencies/monero/'
+  }
+}
 
 const Monero: NextPage = () => {
-  return <EcosystemPage name='Monero' slug='monero' data={data} />
+  return <EcosystemPage
+    name='Monero'
+    slug='monero'
+    metadata={metadata}
+    data={data}
+  />
 }
 
 export default Monero
