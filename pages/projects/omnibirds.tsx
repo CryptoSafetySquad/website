@@ -2,13 +2,13 @@ import type { NextPage } from 'next'
 
 import Page from '../../Components/Page'
 import ExternalLink from '../../Components/ExternalLink'
-import TabbedContent from '../../Components/TabbedContent'
 import AuthorComponent from '../../Components/Author'
 import Sidebar from '../../Components/Project/Sidebar'
 import Disclaimer from '../../Components/Research/Disclaimer'
 import Header from '../../Components/Project/Header'
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
 import RedFlagCard from '../../Components/Project/RedFlagCard'
+import NewsListing from '../../Components/NewsListing'
 
 import { OMNIBirds as Project } from '../../data/projects'
 import PrivateSniper from '../../data/authors/PrivateSniper'
@@ -92,31 +92,18 @@ const NewsContent = () => {
   return (
     <div className='card'>
       <h2 className='mb-2'>{newsIcon} News</h2>
-    {
-      news.map((entry, index) => {
-        return <p className='mb-2 text-xs' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
-      })
-    }
+      <NewsListing newsEntries={news} />
     </div>
   )
 }
 
 const OMNIBirds: NextPage = () => {
-  const title = 'OMNIBirds (Failed)'
-  const tabs = [
-    {
-      title: 'News',
-      content: <NewsContent />
-    },
-    {
-      title: 'Research',
-      content: <Research />
-    }
-  ]
+  const title = 'OMNIBirds'
 
   const content = (
     <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
       <main>
+        <NewsContent />
         <RedFlagCard redflags={['Lack of communication with community']} />
         {/* <TabbedContent content={tabs} /> */}
       </main>
