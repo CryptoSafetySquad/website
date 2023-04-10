@@ -31,8 +31,21 @@ const data: { [key: string]: EcosystemLink[] } = {
   wallets: []
 }
 
+const metadata = {
+  website: 'https://www.avax.com/',
+  token: {
+    name: 'AVAX',
+    cmc: 'https://coinmarketcap.com/currencies/avalanche/'
+  }
+}
+
 const Avalanche: NextPage = () => {
-  return <EcosystemPage name='Avalanche' slug='avalanche' data={data} />
+  return <EcosystemPage
+    name='Avalanche'
+    slug='avalanche'
+    data={data}
+    metadata={metadata}
+  />
 }
 
 export default Avalanche
