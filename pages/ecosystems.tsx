@@ -32,7 +32,7 @@ const Ecosystems: NextPage = () => {
       <p>Market Caps last updated: {lastUpdated}</p>
 
       <h2 className='mb-2 mt-4'>Layer 1</h2>
-      <div className='grid grid-cols-4 gap-2 py-2'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 py-2'>
       {
         l1ecos.map(eco => {
           return (
@@ -45,7 +45,7 @@ const Ecosystems: NextPage = () => {
       </div>
 
       <h2 className='mb-2 mt-4'>Ethereum Layer 2</h2>
-      <div className='grid grid-cols-4 gap-2'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 py-2'>
       {
         ethl2ecos.map(eco => {
           return (
