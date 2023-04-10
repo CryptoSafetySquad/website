@@ -8,6 +8,7 @@ import Sidebar from '../../Components/Project/Sidebar'
 import Disclaimer from '../../Components/Research/Disclaimer'
 import Header from '../../Components/Project/Header'
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
+import RedFlagCard from '../../Components/Project/RedFlagCard'
 
 import { OMNIBirds as Project } from '../../data/projects'
 import PrivateSniper from '../../data/authors/PrivateSniper'
@@ -101,7 +102,7 @@ const NewsContent = () => {
 }
 
 const OMNIBirds: NextPage = () => {
-  const title = 'OMNIBirds'
+  const title = 'OMNIBirds (Failed)'
   const tabs = [
     {
       title: 'News',
@@ -116,9 +117,17 @@ const OMNIBirds: NextPage = () => {
   const content = (
     <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
       <main>
-        <TabbedContent content={tabs} />
+        <RedFlagCard redflags={['Lack of communication with community']} />
+        {/* <TabbedContent content={tabs} /> */}
       </main>
-      <Sidebar project={Project} />
+      <Sidebar project={Project}>
+        <div className='card'>
+          <h1 className='mb-2'>Team</h1>
+          <p className='text-sm'>Stuart Rex: <ExternalLink href='https://www.linkedin.com/in/stuartrex7/' text='LinkedIn' /></p>
+          <p className='text-sm'>Russell Thomas: <ExternalLink href='https://www.linkedin.com/in/russell-thomas-557390204/' text='LinkedIn' /></p>
+          <p className='text-sm'>Shay Thomas: <ExternalLink href='https://www.linkedin.com/in/shay-thomas/' text='LinkedIn' /></p>
+        </div>
+      </Sidebar>
     </div>
   )
 
@@ -127,7 +136,7 @@ const OMNIBirds: NextPage = () => {
       title,
       content,
       slug: 'projects/omnibirds',
-      description: 'OMNIBirds',
+      description: 'OMNIBirds (Failed)',
       header: <Header {...Project} />
     }} />
   )
