@@ -31,6 +31,7 @@ const data: { [key: string]: EcosystemLink[] } = {
 }
 
 const metadata = {
+  website: 'https://solana.com/',
   token: {
     name: 'SOL',
     cmc: 'https://coinmarketcap.com/currencies/solana/',
