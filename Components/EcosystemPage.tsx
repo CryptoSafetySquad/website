@@ -41,12 +41,16 @@ const EcosystemPage = ({ name, slug, data, metadata }: { name: string; slug?: st
           }
           if (data[section.name] && data[section.name].length > 0) {
             return data[section.name] && (
-              <div className='card bordered'>
-                <h2 className={`mb-2 ${tokenClass}`}>{section.title}</h2>
-                <div className='grid md:grid-cols-2 gap-2'>
-                {
-                  data[section.name].map((entry: any) => <ExternalLink className={linkClass ?? null} key={entry.name} href={entry.link} text={entry.name} />)
-                }
+              <div className='ecosystem-card bordered'>
+                <div className='card__header'>
+                  <h2 className={`${tokenClass}`}>{section.title}</h2>
+                </div>
+                <div className='card__content'>
+                  <div className='grid md:grid-cols-2 gap-2'>
+                  {
+                    data[section.name].map((entry: any) => <ExternalLink className={linkClass ?? null} key={entry.name} href={entry.link} text={entry.name} />)
+                  }
+                  </div>
                 </div>
               </div>
             )

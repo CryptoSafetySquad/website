@@ -17,7 +17,7 @@ const Navbar = () => (
     <div className='flex flex-col md:flex-row'>
       <Link className='text-sm mr-8 xl:mr-16 xl:ml-16 my-6 md:my-0' href='/'>Crypto Safety Squad</Link>
       {
-        links.map(l => <Link key={l.href} className='mr-4 mb-6 text-sm md:mb-0' href={l.href}>{l.text}</Link>)  
+        links.map(l => <Link key={l.href} className='text-right mr-4 mb-6 text-sm md:mb-0' href={l.href}>{l.text}</Link>)  
       }
     </div>
     <div className='sm:flex md:ml-auto mr-4 xl:mr-16 hidden'>

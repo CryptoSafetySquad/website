@@ -181,6 +181,15 @@ h1 {
   @apply p-2 mb-2 rounded;
 }
 
+.ecosystem-card {
+  background: rgba(0,0,0,0.1);
+  @apply rounded;
+}
+.ecosystem-card .card__header, .ecosystem-card .card__content {
+  @apply p-2;
+}
+.ecosystem-card .card__header { background: rgba(0,0,0,0.3); }
+
 .card.with-img {
   @apply p-0 rounded;
   overflow: hidden;
@@ -211,7 +220,7 @@ h1 {
     text-shadow: 3px 3px 4px #000;
   }
 
-  .card.bordered {
+  .ecosystem-card.bordered, .card.bordered {
     border: 1px solid #000;
   }
 

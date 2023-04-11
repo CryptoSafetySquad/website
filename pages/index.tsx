@@ -24,11 +24,11 @@ const Home: NextPage = () => {
           About Crypto Safety Squad
         </h1>
 
-        <p className='px-16 mt-16 mb-8 text-xl max-w-2xl m-auto'>
+        <p className='px-4 md:px-16 mt-16 mb-8 text-xl max-w-2xl m-auto'>
           Our mission is to provide information and resources to help keep our members and visitors safe while interacting with crypto currency and making good yield investments.
         </p>
 
-        <p className='px-16 p-4 text-sm max-w-2xl m-auto'>
+        <p className='px-4 md:px-16 p-4 text-sm max-w-2xl m-auto'>
           Use the navigation at the top of the page to explore our site
         </p>
       </main>
