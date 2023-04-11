@@ -34,6 +34,7 @@ const data: { [key: string]: EcosystemLink[] } = {
   ],
   protocols: [
     { name: 'Kadena Mining Club', link: 'https://kdamining.club/' },
+    { name: 'KadenaHashing', link: 'https://kadenahashing.com/' },
   ],
   launchpads: [
     { name: 'Hypercent', link: 'https://hypercent.io/' },
