@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Navbar from '../Components/Navbar'
+import NewsListing from '../Components/NewsListing'
+import ExternalLink from '../Components/ExternalLink'
 
 const Home: NextPage = () => {
   return (
@@ -32,6 +34,14 @@ const Home: NextPage = () => {
           Use the navigation at the top of the page to explore our site
         </p>
       </main>
+
+      <section className='px-4 md:px-16 mt-16 mb-8 text-xl max-w-2xl m-auto'>
+        <span className='text-sm'>News</span>
+        <NewsListing newsEntries={[ 
+          { date: '11 Apr 23', content: (<>Midas announces pivot project: <ExternalLink href='https://www.locus.finance/' text='Locus Finance' /></>) }
+
+         ]} />
+      </section>
     </div>
   )
 }
