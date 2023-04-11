@@ -32,7 +32,7 @@ const EcosystemPage = ({ name, slug, data, metadata }: { name: string; slug?: st
         )}
         </div>
       )}
-      <p className='mb-4 warn'>None of the information on this page is financial advice, do your own research before investing in any protocols.</p>
+      <p className='mb-4 text-sm warn'>None of the information on this page is financial advice, do your own research before investing in any protocols.</p>
       <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-2'>
         {sections.map(section => {
           let linkClass = '';
