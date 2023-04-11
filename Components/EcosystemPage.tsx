@@ -43,7 +43,7 @@ const EcosystemPage = ({ name, slug, data, metadata }: { name: string; slug?: st
             return data[section.name] && (
               <div className='card bordered'>
                 <h2 className={`mb-2 ${tokenClass}`}>{section.title}</h2>
-                <div className='grid grid-cols-2 gap-2'>
+                <div className='grid md:grid-cols-2 gap-2'>
                 {
                   data[section.name].map((entry: any) => <ExternalLink className={linkClass ?? null} key={entry.name} href={entry.link} text={entry.name} />)
                 }
