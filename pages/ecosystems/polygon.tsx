@@ -26,6 +26,7 @@ const data: { [key: string]: EcosystemLink[] } = {
   defi: [
     defi.yieldwolf,
     defi.magik,
+    defi.beefy,
   ],
   protocols: [],
   nftMarketplaces: [
