@@ -11,7 +11,7 @@ const answers: Answer[] = [
   },
   {
     question: 'How much will the first payment be?',
-    answer: '$20 split between wBTC and USDC'
+    answer: (<>$20 split between <span className='text-btc'>wBTC</span> and <span className='text-usdc'>USDC</span></>)
   }
 ]
 
