@@ -20,6 +20,7 @@ const data: { [key: string]: EcosystemLink[] } = {
     exchanges.uniswap,
     exchanges.pancakeswap,
     exchanges.apeswap,
+    exchanges.apollox,
     { name: 'Aequinox', link: 'https://www.aequinox.exchange/#/' },
     { name: 'Thena', link: 'https://thena.fi/' },
   ],

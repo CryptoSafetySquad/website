@@ -6,6 +6,7 @@ const exchanges = {
 
   apeswap: { name: 'ApeSwap', link: 'https://apeswap.finance/' },
   quickswap: { name: 'QuickSwap', link: 'https://quickswap.exchange/' },
+  apollox: { name: 'ApolloX', link: 'https://www.apollox.finance/' },
   // _: { name: '', link: '', type: 'Decentralised' },
   // _: { name: '', link: '', type: 'Decentralised' },
   // _: { name: '', link: '', type: 'Decentralised' },

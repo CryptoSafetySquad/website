@@ -20,6 +20,7 @@ const data: { [key: string]: EcosystemLink[] } = {
     exchanges.uniswap,
     exchanges.pancakeswap,
     exchanges.apeswap,
+    exchanges.apollox,
   ],
   defi: [
     defi.beefy

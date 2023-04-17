@@ -14,7 +14,9 @@ const data: { [key: string]: EcosystemLink[] } = {
     exchanges.kucoin,
     exchanges.gateio,
   ],
-  decentralisedExchanges: [],
+  decentralisedExchanges: [
+    exchanges.apollox,
+  ],
   defi: [
     defi.yieldwolf,
   ],
