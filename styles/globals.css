@@ -38,6 +38,7 @@ html {
   --link: hsl(225, 100%, 20%);
   --text-danger: rgb(231, 28, 28);
   --text-warn: rgb(109, 116, 0);
+  --text-healthy: rgb(7, 136, 14);
   --text-secondary: hsl(277, 69%, 50%);
 }
 
@@ -51,6 +52,7 @@ html {
     --link: hsl(225, 100%, 80%);
     --text-secondary: hsl(69, 100%, 47%);
     --text-warn: rgb(217, 231, 28);
+    --text-healthy: rgb(23, 197, 32);
   }
 
   html {
@@ -165,6 +167,9 @@ a {
   cursor: default;
 }
 
+.healthy {
+  color: var(--text-healthy);
+}
 .warn {
   color: var(--text-warn);
 }
