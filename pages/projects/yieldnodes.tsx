@@ -5,6 +5,7 @@ import { YieldNodes as Project } from '../../data/projects/yieldnodes/yieldnodes
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
 import RedFlagCard from '../../Components/Project/RedFlagCard'
 import NewsListing from '../../Components/NewsListing'
+import ExternalLink from '../../Components/ExternalLink'
 
 const news: any[] = [
   { date: '21/01/2023', content: (<><a href='https://www.youtube.com/watch?v=WloTzNdx8hI' rel='noopener noreferrer' target='_blank'>YNP Update video</a></>) },
@@ -29,10 +30,7 @@ const YieldNodes: NextPage = () => {
         <aside>
           <div className='card'>
             <h2 className='mb-2'>Domains</h2>
-            <p>yieldnodes.com</p>
-          </div>
-          <div className='card'>
-            <h2 className='mb-2'>Contracts / Tokens</h2>
+            <p className='text-xs'><ExternalLink href='https://yieldnodes.com/' text='yieldnodes.com' /></p>
           </div>
         </aside>
       </div>
