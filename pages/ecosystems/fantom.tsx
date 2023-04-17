@@ -6,6 +6,7 @@ import exchanges from '../../data/exchanges'
 import wallets from '../../data/wallets'
 import marketplaces from '../../data/marketplaces'
 import defi from '../../data/defi'
+import fantom from '../../data/blockchains/fantom'
 
 const data: { [key: string]: EcosystemLink[] } = {
   explorers: [
@@ -31,16 +32,8 @@ const data: { [key: string]: EcosystemLink[] } = {
   ]
 }
 
-const metadata = {
-  website: 'https://fantom.foundation/',
-  token: {
-    name: 'FTM',
-    cmc: 'https://coinmarketcap.com/currencies/fantom/',
-  }
-}
-
 const Fantom: NextPage = () => {
-  return <EcosystemPage name='Fantom' data={data} metadata={metadata} />
+  return <EcosystemPage data={data} {...fantom} />
 }
 
 export default Fantom

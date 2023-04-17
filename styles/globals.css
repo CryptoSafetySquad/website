@@ -298,6 +298,13 @@ span.blockchain.Bitcoin::after, span.blockchain.bitcoin::after {
   bottom: 0px;
   margin-left: 4px;
 }
+span.blockchain.Fantom::after, span.blockchain.fantom::after {
+  background-image: url(/images/icons/blockchains/fantom.png);
+  width: 20px;
+  height: 20px;
+  bottom: 0px;
+  margin-left: 4px;
+}
 span.blockchain.BSC::after, span.blockchain.binance::after, span.blockchain.Binance::after {
   background-image: url(/images/icons/brand/binance.svg);
   width: 20px;
