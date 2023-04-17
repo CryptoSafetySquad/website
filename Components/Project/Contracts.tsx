@@ -16,7 +16,7 @@ const Contracts = ({ contracts, title }: ProjectContractsProps) => {
           <p key={contract.name} className='text-xs'>
             {contract.name}: <span className='font-mono'>
               <ExternalLink href={contract.explorerUrl} text={contract.short}></ExternalLink>
-            </span> {contract.blockchain ? (<span>{`(${contract.blockchain})`}</span>) : null}
+            </span> {contract.blockchain ? (<><span title={contract.blockchain} className={` text-xs blockchain ${contract.blockchain}`}></span></>) : null}
           </p>
         )
       })}

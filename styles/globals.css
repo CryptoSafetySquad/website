@@ -275,11 +275,10 @@ span.blockchain::after {
   position: absolute;
 }
 
-span.blockchain.ethereum { @apply text-currency-eth; }
-span.blockchain.polygon {
-  @apply text-currency-matic mr-6;
-}
-span.blockchain.ethereum::after {
+span.blockchain.ethereum, span.blockchain.Ethereum { @apply text-currency-eth; }
+span.blockchain.polygon { @apply text-currency-matic mr-6; }
+span.blockchain.BSC, span.blockchain.binance { @apply text-currency-bnb mr-6; }
+span.blockchain.ethereum::after, span.blockchain.Ethereum::after {
   background-image: url(/images/logos/eth-diamond-purple.png);
   width: 20px;
   height: 20px;
@@ -287,6 +286,13 @@ span.blockchain.ethereum::after {
 }
 span.blockchain.polygon::after {
   background-image: url(/images/logos/polygon.png);
+  width: 20px;
+  height: 20px;
+  bottom: 0px;
+  margin-left: 4px;
+}
+span.blockchain.BSC::after, span.blockchain.binance::after {
+  background-image: url(/images/icons/brand/binance.svg);
   width: 20px;
   height: 20px;
   bottom: 0px;
