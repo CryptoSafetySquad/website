@@ -35,13 +35,13 @@ function average(nums: number[]): number {
 
 const EmpMoney: NextPage = () => {
   const title = 'EMP'
-  const newsIcon = <ModeSwitchingIcon filename='newspaper' size={20} scheme='gold' />
+  const newsIcon = <ModeSwitchingIcon filename='newspaper' size={20} />
 
   const content = (
     <>
       <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
         <div className='card'>
-          <h2 className='dark:text-gold flex mb-2'>{newsIcon} News</h2>
+          <h2 className='flex mb-2'>{newsIcon} News</h2>
           <NewsListing newsEntries={news} />
         </div>
         <Sidebar project={Project}>
