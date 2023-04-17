@@ -3,7 +3,7 @@ import type { Answer } from "../../../types/answer"
 const answers: Answer[] = [
   {
     question: 'What network are the NFTs on?',
-    answer: 'Ethereum'
+    answer: (<span className='blockchain ethereum'>Ethereum</span>)
   },
   {
     question: 'When will the first payment be?',
