@@ -38,8 +38,7 @@ const Home: NextPage = () => {
       <section className='px-4 md:px-16 mt-16 mb-8 text-xl max-w-2xl m-auto'>
         <span className='text-sm'>News</span>
         <NewsListing newsEntries={[ 
-          { date: '11 Apr 23', content: (<>Midas announces pivot project: <ExternalLink href='https://www.locus.finance/' text='Locus Finance' /></>) }
-
+          { date: '11/04/2023', content: (<>Midas announces pivot project: <ExternalLink href='https://www.locus.finance/' text='Locus Finance' /></>) }
          ]} />
       </section>
     </div>
