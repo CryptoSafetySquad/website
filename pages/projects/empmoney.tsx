@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import { Line } from 'react-chartjs-2';
-import Link from 'next/link'
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -16,6 +15,7 @@ import Page from '../../Components/Page'
 import Header from '../../Components/Project/Header'
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon';
 import Sidebar from '../../Components/Project/Sidebar';
+import NewsListing from '../../Components/NewsListing';
 
 import news from '../../data/projects/emp/news'
 import { EMPMoney as Project } from '../../data/projects';
@@ -34,42 +34,6 @@ function average(nums: number[]): number {
   return nums.reduce((a, b) => (a + b)) / nums.length;
 }
 
-const NewsContent = () => {
-  return (
-    <>
-      {
-        news.map((entry, index) => {
-          return <p className='mb-2 text-xs' key={`news-item-${index}`}>{entry.date} - {entry.content}</p>
-        })
-      }
-    </>
-  )
-}
-
-const P79Chart = ({ labels, data, title}: { labels: any[], data: any, title: string; }) => {
-  const chartHeight = '175px'
-  return (
-    <div style={{ height: chartHeight }}>
-      <Line
-        options={{
-          maintainAspectRatio: false,
-        }}
-        data={{
-          labels: labels,
-          datasets: [
-            {
-              label: title,
-              data: data,
-              borderColor: '#b49b68',
-              backgroundColor: '#b49b68',
-            }
-          ],
-        }}
-      />
-    </div>
-  )
-}
-
 const EmpMoney: NextPage = () => {
   const title = 'EMP'
   const newsIcon = <ModeSwitchingIcon filename='newspaper' size={20} scheme='gold' />
@@ -79,7 +43,7 @@ const EmpMoney: NextPage = () => {
       <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
         <div className='card'>
           <h2 className='dark:text-gold flex mb-2'>{newsIcon} News</h2>
-          <NewsContent />
+          <NewsListing newsEntries={news} />
         </div>
         <Sidebar project={Project}>
         </Sidebar>
