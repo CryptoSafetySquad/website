@@ -52,7 +52,7 @@ const Polygon: NextPage = () => {
     data={data}
     metadata={metadata}
     icon='/images/logos/polygon.png'
-    iconSize={{ w: 24, h: 24 }}
+    iconSize={{ w: 40, h: 40 }}
   />
 }
 

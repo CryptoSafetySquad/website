@@ -38,7 +38,6 @@ const Bitcoin: NextPage = () => {
     data={data}
     metadata={metadata}
     icon='/images/icons/bitcoin.svg'
-    iconSize={{ w: 20, h: 20 }}
   />
 }
 

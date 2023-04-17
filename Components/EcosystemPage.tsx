@@ -23,16 +23,40 @@ const EcosystemPage = ({ name, slug, data, metadata, icon, iconSize }: { name: s
 
   let tokenClass = metadata?.token?.name ? `text-${metadata.token.name.toLocaleLowerCase()}` : ''
 
+  const linkIcon = <img alt='Website Link' className='mr-2' src='/images/icons/external.svg' height='20' width='20' />
+  const header = (
+    <div className='grid md:grid-cols-[60px,1fr]'>
+      <div>
+        {icon && (<img className='ml-auto mr-auto' src={icon} alt='icon' width={iconSize?.w || 40} height={iconSize?.h || 40} />)}
+      </div>
+      <div>
+        <h1 className={`${tokenClass} flex mb-2`}>
+          {name} {metadata?.website && (
+            <a className='ml-4' href={metadata.website}>{linkIcon}</a>
+          )}
+        </h1>
+        {metadata && (
+          <span className='text-sm mt-2 mb-2'>
+          {metadata.token && (
+            <p>Native Token: <TokenDisplay className={tokenClass} {...metadata.token} /></p>
+          )}
+          </span>
+        )}
+      </div>
+    </div>
+  )
+
   const content = (
     <>
-      {metadata && (
-        <div>
-        {metadata.token && (
-          <p>Native Token: <TokenDisplay className={tokenClass} {...metadata.token} /></p>
-        )}
+      <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-2'>
+        <div className='card'>
+          {header}
         </div>
-      )}
-      <p className='mb-4 text-sm warn'>None of the information on this page is financial advice, do your own research before investing in any protocols.</p>
+        <div className='card'>
+          <p className='mb-4 text-sm warn'>None of the information on this page is financial advice, do your own research before investing in any protocols.</p>
+        </div>
+      </div>
+
       <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-2'>
         {sections.map(section => {
           let linkClass = '';
@@ -60,20 +84,10 @@ const EcosystemPage = ({ name, slug, data, metadata, icon, iconSize }: { name: s
     </>
   )
 
-  const linkIcon = <img alt='Website Link' className='mr-2' src='/images/icons/external.svg' height='20' width='20' />
-
-  const header = (
-    <h1 className={`${tokenClass} flex`}>
-      {name} {icon && (<img className='ml-2' src={icon} alt='icon' width={iconSize?.w || 20} height={iconSize?.h || 20} />)} {metadata?.website && (
-        <a className='ml-4' href={metadata.website}>{linkIcon}</a>
-      )}
-    </h1>
-  )
-
   return (
     <Page {...{
       title,
-      header,
+      header: <></>,
       content,
       slug: `ecosystems/${slug || name.toLocaleLowerCase()}`,
       description: title
