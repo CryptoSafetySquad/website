@@ -18,6 +18,7 @@ import Percentage from '../../Components/Percentage';
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon';
 import Sidebar from '../../Components/Project/Sidebar';
 import NewsListing from '../../Components/NewsListing';
+import ExternalLink from '../../Components/ExternalLink';
 
 import { Project79 as Project } from '../../data/projects';
 import tvl from '../../data/projects/project79/tvl'
@@ -118,8 +119,17 @@ const Project79: NextPage = () => {
           <div className='card'>
             <h2 className='dark:text-gold mb-2'>Related Projects</h2>
             <ul>
-              <li><Link href='/projects/hydro-whales'>Hydro Whales Mining Club</Link></li>
-              <li><Link href='/projects/ocean-money'>Ocean Money</Link></li>
+              <li><Link className='text-sm' href='/projects/hydro-whales'>Hydro Whales Mining Club</Link></li>
+              <li><Link className='text-sm' href='/projects/ocean-money'>Ocean Money</Link></li>
+            </ul>
+          </div>
+          <div className='card'>
+            <h2 className='dark:text-gold mb-2'>Related Links</h2>
+            <ul>
+              <li><ExternalLink className='text-sm' href='https://www.chainlinkecosystem.com/ecosystem/burlcore-mining-company' text='Chainlink: Burlcore Mining Company' /></li>
+              <li><ExternalLink className='text-sm' href='https://www.burlcoremining.com/' text='Burlcore Mining' /></li>
+              <li><ExternalLink className='text-sm' href='https://burlcore.com/' text='Burlcore' /></li>
+              <li><ExternalLink className='text-sm' href='https://philburley.com/' text='Phil Burley' /></li>
             </ul>
           </div>
         </Sidebar>
