@@ -10,8 +10,8 @@ export const AceMinersNFT: Project = {
   website: 'https://aceminersnft.io/',
   opensea: 'https://opensea.io/collection/aceminersnft',
   nfts: [
-    { name: 'AceMiners NFT', explorerUrl: 'https://etherscan.io/address/0x0770a317af574fba15f205a60bca9075206ad0a8', short: '0x07...d0a8', contract: '0x0770a317af574fba15f205a60bca9075206ad0a8' },
-    { name: 'AceMiners Phase 2 NFT', explorerUrl: 'https://etherscan.io/address/0xe635bd48f69276d6f52cc2e577e5ddeccf16b79c', short: '0xe6...b79c', contract: '0xe635bd48f69276d6f52cc2e577e5ddeccf16b79c' },
+    { name: 'AceMiners NFT', explorerUrl: 'https://etherscan.io/address/0x0770a317af574fba15f205a60bca9075206ad0a8', short: '0x07...d0a8', contract: '0x0770a317af574fba15f205a60bca9075206ad0a8', blockchain: 'Ethereum' },
+    { name: 'AceMiners Phase 2 NFT', explorerUrl: 'https://etherscan.io/address/0xe635bd48f69276d6f52cc2e577e5ddeccf16b79c', short: '0xe6...b79c', contract: '0xe635bd48f69276d6f52cc2e577e5ddeccf16b79c', blockchain: 'Ethereum' },
   ]
 }
 
