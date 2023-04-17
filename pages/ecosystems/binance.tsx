@@ -51,6 +51,7 @@ const data: { [key: string]: EcosystemLink[] } = {
 
 const metadata = {
   website: 'https://www.bnbchain.org/',
+  icon: '/images/icons/brand/binance.svg',
   token: {
     name: 'BNB',
     cmc: 'https://coinmarketcap.com/currencies/bnb/'
@@ -63,6 +64,7 @@ const Binance: NextPage = () => {
     slug='binance'
     data={data}
     metadata={metadata}
+    icon={metadata.icon}
   />
 }
 

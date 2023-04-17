@@ -38,7 +38,7 @@ const Ecosystems: NextPage = () => {
         l1ecos.map(eco => {
           return (
             <div key={eco.slug} className='card with-bg'>
-              <Link className={`flex justify-between text-${eco.token || 'white'}`} href={`/ecosystems/${eco.slug}`}><span>{eco.name}</span><span className='text-xs'>{marketCap(eco.marketCap)}</span></Link>
+              <Link className={`flex justify-between text-${eco.token || 'white'}`} href={`/ecosystems/${eco.slug}`}><span className={`blockchain ${eco.name}`}>{eco.name}</span><span className='text-xs'>{marketCap(eco.marketCap)}</span></Link>
             </div>
           )
         })
@@ -51,7 +51,7 @@ const Ecosystems: NextPage = () => {
         ethl2ecos.map(eco => {
           return (
             <div key={eco.slug} className='card with-bg'>
-              <Link className={`flex justify-between text-${eco.token || 'white'}`} href={`/ecosystems/${eco.slug}`}><span>{eco.name}</span><span className='text-xs'>{marketCap(eco.marketCap)}</span></Link>
+              <Link className={`flex justify-between text-${eco.token || 'white'}`} href={`/ecosystems/${eco.slug}`}><span className={`blockchain ${eco.name}`}>{eco.name}</span><span className='text-xs'>{marketCap(eco.marketCap)}</span></Link>
             </div>
           )
         })

@@ -5,7 +5,7 @@ const TokenDisplay = ({ name, cmc, className }: { name: string; cmc?: string; cl
   return cmc ? <ExternalLink className={className} href={cmc} text={name} /> : (<>{name}</>)
 }
 
-const EcosystemPage = ({ name, slug, data, metadata }: { name: string; slug?: string; data: any; metadata?: any; }) => {
+const EcosystemPage = ({ name, slug, data, metadata, icon, iconSize }: { name: string; slug?: string; data: any; metadata?: any; icon?: string; iconSize?: { w: number; h: number; } }) => {
   const title = name
 
   const sections = [
@@ -64,7 +64,7 @@ const EcosystemPage = ({ name, slug, data, metadata }: { name: string; slug?: st
 
   const header = (
     <h1 className={`${tokenClass} flex`}>
-      {name} {metadata?.website && (
+      {name} {icon && (<img className='ml-2' src={icon} alt='icon' width={iconSize?.w || 20} height={iconSize?.h || 20} />)} {metadata?.website && (
         <a className='ml-4' href={metadata.website}>{linkIcon}</a>
       )}
     </h1>

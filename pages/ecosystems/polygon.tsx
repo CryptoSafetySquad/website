@@ -51,6 +51,8 @@ const Polygon: NextPage = () => {
     name='Polygon'
     data={data}
     metadata={metadata}
+    icon='/images/logos/polygon.png'
+    iconSize={{ w: 24, h: 24 }}
   />
 }
 

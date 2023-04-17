@@ -54,6 +54,8 @@ const Ethereum: NextPage = () => {
     name='Ethereum'
     metadata={metadata}
     data={data}
+    icon='/images/logos/eth-diamond-purple.png'
+    iconSize={{w: 14, h:20}}
   />
 }
 
