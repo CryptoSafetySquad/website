@@ -243,6 +243,8 @@ h1 {
   .reward.wbtc { @apply text-currency-btc; }
 }
 
+.text-usdc { @apply text-currency-usdc; }
+.text-usdt { @apply text-currency-usdt; }
 .text-avax { @apply text-currency-avax; }
 .text-btc { @apply text-currency-btc; }
 .text-bnb { @apply text-currency-bnb; }
@@ -258,3 +260,35 @@ h1 {
 .text-dag { @apply text-currency-dag; }
 .text-sol { @apply text-currency-sol; }
 .text-ltc { @apply text-currency-ltc; }
+
+span.blockchain {
+  position: relative;
+  margin-right: 1rem;
+}
+
+span.blockchain::after {
+  content: '';
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+}
+
+span.blockchain.ethereum { @apply text-currency-eth; }
+span.blockchain.polygon {
+  @apply text-currency-matic mr-6;
+}
+span.blockchain.ethereum::after {
+  background-image: url(/images/logos/eth-diamond-purple.png);
+  width: 20px;
+  height: 20px;
+  bottom: 0px;
+}
+span.blockchain.polygon::after {
+  background-image: url(/images/logos/polygon.png);
+  width: 20px;
+  height: 20px;
+  bottom: 0px;
+  margin-left: 4px;
+}

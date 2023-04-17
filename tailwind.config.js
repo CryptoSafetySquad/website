@@ -41,6 +41,7 @@ module.exports = {
           op: '#ff0420',
           sol: '#19FB9B',
           usdc: '#2775CA',
+          usdt: '#009393',
           xmr: '#d26e2b',
         }
       }

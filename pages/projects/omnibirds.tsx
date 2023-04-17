@@ -84,8 +84,8 @@ const Research = () => {
 const NewsContent = () => {
   const news = [
     { date: '07/12/2022', content: 'Bird holder announcement, NFTs will no longer be paying out rewards.' },
-    { date: '28/10/2022', content: 'NFT holders receive another payout in USDC on Ethereum blockchain.' },
-    { date: '27/09/2022', content: 'NFT holders receive first payout in USDC on Ethereum blockchain.' }
+    { date: '28/10/2022', content: (<>NFT holders receive another payout in <span className='text-usdc'>USDC</span> on <span className='blockchain ethereum'>Ethereum</span> blockchain.</>) },
+    { date: '27/09/2022', content: (<>NFT holders receive first payout in <span className='text-usdc'>USDC</span> on <span className='blockchain ethereum'>Ethereum</span> blockchain.</>) }
   ]
   const newsIcon = <ModeSwitchingIcon filename='newspaper' size={20} scheme='white' />
 
