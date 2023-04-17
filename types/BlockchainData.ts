@@ -10,6 +10,10 @@ export type BlockchainData = {
   iconSize?: {
     w: number;
     h: number;
+  },
+  iconRatio?: {
+    x: number;
+    y: number;
   }
   metadata?: {
     website?: string;

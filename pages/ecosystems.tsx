@@ -46,15 +46,18 @@ const EcosystemGrid = ({ ecosystems }: { ecosystems: any[]; }) => {
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 py-2'>
     {
       ecosystems.map(eco => {
+        let imageWidth = eco.iconRatio ? 24 * eco.iconRatio.x : 24
+        let imageHeight = eco.iconRatio ? 24 * eco.iconRatio.y : 24
+
         return (
           <div key={eco.slug} className='card with-bg'>
             <Link className={`flex justify-between text-${eco?.metadata?.token?.name?.toLocaleLowerCase() || 'white'}`} href={`/ecosystems/${eco.slug}`}>
               <span className='flex'>
-                {eco.icon && (typeof eco.icon === 'string') && (<img className='mr-2' alt={eco.name} src={eco.icon} width={eco.iconSize?.w || 20} height={eco.iconSize?.h || 20} />) }
+                {eco.icon && (typeof eco.icon === 'string') && (<img className='mr-2' alt={eco.name} src={eco.icon} width={imageWidth} height={imageHeight} />) }
                 {eco.icon && (typeof eco.icon === 'object') && (
                   <>
-                    <img className='mr-2 dark:hidden' alt={eco.name} src={eco.icon.default} width={eco.iconSize?.w || 20} height={eco.iconSize?.h || 20} />
-                    <img className='mr-2 hidden dark:block' alt={eco.name} src={eco.icon.darkMode} width={eco.iconSize?.w || 20} height={eco.iconSize?.h || 20} />
+                    <img className='mr-2 dark:hidden' alt={eco.name} src={eco.icon.default} width={imageWidth} height={imageHeight} />
+                    <img className='mr-2 hidden dark:block' alt={eco.name} src={eco.icon.darkMode} width={imageWidth} height={imageHeight} />
                   </>
                 )}
                 {eco.name}

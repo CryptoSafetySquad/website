@@ -3,13 +3,10 @@ import wallets from "../wallets"
 import exchanges from "../exchanges"
 
 const monero: BlockchainData = {
-  icon: '/images/icons/blockchains/monero.png',
   name: 'Monero',
   slug: 'monero',
-  iconSize: {
-    w: 24,
-    h: 24,
-  },
+  icon: '/images/icons/blockchains/monero.png',
+  iconRatio: { x: 1, y: 1 },
   metadata: {
     website: 'https://www.getmonero.org/',
     token: {

@@ -12,7 +12,7 @@ type EcosystemSection = {
   title: any;
 }
 
-const EcosystemPage = ({ name, slug, data, metadata, icon, iconSize }: BlockchainData) => {
+const EcosystemPage = ({ name, slug, data, metadata, icon, iconSize, iconRatio }: BlockchainData) => {
   const title = name
 
   const sections: EcosystemSection[] = [
@@ -31,14 +31,16 @@ const EcosystemPage = ({ name, slug, data, metadata, icon, iconSize }: Blockchai
   let tokenClass = metadata?.token?.name ? `text-${metadata.token.name.toLocaleLowerCase()}` : ''
 
   const linkIcon = <img alt='Website Link' className='mr-2' src='/images/icons/external.svg' height='20' width='20' />
+  let iconWidth = iconRatio?.x ? iconRatio?.x * 40 : 40
+  let iconHeight = iconRatio?.y ? iconRatio?.y * 40 : 40
   const header = (
     <div className='grid md:grid-cols-[60px,1fr]'>
       <div>
-        {icon && (typeof icon === 'string') && (<img className='ml-auto mr-auto' src={icon} alt='icon' width={iconSize?.w || 40} height={iconSize?.h || 40} />)}
+        {icon && (typeof icon === 'string') && (<img className='ml-auto mr-auto' src={icon} alt='icon' width={iconWidth} height={iconHeight} />)}
         {icon && (typeof icon === 'object') && (
           <>
-            <img className='ml-auto mr-auto dark:hidden' src={icon.default} alt='icon' width={iconSize?.w || 40} height={iconSize?.h || 40} />
-            <img className='ml-auto mr-auto hidden dark:block' src={icon.darkMode} alt='icon' width={iconSize?.w || 40} height={iconSize?.h || 40} />
+            <img className='ml-auto mr-auto dark:hidden' src={icon.default} alt='icon' width={iconWidth} height={iconHeight} />
+            <img className='ml-auto mr-auto hidden dark:block' src={icon.darkMode} alt='icon' width={iconWidth} height={iconHeight} />
           </>
         )}
       </div>

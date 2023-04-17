@@ -7,7 +7,7 @@ const ethereum = {
   icon: '/images/logos/eth-diamond-purple.png',
   name: 'Ethereum',
   slug: 'ethereum',
-  iconSize: { w: 14, h: 20 },
+  iconRatio: { y: 1, x: 0.8 },
   metadata: {
     token: {
       name: 'ETH',
