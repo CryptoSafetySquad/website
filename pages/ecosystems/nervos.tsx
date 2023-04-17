@@ -4,6 +4,7 @@ import { EcosystemLink } from '../../types/EcosystemLink'
 import EcosystemPage from '../../Components/EcosystemPage'
 
 import exchanges from '../../data/exchanges'
+import nervos from '../../data/blockchains/nervos'
 
 const data: { [key: string]: EcosystemLink[] } = {
   explorers: [
@@ -31,7 +32,10 @@ const metadata = {
 }
 
 const Nervos: NextPage = () => {
-  return <EcosystemPage data={data} name='Nervos' metadata={metadata} />
+  return <EcosystemPage
+    {...nervos}
+    data={data} name='Nervos'
+  />
 }
 
 export default Nervos

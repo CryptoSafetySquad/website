@@ -33,7 +33,7 @@ module.exports = {
           eth: '#ECEFF0',
           ckb: '#18efb1',
           canto: '#06fc99',
-          dag: '#1552EF',
+          dag: '#fff',
           ltc: '#88cbf5',
           ftm: '#1969ff',
           kda: '#ED098F',

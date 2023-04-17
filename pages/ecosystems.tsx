@@ -4,28 +4,39 @@ import Link from 'next/link'
 import Page from '../Components/Page'
 import marketCap from '../functions/marketCap'
 
-import fantom from '../data/blockchains/fantom'
-import ethereum from '../data/blockchains/ethereum'
+import arbitrum from '../data/blockchains/layer2eth/arbitrum'
+import avalanche from '../data/blockchains/avalanche'
+import binance from '../data/blockchains/binance'
 import bitcoin from '../data/blockchains/bitcoin'
+import canto from '../data/blockchains/canto'
+import consellation from '../data/blockchains/constellation'
+import ethereum from '../data/blockchains/ethereum'
+import fantom from '../data/blockchains/fantom'
+import kadena from '../data/blockchains/kadena'
+import monero from '../data/blockchains/monero'
+import polygon from '../data/blockchains/layer2eth/polygon'
+import solana from '../data/blockchains/solana'
+import nervos from '../data/blockchains/nervos'
+import optimism from '../data/blockchains/layer2eth/optimism'
 
 const l1ecos: any[] = [
-  { ...bitcoin, marketCap: 540115865088, lastUpdated: '09/04/2023', token: 'btc' },
-  { ...ethereum, marketCap: 221519687844, lastUpdated: '09/04/2023', token: 'eth' },
-  { name: 'Binance', slug: 'binance', marketCap: 49069307443, lastUpdated: '27/03/2023', token: 'bnb' },
-  { name: 'Solana', slug: 'solana', marketCap: 7812135314, lastUpdated: '27/03/2023', token: 'sol' },
-  // { name: 'Litecoin', slug: 'litecoin', marketCap: 6823904572, lastUpdated: '', token: 'ltc' },
-  { name: 'Avalanche', slug: 'avalanche', marketCap: 5660089337, lastUpdated: '27/03/2023', token: 'avax' },
-  { name: 'Monero', slug: 'monero', marketCap: 2907148559, lastUpdated: '27/03/2023', token: 'xmr' },
-  { ...fantom, marketCap: 1151938313, lastUpdated: '27/03/2023', token: 'ftm' },
-  { name: 'Kadena', slug: 'kadena', marketCap: 204180499, lastUpdated: '27/03/2023', token: 'kda' },
-  { name: 'Canto', slug: 'canto', marketCap: 308341147, lastUpdated: '09/04/2023', token: 'canto' },
-  { name: 'Nervos', slug: 'nervos', marketCap: 190951046, lastUpdated: '27/03/2023', token: 'ckb' },
-  { name: 'Constellation', slug: 'constellation', marketCap: 62617251, lastUpdated: '27/03/2023', token: 'dag' },
+  { ...bitcoin, marketCap: 540115865088, lastUpdated: '09/04/2023' },
+  { ...ethereum, marketCap: 221519687844, lastUpdated: '09/04/2023' },
+  { ...binance, marketCap: 49069307443, lastUpdated: '27/03/2023' },
+  { ...solana, marketCap: 7812135314, lastUpdated: '27/03/2023' },
+  // { name: 'Litecoin', slug: 'litecoin', marketCap: 6823904572, lastUpdated: '' },
+  { ...avalanche, marketCap: 5660089337, lastUpdated: '27/03/2023' },
+  { ...monero, marketCap: 2907148559, lastUpdated: '27/03/2023' },
+  { ...fantom, marketCap: 1151938313, lastUpdated: '27/03/2023' },
+  { ...kadena, marketCap: 204180499, lastUpdated: '27/03/2023' },
+  { ...canto, marketCap: 308341147, lastUpdated: '09/04/2023' },
+  { ...nervos, marketCap: 190951046, lastUpdated: '27/03/2023' },
+  { ...consellation, marketCap: 62617251, lastUpdated: '27/03/2023' },
 ]
 const ethl2ecos: any[] = [
-  { name: 'Polygon', slug: 'polygon', marketCap: 10000741025, lastUpdated: '09/04/2023', token: 'matic' },
-  { name: 'Arbitrum', slug: 'arbitrum', marketCap: 1474265907, lastUpdated: '09/04/2023', token: 'arb' },
-  { name: 'Optimism', slug: 'optimism', marketCap: 701913699, lastUpdated: '09/04/2023', token: 'op' },
+  { ...polygon, marketCap: 10000741025, lastUpdated: '09/04/2023' },
+  { ...arbitrum, marketCap: 1474265907, lastUpdated: '09/04/2023' },
+  { ...optimism, marketCap: 701913699, lastUpdated: '09/04/2023' },
 ]
 
 const lastUpdated = '09/04/2023'
@@ -37,9 +48,15 @@ const EcosystemGrid = ({ ecosystems }: { ecosystems: any[]; }) => {
       ecosystems.map(eco => {
         return (
           <div key={eco.slug} className='card with-bg'>
-            <Link className={`flex justify-between text-${eco.token || 'white'}`} href={`/ecosystems/${eco.slug}`}>
+            <Link className={`flex justify-between text-${eco?.metadata?.token?.name?.toLocaleLowerCase() || 'white'}`} href={`/ecosystems/${eco.slug}`}>
               <span className='flex'>
-                {eco.icon && (<img className='mr-2' src={eco.icon} width={eco.iconSize?.w || 20} height={eco.iconSize?.h || 20} />)}
+                {eco.icon && (typeof eco.icon === 'string') && (<img className='mr-2' alt={eco.name} src={eco.icon} width={eco.iconSize?.w || 20} height={eco.iconSize?.h || 20} />) }
+                {eco.icon && (typeof eco.icon === 'object') && (
+                  <>
+                    <img className='mr-2 dark:hidden' alt={eco.name} src={eco.icon.default} width={eco.iconSize?.w || 20} height={eco.iconSize?.h || 20} />
+                    <img className='mr-2 hidden dark:block' alt={eco.name} src={eco.icon.darkMode} width={eco.iconSize?.w || 20} height={eco.iconSize?.h || 20} />
+                  </>
+                )}
                 {eco.name}
               </span>
               <span className='text-xs'>{marketCap(eco.marketCap)}</span>

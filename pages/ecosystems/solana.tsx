@@ -7,6 +7,7 @@ import EcosystemPage from '../../Components/EcosystemPage'
 import exchanges from '../../data/exchanges'
 import marketplaces from '../../data/marketplaces'
 import wallets from '../../data/wallets'
+import solana from '../../data/blockchains/solana'
 
 const data: { [key: string]: EcosystemLink[] } = {
   explorers: [
@@ -30,20 +31,9 @@ const data: { [key: string]: EcosystemLink[] } = {
   ]
 }
 
-const metadata = {
-  website: 'https://solana.com/',
-  token: {
-    name: 'SOL',
-    cmc: 'https://coinmarketcap.com/currencies/solana/',
-  }
-}
-
 const Solana: NextPage = () => {
   return <EcosystemPage
-    name='Solana'
-    slug='solana'
-    data={data}
-    metadata={metadata}
+    {...solana}
   />
 }
 

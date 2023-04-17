@@ -9,6 +9,7 @@ import defi from '../../data/defi'
 import wallets from '../../data/wallets'
 import marketplaces from '../../data/marketplaces'
 import EcosystemPage from '../../Components/EcosystemPage'
+import kadena from '../../data/blockchains/kadena'
 
 const data: { [key: string]: EcosystemLink[] } = {
   explorers: [
@@ -46,19 +47,10 @@ const data: { [key: string]: EcosystemLink[] } = {
   ]
 }
 
-const metadata = {
-  token: {
-    name: 'KDA',
-    cmc: 'https://coinmarketcap.com/currencies/kadena/',
-  },
-  website: 'https://kadena.io/'
-}
 
 const Kadena: NextPage = () => {
   return <EcosystemPage
-    name='Kadena'
-    data={data}
-    metadata={metadata}
+    {...kadena}
   />
 }
 

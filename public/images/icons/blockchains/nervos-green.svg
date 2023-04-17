@@ -1,0 +1,12 @@
+<svg width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#logo_svg__a)" fill="#18efb1">
+  <path d="M.5.5v33h8.445V15.519h6.476L.5.5ZM25.054.5v17.981H18.58L33.5 33.5V.5h-8.445Z">
+  </path>
+  </g>
+  <defs>
+  <clipPath id="logo_svg__a">
+  <path fill="#18efb1" transform="translate(.5 .5)" d="M0 0h33v33H0z">
+  </path>
+  </clipPath>
+  </defs>
+</svg>

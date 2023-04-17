@@ -1,14 +1,12 @@
 import type { NextPage } from 'next'
 import type { EcosystemLink } from '../../types/EcosystemLink'
 
-import Page from '../../Components/Page'
-import ExternalLink from '../../Components/ExternalLink'
 import EcosystemPage from '../../Components/EcosystemPage'
 
 import exchanges from '../../data/exchanges'
-import wallets from '../../data/wallets'
 import defi from '../../data/defi'
 import marketplaces from '../../data/marketplaces'
+import polygon from '../../data/blockchains/layer2eth/polygon'
 
 const data: { [key: string]: EcosystemLink[] } = {
   explorers: [
@@ -38,21 +36,10 @@ const data: { [key: string]: EcosystemLink[] } = {
   ]
 }
 
-const metadata = {
-  website: 'https://polygon.technology/',
-  token: {
-    name: 'MATIC',
-    cmc: 'https://coinmarketcap.com/currencies/polygon/'
-  }
-}
-
 const Polygon: NextPage = () => {
   return <EcosystemPage
-    name='Polygon'
+    {...polygon}
     data={data}
-    metadata={metadata}
-    icon='/images/logos/polygon.png'
-    iconSize={{ w: 40, h: 40 }}
   />
 }
 

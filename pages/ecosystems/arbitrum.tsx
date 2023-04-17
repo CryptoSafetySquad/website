@@ -5,6 +5,7 @@ import EcosystemPage from '../../Components/EcosystemPage'
 import exchanges from '../../data/exchanges'
 import marketplaces from '../../data/marketplaces'
 import defi from '../../data/defi'
+import arbitrum from '../../data/blockchains/layer2eth/arbitrum'
 
 const data: { [key: string]: EcosystemLink[] } = {
   explorers: [
@@ -28,20 +29,9 @@ const data: { [key: string]: EcosystemLink[] } = {
   wallets: []
 }
 
-const metadata = {
-  website: 'https://arbitrum.io/',
-  token: {
-    name: 'ARB',
-    cmc: 'https://coinmarketcap.com/currencies/arbitrum/'
-  }
-}
-
 const Arbitrum: NextPage = () => {
   return <EcosystemPage
-    data={data}
-    name='Arbitrum'
-    slug='arbitrum'
-    metadata={metadata}
+    {...arbitrum}
   />
 }
 
