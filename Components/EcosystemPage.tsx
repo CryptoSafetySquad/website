@@ -48,7 +48,7 @@ const EcosystemPage = ({ name, slug, data, metadata, icon, iconSize }: { name: s
 
   const content = (
     <>
-      <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-2'>
+      <div className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2'>
         <div className='card'>
           {header}
         </div>
@@ -57,7 +57,7 @@ const EcosystemPage = ({ name, slug, data, metadata, icon, iconSize }: { name: s
         </div>
       </div>
 
-      <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-2'>
+      <div className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2'>
         {sections.map(section => {
           let linkClass = '';
           if (section.name === 'riskyProjects') {
