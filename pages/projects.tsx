@@ -90,6 +90,8 @@ const Projects: NextPage = () => {
   const [showRugged, setShowRugged] = useState(false)
   const [showFailed, setShowFailed] = useState(false)
 
+  const cardGridClasses = 'grid gap-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-4'
+
   const content = (
     <>
       <p className='text-xs'>The projects here are just those we have done some research into, the content herein does not constitute financial advice</p>
@@ -109,13 +111,13 @@ const Projects: NextPage = () => {
       
       
       <h2 className='text-lg my-4 text-green dark:text-green-darkmode'>Highly Rated Projects</h2>
-      <div className='grid gap-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-4'>
+      <div className={cardGridClasses}>
         {
           projectCardList(projects.bluechip)
         }
       </div>
       <h2 className='my-4 text-lg text-blue dark:text-blue-darkmode'>Average Projects</h2>
-      <div className='grid gap-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-4'>
+      <div className={cardGridClasses}>
         {
           projectCardList(projects.average)
         }
@@ -124,7 +126,7 @@ const Projects: NextPage = () => {
         showRisky && (
           <>
             <h2 className='my-4 text-lg text-orange dark:text-orange-darkmode'>Risky Projects</h2>
-            <div className='grid gap-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mb-4'>
+            <div className={cardGridClasses}>
               {
                 projectSimpleCardList(projects.risky, 'warn')
               }
@@ -136,7 +138,7 @@ const Projects: NextPage = () => {
         showFailed && (
           <>
             <h2 className='my-4 text-lg text-red dark:text-red-darkmode'>Failed Projects</h2>
-            <div className='grid gap-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mb-4'>
+            <div className={cardGridClasses}>
               {
                 projectSimpleCardList(projects.failed, 'danger')
               }
@@ -148,7 +150,7 @@ const Projects: NextPage = () => {
         showRugged && (
           <>
             <h2 className='my-4 text-lg text-red dark:text-red-darkmode'>Rug Pulled Projects</h2>
-            <div className='grid gap-2 md:gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mb-4'>
+            <div className={cardGridClasses}>
               {
                 projectSimpleCardList(projects.rugpulled, 'danger')
               }
