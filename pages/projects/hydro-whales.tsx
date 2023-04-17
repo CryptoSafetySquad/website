@@ -270,6 +270,12 @@ const HydroWhales: NextPage = () => {
               <li className='text-xs'><Link href='/projects/ocean-money'>Ocean Money</Link> - Banking Services</li>
             </ul>
           </div>
+          <div className='card'>
+            <h2>Related Links</h2>
+            <ul>
+              <li><ExternalLink href='https://raritysniper.com/hydro-whales-mining-club' className='text-xs' text='Rarity Sniper' /></li>
+            </ul>
+          </div>
         </Sidebar>
       </div>
     </>
