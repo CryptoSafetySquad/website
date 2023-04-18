@@ -14,16 +14,12 @@ import {
 } from 'chart.js';
 
 import Page from '../../Components/Page'
-import PrivateSniper from '../../data/authors/PrivateSniper'
 import ExternalLink from '../../Components/ExternalLink'
 import TabbedContent from '../../Components/TabbedContent'
-import AuthorComponent from '../../Components/Author'
-import Disclaimer from '../../Components/Research/Disclaimer'
 import Answers from '../../Components/Answers'
 import Header from '../../Components/Project/Header'
 import NewsListing from '../../Components/NewsListing';
 
-import HydroWhalesResearch from '../../data/projects/hydrowhales/research'
 import { HydroWhalesMiningClub } from '../../data/projects/hydrowhales/hydrowhales'
 import Sidebar from '../../Components/Project/Sidebar';
 
@@ -40,70 +36,6 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-
-const doxxed = () => {
-  return (
-    <>
-      Core team fully <abbr title='Doxxed means personal data is available about team members, photo, work history, social media profiles etc.'>doxxed</abbr>: <ExternalLink href='https://www.hydrowhalesclub.com/#team' />
-    </>
-  )
-}
-
-const Research = () => {
-  const tick = '✅'
-  const warn = '⚠️'
-
-  const author = PrivateSniper
-  const goodPoints = [
-    { key: 'doxxed', content: doxxed() },
-    { key:'legal', content: 'Has legal team on retainer' },
-    { key:'whitepaper', content: 'Full whitepaper' },
-    { key:'wayback', content: (<>Website content is captured in <ExternalLink href='https://web.archive.org/web/20220711192706/https://www.hydrowhalesclub.com/' text='wayback machine' /></>) }
-  ]
-
-  const researchContent = (
-    <div className='guide'>
-      <img className='mb-4' src='/images/logos/hwmc_os_logo.png' />
-      <Disclaimer />
-      <p className='text-sm'>TLDR: Overall Rating: 🟩 ({HydroWhalesResearch.score}) Excellent</p>
-      <p className='text-sm'>TLDR: What is this about?: A passive income focused community, powered by bitcoin mining and community voted investments.</p>
-      <h2 className='text-secondary'>Links</h2>
-      <ul>
-        <li className='text-sm'>Official Website: <ExternalLink href='https://www.hydrowhalesclub.com/' /></li>
-        <li className='text-sm'>Official Dashboard: <ExternalLink href='https://dashboard.hydrowhalesclub.com/' /></li>
-        <li className='text-sm'>OpenSea: <ExternalLink href='https://opensea.io/collection/hydro-whales-mining-club-official' /></li>
-        <li className='text-sm'><ExternalLink href='https://discord.gg/hydrowhales' text='Discord' /></li>
-      </ul>
-      <h2 className='text-secondary'>Good Factors</h2>
-      <ul>
-        {goodPoints.map(good => (<li  className='text-sm' key={good.key}>{tick}{good.content}</li>))}
-      </ul>
-      <h2 className='text-secondary'>Red Flags?</h2>
-      <ul>
-        <li className='text-sm'>{tick} None found for this project.</li>
-      </ul>
-      <h2 className='text-secondary'>Potential Risks</h2>
-      <p className='text-sm'>{warn} As with any crypto project, the underlying assets (BTC) could decrease in price, so your rewards for being a holder are not gauranteed to be stable consistently.</p>
-    </div>
-  )
-
-  return (
-    <main className='max-w-7xl m-auto bg-dark rounded-md'>
-      <div className='xl:grid grid-cols-[70%,1fr] gap-16'>
-        <div>
-          <h1 className='mb-6'>Hydro Whales Research by PrivateSniper</h1>
-          {researchContent}
-        </div>
-        {author && (
-          <aside>
-            <h2 className='mb-2'>About the author</h2>
-            <AuthorComponent {...author} />
-          </aside>
-        )}
-      </div>
-    </main>
-  )
-}
 
 const HWChart = ({ labels, data, title}: { labels: any[], data: any, title: string; }) => {
   const chartHeight = '175px'
@@ -209,11 +141,7 @@ const HydroWhales: NextPage = () => {
     {
       title: 'News',
       content: <NewsListing newsEntries={HydroWhalesMiningClub.news} />
-    },
-    {
-      title: 'Research',
-      content: <Research />
-    },
+    }
   ]
 
   if (HydroWhalesMiningClub.officialVideos) {
@@ -274,6 +202,7 @@ const HydroWhales: NextPage = () => {
             <h2>Related Links</h2>
             <ul>
               <li><ExternalLink href='https://raritysniper.com/hydro-whales-mining-club' className='text-xs' text='Rarity Sniper' /></li>
+              <li><ExternalLink href='https://github.com/CryptoSafetySquad/research/blob/main/ethereum/hydrowhales-privatesnipers-research.md' className='text-xs' text='HWMC Research by PrivateSniper' /></li>
             </ul>
           </div>
         </Sidebar>

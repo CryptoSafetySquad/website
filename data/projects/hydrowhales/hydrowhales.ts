@@ -3,7 +3,6 @@ import { Blockchains } from "../../../enums/blockchains"
 
 import earnings from "./earnings"
 import news from "./news"
-import HydroWhalesResearch from "./research"
 import answers from "./answers"
 import { officialVideos, communityVideos } from "./videos"
 
@@ -26,7 +25,6 @@ export const HydroWhalesMiningClub: Project = {
     { name: 'Hydro Whales Mining Club', contract: '0xba72b008d53d3e65f6641e1d63376be2f9c1ad05', explorerUrl: 'https://etherscan.io/address/0xba72b008d53d3e65f6641e1d63376be2f9c1ad05', short: '0xba...ad05', blockchain: 'Ethereum' },
   ],
   earnings,
-  research: HydroWhalesResearch,
   officialVideos,
   communityVideos,
   answers,
