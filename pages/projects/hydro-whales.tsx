@@ -148,10 +148,10 @@ const HydroWhales: NextPage = () => {
     tabs.push({
       title: 'Official Videos',
       content: (
-        <div className='grid md:grid-cols-3 gap-4'>
+        <div className='grid md:grid-cols-3 gap-4 text-sm'>
           {HydroWhalesMiningClub.officialVideos.map(video => (
             <div key={video.youtubeSlug}>
-            <iframe  width='100%' height='200' src={`https://www.youtube.com/embed/${video.youtubeSlug}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <iframe width='100%' height='200' src={`https://www.youtube.com/embed/${video.youtubeSlug}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             {video.title}
           </div>
           ))}
@@ -164,7 +164,7 @@ const HydroWhales: NextPage = () => {
     tabs.push({
       title: 'Community Videos',
       content: (
-        <div className='grid md:grid-cols-3 gap-4'>
+        <div className='grid md:grid-cols-3 gap-4 text-sm'>
           {HydroWhalesMiningClub.communityVideos.map(video => (
             <div key={video.youtubeSlug}>
             <iframe width='100%' height='200' src={`https://www.youtube.com/embed/${video.youtubeSlug}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
