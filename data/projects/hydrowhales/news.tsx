@@ -2,10 +2,11 @@ import ExternalLink from "../../../Components/ExternalLink"
 import type { NewsEntry } from "../../../types/NewsEntry"
 
 const news: NewsEntry[] = [
+  { date: '31/03/2023', dateISO: '2023-03-31', content: (<>March earnings (<span className="blockchain ethereum">Ethereum</span>): <span className='reward wbtc'>$10 wBTC</span></>) },
   { date: '20/03/2023', dateISO: '2023-03-20', content: (<>AceMiners NFT purchase <ExternalLink href='https://snapshot.org/#/hydrowhales.eth/proposal/0x9b704b8622eedbbc2c7287e6ce5da0548307330279416ba30efea2c86fe36702'>proposal</ExternalLink> passed ✔️</>) },
   { date: '13/03/2023', dateISO: '2023-03-13', content: (<>Proposal: transition rewards to <span className='blockchain polygon'>Polygon</span> <a href='https://snapshot.org/#/hydrowhales.eth/proposal/0x125242229981e4b694aff075a13434c8e37b59d726a89bd434affbebf274be4c' target='
   '>Snapshot</a> ✔️</>) },
-  { date: '01/02/2023', dateISO: '2023-02-01', content: (<>March claimable earnings (<span className="blockchain ethereum">Ethereum</span>): <span className='reward usdc'>$13 USDC</span>, <span className='reward wbtc'>0.000424 wBTC</span></>) },
+  { date: '27/02/2023', dateISO: '2023-02-27', content: (<>Feb earnings (<span className="blockchain ethereum">Ethereum</span>): <span className='reward usdc'>$13 USDC</span>, <span className='reward wbtc'>0.000424 wBTC</span></>) },
   { date: '01/02/2023', dateISO: '2023-02-01', content: (<>1st claimable earnings (<span className="blockchain ethereum">Ethereum</span>): <span className='reward usdc'>$10 USDC</span>, <span className='reward wbtc'>0.000435 wBTC</span></>) },
   { date: '07/01/2023', dateISO: '2023-01-07', content: (<>P79 adds <span className='reward usd'>$93,000</span> to Hydro Whales treasury from Dec 22-Jan 23 period.</>) },
   { date: '07/01/2023', dateISO: '2023-01-07', content: 'Accouncements: NFT Vault and Escrow platform:  beta begin end of Jan for whales, public live mid feb.' },
