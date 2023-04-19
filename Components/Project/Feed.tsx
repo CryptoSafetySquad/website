@@ -9,7 +9,7 @@ type FeedEntry = NewsEntry | {
 
 const Feed = ({ entries }: { entries: FeedEntry[] }) => {
   return (
-    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2'>
+    <div className='grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-2'>
       {entries.map((entry, index) => 
         <div key={index} className='project-card bordered'>
           <div className='card__header text-xs'>{entry.date}</div>
