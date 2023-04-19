@@ -23,6 +23,8 @@ import NewsListing from '../../Components/NewsListing';
 import earnings from '../../data/projects/aceminers/earnings'
 import { AceMinersNFT as Project } from '../../data/projects/aceminers/aceminers';
 import news from '../../data/projects/aceminers/news'
+import FullPage from '../../Components/FullPage';
+import Feed from '../../Components/Project/Feed';
 
 
 ChartJS.register(
@@ -38,17 +40,6 @@ ChartJS.register(
 
 function average(nums: number[]) {
   return nums.reduce((a, b) => (a + b)) / nums.length;
-}
-
-const NewsContent = () => {
-  const newsIcon = <ModeSwitchingIcon filename='newspaper' size={20} />
-
-  return (
-    <>
-      <h2 className='mb-2'>{newsIcon} News</h2>
-      <NewsListing newsEntries={news} />
-    </>
-  )
 }
 
 const Chart = ({ labels, data, title}: { labels: any[], data: any, title: string; }) => {
@@ -143,27 +134,27 @@ const AceMiners: NextPage = () => {
 
   const content = (
     <>
-      <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
-        <div className='card'>
-          <NewsContent />
-        </div>
-        <Sidebar project={Project}>
-          <StatsContent />
-        </Sidebar>
-      </div>
+      <Feed entries={news} />
     </>
   )
 
   return (
-    <Page {...{
+    <FullPage {...{
       title,
       content,
       slug: 'projects/aceminers',
       description: 'Ace Miners NFT',
       header: <Header
-        description={(<>LTC and KDA mining NFT - Also has a Phase 2 NFT @<a href='https://opensea.io/collection/aceminersnftp2' target='_blank' rel='noopener noreferrer'>OpenSea</a></>)}
+        description={<p>LTC and KDA mining NFT - Also has a Phase 2 NFT @<a href='https://opensea.io/collection/aceminersnftp2' target='_blank' rel='noopener noreferrer'>OpenSea</a></p>}
         {...Project}
-      />
+      />,
+      sidebarContent: (
+        <>
+          <Sidebar project={Project}>
+            <StatsContent />
+          </Sidebar>
+        </>
+      )
     }} />
   )
 }

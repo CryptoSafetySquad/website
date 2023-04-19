@@ -13,7 +13,6 @@ import {
   BarElement
 } from 'chart.js';
 
-import Page from '../../Components/Page'
 import ExternalLink from '../../Components/ExternalLink'
 import TabbedContent from '../../Components/TabbedContent'
 import Answers from '../../Components/Answers'
@@ -25,6 +24,10 @@ import Sidebar from '../../Components/Project/Sidebar';
 
 import type { Project } from '../../types/project';
 import type { EarningsEntry } from '../../types/EarningsEntry';
+import FullPage from '../../Components/FullPage';
+import Feed from '../../Components/Project/Feed';
+import { YouTubeVideo } from '../../types/youtubeVideo';
+import { buildFeed } from '../../functions/Project/buildFeed';
 
 ChartJS.register(
   CategoryScale,
@@ -123,8 +126,8 @@ const StatsContent = ({ project }: { project: Project }) => {
   return (
     <>
       {/* Earnings */}
-      <div className='card'>
-        <h2>Earnings</h2>
+      <div className='project-card'>
+        <h2 className='card__header'>Earnings</h2>
         <HWChart
           labels={earningsData.labels}
           title='Earnings'
@@ -137,86 +140,80 @@ const StatsContent = ({ project }: { project: Project }) => {
 
 const HydroWhales: NextPage = () => {
   const title = 'Hydro Whales Mining Club'
-  const tabs = [
-    {
-      title: 'News',
-      content: <NewsListing newsEntries={HydroWhalesMiningClub.news} />
-    }
-  ]
 
-  if (HydroWhalesMiningClub.officialVideos) {
-    tabs.push({
-      title: 'Official Videos',
-      content: (
-        <div className='grid md:grid-cols-3 gap-4 text-sm'>
-          {HydroWhalesMiningClub.officialVideos.map(video => (
-            <div key={video.youtubeSlug}>
-            <iframe width='100%' height='200' src={`https://www.youtube.com/embed/${video.youtubeSlug}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-            {video.title}
-          </div>
-          ))}
-        </div>
-      )
-    })
-  }
+  // const feedItems = [
+  //   ...HydroWhalesMiningClub.news
+  // ]
 
-  if (HydroWhalesMiningClub.communityVideos) {
-    tabs.push({
-      title: 'Community Videos',
-      content: (
-        <div className='grid md:grid-cols-3 gap-4 text-sm'>
-          {HydroWhalesMiningClub.communityVideos.map(video => (
-            <div key={video.youtubeSlug}>
-            <iframe width='100%' height='200' src={`https://www.youtube.com/embed/${video.youtubeSlug}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-            {video.title}
-          </div>
-          ))}
-        </div>
-      )
-    })
-  }
+  // function parseVideo(video: YouTubeVideo) {
+  //   return {
+  //     date: video.date,
+  //     dateISO: video.dateISO,
+  //     content: (
+  //       <div key={video.youtubeSlug}>
+  //         <iframe className='mb-2' width='100%' height='200' src={`https://www.youtube.com/embed/${video.youtubeSlug}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+  //         {video.title}
+  //       </div>
+  //     )
+  //   }
+  // }
 
-  if (HydroWhalesMiningClub.answers) {
-    tabs.push({
-      title: 'FAQs',
-      content: <Answers qa={HydroWhalesMiningClub.answers} />
-    })
-  }
+  // if (HydroWhalesMiningClub.communityVideos) {
+  //   HydroWhalesMiningClub.communityVideos.map(video => (
+  //     feedItems.push(parseVideo(video))
+  //   ))
+  // }
+
+  // if (HydroWhalesMiningClub.officialVideos) {
+    // HydroWhalesMiningClub.officialVideos.map(video => (
+    //   feedItems.push(parseVideo(video))
+    // ))
+  // }
+
+  // feedItems.sort((a,b) => {
+  //   return (new Date(a.dateISO).getTime()) - (new Date(b.dateISO).getTime());
+  // }).reverse()
 
   const content = (
-    <>
-      <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
-        <main className='card'>
-          <TabbedContent content={tabs} />
-        </main>
-        <Sidebar project={HydroWhalesMiningClub}>
-          <StatsContent project={HydroWhalesMiningClub} />
-          <div className='card'>
-            <h2 className='mb-2'>Related Projects</h2>
-            <ul>
-              <li className='text-xs'><Link href='/projects/project79'>Project 79</Link> - Gold Arbitrage</li>
-              <li className='text-xs'><Link href='/projects/ocean-money'>Ocean Money</Link> - Banking Services</li>
-            </ul>
-          </div>
-          <div className='card'>
-            <h2>Related Links</h2>
-            <ul>
-              <li><ExternalLink href='https://raritysniper.com/hydro-whales-mining-club' className='text-xs' text='Rarity Sniper' /></li>
-              <li><ExternalLink href='https://github.com/CryptoSafetySquad/research/blob/main/ethereum/hydrowhales-privatesnipers-research.md' className='text-xs' text='HWMC Research by PrivateSniper' /></li>
-            </ul>
-          </div>
-        </Sidebar>
-      </div>
-    </>
+    <main>
+      <Feed entries={buildFeed(HydroWhalesMiningClub)} />
+    </main>
   )
 
   return (
-    <Page {...{
+    <FullPage {...{
       title,
       content,
       slug: 'projects/hydro-whales',
       description: 'Hydro Whales Mining Club',
-      header: <Header {...HydroWhalesMiningClub} />
+      header: <Header {...HydroWhalesMiningClub} />,
+      sidebarContent: (
+        <>
+          <Sidebar project={HydroWhalesMiningClub}>
+            <StatsContent project={HydroWhalesMiningClub} />
+            <div className='project-card'>
+              <h2 className='card__header mb-2'>Related Projects</h2>
+              <ul>
+                <li className='text-xs'><Link href='/projects/project79'>Project 79</Link> - Gold Arbitrage</li>
+                <li className='text-xs'><Link href='/projects/ocean-money'>Ocean Money</Link> - Banking Services</li>
+              </ul>
+            </div>
+            <div className='project-card'>
+              <h2 className='card__header'>Related Links</h2>
+              <ul>
+                <li><ExternalLink href='https://raritysniper.com/hydro-whales-mining-club' className='text-xs' text='Rarity Sniper' /></li>
+                <li><ExternalLink href='https://github.com/CryptoSafetySquad/research/blob/main/ethereum/hydrowhales-privatesnipers-research.md' className='text-xs' text='HWMC Research by PrivateSniper' /></li>
+              </ul>
+            </div>
+            <div className='project-card'>
+              <h2 className='card__header'>FAQs</h2>
+              <div className='card__content'>
+                <Answers qa={HydroWhalesMiningClub.answers} />
+              </div>
+            </div>
+          </Sidebar>
+        </>
+      )
     }} />
   )
 }

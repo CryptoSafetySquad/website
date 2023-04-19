@@ -5,6 +5,8 @@ import defi from "../defi"
 import wallets from "../wallets"
 import marketplaces from "../marketplaces"
 
+import EMPMoney from "../projects/emp/emp"
+
 const binance: BlockchainData = {
   name: 'Binance',
   slug: 'binance',
@@ -40,8 +42,10 @@ const binance: BlockchainData = {
       defi.dexVaults,
     ],
     protocols: [
-      { name: 'EMP Money', link: 'https://emp.money/' },
       { name: 'MDB (Make Defi Better)', link: 'https://www.mdb.fund/' },
+    ],
+    projects: [
+      EMPMoney,
     ],
     nftMarketplaces: [
       marketplaces.alphaShares,
@@ -54,7 +58,7 @@ const binance: BlockchainData = {
       wallets.rabby,
       wallets.trustwallet,
       wallets.metamask,
-    ]
+    ],
   }
 }
 

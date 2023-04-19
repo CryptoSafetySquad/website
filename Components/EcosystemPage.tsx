@@ -2,6 +2,8 @@ import Page from "./Page"
 import ExternalLink from "./ExternalLink"
 import type { BlockchainData } from "../types/BlockchainData";
 import type { EcosystemLink } from "../types/EcosystemLink";
+import type { Project } from "../types/project";
+import FullPage from "./FullPage";
 
 const TokenDisplay = ({ name, cmc, className }: { name: string; cmc?: string; className?: string; [key: string]: any; }) => {
   return cmc ? <ExternalLink className={className} href={cmc} text={name} /> : (<>{name}</>)
@@ -22,7 +24,7 @@ const EcosystemPage = ({ name, slug, data, metadata, icon, iconSize, iconRatio }
     { name: 'decentralisedExchanges', title: 'DEXs (Token Swap)' },
     { name: 'nftMarketplaces', title: 'NFT Marketplaces' },
     { name: 'defi', title: 'DeFI (Decentralised Finance)' },
-    { name: 'protocols', title: 'Projects / Protocols' },
+    { name: 'protocols', title: 'Protocols' },
     { name: 'launchpads', title: 'Launchpads' },
     { name: 'gaming', title: 'Gaming' },
     { name: 'riskyProjects', title: (<>&quot;Risky&quot; Projects / Protocols</>) },
@@ -64,15 +66,6 @@ const EcosystemPage = ({ name, slug, data, metadata, icon, iconSize, iconRatio }
   const content = (
     <>
       <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-2'>
-        <div className='card'>
-          {header}
-        </div>
-        <div className='card'>
-          <p className='mb-4 text-sm warn'>None of the information on this page is financial advice, do your own research before investing in any protocols.</p>
-        </div>
-      </div>
-
-      <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-2'>
         {sections.map((section: EcosystemSection) => {
           let linkClass = 'text-sm';
           if (section.name === 'riskyProjects') {
@@ -100,16 +93,73 @@ const EcosystemPage = ({ name, slug, data, metadata, icon, iconSize, iconRatio }
           }
         })}
       </div>
+
+      {(
+        (data?.nftProjects && data.nftProjects.length > 0) ||
+        (data?.projects && data.projects.length > 0)
+        ) && (
+        <div className='grid mt-4'>
+          <div className="ecosystem-card bordered">
+            <div className="card__header">
+              Projects
+            </div>
+            <div className='card__content grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2'>
+              {data.nftProjects && data.nftProjects.map(project => (
+                <a href={`/projects/${project.slug}`} className="card" key={project.name}>
+                  <div style={
+                    {
+                      height: '150px',
+                      background: `url(${project.bannerImage})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center center',
+                      backgroundRepeat: 'no-repeat'
+                    }
+                  }>
+                    &nbsp;
+                  </div>
+                  <div className="card__header text-sm">
+                    {project.name}
+                  </div>
+                </a>
+              ))}
+              {data.projects && data.projects.map(project => (
+                <a href={`/projects/${project.slug}`} className="card" key={project.name}>
+                  <div style={
+                    {
+                      height: '150px',
+                      background: `url(${project.bannerImage})`,
+                      backgroundSize: 'contain',
+                      backgroundPosition: 'center center',
+                      backgroundRepeat: 'no-repeat'
+                    }
+                  }>
+                    &nbsp;
+                  </div>
+                  <div className="card__header text-sm">
+                    {project.name}
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </>
   )
 
   return (
-    <Page {...{
+    <FullPage {...{
       title,
       header: <></>,
       content,
       slug: `ecosystems/${slug || name.toLocaleLowerCase()}`,
-      description: title
+      description: title,
+      sidebarContent: (
+        <div className='ecosystem-card p-4'>
+          {header}
+          <p className='mt-4 text-sm warn'>None of the information on this page is financial advice, do your own research before investing in any protocols.</p>
+        </div>
+      )
     }} />
   )
 }

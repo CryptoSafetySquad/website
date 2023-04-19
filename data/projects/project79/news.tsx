@@ -1,4 +1,6 @@
-const news = [
+import type { NewsEntry } from "../../../types/NewsEntry"
+
+const news: NewsEntry[] = [
   { date: '26/02/2023', content: (<>Feb 2023 Earnings: <span className="healthy">5.9%</span></>) },
   { date: '12/02/2023', content: 'Burlcore token prices: public price: $250, presale $225 (10% discount), transition: $200 (20% discount)' },
   { date: '28/01/2023', content: (<>Jan 2023 Earnings: <span className="healthy">6.4%</span></>) },

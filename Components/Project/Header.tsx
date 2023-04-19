@@ -16,7 +16,7 @@ const Header = ({ className, name, website, opensea, description, twitter, banne
   const twitterIcon = <img alt='OpenSea Link' className='mr-2' src='/images/icons/twitter.svg' height='22' width='22' />
 
   return (
-    <div>
+    <div className="mb-4">
       {bannerImage && <div className='mb-4 rounded-md' style={{ height: '400px', backgroundSize: 'cover', backgroundImage: `url(${bannerImage})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center' }}></div>}
       <h1 className={`flex ${className} mb-2`}>
         <span className='mr-4'>{name}</span>
@@ -24,7 +24,9 @@ const Header = ({ className, name, website, opensea, description, twitter, banne
         {opensea && <ExternalLink href={`${opensea}`}>{openseaIcon}</ExternalLink>}
         {twitter && <ExternalLink href={`https://twitter.com/${twitter}`}>{twitterIcon}</ExternalLink>}
       </h1>
-      {description}
+      {description && (
+        <span className='text-sm mb-4'>{description}</span>
+      )}
     </div>
   )
 }

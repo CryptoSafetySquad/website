@@ -10,14 +10,13 @@ import {
   Legend,
 } from 'chart.js';
 
-import Page from '../../Components/Page'
 import Header from '../../Components/Project/Header'
-import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon';
 import Sidebar from '../../Components/Project/Sidebar';
-import NewsListing from '../../Components/NewsListing';
 
 import news from '../../data/projects/emp/news'
-import { EMPMoney as Project } from '../../data/projects';
+import EMPMoney from '../../data/projects/emp/emp';
+import FullPage from '../../Components/FullPage';
+import Feed from '../../Components/Project/Feed';
 
 ChartJS.register(
   CategoryScale,
@@ -35,32 +34,30 @@ function average(nums: number[]): number {
 
 const EmpMoney: NextPage = () => {
   const title = 'EMP'
-  const newsIcon = <ModeSwitchingIcon filename='newspaper' size={20} />
 
   const content = (
     <>
-      <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
-        <div className='card'>
-          <h2 className='flex mb-2'>{newsIcon} News</h2>
-          <NewsListing newsEntries={news} />
-        </div>
-        <Sidebar project={Project}>
-        </Sidebar>
-      </div>
+      <Feed entries={news} />
     </>
   )
 
   return (
-    <Page {...{
+    <FullPage {...{
       title,
       content,
       slug: 'projects/empmoney',
       description: 'EMP',
       header: <Header
+        description={(<>A seigniorage protocol on BSC pegged to ethereum 4000:1</>)}
         name={title}
         website='https://emp.money'
         // twitter=''
-      />
+      />,
+      sidebarContent: (
+        <>
+          <Sidebar project={EMPMoney} />
+        </>
+      )
     }} />
   )
 }

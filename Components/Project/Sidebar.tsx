@@ -11,11 +11,11 @@ const Sidebar = ({ project, children }: ProjectSidebarProps) => {
   if (!project) { return null }
   return (
     <aside>
-      {children}
       {project.nfts && <Contracts contracts={project.nfts} title='NFTs' />}
       {project.wallets && <Contracts contracts={project.wallets} title='Wallets' />}
       {project.contracts && <Contracts contracts={project.contracts} title='Contracts' />}
       {project.tokens && <Contracts contracts={project.tokens} title='Tokens' />}
+      {children}
     </aside>
   )
 }

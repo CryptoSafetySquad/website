@@ -1,9 +1,15 @@
+import type { BlockchainData } from "../../types/BlockchainData"
+
 import exchanges from "../exchanges"
 import defi from "../defi"
 import marketplaces from "../marketplaces"
 import wallets from "../wallets"
 
-const ethereum = {
+import HydroWhalesMiningClub from "../projects/hydrowhales/hydrowhales"
+import AceMinersNFT from "../projects/aceminers/aceminers"
+import { Project79 } from "../projects"
+
+const ethereum: BlockchainData = {
   icon: '/images/logos/eth-diamond-purple.png',
   name: 'Ethereum',
   slug: 'ethereum',
@@ -38,6 +44,11 @@ const ethereum = {
       marketplaces.x2y2,
       marketplaces.magiceden,
       marketplaces.blur,
+    ],
+    nftProjects: [
+      HydroWhalesMiningClub,
+      AceMinersNFT,
+      Project79,
     ],
     // protocols: [],
     // riskyProjects: [],

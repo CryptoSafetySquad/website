@@ -1,4 +1,5 @@
 import type { EcosystemLink } from "./EcosystemLink";
+import type { Project } from "./project";
 
 export type BlockchainData = {
   name: string;
@@ -31,7 +32,9 @@ export type BlockchainData = {
     nftMarketplaces?: EcosystemLink[] | undefined;
     protocols?: EcosystemLink[] | undefined;
     riskyProjects?: EcosystemLink[] | undefined;
-    [key: string]: EcosystemLink[] | undefined;
-  }
+    nftProjects?: Project[];
+    [key: string]: EcosystemLink[] | Project[] | undefined;
+
+  },
   [key: string]: string | object | undefined;
 }

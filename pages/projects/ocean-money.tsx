@@ -6,8 +6,8 @@ import NewsListing from '../../Components/NewsListing'
 import Header from '../../Components/Project/Header'
 import { OceanMoney as Project } from '../../data/projects/oceanmoney/oceanmoney'
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
-import { NewsEntry } from '../../types/NewsEntry'
-import ExternalLink from '../../Components/ExternalLink'
+import FullPage from '../../Components/FullPage'
+import Feed from '../../Components/Project/Feed'
 
 const NewsContent = () => {
   const newsIcon = <ModeSwitchingIcon filename='newspaper' size={20} />
@@ -25,11 +25,21 @@ const OceanMoney: NextPage = () => {
 
   const content = (
     <>
-      <div className='grid gap-2 md:grid-cols-[3fr_1fr]'>
-        <main className='card'>
-          <NewsContent />
-        </main>
-        <aside>
+      <main className='grid gap-2 md:grid-cols-[3fr_1fr]'>
+        <Feed entries={Project.news} />  
+      </main>
+    </>
+  )
+
+  return (
+    <FullPage {...{
+      title,
+      content,
+      slug: 'projects/ocean-money',
+      description: 'Ocean Money',
+      header: <Header {...Project} />,
+      sidebarContent: (
+        <>
           <div className='card'>
             <h2 className='mb-2'>Related Projects</h2>
             <ul>
@@ -37,18 +47,8 @@ const OceanMoney: NextPage = () => {
               <li className='text-xs'><Link href='/projects/project79'>Project 79</Link> - Gold Arbitrage</li>
             </ul>
           </div>
-        </aside>
-      </div>
-    </>
-  )
-
-  return (
-    <Page {...{
-      title,
-      content,
-      slug: 'projects/ocean-money',
-      description: 'Ocean Money',
-      header: <Header {...Project} />
+        </>
+      )
     }} />
   )
 }
