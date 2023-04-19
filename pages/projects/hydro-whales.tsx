@@ -14,10 +14,8 @@ import {
 } from 'chart.js';
 
 import ExternalLink from '../../Components/ExternalLink'
-import TabbedContent from '../../Components/TabbedContent'
 import Answers from '../../Components/Answers'
 import Header from '../../Components/Project/Header'
-import NewsListing from '../../Components/NewsListing';
 
 import { HydroWhalesMiningClub } from '../../data/projects/hydrowhales/hydrowhales'
 import Sidebar from '../../Components/Project/Sidebar';
@@ -26,7 +24,6 @@ import type { Project } from '../../types/project';
 import type { EarningsEntry } from '../../types/EarningsEntry';
 import FullPage from '../../Components/FullPage';
 import Feed from '../../Components/Project/Feed';
-import { YouTubeVideo } from '../../types/youtubeVideo';
 import { buildFeed } from '../../functions/Project/buildFeed';
 
 ChartJS.register(
@@ -141,43 +138,13 @@ const StatsContent = ({ project }: { project: Project }) => {
 const HydroWhales: NextPage = () => {
   const title = 'Hydro Whales Mining Club'
 
-  // const feedItems = [
-  //   ...HydroWhalesMiningClub.news
-  // ]
-
-  // function parseVideo(video: YouTubeVideo) {
-  //   return {
-  //     date: video.date,
-  //     dateISO: video.dateISO,
-  //     content: (
-  //       <div key={video.youtubeSlug}>
-  //         <iframe className='mb-2' width='100%' height='200' src={`https://www.youtube.com/embed/${video.youtubeSlug}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-  //         {video.title}
-  //       </div>
-  //     )
-  //   }
-  // }
-
-  // if (HydroWhalesMiningClub.communityVideos) {
-  //   HydroWhalesMiningClub.communityVideos.map(video => (
-  //     feedItems.push(parseVideo(video))
-  //   ))
-  // }
-
-  // if (HydroWhalesMiningClub.officialVideos) {
-    // HydroWhalesMiningClub.officialVideos.map(video => (
-    //   feedItems.push(parseVideo(video))
-    // ))
-  // }
-
-  // feedItems.sort((a,b) => {
-  //   return (new Date(a.dateISO).getTime()) - (new Date(b.dateISO).getTime());
-  // }).reverse()
-
   const content = (
+    <>
+    {HydroWhalesMiningClub.bannerImage && <div className='mb-4 rounded-md' style={{ height: '400px', backgroundSize: 'cover', backgroundImage: `url(${HydroWhalesMiningClub.bannerImage})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center' }}></div>}
     <main>
       <Feed entries={buildFeed(HydroWhalesMiningClub)} />
     </main>
+    </>
   )
 
   return (
@@ -186,9 +153,11 @@ const HydroWhales: NextPage = () => {
       content,
       slug: 'projects/hydro-whales',
       description: 'Hydro Whales Mining Club',
-      header: <Header {...HydroWhalesMiningClub} />,
+      header: (<></>),
+      // header: <Header {...HydroWhalesMiningClub} />,
       sidebarContent: (
         <>
+          <Header {...HydroWhalesMiningClub} />
           <Sidebar project={HydroWhalesMiningClub}>
             <StatsContent project={HydroWhalesMiningClub} />
             <div className='project-card'>
