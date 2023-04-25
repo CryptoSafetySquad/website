@@ -158,26 +158,14 @@ const StatsContent = ({ project }: { project: Project }) => {
   const dollarIcon = <ModeSwitchingIcon filename='dollar-sign' size={12} scheme='white' />
 
   // Compile earnings data
-  const earningsData: {
-    labels: string[];
-    ethereum: { wbtc?: number[]; usdc?: number[]; usdt?: number[]; weth?: number[]; };
-    polygon: { wbtc?: number[]; usdc?: number[]; usdt?: number[]; weth?: number[]; };
-    bsc: { usdc?: number[]; busd?: number[]; }
-    total: number[];
-    [key: string]: {
-      weth?: number[], wbtc?: number[];
-      usdc?: number[]; usdt?: number[];
-      busd?: number[];
-      [key: string]: number[] | undefined;
-    } | number[] | string[];
-  } = {
+  const earningsData: any = {
     labels: [],
     ethereum: { wbtc: [], usdc: [] },
     polygon: { wbtc: [], usdc: [], weth: [] },
     bsc: { usdc: [], busd: [] },
     total: []
   }
-  project.earnings.forEach((entry: EarningsEntry) => {
+  project.earnings.forEach((entry: any) => {
     let total = 0
     tokens.forEach(token => {
       if (
