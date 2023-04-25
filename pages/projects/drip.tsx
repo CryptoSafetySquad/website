@@ -41,9 +41,11 @@ const Drip: NextPage = () => {
           <NewsContent />
         </main>
         <Sidebar project={Project}>
-          <div className='card'>
-            <h2>Domains</h2>
-            {Project.domains?.map(domain => <p key={domain} className='text-xs'>{domain}</p>)}
+          <div className='project-card'>
+            <h2 className='card__header'>Domains</h2>
+            <div className='card__content'>
+              {Project.domains?.map(domain => <p key={domain} className='text-xs'>{domain}</p>)}
+            </div>
           </div>
         </Sidebar>
       </div>
