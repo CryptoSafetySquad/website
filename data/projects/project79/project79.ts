@@ -12,6 +12,9 @@ const Project79: Project = {
   bannerImage: 'https://pbs.twimg.com/media/FdBHe8kaMAEk8_2?format=jpg&name=4096x4096',
   news,
   earnings,
+  relatedProjects: [
+    { name: 'Hydro Whales Mining Club', link: 'hydro-whales', desc: 'Passive Income NFT' },
+  ]
 }
 
 export default Project79
