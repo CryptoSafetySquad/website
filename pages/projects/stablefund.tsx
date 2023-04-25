@@ -3,6 +3,7 @@ import Page from '../../Components/Page'
 import Contracts from '../../Components/Project/Contracts'
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
 
+import { default as ProjectPage } from '../../Components/Project/Page'
 import { StableFund as Project } from '../../data/projects/stablefund/stablefund'
 
 import type { NextPage } from 'next'
@@ -21,6 +22,9 @@ const NewsContent = () => {
 }
 
 const Stablefund: NextPage = () => {
+
+  return <ProjectPage project={Project} />
+
   const title = 'StableFund (Rug Pulled)'
 
   const content = (

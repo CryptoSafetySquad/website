@@ -16,7 +16,7 @@ const Sidebar = ({ project, children }: ProjectSidebarProps) => {
         <div className='project-card'>
           <div className='card__header danger'><ModeSwitchingIcon filename='flag' scheme='red' /> Red Flags</div>
           <div className='card__content'>
-            {project.redflags}
+            {project.redflags.map(rf => <p key={rf?.toString()} className='text-xs'>{rf}</p>)}
           </div>
         </div>
       )}
@@ -54,9 +54,9 @@ const Sidebar = ({ project, children }: ProjectSidebarProps) => {
           <div className='card__content'>
             {project.domains.map(dom => {
               return (
-                <span key={dom} className='text-xs'>
+                <p key={dom} className='text-xs'>
                   <a href={dom}>{dom}</a>
-                </span>
+                </p>
               )
             })}
           </div>
