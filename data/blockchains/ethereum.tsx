@@ -7,7 +7,7 @@ import wallets from "../wallets"
 
 import HydroWhalesMiningClub from "../projects/hydrowhales/hydrowhales"
 import AceMinersNFT from "../projects/aceminers/aceminers"
-import { Project79 } from "../projects"
+import Project79 from "../projects/project79/project79"
 
 const ethereum: BlockchainData = {
   icon: '/images/logos/eth-diamond-purple.png',
