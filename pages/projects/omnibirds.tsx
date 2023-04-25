@@ -108,11 +108,13 @@ const OMNIBirds: NextPage = () => {
         {/* <TabbedContent content={tabs} /> */}
       </main>
       <Sidebar project={Project}>
-        <div className='card'>
-          <h1 className='mb-2'>Team</h1>
-          <p className='text-sm'>Stuart Rex: <ExternalLink href='https://www.linkedin.com/in/stuartrex7/' text='LinkedIn' /></p>
-          <p className='text-sm'>Russell Thomas: <ExternalLink href='https://www.linkedin.com/in/russell-thomas-557390204/' text='LinkedIn' /></p>
-          <p className='text-sm'>Shay Thomas: <ExternalLink href='https://www.linkedin.com/in/shay-thomas/' text='LinkedIn' /></p>
+        <div className='project-card'>
+          <h1 className='card__header'>Team</h1>
+          <div className='card__content'>
+            <p className='text-sm'>Stuart Rex: <ExternalLink href='https://www.linkedin.com/in/stuartrex7/' text='LinkedIn' /></p>
+            <p className='text-sm'>Russell Thomas: <ExternalLink href='https://www.linkedin.com/in/russell-thomas-557390204/' text='LinkedIn' /></p>
+            <p className='text-sm'>Shay Thomas: <ExternalLink href='https://www.linkedin.com/in/shay-thomas/' text='LinkedIn' /></p>
+          </div>
         </div>
       </Sidebar>
     </div>
