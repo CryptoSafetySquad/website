@@ -2,8 +2,6 @@ import type { Project } from "../../../types/project"
 import Blockchains from "../../../enums/blockchains"
 import news from "./news"
 
-const quoteMark = (<>&quot;</>)
-
 export const YieldRobot: Project = {
   name: 'YieldRobot',
   slug: 'yieldrobot',
@@ -23,6 +21,9 @@ export const YieldRobot: Project = {
     '8% referral bonus, build ponzi scheme faster!',
     (<>Quote: &quot;We are not worried about KYC, we are worried about regulations.&quot;</>),
     (<>&quot;Audit&quot; from watchdogs may be seen as misleading (subjective).</>),
+  ],
+  greenflags: [
+    'Contract code is fully published'
   ]
 }
 

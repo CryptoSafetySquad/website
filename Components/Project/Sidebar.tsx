@@ -20,6 +20,14 @@ const Sidebar = ({ project, children }: ProjectSidebarProps) => {
           </div>
         </div>
       )}
+      {project.greenflags && (
+        <div className='project-card'>
+          <div className='card__header'><ModeSwitchingIcon filename='flag' scheme='white' /> Green Flags</div>
+          <div className='card__content'>
+            {project.greenflags.map(gf => <p key={gf?.toString()} className='text-xs'>{gf}</p>)}
+          </div>
+        </div>
+      )}
       {project.warnings && (
         <div className='project-card'>
           <div className='card__header warn'><ModeSwitchingIcon filename='warning' scheme='orange' /> Red Flags</div>
