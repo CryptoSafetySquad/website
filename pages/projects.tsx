@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 import { useState } from 'react'
 
-import Page from '../Components/Page'
 import projects from '../data/projects'
 import type { Project } from '../types/project'
 import styles from '../styles/projects.module.css'
