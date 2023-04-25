@@ -29,6 +29,7 @@ export interface Project {
   videos?: any;
   news?: any;
   redflags?: ReactNode[];
+  warnings?: ReactNode[];
   greenflags?: ReactNode[];
   officialVideos?: YouTubeVideo[];
   communityVideos?: YouTubeVideo[];

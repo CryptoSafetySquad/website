@@ -1,10 +1,13 @@
 import type { Project } from "../../../types/project"
 import Blockchains from "../../../enums/blockchains"
+import warnings from "./warnings"
+import ProjectStatus from "../../../enums/ProjectStatus"
 
 export const DRIP: Project = {
   name: 'DRIP',
   slug: 'drip',
   type: 'Passive Income',
+  status: ProjectStatus.Risky,
   blockchain: Blockchains.Binance,
   tokens: [
     {
@@ -18,6 +21,7 @@ export const DRIP: Project = {
   redflags: [
     'Undoxxed',
   ],
+  warnings,
   domains: [
     'drip.community',
   ]

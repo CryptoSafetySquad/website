@@ -20,6 +20,14 @@ const Sidebar = ({ project, children }: ProjectSidebarProps) => {
           </div>
         </div>
       )}
+      {project.warnings && (
+        <div className='project-card'>
+          <div className='card__header warn'><ModeSwitchingIcon filename='warning' scheme='orange' /> Red Flags</div>
+          <div className='card__content'>
+            {project.redflags}
+          </div>
+        </div>
+      )}
       {project.nfts && <Contracts contracts={project.nfts} title='NFTs' />}
       {project.wallets && <Contracts contracts={project.wallets} title='Wallets' />}
       {project.contracts && <Contracts contracts={project.contracts} title='Contracts' />}

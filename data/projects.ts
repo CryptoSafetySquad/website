@@ -10,7 +10,7 @@ import YieldNodes from "./projects/yieldnodes/yieldnodes";
 import YieldRobot from "./projects/yieldrobot/yieldrobot";
 import EMPMoney from "./projects/emp/emp";
 import Project79 from "./projects/project79/project79";
-import OMNIBirds from "../pages/projects/omnibirds";
+import OMNIBirds from "./projects/omnibirds/omnibirds";
 
 export const BoredApeYachtClub: Project = {
   name: 'Bored Ape Yacht Club',
@@ -22,13 +22,6 @@ export const BoredApeYachtClub: Project = {
   bannerImage: 'https://i.seadn.io/gae/i5dYZRkVCUK97bfprQ3WXyrT9BnLSZtVKGJlKQ919uaUB0sxbngVCioaiyu9r6snqfi2aaTyIvv6DHm4m2R3y7hMajbsv14pSZK8mhs?auto=format&w=1920',
   twitter: 'BoredApeYC'
 }
-
-// export const EMPMoney: Project = {
-//   name: 'EMP',
-//   slug: 'empmoney',
-//   type: 'Passive Income',
-//   blockchain: Blockchains.Binance,
-// }
 
 const projects = {
   bluechip: [
