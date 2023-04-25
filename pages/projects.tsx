@@ -5,6 +5,7 @@ import Page from '../Components/Page'
 import projects from '../data/projects'
 import type { Project } from '../types/project'
 import styles from '../styles/projects.module.css'
+import FullPage from '../Components/FullPage'
 
 const BlochainIcon = ({ blockchain }: { blockchain: string | string[] | undefined; }) => {
   if (!blockchain) {
@@ -94,22 +95,6 @@ const Projects: NextPage = () => {
 
   const content = (
     <>
-      <p className='text-xs'>The projects here are just those we have done some research into, the content herein does not constitute financial advice</p>
-      <p className='text-xs'>Please do your own research before investing, we can take no responsibility for the performance of any investments you make.</p>
-      <p className='text-xs'>Ratings are of course mostly subjective, your opinion may differ.</p>
-      <div className='grid gap-2 md:gap-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 mb-4'>
-        <div className='card with-bg'>
-          <p className='text-xs'>Include high risk?: <input type='checkbox' defaultChecked={showRisky} onChange={() => {setShowRisky(!showRisky)}} /></p>
-        </div>
-        <div className='card with-bg'>
-          <p className='text-xs'>Include failed?: <input type='checkbox' defaultChecked={showFailed} onChange={() => {setShowFailed(!showFailed)}} /></p>
-        </div>
-        <div className='card with-bg'>
-          <p className='text-xs'>Include rug-pulled?: <input type='checkbox' defaultChecked={showRugged} onChange={() => setShowRugged(!showRugged)} /></p>
-        </div>
-      </div>
-      
-      
       <h2 className='text-lg my-4 text-green dark:text-green-darkmode'>Highly Rated Projects</h2>
       <div className={cardGridClasses}>
         {
@@ -163,9 +148,31 @@ const Projects: NextPage = () => {
   )
 
   return (
-    <Page {...{
+    <FullPage {...{
       title,
+      header: <></>,
       content,
+      sidebarContent: (
+        <div className='project-card'>
+          <div className='card__header rounded-lg p-4'>
+            <h1 className='mb-4'>Projects</h1>
+              <p className='text-xs warn'>The projects here are just those we have done some research into, the content herein does not constitute financial advice</p>
+            <p className='text-xs warn'>Please do your own research before investing, we can take no responsibility for the performance of any investments you make.</p>
+            <p className='text-xs warn'>Ratings are of course mostly subjective, your opinion may differ.</p>
+            <div className=''>
+              <div className='mt-4 mb-4'>
+                <p className='text-xs'>Include high risk?: <input type='checkbox' defaultChecked={showRisky} onChange={() => {setShowRisky(!showRisky)}} /></p>
+              </div>
+              <div className='mb-4'>
+                <p className='text-xs'>Include failed?: <input type='checkbox' defaultChecked={showFailed} onChange={() => {setShowFailed(!showFailed)}} /></p>
+              </div>
+              <div>
+                <p className='text-xs'>Include rug-pulled?: <input type='checkbox' defaultChecked={showRugged} onChange={() => setShowRugged(!showRugged)} /></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      ),
       slug: 'research',
       description: 'Research'
     }} />
