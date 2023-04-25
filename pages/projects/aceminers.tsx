@@ -13,18 +13,16 @@ import {
   Legend,
 } from 'chart.js';
 
-import Page from '../../Components/Page'
-import Contracts from '../../Components/Project/Contracts';
 import Header from '../../Components/Project/Header'
 import Sidebar from '../../Components/Project/Sidebar';
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon';
-import NewsListing from '../../Components/NewsListing';
 
 import earnings from '../../data/projects/aceminers/earnings'
 import { AceMinersNFT as Project } from '../../data/projects/aceminers/aceminers';
 import news from '../../data/projects/aceminers/news'
 import FullPage from '../../Components/FullPage';
 import Feed from '../../Components/Project/Feed';
+import { default as ProjectPage } from '../../Components/Project/Page';
 
 
 ChartJS.register(
@@ -138,7 +136,10 @@ const AceMiners: NextPage = () => {
     </>
   )
 
+  return <ProjectPage project={Project} />
+
   return (
+    
     <FullPage {...{
       title,
       content,

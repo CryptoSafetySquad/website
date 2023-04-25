@@ -3,15 +3,23 @@ import { Blockchains } from "../enums/blockchains";
 import type { YouTubeVideo } from "./youtubeVideo";
 import ProjectStatus from "../enums/ProjectStatus";
 import { ReactNode } from "react";
+import type { EcosystemLink } from "./EcosystemLink";
+
+type RelatedProject = {
+  name: string;
+  link: string;
+  desc?: string;
+}
 
 export interface Project {
   bannerImage?: string;
   slug?: string;
   type: string;
+  description?: string | ReactNode | undefined;
   blockchain?: Blockchains | Blockchains[] | string;
   name: string;
   status?: ProjectStatus;
-  opensea?: string;
+  opensea?: string | string[];
   twitter?: string;
   website?: string;
   earnings?: any;
@@ -28,5 +36,6 @@ export interface Project {
   contracts?: Contract[];
   tokens?: Contract[];
   nfts?: Contract[];
+  relatedProjects?: RelatedProject[];
   data?: any; // Placeholder for any other project specific data.
 }

@@ -3,29 +3,37 @@ export type EarningsEntry = {
   date: string;
   amount?: number;
   notes?: string;
-  matic?: number;
-  eth?: number;
-  kda?: number;
-  ltc?: number;
-  bnb?: number;
-  ckb?: number; // Nervos
+  bitcoin?: {
+    btc: number;
+  },
   bsc?: {
     usdc?: number;
     usdt?: number;
+    bnb?: number;
   }
+  kadena?: {
+    kda?: number;
+  },
   polygon?: {
     weth?: number;
     wbtc?: number;
     usdc?: number;
     usdt?: number;
+    matic?: number;
   };
   ethereum?: {
     usdc?: number;
     wbtc?: number;
     usdt?: number;
+    eth?: number;
   };
+  litecoin?: {
+    ltc?: number;
+  }
   nervos?: {
     usdc?: number;
     usdt?: number;
+    ckb?: number; // Nervos
   }
+  [key: string]: string | number | undefined | { [key: string]: number | undefined };
 }

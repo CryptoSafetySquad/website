@@ -9,6 +9,7 @@ import StableFund from "./projects/stablefund/stablefund";
 import YieldNodes from "./projects/yieldnodes/yieldnodes";
 import YieldRobot from "./projects/yieldrobot/yieldrobot";
 import EMPMoney from "./projects/emp/emp";
+import Project79 from "./projects/project79/project79";
 
 export const BoredApeYachtClub: Project = {
   name: 'Bored Ape Yacht Club',
@@ -33,14 +34,6 @@ export const OMNIBirds: Project = {
   wallets: [
     { name: 'Payouts', contract: '0x30b767ef4a5c83ede9a370355208b018689b405a', short: '0x30...b405a', explorerUrl: 'https://etherscan.io/address/0x30b767ef4a5c83ede9a370355208b018689b405a', blockchain: 'ethereum' }
   ]
-}
-
-export const Project79: Project = {
-  name: 'Project 79',
-  slug: 'project79',
-  type: 'Passive Income',
-  blockchain: [Blockchains.Ethereum, Blockchains.Binance],
-  bannerImage: 'https://pbs.twimg.com/media/FdBHe8kaMAEk8_2?format=jpg&name=4096x4096'
 }
 
 // export const EMPMoney: Project = {

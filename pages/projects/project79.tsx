@@ -11,16 +11,14 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import { default as Project } from '../../data/projects/project79/project79';
 
-import Page from '../../Components/Page'
+import { default as ProjectPage } from '../../Components/Project/Page';
 import Header from '../../Components/Project/Header'
 import Percentage from '../../Components/Percentage';
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon';
 import Sidebar from '../../Components/Project/Sidebar';
-import NewsListing from '../../Components/NewsListing';
 import ExternalLink from '../../Components/ExternalLink';
-
-import { Project79 as Project } from '../../data/projects';
 import tvl from '../../data/projects/project79/tvl'
 import earnings from '../../data/projects/project79/earnings'
 import news from '../../data/projects/project79/news'
@@ -114,44 +112,10 @@ const Project79: NextPage = () => {
     </>
   )
 
-  return (
-    <FullPage {...{
-      title,
-      content,
-      slug: 'projects/project79',
-      description: 'Project 79',
-      header: <Header
-        className='dark:text-gold'
-        name={title}
-        website='https://www.project79.com/'
-        description={<p>A <Link href='/projects/hydro-whales'>HydroWhales</Link> launchpad project</p>}
-        twitter='Project79Gold'
-      />,
-      sidebarContent: (
-        <>
-          <Sidebar project={Project}>
-            <StatsContent />
-            <div className='project-card'>
-              <h2 className='card__header dark:text-gold mb-2'>Related Projects</h2>
-              <ul className='card__content'>
-                <li><Link className='text-sm' href='/projects/hydro-whales'>Hydro Whales Mining Club</Link></li>
-                <li><Link className='text-sm' href='/projects/ocean-money'>Ocean Money</Link></li>
-              </ul>
-            </div>
-            <div className='project-card'>
-              <h2 className='card__header dark:text-gold mb-2'>Related Links</h2>
-              <ul className='card__content'>
-                <li><ExternalLink className='text-sm' href='https://www.chainlinkecosystem.com/ecosystem/burlcore-mining-company' text='Chainlink: Burlcore Mining Company' /></li>
-                <li><ExternalLink className='text-sm' href='https://www.burlcoremining.com/' text='Burlcore Mining' /></li>
-                <li><ExternalLink className='text-sm' href='https://burlcore.com/' text='Burlcore' /></li>
-                <li><ExternalLink className='text-sm' href='https://philburley.com/' text='Phil Burley' /></li>
-              </ul>
-            </div>
-          </Sidebar>
-        </>
-      )
-    }} />
-  )
+  return <ProjectPage
+    project={Project}
+    sidebar={<StatsContent />}
+  />
 }
 
 export default Project79

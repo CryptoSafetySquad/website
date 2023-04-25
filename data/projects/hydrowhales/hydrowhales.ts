@@ -29,6 +29,9 @@ export const HydroWhalesMiningClub: Project = {
   communityVideos,
   answers,
   news,
+  relatedProjects: [
+    { name: 'Project 79', link: 'project79', desc: 'Gold Mining' }
+  ]
 }
 
 export default HydroWhalesMiningClub

@@ -16,6 +16,21 @@ const Sidebar = ({ project, children }: ProjectSidebarProps) => {
       {project.contracts && <Contracts contracts={project.contracts} title='Contracts' />}
       {project.tokens && <Contracts contracts={project.tokens} title='Tokens' />}
       {children}
+      {project.relatedProjects && (
+        <div className='project-card'>
+          <h2 className='card__header'>Related Projects</h2>
+          <div className='card__content'>
+            {project.relatedProjects.map(prj => {
+              return (
+                <span key={prj.link} className='text-xs'>
+                  <a href={`/projects/${prj.link}`}>{prj.name}</a>
+                  {prj.desc && <> - {prj.desc}</>}
+                </span>
+              )
+            })}
+          </div>
+        </div>
+      )}
     </aside>
   )
 }
