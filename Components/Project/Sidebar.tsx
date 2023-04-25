@@ -40,6 +40,20 @@ const Sidebar = ({ project, children }: ProjectSidebarProps) => {
           </div>
         </div>
       )}
+      {project.domains && (
+        <div className='project-card'>
+          <h2 className='card__header'>Domains</h2>
+          <div className='card__content'>
+            {project.domains.map(dom => {
+              return (
+                <span key={dom} className='text-xs'>
+                  <a href={dom}>{dom}</a>
+                </span>
+              )
+            })}
+          </div>
+        </div>
+      )}
     </aside>
   )
 }

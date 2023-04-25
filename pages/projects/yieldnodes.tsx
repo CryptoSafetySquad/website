@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 
 import Page from '../../Components/Page'
+import { default as ProjectPage } from '../../Components/Project/Page'
 import { YieldNodes as Project } from '../../data/projects/yieldnodes/yieldnodes'
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
 import RedFlagCard from '../../Components/Project/RedFlagCard'
@@ -36,6 +37,8 @@ const YieldNodes: NextPage = () => {
       </div>
     </>
   )
+
+  return <ProjectPage project={Project} />
 
   return (
     <Page {...{
