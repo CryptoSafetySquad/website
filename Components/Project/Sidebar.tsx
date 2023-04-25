@@ -24,7 +24,7 @@ const Sidebar = ({ project, children }: ProjectSidebarProps) => {
         <div className='project-card'>
           <div className='card__header warn'><ModeSwitchingIcon filename='warning' scheme='orange' /> Red Flags</div>
           <div className='card__content'>
-            {project.redflags}
+            {project.warnings}
           </div>
         </div>
       )}
