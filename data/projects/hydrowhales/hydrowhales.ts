@@ -30,7 +30,8 @@ export const HydroWhalesMiningClub: Project = {
   answers,
   news,
   relatedProjects: [
-    { name: 'Project 79', link: 'project79', desc: 'Gold Mining' }
+    { name: 'Project 79', link: 'project79', desc: 'Gold Mining' },
+    { name: 'Ocean Money', link: 'ocean-money', desc: 'Banking and Crypto' }
   ]
 }
 

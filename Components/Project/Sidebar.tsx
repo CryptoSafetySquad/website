@@ -47,10 +47,10 @@ const Sidebar = ({ project, children }: ProjectSidebarProps) => {
           <div className='card__content'>
             {project.relatedProjects.map(prj => {
               return (
-                <span key={prj.link} className='text-xs'>
+                <p key={prj.link} className='text-xs'>
                   <a href={`/projects/${prj.link}`}>{prj.name}</a>
                   {prj.desc && <> - {prj.desc}</>}
-                </span>
+                </p>
               )
             })}
           </div>
