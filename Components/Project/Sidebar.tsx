@@ -63,7 +63,7 @@ const Sidebar = ({ project, children }: ProjectSidebarProps) => {
             {project.domains.map(dom => {
               return (
                 <p key={dom} className='text-xs'>
-                  <a href={dom}>{dom}</a>
+                  <ExternalLink href={`https://${dom}`} text={dom} />
                 </p>
               )
             })}
