@@ -7,6 +7,7 @@ const Project79: Project = {
   name: 'Project 79',
   slug: 'project79',
   type: 'Passive Income',
+  textClass: 'dark:text-gold',
   website: 'https://www.project79.com/',
   blockchain: [Blockchains.Ethereum, Blockchains.Binance],
   bannerImage: 'https://pbs.twimg.com/media/FdBHe8kaMAEk8_2?format=jpg&name=4096x4096',

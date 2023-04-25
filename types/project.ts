@@ -27,6 +27,7 @@ export interface Project {
   research?: any;
   domains?: string[];
   videos?: any;
+  textClass?: string;
   news?: any;
   redflags?: ReactNode[];
   warnings?: ReactNode[];

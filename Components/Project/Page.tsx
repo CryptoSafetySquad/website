@@ -175,7 +175,7 @@ const Page = ({ project, sidebar }: ProjectPageProps) => {
     content: (
       <>
       <main>  
-        <Feed entries={buildFeed(project)} />
+        <Feed className={project?.textClass} entries={buildFeed(project)} />
       </main>
       </>
     ),

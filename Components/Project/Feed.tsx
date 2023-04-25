@@ -25,7 +25,7 @@ const getMonthName = (m: number) => {
   return ret
 }
 
-const Feed = ({ entries }: { entries: FeedEntry[] }) => {
+const Feed = ({ entries, className }: { entries: FeedEntry[]; className?: string; }) => {
   return (
     <div className='grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-2'>
       {entries.map((entry, index) => {
@@ -33,7 +33,7 @@ const Feed = ({ entries }: { entries: FeedEntry[] }) => {
         const displayDate = `${parsedDate.getDate()} ${getMonthName(parsedDate.getMonth())} ${parsedDate.getFullYear()}`
         return (
           <div key={index} className='project-card bordered'>
-            <div className='card__header text-xs'>{displayDate}</div>
+            <div className={`card__header text-xs ${className}`}>{displayDate}</div>
             <div className='card__content text-sm'>
               {entry.content}
             </div>
