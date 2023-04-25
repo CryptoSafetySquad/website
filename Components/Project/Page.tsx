@@ -45,8 +45,8 @@ const tokenColours = {
 }
 
 type tokenEntry = {
-  blockchain: 'ethereum' | 'polygon' | 'bsc',
-  token: 'wbtc' | 'usdc' | 'usdt' | 'eth' | 'weth' | 'btc' | 'ltc',
+  blockchain: 'ethereum' | 'polygon' | 'bsc' | 'litecoin' | 'kadena',
+  token: 'wbtc' | 'usdc' | 'usdt' | 'eth' | 'weth' | 'btc' | 'ltc' | 'kda',
   label: string;
   color: string;
   stack: 'Bluechip' | 'Altcoin'
@@ -58,8 +58,8 @@ let tokens: tokenEntry[] = [
   { blockchain: 'polygon', token: 'weth', label: 'wETH (Poly)', color: tokenColours.eth, stack: 'Bluechip' },
   { blockchain: 'polygon', token: 'wbtc', label: 'wBTC (Poly)', color: tokenColours.btc, stack: 'Bluechip' },
   { blockchain: 'polygon', token: 'usdc', label: 'USDC (Poly)', color: tokenColours.usdc, stack: 'Bluechip' },
-  // { blockchain: 'ethereum', token: 'usdc', label: 'USDT (Eth)', color: '' },
-  // { blockchain: 'ethereum', token: 'usdc', label: 'USDT (Eth)', color: '' },
+  { blockchain: 'litecoin', token: 'ltc', label: 'LTC', color: '', stack: 'Bluechip' },
+  { blockchain: 'kadena', token: 'kda', label: 'KDA ', color: '', stack: 'Altcoin' },
   // { blockchain: 'ethereum', token: 'usdc', label: 'USDT (Eth)', color: '' },
   // { blockchain: 'ethereum', token: 'usdc', label: 'USDT (Eth)', color: '' },
 ]
@@ -85,8 +85,6 @@ const EarningsChart = ({ labels, data, title}: { labels: any[], data: any, title
     }
   })
 
-  console.log(chartDataset)
-
   return (
     <div style={{ height: chartHeight }}>
       <Bar
@@ -104,49 +102,6 @@ const EarningsChart = ({ labels, data, title}: { labels: any[], data: any, title
         data={{
           labels: labels,
           datasets: chartDataset
-          // datasets: [
-          //   // {
-          //   //   label: 'Total ($)',
-          //   //   data: data.total,
-          //   //   backgroundColor: 'rgba(100, 100, 255, 0.4)'
-          //   // },
-          //   {
-          //     label: 'wBTC (Eth) ($)',
-          //     data: data.ethereum.wbtc,
-          //     backgroundColor: '#FF9500',
-          //     // borderColor: '#fff',
-          //     borderWidth: 0,
-          //     // borderRadius: 0,
-          //     stack: 'Primary', // 'Bluechip'
-          //   },
-          //   // {
-          //   //   label: 'USDC (Eth)',
-          //   //   data: data.ethereum.usdc,
-          //   //   backgroundColor: '#2775CA',
-          //   //   // borderColor: '#fff',
-          //   //   borderWidth: 0,
-          //   //   // borderRadius: 0,
-          //   //   stack: 'Primary', // 'Stablecoin'
-          //   // },
-          //   {
-          //     label: 'wBTC (Poly) ($)',
-          //     data: data.polygon.wbtc,
-          //     borderColor: '#2f1a52', // Polygon Purple
-          //     borderWidth: 2,
-          //     borderRadius: 0,
-          //     backgroundColor: '#FF9500',
-          //     stack: 'Primary', // 'Bluechip'
-          //   },
-          //   {
-          //     label: 'USDC (Poly)',
-          //     data: data.polygon.usdc,
-          //     borderColor: '#2f1a52', // Polygon Purple
-          //     borderWidth: 2,
-          //     borderRadius: 0,
-          //     backgroundColor: '#2775CA',
-          //     stack: 'Primary', // 'Stablecoin'
-          //   }
-          // ],
         }}
       />
     </div>

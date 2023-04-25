@@ -9,9 +9,10 @@ interface ProjectHeaderProps {
   className?: string;
   description?: any;
   bannerImage?: string;
+  status?: string;
 }
 
-const Header = ({ className, name, website, opensea, description, twitter, bannerImage }: ProjectHeaderProps) => {
+const Header = ({ className, name, website, opensea, description, twitter, bannerImage, status }: ProjectHeaderProps) => {
   const linkIcon = <img alt='Website Link' className='mr-2' src='/images/icons/external.svg' height='20' width='20' />
   const openseaIcon = <img alt='OpenSea Link' className='mr-2' src='/images/icons/opensea.svg' height='22' width='22' />
   const twitterIcon = <img alt='Twitter' className='mr-2' src='/images/icons/twitter.svg' height='22' width='22' />
@@ -20,7 +21,7 @@ const Header = ({ className, name, website, opensea, description, twitter, banne
     <div className="project-card grid grid-cols-[minmax(350px,1fr),4fr] rounded-sm">
       <div>
         <h1 className={`card__header h-full ${className} mb-2`}>
-          <p className='mb-4'>{name}</p>
+          <p className='mb-4'>{name} {status && (<>({status})</>)}</p>
           {description && (
             <span className='text-sm mb-4'>{description}</span>
           )}

@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 
 import Page from '../../Components/Page'
+import { default as ProjectPage } from '../../Components/Project/Page'
 import ExternalLink from '../../Components/ExternalLink'
 import AuthorComponent from '../../Components/Author'
 import Sidebar from '../../Components/Project/Sidebar'
@@ -9,8 +10,8 @@ import Header from '../../Components/Project/Header'
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon'
 import RedFlagCard from '../../Components/Project/RedFlagCard'
 import NewsListing from '../../Components/NewsListing'
+import { default as Project } from '../../data/projects/omnibirds/omnibirds'
 
-import { OMNIBirds as Project } from '../../data/projects'
 import PrivateSniper from '../../data/authors/PrivateSniper'
 
 const doxxed = () => {
@@ -108,17 +109,25 @@ const OMNIBirds: NextPage = () => {
         {/* <TabbedContent content={tabs} /> */}
       </main>
       <Sidebar project={Project}>
-        <div className='project-card'>
-          <h1 className='card__header'>Team</h1>
-          <div className='card__content'>
-            <p className='text-sm'>Stuart Rex: <ExternalLink href='https://www.linkedin.com/in/stuartrex7/' text='LinkedIn' /></p>
-            <p className='text-sm'>Russell Thomas: <ExternalLink href='https://www.linkedin.com/in/russell-thomas-557390204/' text='LinkedIn' /></p>
-            <p className='text-sm'>Shay Thomas: <ExternalLink href='https://www.linkedin.com/in/shay-thomas/' text='LinkedIn' /></p>
-          </div>
-        </div>
+        
       </Sidebar>
     </div>
   )
+
+  return <ProjectPage
+    project={Project}
+    sidebar={(
+      <div className='project-card'>
+        <h1 className='card__header'>Team</h1>
+        <div className='card__content'>
+          <p className='text-sm'>Stuart Rex: <ExternalLink href='https://www.linkedin.com/in/stuartrex7/' text='LinkedIn' /></p>
+          <p className='text-sm'>Russell Thomas: <ExternalLink href='https://www.linkedin.com/in/russell-thomas-557390204/' text='LinkedIn' /></p>
+          <p className='text-sm'>Shay Thomas: <ExternalLink href='https://www.linkedin.com/in/shay-thomas/' text='LinkedIn' /></p>
+        </div>
+      </div>
+    )}
+  />
+
 
   return (
     <Page {...{
