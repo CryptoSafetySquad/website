@@ -4,7 +4,7 @@ interface p79EarningsEntry {
   percent: number;
 }
 
-const earnings: p79EarningsEntry[] = [
+const sacrificeEarnings: p79EarningsEntry[] = [
   // Sacrifice Model, total earnings: 38.7%
   { label: 'Sep 22', date: '2022-09-26', percent: 6.8 },
   { label: 'Oct 22', date: '2022-10-24', percent: 6.4 },
@@ -14,4 +14,4 @@ const earnings: p79EarningsEntry[] = [
   { label: 'Feb 23', date: '2023-02-26', percent: 5.9 }
 ]
 
-export default earnings
+export default sacrificeEarnings
