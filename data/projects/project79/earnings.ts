@@ -5,6 +5,7 @@ interface p79EarningsEntry {
 }
 
 const earnings: p79EarningsEntry[] = [
+  // Sacrifice Model, total earnings: 38.7%
   { label: 'Sep 22', date: '2022-09-26', percent: 6.8 },
   { label: 'Oct 22', date: '2022-10-24', percent: 6.4 },
   { label: 'Nov 22', date: '2022-11-26', percent: 6.5 },
