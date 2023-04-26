@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import { Line } from 'react-chartjs-2';
-import Link from 'next/link'
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -14,15 +13,11 @@ import {
 import { default as Project } from '../../data/projects/project79/project79';
 
 import { default as ProjectPage } from '../../Components/Project/Page';
-import Header from '../../Components/Project/Header'
 import Percentage from '../../Components/Percentage';
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon';
-import Sidebar from '../../Components/Project/Sidebar';
-import ExternalLink from '../../Components/ExternalLink';
 import tvl from '../../data/projects/project79/tvl'
 import earnings from '../../data/projects/project79/earnings'
 import news from '../../data/projects/project79/news'
-import FullPage from '../../Components/FullPage';
 import Feed from '../../Components/Project/Feed';
 
 ChartJS.register(
@@ -104,14 +99,6 @@ const StatsContent = () => {
 }
 
 const Project79: NextPage = () => {
-  const title = 'Project 79'
-
-  const content = (
-    <>
-      <Feed entries={news} />
-    </>
-  )
-
   return <ProjectPage
     project={Project}
     sidebar={<StatsContent />}

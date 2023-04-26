@@ -4,8 +4,6 @@ import Feed from "./Feed";
 import { buildFeed } from "../../functions/Project/buildFeed";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
-import Banner from "./Banner";
-import { EarningsEntry } from "../../types/EarningsEntry";
 
 import { Line, Bar } from 'react-chartjs-2';
 import {

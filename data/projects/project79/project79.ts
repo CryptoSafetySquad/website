@@ -2,6 +2,7 @@ import type { Project } from "../../../types/project";
 import news from "./news";
 import earnings from "./earnings";
 import Blockchains from "../../../enums/blockchains";
+import { officialVideos, communityVideos } from "./videos";
 
 const Project79: Project = {
   name: 'Project 79',
@@ -15,7 +16,9 @@ const Project79: Project = {
   earnings,
   relatedProjects: [
     { name: 'Hydro Whales Mining Club', link: 'hydro-whales', desc: 'Passive Income NFT' },
-  ]
+  ],
+  officialVideos,
+  communityVideos,
 }
 
 export default Project79
