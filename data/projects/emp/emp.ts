@@ -4,7 +4,7 @@ import { Blockchains } from "../../../enums/blockchains"
 // import earnings from "./earnings"
 import news from "./news"
 // import answers from "./answers"
-// import { officialVideos, communityVideos } from "./videos"
+import { officialVideos, communityVideos } from "./videos"
 
 export const EMPMoney: Project = {
   name: 'EMP Money',
@@ -26,6 +26,8 @@ export const EMPMoney: Project = {
     { name: 'Detonator Defender NFT', contract: '0x6df246a1e0064169518da5d1e1905e37410e8694', blockchain: 'BSC', short: '0x6d...8694', explorerUrl: 'https://bscscan.com/address/0x6df246a1e0064169518da5d1e1905e37410e8694' },
   ],
   news,
+  officialVideos,
+  communityVideos
 }
 
 export default EMPMoney
