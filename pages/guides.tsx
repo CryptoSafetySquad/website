@@ -2,8 +2,12 @@ import type { NextPage } from 'next'
 import Page from '../Components/Page'
 
 const guides = [
-  {name: 'Ad-blocking with uBlock Origin and Installing CryptoSafetySquad AdBlock filters', slug: 'adblock'},
-  {name: 'Discord: Disable DMs from server members.', slug: 'discorddm'},
+  {
+    name: 'Security', guides: [
+      {name: 'Ad-blocking with uBlock Origin and Installing CryptoSafetySquad AdBlock filters', slug: 'adblock'},
+      {name: 'Discord: Disable DMs from server members.', slug: 'discorddm'},
+    ]
+  }
 ]
 
 const Guides: NextPage = () => {
@@ -11,10 +15,17 @@ const Guides: NextPage = () => {
   const content = (
     <div className='grid grid-cols-1 gap-4'>
       {
-        guides.map(guide => 
-          <div className='card p-4' key={guide.slug}>
-            <a className='text-lg' href={`/guides/${guide.slug}`}>{guide.name}</a>
-          </div>
+        guides.map(section =>
+          <div key={section.name} className='project-card'>
+            <h2 className='card__header'>{section.name}</h2>
+            <div className='card__content gap-4 grid grid-cols-2 md:grid-cols-3'>
+              {section.guides.map(guide =>
+                <div className='card p-4' key={guide.slug}>
+                  <a className='text-lg' href={`/guides/${guide.slug}`}>{guide.name}</a>
+                </div>
+              )}
+            </div>
+          </div> 
         )
       }
     </div>
