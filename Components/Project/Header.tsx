@@ -18,7 +18,7 @@ const Header = ({ className, name, website, opensea, description, twitter, banne
   const twitterIcon = <img alt='Twitter' className='mr-2' src='/images/icons/twitter.svg' height='22' width='22' />
 
   return (
-    <div className="grid project-header grid-cols-[minmax(350px,1fr),4fr] gap-16 mb-4">
+    <div className="grid project-header grid-cols-[minmax(350px,1fr),4fr] mb-4">
       <div className="header__content">
         <h1 className={`card__header rounded-l-lg h-full ${className}`}>
           <p className='mb-4'>{name} {status && (<>({status})</>)}</p>
