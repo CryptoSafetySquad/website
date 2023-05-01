@@ -5,6 +5,7 @@ type FeedEntry = NewsEntry | {
   dateISO: string;
   date: string;
   content: ReactNode;
+  type: 'video' | 'news'
 }
 
 const getMonthName = (m: number) => {
@@ -27,12 +28,12 @@ const getMonthName = (m: number) => {
 
 const Feed = ({ entries, className }: { entries: FeedEntry[]; className?: string; }) => {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-2'>
+    <div className='grid grid-cols-1 dense md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2'>
       {entries.map((entry, index) => {
         const parsedDate = new Date(entry.dateISO as string);
         const displayDate = `${parsedDate.getDate()} ${getMonthName(parsedDate.getMonth())} ${parsedDate.getFullYear()}`
         return (
-          <div key={index} className='project-card bordered'>
+          <div key={index} className={`project-card ${entry.type} bordered`}>
             <div className={`card__header text-xs ${className}`}>{displayDate}</div>
             <div className='card__content text-sm'>
               {entry.content}

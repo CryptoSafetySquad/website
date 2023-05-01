@@ -212,6 +212,10 @@ h1 {
   }
 }
 
+.video {
+  @apply col-span-2;
+}
+
 .card.with-img {
   @apply p-0 rounded;
   overflow: hidden;

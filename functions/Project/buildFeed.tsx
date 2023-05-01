@@ -6,6 +6,7 @@ function parseVideo(video: YouTubeVideo) {
   return {
     date: video.date,
     dateISO: video.dateISO,
+    type: 'video',
     content: (
       <div key={video.youtubeSlug}>
         <iframe className='mb-2' width='100%' height='200' src={`https://www.youtube.com/embed/${video.youtubeSlug}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
@@ -18,7 +19,7 @@ function parseVideo(video: YouTubeVideo) {
 export const buildFeed = (project: Project) => {
   const feedItems: any[] = []
   if (project.news) {
-    project.news.map((newsItem: NewsEntry) => feedItems.push(newsItem))
+    project.news.map((newsItem: NewsEntry) => feedItems.push({...newsItem, type: 'news'}))
   }
   if (project.officialVideos) {
     project.officialVideos.map(video => (
