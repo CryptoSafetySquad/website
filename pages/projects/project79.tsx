@@ -17,8 +17,6 @@ import Percentage from '../../Components/Percentage';
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon';
 import tvl from '../../data/projects/project79/tvl'
 import earnings from '../../data/projects/project79/earnings'
-import news from '../../data/projects/project79/news'
-import Feed from '../../Components/Project/Feed';
 
 ChartJS.register(
   CategoryScale,

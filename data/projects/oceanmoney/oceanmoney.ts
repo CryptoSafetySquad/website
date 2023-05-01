@@ -12,6 +12,10 @@ export const OceanMoney: Project = {
   news,
   officialVideos,
   communityVideos,
+  relatedProjects: [
+    { name: 'Hydro Whales Mining Club', link: 'hydro-whales', desc: 'Passive Income NFT' },
+    { name: 'Project 79', link: 'project79', desc: 'Gold Arbitrage' },
+  ]
 }
 
 export default OceanMoney

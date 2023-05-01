@@ -16,6 +16,7 @@ const Project79: Project = {
   earnings,
   relatedProjects: [
     { name: 'Hydro Whales Mining Club', link: 'hydro-whales', desc: 'Passive Income NFT' },
+    { name: 'Ocean Money', link: 'ocean-money', desc: 'Banking and Crypto Services' },
   ],
   officialVideos,
   communityVideos,
