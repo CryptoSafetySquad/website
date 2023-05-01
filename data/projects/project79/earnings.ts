@@ -11,7 +11,9 @@ const sacrificeEarnings: p79EarningsEntry[] = [
   { label: 'Nov 22', date: '2022-11-26', percent: 6.5 },
   { label: 'Dec 22', date: '2022-12-28', percent: 6.7 },
   { label: 'Jan 23', date: '2022-01-28', percent: 6.4 },
-  { label: 'Feb 23', date: '2023-02-26', percent: 5.9 }
+  { label: 'Feb 23', date: '2023-02-26', percent: 5.9 },
+  { label: 'Mar 23', date: '2023-03-30', percent: 6.3 },
+  { label: 'Apr 23', date: '2023-04-30', percent: 5.5 }
 ]
 
 export default sacrificeEarnings
