@@ -1,5 +1,7 @@
 import type { EcosystemLink } from "./EcosystemLink";
 import type { Project } from "./project";
+import type { NewsEntry } from "./NewsEntry";
+import type { YouTubeVideo } from "./YouTubeVideo";
 
 export type BlockchainData = {
   name: string;
@@ -34,7 +36,9 @@ export type BlockchainData = {
     riskyProjects?: EcosystemLink[] | undefined;
     nftProjects?: Project[];
     [key: string]: EcosystemLink[] | Project[] | undefined;
-
   },
+  officialVideos?: YouTubeVideo[];
+  communityVideos?: YouTubeVideo[];
+  news?: NewsEntry[];
   [key: string]: string | object | undefined;
 }

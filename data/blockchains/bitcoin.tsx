@@ -1,6 +1,7 @@
 import exchanges from "../exchanges"
 import wallets from "../wallets"
 import businesses from "../businesses"
+import { officialVideos, communityVideos } from "./bitcoin/videos"
 
 const bitcoin = {
   icon: '/images/icons/bitcoin.svg',
@@ -33,7 +34,9 @@ const bitcoin = {
       { name: 'Ledn', link: 'https://www.ledn.io/' },
       businesses.bitmain,
     ],
-  }
+  },
+  officialVideos,
+  communityVideos,
 }
 
 export default bitcoin

@@ -1,6 +1,8 @@
 import ExternalLink from "./ExternalLink"
 import type { BlockchainData } from "../types/BlockchainData";
 import FullPage from "./FullPage";
+import Feed from "./Ecosystem/Feed";
+import { buildFeed } from "../functions/Ecosystem/buildFeed";
 
 const TokenDisplay = ({ name, cmc, className }: { name: string; cmc?: string; className?: string; [key: string]: any; }) => {
   return cmc ? <ExternalLink className={className} href={cmc} text={name} /> : (<>{name}</>)
@@ -11,7 +13,7 @@ type EcosystemSection = {
   title: any;
 }
 
-const EcosystemPage = ({ name, slug, data, metadata, icon, iconSize, iconRatio }: BlockchainData) => {
+const EcosystemPage = ({ name, slug, data, metadata, icon, iconSize, iconRatio, news, officialVideos, communityVideos }: BlockchainData) => {
   const title = name
 
   const sections: EcosystemSection[] = [
@@ -142,6 +144,7 @@ const EcosystemPage = ({ name, slug, data, metadata, icon, iconSize, iconRatio }
           </div>
         </div>
       )}
+      <Feed entries={buildFeed({ name, news, officialVideos, communityVideos })} />
     </>
   )
 

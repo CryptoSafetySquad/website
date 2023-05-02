@@ -1,4 +1,4 @@
-import type { YouTubeVideo } from "../../../types/youtubeVideo"
+import type { YouTubeVideo } from "../../../types/YouTubeVideo"
 
 export const officialVideos: YouTubeVideo[] = [
 ]

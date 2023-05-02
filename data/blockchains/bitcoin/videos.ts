@@ -4,7 +4,12 @@ export const officialVideos: YouTubeVideo[] = [
 ]
 
 export const communityVideos: YouTubeVideo[] = [
-  { date: '11/05/2022', dateISO: '2022-05-11', title: '🐦OMNIBIRDS - THE FUTURE OF FINANCE APPLICATIONS', youtubeSlug: 'N_DubwOpL98' }
+  {
+    date: '24/04/2023',
+    dateISO: '2023-04-24',
+    title: 'Episode 77: Peer-to-peer Encryption',
+    youtubeSlug: 'jvFdPwssv_E'
+  },
 ]
 
 export default officialVideos

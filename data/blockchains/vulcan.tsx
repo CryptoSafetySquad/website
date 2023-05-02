@@ -4,6 +4,7 @@ import exchanges from "../exchanges"
 import defi from "../defi"
 import wallets from "../wallets"
 import marketplaces from "../marketplaces"
+import { communityVideos, officialVideos } from "./vulcan/videos"
 
 const vulcan: BlockchainData = {
   name: 'Vulcan',
@@ -20,6 +21,9 @@ const vulcan: BlockchainData = {
     // explorers: [
     //   { name: 'BscScan', link: 'https://bscscan.com/', },
     // ],
+    decentralisedExchanges: [
+      { name: 'Ooxy', link: 'https://www.ooxy.com/' }
+    ]
     // centralisedExchanges: [
     //   exchanges.binance,
     //   exchanges.kucoin,
@@ -59,7 +63,9 @@ const vulcan: BlockchainData = {
     //   wallets.trustwallet,
     //   wallets.metamask,
     // ],
-  }
+  },
+  communityVideos,
+  officialVideos,
 }
 
 export default vulcan

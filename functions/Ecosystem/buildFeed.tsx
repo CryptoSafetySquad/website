@@ -1,5 +1,5 @@
+import { BlockchainData } from "../../types/BlockchainData"
 import { NewsEntry } from "../../types/NewsEntry"
-import type { Project } from "../../types/project"
 import type { YouTubeVideo } from "../../types/YouTubeVideo"
 
 function parseVideo(video: YouTubeVideo) {
@@ -16,18 +16,18 @@ function parseVideo(video: YouTubeVideo) {
   }
 }
 
-export const buildFeed = (project: Project) => {
+export const buildFeed = (ecosystem: BlockchainData) => {
   const feedItems: any[] = []
-  if (project.news) {
-    project.news.map((newsItem: NewsEntry) => feedItems.push({...newsItem, type: 'news'}))
+  if (ecosystem.news) {
+    ecosystem.news.map((newsItem: NewsEntry) => feedItems.push({...newsItem, type: 'news'}))
   }
-  if (project.officialVideos) {
-    project.officialVideos.map(video => (
+  if (ecosystem.officialVideos) {
+    ecosystem.officialVideos.map(video => (
       feedItems.push(parseVideo(video))
     ))
   }
-  if (project.communityVideos) {
-    project.communityVideos.map(video => (
+  if (ecosystem.communityVideos) {
+    ecosystem.communityVideos.map(video => (
       feedItems.push(parseVideo(video))
     ))
   }

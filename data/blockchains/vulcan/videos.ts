@@ -7,17 +7,15 @@ export const communityVideos: YouTubeVideo[] = [
   {
     date: '01/05/2023',
     dateISO: '2023-05-01',
-    title: 'Burlcore Mining: Mining Gold and Other Precious Metals',
-    youtubeSlug: 'tLilUxWciAU'
+    title: 'SafuuGo 5000x! BULLISH Vulcan news | Ooxy could pump | Triangle arbitrage explained',
+    youtubeSlug: 'qUI1KU2Or2k'
   },
   {
-    date: '23/04/2023',
-    dateISO: '2023-04-23',
-    title: 'Project 79 Account Creation & KYC (step by step guide)',
-    youtubeSlug: 'fjqN_Im65v8'
+    date: '27/04/2023',
+    dateISO: '2023-04-27',
+    title: 'SAFUUGO: BRYAN LEGEND TO MAKE HUGE BUY',
+    youtubeSlug: 'ky0HHmOwcQ8'
   },
-
-  
 ]
 
 export default officialVideos

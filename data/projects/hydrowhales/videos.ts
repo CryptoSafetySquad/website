@@ -1,4 +1,4 @@
-import type { YouTubeVideo } from "../../../types/youtubeVideo"
+import type { YouTubeVideo } from "../../../types/YouTubeVideo"
 
 // https://www.youtube.com/channel/UCzkt_q3YF_6Rzuie6-eokTQ
 export const officialVideos: YouTubeVideo[] = [

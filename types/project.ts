@@ -1,6 +1,6 @@
 import type { Contract } from "./contract";
 import { Blockchains } from "../enums/blockchains";
-import type { YouTubeVideo } from "./youtubeVideo";
+import type { YouTubeVideo } from "./YouTubeVideo";
 import ProjectStatus from "../enums/ProjectStatus";
 import { ReactNode } from "react";
 import type { EcosystemLink } from "./EcosystemLink";
