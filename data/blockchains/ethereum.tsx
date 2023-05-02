@@ -28,6 +28,7 @@ const ethereum: BlockchainData = {
     centralisedExchanges: [
       exchanges.kucoin,
       exchanges.gateio,
+      exchanges.coinbase,
     ],
     decentralisedExchanges: [
       exchanges.uniswap,

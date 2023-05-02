@@ -1,8 +1,5 @@
-import Page from "./Page"
 import ExternalLink from "./ExternalLink"
 import type { BlockchainData } from "../types/BlockchainData";
-import type { EcosystemLink } from "../types/EcosystemLink";
-import type { Project } from "../types/project";
 import FullPage from "./FullPage";
 
 const TokenDisplay = ({ name, cmc, className }: { name: string; cmc?: string; className?: string; [key: string]: any; }) => {
@@ -28,6 +25,7 @@ const EcosystemPage = ({ name, slug, data, metadata, icon, iconSize, iconRatio }
     { name: 'launchpads', title: 'Launchpads' },
     { name: 'gaming', title: 'Gaming' },
     { name: 'riskyProjects', title: (<>&quot;Risky&quot; Projects / Protocols</>) },
+    { name: 'businesses', title: 'Businesses' },
   ]
 
   let tokenClass = metadata?.token?.name ? `text-${metadata.token.name.toLocaleLowerCase()}` : ''

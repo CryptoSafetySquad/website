@@ -21,6 +21,7 @@ const avalanche = {
     centralisedExchanges: [
       exchanges.kucoin,
       exchanges.gateio,
+      exchanges.coinbase,
     ],
     decentralisedExchanges: [
       { name: 'TraderJoe', link: 'https://traderjoexyz.com/' }

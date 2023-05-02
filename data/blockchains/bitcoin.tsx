@@ -1,5 +1,6 @@
 import exchanges from "../exchanges"
 import wallets from "../wallets"
+import businesses from "../businesses"
 
 const bitcoin = {
   icon: '/images/icons/bitcoin.svg',
@@ -19,13 +20,18 @@ const bitcoin = {
     centralisedExchanges: [
       exchanges.kucoin,
       exchanges.gateio,
+      exchanges.coinbase,
     ],
     wallets: [
       wallets.trustwallet,
       wallets.cakewallet,
       wallets.unstoppable,
       wallets.exodus,
-    ]
+    ],
+    businesses: [
+      { name: 'Ledn', link: 'https://www.ledn.io/' },
+      businesses.bitmain,
+    ],
   }
 }
 

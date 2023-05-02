@@ -20,6 +20,7 @@ const kadena: BlockchainData = {
     centralisedExchanges: [
       exchanges.kucoin,
       exchanges.gateio,
+      exchanges.coinbase,
     ],
     decentralisedExchanges: [
       { name: 'Kaddex', link: 'https://swap.kaddex.com/' },

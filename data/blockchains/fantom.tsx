@@ -27,6 +27,7 @@ const fantom: BlockchainData = {
     centralisedExchanges: [
       exchanges.kucoin,
       exchanges.gateio,
+      exchanges.coinbase,
     ],
     decentralisedExchanges: [
       { name: 'SpookySwap', link: 'https://spooky.fi/#/' },

@@ -22,7 +22,8 @@ const solana: BlockchainData = {
     ],
     centralisedExchanges: [
       exchanges.kucoin,
-      exchanges.gateio
+      exchanges.gateio,
+      exchanges.coinbase,
     ],
     nftMarketplaces: [
       marketplaces.magiceden

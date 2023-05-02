@@ -18,6 +18,7 @@ const monero: BlockchainData = {
     centralisedExchanges: [
       exchanges.kucoin,
       exchanges.gateio,
+      exchanges.coinbase,
     ],
     wallets: [
       wallets.cakewallet,
