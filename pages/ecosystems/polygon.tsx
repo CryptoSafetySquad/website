@@ -7,6 +7,7 @@ import exchanges from '../../data/exchanges'
 import defi from '../../data/defi'
 import marketplaces from '../../data/marketplaces'
 import polygon from '../../data/blockchains/layer2eth/polygon'
+import wallets from '../../data/wallets'
 
 const data: { [key: string]: EcosystemLink[] } = {
   explorers: [
@@ -26,13 +27,16 @@ const data: { [key: string]: EcosystemLink[] } = {
     defi.magik,
     defi.beefy,
   ],
-  protocols: [],
+  // protocols: [],
   nftMarketplaces: [
     marketplaces.alphaShares,
     marketplaces.magiceden,
   ],
-  riskyProjects: [],
+  // riskyProjects: [],
   wallets: [
+    wallets.trustwallet,
+    wallets.metamask,
+    wallets.exodus,
   ]
 }
 
