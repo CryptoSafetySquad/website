@@ -11,6 +11,12 @@ type RelatedProject = {
   desc?: string;
 }
 
+type TeamMember = {
+  name: string;
+  linkedin?: string;
+  twitter?: string;
+}
+
 export interface Project {
   bannerImage?: string;
   slug?: string;
@@ -39,5 +45,6 @@ export interface Project {
   tokens?: Contract[];
   nfts?: Contract[];
   relatedProjects?: RelatedProject[];
+  team?: TeamMember[];
   data?: any; // Placeholder for any other project specific data.
 }
