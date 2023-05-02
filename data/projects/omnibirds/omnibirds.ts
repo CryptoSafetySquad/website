@@ -19,7 +19,12 @@ const OMNIBirds: Project = {
   redflags: [
     'Lack of communication with community'
   ],
-  news
+  news,
+  team: [
+    { name: 'Stuart Rex', linkedin: 'https://www.linkedin.com/in/stuartrex7/' },
+    { name: 'Russell Thomas', linkedin: 'https://www.linkedin.com/in/russell-thomas-557390204/' },
+    { name: 'Shay Thomas', linkedin: 'https://www.linkedin.com/in/shay-thomas/' },
+  ]
 }
 
 export default OMNIBirds
