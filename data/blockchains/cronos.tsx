@@ -12,7 +12,7 @@ const cronos: BlockchainData = {
   metadata: {
     token: {
       name: 'CRO',
-      // cmc: 'https://coinmarketcap.com/currencies/ethereum/'
+      cmc: 'https://coinmarketcap.com/currencies/cronos/'
     },
     website: 'https://cronos.org/'
   },
@@ -36,8 +36,6 @@ const cronos: BlockchainData = {
       defi.beefy
     ],
     nftMarketplaces: [
-      // marketplaces.alphaShares,
-      // marketplaces.opensea,
       // marketplaces.x2y2,
       // marketplaces.magiceden,
       // marketplaces.blur,
@@ -45,9 +43,8 @@ const cronos: BlockchainData = {
     // protocols: [],
     // riskyProjects: [],
     wallets: [
-      // wallets.metamask,
       wallets.trustwallet,
-      // wallets.rabby,
+      { name: 'Crypto.com DeFi Wallet', link: 'https://crypto.com/eea/defi-wallet' }
     ],
   }
 }
