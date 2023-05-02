@@ -56,6 +56,21 @@ const Sidebar = ({ project, children }: ProjectSidebarProps) => {
           </div>
         </div>
       )}
+      {project.relatedLinks && (
+        <div className='project-card'>
+        <h2 className='card__header'>Related Links</h2>
+        <div className='card__content'>
+          {project.relatedLinks.map(l => {
+            return (
+              <p key={l.link} className='text-xs'>
+                <ExternalLink href={l.link} text={l.name} />
+                {l.desc && <> - {l.desc}</>}
+              </p>
+            )
+          })}
+        </div>
+      </div>
+      )}
       {project.domains && (
         <div className='project-card'>
           <h2 className='card__header'>Domains</h2>

@@ -2,6 +2,7 @@ import type { Project } from "../../../types/project"
 import { Blockchains } from "../../../enums/blockchains"
 import earnings from "./earnings"
 import news from "./news"
+import people from "../../people"
 
 export const AceMinersNFT: Project = {
   name: 'Ace Miners NFT',
@@ -20,6 +21,14 @@ export const AceMinersNFT: Project = {
   ],
   earnings,
   news,
+  team: [
+    people.ajamrani,
+    people.zaraamrani,
+    people.ace_sarah,
+  ],
+  relatedLinks: [
+    { name: 'AceMiners.io', link: 'https://aceminers.io/', desc: 'Crypto mining consultancy' }
+  ]
 }
 
 export default AceMinersNFT

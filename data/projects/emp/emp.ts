@@ -5,11 +5,13 @@ import { Blockchains } from "../../../enums/blockchains"
 import news from "./news"
 // import answers from "./answers"
 import { officialVideos, communityVideos } from "./videos"
+import people from "../../people"
 
 export const EMPMoney: Project = {
   name: 'EMP Money',
   slug: 'empmoney',
   type: 'Protocol',
+  twitter: 'EmpMoneyBSC',
   blockchain: Blockchains.Binance,
   bannerImage: 'https://pbs.twimg.com/profile_images/1556112831032037376/g-XdTo52_400x400.jpg',
   tokens: [
@@ -27,7 +29,10 @@ export const EMPMoney: Project = {
   ],
   news,
   officialVideos,
-  communityVideos
+  communityVideos,
+  team: [
+    people.ajbrockman,
+  ]
 }
 
 export default EMPMoney

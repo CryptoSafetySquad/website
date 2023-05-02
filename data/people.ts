@@ -2,6 +2,7 @@ type Person = {
   name: string;
   twitter?: string;
   linkedin?: string;
+  tiktok?: string;
 }
 
 const people: {[key: string]: Person;} = {
@@ -29,6 +30,28 @@ const people: {[key: string]: Person;} = {
     linkedin: 'https://www.linkedin.com/in/adam-javaid-511397161/',
     twitter: 'https://twitter.com/_adambanks'
   },
+  // AceMiners NFT
+  ace_sarah: {
+    name: 'Sarah',
+    twitter: 'https://twitter.com/sarahaceminers',
+  },
+  ajamrani: {
+    name: 'AJ Amrani',
+    twitter: 'https://twitter.com/ajaceminersnft',
+  },
+  zaraamrani: {
+    name: 'Zara Amrani',
+    linkedin: 'https://www.linkedin.com/in/zara-amrani-117b88228/',
+    tiktok: 'https://www.tiktok.com/@cryptozara',
+  },
+  // EMP Money
+  ajbrockman: {
+    name: 'AJ Brockman',
+    linkedin: 'https://www.linkedin.com/in/ajbrockman/',
+    twitter: 'https://twitter.com/brockman_aj',
+  },
+
+  // OMNIMoney/OMNIBirds
 
   // Content Creators
 }
