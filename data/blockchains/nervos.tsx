@@ -17,6 +17,7 @@ const nervos: BlockchainData = {
       exchanges.kucoin,
       exchanges.gateio,
       exchanges.coinbase,
+      exchanges.binance,
     ],
   },
   metadata: {

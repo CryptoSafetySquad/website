@@ -20,6 +20,7 @@ const avalanche = {
     ],
     centralisedExchanges: [
       exchanges.kucoin,
+      exchanges.binance,
       exchanges.gateio,
       exchanges.coinbase,
     ],

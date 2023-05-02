@@ -21,6 +21,7 @@ const bitcoin = {
       exchanges.kucoin,
       exchanges.gateio,
       exchanges.coinbase,
+      exchanges.binance,
     ],
     wallets: [
       wallets.trustwallet,

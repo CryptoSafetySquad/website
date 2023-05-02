@@ -1,5 +1,6 @@
 const exchanges = {
   kucoin: { name: 'KuCoin', link: 'https://www.kucoin.com/r/rf/rJQQK1S', type: 'Centralised' },
+  binance: { name: 'Binance', link: 'https://www.binance.com/en/activity/referral-entry/CPA?fromActivityPage=true&ref=CPA_00Z6XZLBQ0', type: 'Centralised' },
   gateio: { name: 'Gate.io', link: 'https://www.gate.io/signup/11213076', type: 'Centralised' },
   coinbase: { name: 'Coinbase', link: 'https://www.coinbase.com/', type: 'Centralised' },
   uniswap: { name: 'UniSwap', link: 'https://app.uniswap.org/', type: 'Decentralised' },

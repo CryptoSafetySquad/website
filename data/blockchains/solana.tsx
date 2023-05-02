@@ -24,6 +24,7 @@ const solana: BlockchainData = {
       exchanges.kucoin,
       exchanges.gateio,
       exchanges.coinbase,
+      exchanges.binance,
     ],
     nftMarketplaces: [
       marketplaces.magiceden

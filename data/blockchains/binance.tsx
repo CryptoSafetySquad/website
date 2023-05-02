@@ -23,6 +23,7 @@ const binance: BlockchainData = {
       { name: 'BscScan', link: 'https://bscscan.com/', },
     ],
     centralisedExchanges: [
+      exchanges.binance,
       exchanges.kucoin,
       exchanges.gateio,
       exchanges.coinbase,
