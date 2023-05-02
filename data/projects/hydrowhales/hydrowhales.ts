@@ -5,6 +5,7 @@ import earnings from "./earnings"
 import news from "./news"
 import answers from "./answers"
 import { officialVideos, communityVideos } from "./videos"
+import people from "../../people"
 
 export const HydroWhalesMiningClub: Project = {
   name: 'Hydro Whales Mining Club',
@@ -34,10 +35,10 @@ export const HydroWhalesMiningClub: Project = {
     { name: 'Ocean Money', link: 'ocean-money', desc: 'Banking and Crypto' }
   ],
   team: [
-    { name: 'Sam Pitman', twitter: 'https://twitter.com/_sampitman', linkedin: 'https://www.linkedin.com/in/sam-pitman-3b5959138/' },
-    { name: 'Adam Dignan', linkedin: 'https://www.linkedin.com/in/adam-dignan-b7985418b/' },
-    { name: 'Adam Javaid', linkedin: 'https://www.linkedin.com/in/adam-javaid-511397161/' },
-    { name: 'Anderson Arokium', linkedin: 'https://www.linkedin.com/in/andersonarokium/' },
+    people.sampitman,
+    people.adamdignan,
+    people.andersonarokium,
+    people.adamjavaid,
   ]
 }
 
