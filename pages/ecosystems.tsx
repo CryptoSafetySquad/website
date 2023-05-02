@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Page from '../Components/Page'
 import marketCap from '../functions/marketCap'
 
-import arbitrum from '../data/blockchains/layer2eth/arbitrum'
+// L1
 import avalanche from '../data/blockchains/avalanche'
 import binance from '../data/blockchains/binance'
 import bitcoin from '../data/blockchains/bitcoin'
@@ -14,9 +14,12 @@ import ethereum from '../data/blockchains/ethereum'
 import fantom from '../data/blockchains/fantom'
 import kadena from '../data/blockchains/kadena'
 import monero from '../data/blockchains/monero'
-import polygon from '../data/blockchains/layer2eth/polygon'
 import solana from '../data/blockchains/solana'
 import nervos from '../data/blockchains/nervos'
+import vulcan from '../data/blockchains/vulcan'
+// Eth Layer 2
+import arbitrum from '../data/blockchains/layer2eth/arbitrum'
+import polygon from '../data/blockchains/layer2eth/polygon'
 import optimism from '../data/blockchains/layer2eth/optimism'
 
 const l1ecos: any[] = [
@@ -32,6 +35,7 @@ const l1ecos: any[] = [
   { ...canto, marketCap: 308341147, lastUpdated: '09/04/2023' },
   { ...nervos, marketCap: 190951046, lastUpdated: '27/03/2023' },
   { ...consellation, marketCap: 62617251, lastUpdated: '27/03/2023' },
+  { ...vulcan, marketCap: 0, lastUpdated: '02/05/2023' }
 ]
 const ethl2ecos: any[] = [
   { ...polygon, marketCap: 10000741025, lastUpdated: '09/04/2023' },
