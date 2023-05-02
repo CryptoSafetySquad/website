@@ -33,6 +33,12 @@ export const HydroWhalesMiningClub: Project = {
     { name: 'Project 79', link: 'project79', desc: 'Gold Mining' },
     { name: 'Ocean Money', link: 'ocean-money', desc: 'Banking and Crypto' }
   ],
+  team: [
+    { name: 'Sam Pitman', twitter: 'https://twitter.com/_sampitman', linkedin: 'https://www.linkedin.com/in/sam-pitman-3b5959138/' },
+    { name: 'Adam Dignan', linkedin: 'https://www.linkedin.com/in/adam-dignan-b7985418b/' },
+    { name: 'Adam Javaid', linkedin: 'https://www.linkedin.com/in/adam-javaid-511397161/' },
+    { name: 'Anderson Arokium', linkedin: 'https://www.linkedin.com/in/andersonarokium/' },
+  ]
 }
 
 export default HydroWhalesMiningClub

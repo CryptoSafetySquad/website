@@ -77,7 +77,9 @@ const Sidebar = ({ project, children }: ProjectSidebarProps) => {
             {project.team.map(t => {
               return (
                 <p key={t.name} className='text-xs'>
-                  {t.name} {t.linkedin && <ExternalLink href={t.linkedin} text='LinkedIn' />}
+                  {t.name}
+                  {t.linkedin && <ExternalLink className="ml-2" href={t.linkedin}><img className='inline-block' width='20' src='/images/icons/brand/linkedin.svg' /></ExternalLink>}
+                  {t.twitter && <ExternalLink className="ml-2" href={t.twitter}><img className='inline-block' width='20' src='/images/icons/brand/twitter.svg' /></ExternalLink>}
                 </p>
               )
             })}

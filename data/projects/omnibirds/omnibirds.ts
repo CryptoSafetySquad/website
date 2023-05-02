@@ -1,7 +1,9 @@
 import type { Project } from "../../../types/project";
 import Blockchains from "../../../enums/blockchains";
-import news from "./news";
 import ProjectStatus from "../../../enums/ProjectStatus";
+
+import news from "./news";
+import { officialVideos, communityVideos } from "./videos";
 
 const OMNIBirds: Project = {
   name: 'OMNI Birds',
@@ -21,10 +23,12 @@ const OMNIBirds: Project = {
   ],
   news,
   team: [
-    { name: 'Stuart Rex', linkedin: 'https://www.linkedin.com/in/stuartrex7/' },
+    { name: 'Stuart Rex', linkedin: 'https://www.linkedin.com/in/stuartrex7/', twitter: 'https://twitter.com/StuartRex777' },
     { name: 'Russell Thomas', linkedin: 'https://www.linkedin.com/in/russell-thomas-557390204/' },
     { name: 'Shay Thomas', linkedin: 'https://www.linkedin.com/in/shay-thomas/' },
-  ]
+  ],
+  officialVideos,
+  communityVideos,
 }
 
 export default OMNIBirds

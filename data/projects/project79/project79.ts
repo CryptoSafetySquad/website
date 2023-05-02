@@ -20,6 +20,12 @@ const Project79: Project = {
   ],
   officialVideos,
   communityVideos,
+  team: [
+    { name: 'Sam Pitman', twitter: 'https://twitter.com/_sampitman', linkedin: 'https://www.linkedin.com/in/sam-pitman-3b5959138/' },
+    { name: 'Adam Dignan', linkedin: 'https://www.linkedin.com/in/adam-dignan-b7985418b/' },
+    { name: 'Dylan Hatten', linkedin: 'https://www.linkedin.com/in/dylanhatten/' },
+    { name: 'Anderson Arokium', linkedin: 'https://www.linkedin.com/in/andersonarokium/' },
+  ]
 }
 
 export default Project79
