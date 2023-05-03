@@ -5,6 +5,12 @@ export const officialVideos: YouTubeVideo[] = [
 
 export const communityVideos: YouTubeVideo[] = [
   {
+    date: '03/05/2023',
+    dateISO: '2023-05-03',
+    title: 'How much did Burlcore make in April?! 🤑⛏️ (Project 79 NEW MODEL)',
+    youtubeSlug: 'MDYKqHj1F8I',
+  },
+  {
     date: '01/05/2023',
     dateISO: '2023-05-01',
     title: 'Burlcore Mining: Mining Gold and Other Precious Metals',
