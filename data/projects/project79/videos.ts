@@ -1,6 +1,13 @@
 import type { YouTubeVideo } from "../../../types/YouTubeVideo"
 
+// https://www.youtube.com/@Project79Gold
 export const officialVideos: YouTubeVideo[] = [
+  {
+    date: '06/05/2023',
+    dateISO: '2023-05-06',
+    title: "Introducing Project 79's Newest Marketplace Listing",
+    youtubeSlug: 'GUYBo7P6_Uk',
+  },
 ]
 
 export const communityVideos: YouTubeVideo[] = [
