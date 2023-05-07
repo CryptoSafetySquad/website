@@ -5,6 +5,12 @@ export const officialVideos: YouTubeVideo[] = [
 
 export const communityVideos: YouTubeVideo[] = [
   {
+    date: '06/05/2023',
+    dateISO: '2023-05-06',
+    title: 'Project 79 is EXPANDING! (More Opportunities Coming!!) 💰🚀',
+    youtubeSlug: 'spZuMJMd9Rk',
+  },
+  {
     date: '03/05/2023',
     dateISO: '2023-05-03',
     title: 'How much did Burlcore make in April?! 🤑⛏️ (Project 79 NEW MODEL)',
