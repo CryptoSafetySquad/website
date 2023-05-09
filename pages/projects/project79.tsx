@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { Line } from 'react-chartjs-2';
+import { Bar, Line } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -16,7 +16,7 @@ import { default as ProjectPage } from '../../Components/Project/Page';
 import Percentage from '../../Components/Percentage';
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon';
 import tvl from '../../data/projects/project79/tvl'
-import earnings from '../../data/projects/project79/earnings'
+import { default as burlcoreEarnings } from '../../data/projects/project79/burlcore/earnings'
 
 ChartJS.register(
   CategoryScale,
@@ -36,7 +36,7 @@ const P79Chart = ({ labels, data, title}: { labels: any[], data: any, title: str
   const chartHeight = '175px'
   return (
     <div style={{ height: chartHeight }}>
-      <Line
+      <Bar
         options={{
           maintainAspectRatio: false,
         }}
@@ -57,12 +57,9 @@ const P79Chart = ({ labels, data, title}: { labels: any[], data: any, title: str
 }
 
 const StatsContent = () => {
-  // Compile TVL data
-  const tvlData: { labels: string[]; data: number[] } = { labels: [], data: [] }
-  tvl.forEach(value => { tvlData.labels.push(value.label); tvlData.data.push(value.tvl) })
-  // Compile earnings data
-  const earningsData: { labels: string[]; data: number[] } = { labels: [], data: [] }
-  earnings.forEach(value => { earningsData.labels.push(value.label); earningsData.data.push(value.percent) })
+  // Burlcore
+  const burlcoreEarnData: { labels: string[]; data: number[] } = { labels: [], data: [] }
+  burlcoreEarnings.forEach(value => { burlcoreEarnData.labels.push(value.label); burlcoreEarnData.data.push(value.ethereum?.usdc) })
 
   const dollarIcon = <ModeSwitchingIcon filename='dollar-sign' size={12} scheme='gold' />
 
@@ -70,27 +67,16 @@ const StatsContent = () => {
     <>
       {/* Earnings */}
       <div className='project-card'>
-        <h2 className='card__header dark:text-gold flex'>{dollarIcon} Earnings</h2>
+        <h2 className='card__header dark:text-gold flex'>{dollarIcon} Burlcore Earnings</h2>
         <P79Chart
-          labels={earningsData.labels}
+          labels={burlcoreEarnData.labels}
           title='Earnings'
-          data={earningsData.data}
+          data={burlcoreEarnData.data}
         />
         <div className='flex justify-between'>
-          <span className='dark:text-gold'>Average: {Percentage(average(earningsData.data))}</span>
-          <span className='dark:text-gold'>Latest: {Percentage(earningsData.data[earningsData.data.length - 1])}</span>
+          <span className='dark:text-gold'>Average: {average(burlcoreEarnData.data)}</span>
+          <span className='dark:text-gold'>Latest: {burlcoreEarnData.data[burlcoreEarnData.data.length - 1]}</span>
         </div>
-        
-      </div>
-    
-      {/* TVL */}
-      <div className='project-card'>
-        <h2 className='card__header dark:text-gold flex'>{dollarIcon} TVL (Sacrifice Model)</h2>
-        <P79Chart
-          labels={tvlData.labels}
-          title='TVL'
-          data={tvlData.data}
-        />
       </div>
     </>
   )
