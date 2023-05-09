@@ -12,6 +12,13 @@ export const officialVideos: YouTubeVideo[] = [
 
 export const communityVideos: YouTubeVideo[] = [
   {
+    // https://www.youtube.com/watch?v=29MimT0FAMU
+    date: '09/05/2023',
+    dateISO: '2023-05-09',
+    title: 'How To Claim Burlcore Rewards April 2023 (Project 79)',
+    youtubeSlug: '29MimT0FAMU',
+  },
+  {
     date: '06/05/2023',
     dateISO: '2023-05-06',
     title: 'Project 79 is EXPANDING! (More Opportunities Coming!!) 💰🚀',
