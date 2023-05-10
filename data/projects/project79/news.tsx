@@ -1,6 +1,8 @@
+import ExternalLink from "../../../Components/ExternalLink"
 import type { NewsEntry } from "../../../types/NewsEntry"
 
 const news: NewsEntry[] = [
+  { type: 'news', date: '10/05/2023', dateISO: '2023-05-10', content: (<>Sahara STAR presale is now live <ExternalLink href='https://sahara-presale.project79.com/' text="https://sahara-presale.project79.com/" /></>) },
   { type: 'news', date: '26/02/2023', dateISO: '2023-02-26', content: (<>Feb 2023 Earnings: <span className="healthy">5.9%</span></>) },
   { type: 'news', date: '12/02/2023', dateISO: '2023-02-12', content: 'Burlcore token prices: public price: $250, presale $225 (10% discount), transition: $200 (20% discount)' },
   { type: 'news', date: '28/01/2023', dateISO: '2023-01-28', content: (<>Jan 2023 Earnings: <span className="healthy">6.4%</span></>) },
