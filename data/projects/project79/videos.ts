@@ -12,6 +12,12 @@ export const officialVideos: YouTubeVideo[] = [
 
 export const communityVideos: YouTubeVideo[] = [
   {
+    date: '11/05/2023',
+    dateISO: '2023-05-11',
+    title: '10X your money with Sahara Star Mining launching on Project79? - Interview + Special News!',
+    youtubeSlug: 'eZrcHLvb1cM'
+  },
+  {
     // https://www.youtube.com/watch?v=29MimT0FAMU
     date: '09/05/2023',
     dateISO: '2023-05-09',
