@@ -12,6 +12,12 @@ export const officialVideos: YouTubeVideo[] = [
 
 export const communityVideos: YouTubeVideo[] = [
   {
+    date: '13/05/2023',
+    dateISO: '2023-05-13',
+    title: 'Sahara Star Presale Is Live 🔴💰 (Project 79 token, Multi-chain & More)',
+    youtubeSlug: 'I3LTERERRDk'
+  },
+  {
     date: '11/05/2023',
     dateISO: '2023-05-11',
     title: '10X your money with Sahara Star Mining launching on Project79? - Interview + Special News!',
