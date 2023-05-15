@@ -4,6 +4,7 @@ const defi = {
   autofarm: { name: 'Autofarm', link: 'https://autofarm.network/' },
   yieldwolf: { name: 'YieldWolf', link: 'https://yieldwolf.finance/' },
   dexVaults: { name: 'dexVaults+', link: 'https://dexvaults.com/' },
+  yieldYak: { name: 'YieldYak', link: 'https://yieldyak.com/' },
 }
 
 export default defi

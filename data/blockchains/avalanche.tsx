@@ -29,6 +29,7 @@ const avalanche = {
     ],
     defi: [
       defi.yieldwolf,
+      defi.yieldYak,
     ],
     protocols: [
       { link: 'https://grapefinance.app/', name: 'Grape Finance'  }

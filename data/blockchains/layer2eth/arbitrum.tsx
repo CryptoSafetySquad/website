@@ -29,6 +29,7 @@ const arbitrum: BlockchainData = {
     ],
     defi: [
       defi.yieldwolf,
+      defi.yieldYak,
     ],
     nftMarketplaces: [
       marketplaces.alphaShares,
