@@ -59,7 +59,7 @@ const P79Chart = ({ labels, data, title}: { labels: any[], data: any, title: str
 const StatsContent = () => {
   // Burlcore
   const burlcoreEarnData: { labels: string[]; data: number[] } = { labels: [], data: [] }
-  burlcoreEarnings.forEach(value => { burlcoreEarnData.labels.push(value.label); burlcoreEarnData.data.push(value.ethereum?.usdc) })
+  burlcoreEarnings.forEach(value => { burlcoreEarnData.labels.push(value.label); burlcoreEarnData.data.push(value.ethereum?.usdc || 0) })
 
   const dollarIcon = <ModeSwitchingIcon filename='dollar-sign' size={12} scheme='gold' />
 
