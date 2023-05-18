@@ -2,6 +2,8 @@ import ExternalLink from "../../../Components/ExternalLink"
 import type { NewsEntry } from "../../../types/NewsEntry"
 
 const news: NewsEntry[] = [
+  { type: 'news', date: '02/05/2023', dateISO: '2023-05-02', content: (<>
+    The reward for April was a $5 USDC / $5 BTC split. Anticipating a potential growth in BTC this month which will be very beneficial to us 👀</>) },
   { type: 'news', date: '31/03/2023', dateISO: '2023-03-31', content: (<>March earnings (<span className="blockchain ethereum">Ethereum</span>): <span className='reward wbtc'>$10 wBTC</span></>) },
   { type: 'news', date: '20/03/2023', dateISO: '2023-03-20', content: (<>AceMiners NFT purchase <ExternalLink href='https://snapshot.org/#/hydrowhales.eth/proposal/0x9b704b8622eedbbc2c7287e6ce5da0548307330279416ba30efea2c86fe36702'>proposal</ExternalLink> passed ✔️</>) },
   { type: 'news', date: '13/03/2023', dateISO: '2023-03-13', content: (<>Proposal: transition rewards to <span className='blockchain polygon'>Polygon</span> <a href='https://snapshot.org/#/hydrowhales.eth/proposal/0x125242229981e4b694aff075a13434c8e37b59d726a89bd434affbebf274be4c' target='_blank'>Snapshot</a> ✔️</>) },
