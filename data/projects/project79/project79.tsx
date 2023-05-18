@@ -9,6 +9,15 @@ const Project79: Project = {
   name: 'Project 79',
   slug: 'project79',
   type: 'Passive Income',
+  description: (
+    <>
+      <p>A marketplace for cashflow yielding properties:</p>
+      <ul>
+        <li>Burlcore</li>
+        <li>Sahara STAR</li>
+      </ul>
+    </>
+  ),
   textClass: 'dark:text-gold',
   website: 'https://www.project79.com/',
   blockchain: [Blockchains.Ethereum, Blockchains.Binance],

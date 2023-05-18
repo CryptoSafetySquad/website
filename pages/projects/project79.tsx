@@ -13,9 +13,7 @@ import {
 import { default as Project } from '../../data/projects/project79/project79';
 
 import { default as ProjectPage } from '../../Components/Project/Page';
-import Percentage from '../../Components/Percentage';
 import ModeSwitchingIcon from '../../Components/ModeSwitchingIcon';
-import tvl from '../../data/projects/project79/tvl'
 import { default as burlcoreEarnings } from '../../data/projects/project79/burlcore/earnings'
 
 ChartJS.register(
