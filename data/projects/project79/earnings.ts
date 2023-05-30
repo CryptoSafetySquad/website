@@ -14,6 +14,7 @@ const sacrificeEarnings: p79EarningsEntry[] = [
   { label: 'Feb 23', date: '2023-02-26', percent: 5.9 }, // 38.7%
   { label: 'Mar 23', date: '2023-03-30', percent: 6.3 }, // 45%
   { label: 'Apr 23', date: '2023-04-30', percent: 5.5 }, // 50.5%
+  { label: 'May 23', date: '2023-05-30', percent: 5.2 }, // 55.7%
 ]
 
 export default sacrificeEarnings
