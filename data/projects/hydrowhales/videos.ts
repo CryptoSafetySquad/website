@@ -48,6 +48,12 @@ export const officialVideos: YouTubeVideo[] = [
 
 export const communityVideos: YouTubeVideo[] = [
   {
+    date: '31/05/2023',
+    dateISO: '2023-05-31',
+    title: 'Hydro Whales made me THIS much in May 2023!! 🧃💰',
+    youtubeSlug: 'XcBwIW30LYk'
+  },
+  {
     date: '08/04/2023',
     dateISO: '2023-04-08',
     title: 'How To Claim Hydro Whales Rewards With Ledger (Polygon) 💻💰',
