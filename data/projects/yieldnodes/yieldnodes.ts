@@ -3,6 +3,7 @@ import Blockchains from "../../../enums/blockchains"
 
 import news from "./news"
 import ProjectStatus from "../../../enums/ProjectStatus"
+import { communityVideos } from './videos'
 
 export const YieldNodes: Project = {
   name: 'YieldNodes',
@@ -17,7 +18,8 @@ export const YieldNodes: Project = {
   domains: [
     'yieldnodes.com'
   ],
-  news
+  news,
+  communityVideos,
 }
 
 export default YieldNodes
