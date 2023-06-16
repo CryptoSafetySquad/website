@@ -9,6 +9,7 @@ import avalanche from '../data/blockchains/avalanche'
 import binance from '../data/blockchains/binance'
 import bitcoin from '../data/blockchains/bitcoin'
 import canto from '../data/blockchains/canto'
+import cardano from '../data/blockchains/cardano'
 import consellation from '../data/blockchains/constellation'
 import ethereum from '../data/blockchains/ethereum'
 import fantom from '../data/blockchains/fantom'
@@ -23,24 +24,25 @@ import polygon from '../data/blockchains/layer2eth/polygon'
 import optimism from '../data/blockchains/layer2eth/optimism'
 
 const l1ecos: any[] = [
-  { ...bitcoin, marketCap: 540115865088, lastUpdated: '09/04/2023' },
-  { ...ethereum, marketCap: 221519687844, lastUpdated: '09/04/2023' },
-  { ...binance, marketCap: 49069307443, lastUpdated: '27/03/2023' },
-  { ...solana, marketCap: 7812135314, lastUpdated: '27/03/2023' },
+  { ...bitcoin, marketCap: 495610038966, lastUpdated: '16/06/2023' },
+  { ...ethereum, marketCap: 200492209355, lastUpdated: '16/06/2023' },
+  { ...binance, marketCap: 36886308118, lastUpdated: '16/06/2023' },
+  { ...cardano, marketCap: 9114624590, lastUpdated: '16/06/2023' },
+  { ...solana, marketCap: 5900365921, lastUpdated: '16/06/2023' },
   // { name: 'Litecoin', slug: 'litecoin', marketCap: 6823904572, lastUpdated: '' },
-  { ...avalanche, marketCap: 5660089337, lastUpdated: '27/03/2023' },
-  { ...monero, marketCap: 2907148559, lastUpdated: '27/03/2023' },
-  { ...fantom, marketCap: 1151938313, lastUpdated: '27/03/2023' },
-  { ...kadena, marketCap: 204180499, lastUpdated: '27/03/2023' },
-  { ...canto, marketCap: 308341147, lastUpdated: '09/04/2023' },
-  { ...nervos, marketCap: 190951046, lastUpdated: '27/03/2023' },
-  { ...consellation, marketCap: 62617251, lastUpdated: '27/03/2023' },
+  { ...avalanche, marketCap: 3937538704, lastUpdated: '16/06/2023' },
+  { ...monero, marketCap: 2503949150, lastUpdated: '16/06/2023' },
+  { ...fantom, marketCap: 711720765, lastUpdated: '16/06/2023' },
+  { ...kadena, marketCap: 122733452, lastUpdated: '16/06/2023' },
+  { ...nervos, marketCap: 104561039, lastUpdated: '16/06/2023' },
+  { ...consellation, marketCap: 62617251, lastUpdated: '16/06/2023' },
+  { ...canto, marketCap: 51729762, lastUpdated: '16/06/2023' },
   { ...vulcan, marketCap: 0, lastUpdated: '02/05/2023' }
 ]
 const ethl2ecos: any[] = [
-  { ...polygon, marketCap: 10000741025, lastUpdated: '09/04/2023' },
-  { ...arbitrum, marketCap: 1474265907, lastUpdated: '09/04/2023' },
-  { ...optimism, marketCap: 701913699, lastUpdated: '09/04/2023' },
+  { ...polygon, marketCap: 5451402844, lastUpdated: '16/06/2023' },
+  { ...arbitrum, marketCap: 1215723115, lastUpdated: '16/06/2023' },
+  { ...optimism, marketCap: 716034544, lastUpdated: '16/06/2023' },
 ]
 
 const lastUpdated = '09/04/2023'
