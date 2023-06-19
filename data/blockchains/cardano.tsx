@@ -3,7 +3,7 @@ import type { BlockchainData } from "../../types/BlockchainData"
 import exchanges from "../exchanges"
 
 const cardano: BlockchainData = {
-  // icon: '/images/icons/blockchains/',
+  icon: '/images/logos/cardano.webp',
   name: 'Cardano',
   slug: 'cardano',
   metadata: {

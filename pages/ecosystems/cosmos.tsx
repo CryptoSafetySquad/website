@@ -2,12 +2,12 @@ import type { NextPage } from 'next'
 
 import EcosystemPage from '../../Components/EcosystemPage'
 
-import vulcan from '../../data/blockchains/vulcan'
+import cosmos from '../../data/blockchains/cosmos'
 
-const Vulcan: NextPage = () => {
+const Cosmos: NextPage = () => {
   return <EcosystemPage
-    {...vulcan}
+  {...cosmos}
   />
 }
 
-export default Vulcan
+export default Cosmos

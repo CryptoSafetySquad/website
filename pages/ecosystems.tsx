@@ -11,6 +11,7 @@ import bitcoin from '../data/blockchains/bitcoin'
 import canto from '../data/blockchains/canto'
 import cardano from '../data/blockchains/cardano'
 import consellation from '../data/blockchains/constellation'
+import cosmos from '../data/blockchains/cosmos'
 import ethereum from '../data/blockchains/ethereum'
 import fantom from '../data/blockchains/fantom'
 import kadena from '../data/blockchains/kadena'
@@ -31,13 +32,13 @@ const l1ecos: any[] = [
   { ...solana, marketCap: 5900365921, lastUpdated: '16/06/2023' },
   // { name: 'Litecoin', slug: 'litecoin', marketCap: 6823904572, lastUpdated: '' },
   { ...avalanche, marketCap: 3937538704, lastUpdated: '16/06/2023' },
+  { ...cosmos, marketCap: 2974424096, lastUpdated: '19/06/2023' },
   { ...monero, marketCap: 2503949150, lastUpdated: '16/06/2023' },
   { ...fantom, marketCap: 711720765, lastUpdated: '16/06/2023' },
   { ...kadena, marketCap: 122733452, lastUpdated: '16/06/2023' },
   { ...nervos, marketCap: 104561039, lastUpdated: '16/06/2023' },
   { ...consellation, marketCap: 62617251, lastUpdated: '16/06/2023' },
-  { ...canto, marketCap: 51729762, lastUpdated: '16/06/2023' },
-  { ...vulcan, marketCap: 0, lastUpdated: '02/05/2023' }
+  { ...canto, marketCap: 51729762, lastUpdated: '16/06/2023' }
 ]
 const ethl2ecos: any[] = [
   { ...polygon, marketCap: 5451402844, lastUpdated: '16/06/2023' },
