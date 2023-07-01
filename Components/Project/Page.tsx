@@ -39,12 +39,15 @@ const tokenColours = {
   btc: '#FF9500',
   usdc: '#2775CA',
   usdt: '#009393',
-  eth: '#fff'
+  eth: '#fff',
+  ltc: '#88cbf5',
+  kda: '#ED098F',
+  ckb: '#18efb1',
 }
 
 type tokenEntry = {
-  blockchain: 'ethereum' | 'polygon' | 'bsc' | 'litecoin' | 'kadena',
-  token: 'wbtc' | 'usdc' | 'usdt' | 'eth' | 'weth' | 'btc' | 'ltc' | 'kda',
+  blockchain: 'ethereum' | 'polygon' | 'bsc' | 'litecoin' | 'kadena' | 'nervos',
+  token: 'wbtc' | 'usdc' | 'usdt' | 'eth' | 'weth' | 'btc' | 'ltc' | 'kda' | 'ckb',
   label: string;
   color: string;
   stack: 'Bluechip' | 'Altcoin'
@@ -56,9 +59,9 @@ let tokens: tokenEntry[] = [
   { blockchain: 'polygon', token: 'weth', label: 'wETH (Poly)', color: tokenColours.eth, stack: 'Bluechip' },
   { blockchain: 'polygon', token: 'wbtc', label: 'wBTC (Poly)', color: tokenColours.btc, stack: 'Bluechip' },
   { blockchain: 'polygon', token: 'usdc', label: 'USDC (Poly)', color: tokenColours.usdc, stack: 'Bluechip' },
-  { blockchain: 'litecoin', token: 'ltc', label: 'LTC', color: '', stack: 'Bluechip' },
-  { blockchain: 'kadena', token: 'kda', label: 'KDA ', color: '', stack: 'Altcoin' },
-  // { blockchain: 'ethereum', token: 'usdc', label: 'USDT (Eth)', color: '' },
+  { blockchain: 'litecoin', token: 'ltc', label: 'LTC', color: tokenColours.ltc, stack: 'Bluechip' },
+  { blockchain: 'kadena', token: 'kda', label: 'KDA ', color: tokenColours.kda, stack: 'Altcoin' },
+  { blockchain: 'nervos', token: 'ckb', label: 'CKB', color: tokenColours.ckb, stack: 'Altcoin' },
   // { blockchain: 'ethereum', token: 'usdc', label: 'USDT (Eth)', color: '' },
 ]
 
