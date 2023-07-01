@@ -12,6 +12,12 @@ export const officialVideos: YouTubeVideo[] = [
 
 export const communityVideos: YouTubeVideo[] = [
   {
+    date: '20/06/2023',
+    dateISO: '2023-06-20',
+    title: 'CryptoSafe - Project79 Overview',
+    youtubeSlug: 'clhgdgx-ZuQ'
+  },
+  {
     date: '13/05/2023',
     dateISO: '2023-05-13',
     title: 'Sahara Star Presale Is Live 🔴💰 (Project 79 token, Multi-chain & More)',
