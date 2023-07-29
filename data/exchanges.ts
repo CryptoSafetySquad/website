@@ -5,6 +5,7 @@ const exchanges = {
   coinbase: { name: 'Coinbase', link: 'https://www.coinbase.com/', type: 'Centralised' },
   uniswap: { name: 'UniSwap', link: 'https://app.uniswap.org/', type: 'Decentralised' },
   pancakeswap: { name: 'PancakeSwap', link: 'https://pancakeswap.finance/', type: 'Decentralised' },
+  bybit: { name: 'ByBit', link: 'https://www.bybit.com' },
 
   apeswap: { name: 'ApeSwap', link: 'https://apeswap.finance/' },
   quickswap: { name: 'QuickSwap', link: 'https://quickswap.exchange/' },
