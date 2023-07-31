@@ -18,7 +18,6 @@ import kadena from '../data/blockchains/kadena'
 import monero from '../data/blockchains/monero'
 import solana from '../data/blockchains/solana'
 import nervos from '../data/blockchains/nervos'
-import vulcan from '../data/blockchains/vulcan'
 // Eth Layer 2
 import arbitrum from '../data/blockchains/layer2eth/arbitrum'
 import polygon from '../data/blockchains/layer2eth/polygon'
