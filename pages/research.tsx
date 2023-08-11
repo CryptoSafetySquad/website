@@ -4,7 +4,7 @@ import Page from '../Components/Page'
 
 const Research: NextPage = () => {
 
-  const title = 'People: Sam Pitman'
+  const title = 'Research'
   const content = (
     <>
       <h1>Research Tools</h1>
