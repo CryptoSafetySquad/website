@@ -23,7 +23,6 @@ const data: { [key: string]: EcosystemLink[] } = {
     exchanges.quickswap,
   ],
   defi: [
-    defi.yieldwolf,
     defi.magik,
     defi.beefy,
   ],

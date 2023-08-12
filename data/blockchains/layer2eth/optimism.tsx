@@ -26,7 +26,6 @@ const optimism: BlockchainData = {
       exchanges.gateio,
     ],
     defi: [
-      defi.yieldwolf,
     ],
   }
 }

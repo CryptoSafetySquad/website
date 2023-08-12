@@ -19,7 +19,6 @@ const data: { [key: string]: EcosystemLink[] } = {
     exchanges.apollox,
   ],
   defi: [
-    defi.yieldwolf,
   ],
   protocols: [],
   nftMarketplaces: [

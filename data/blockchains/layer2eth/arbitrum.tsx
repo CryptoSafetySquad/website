@@ -28,7 +28,6 @@ const arbitrum: BlockchainData = {
       exchanges.apollox,
     ],
     defi: [
-      defi.yieldwolf,
       defi.yieldYak,
     ],
     nftMarketplaces: [

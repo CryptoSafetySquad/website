@@ -28,7 +28,6 @@ const avalanche = {
       { name: 'TraderJoe', link: 'https://traderjoexyz.com/' }
     ],
     defi: [
-      defi.yieldwolf,
       defi.yieldYak,
     ],
     protocols: [

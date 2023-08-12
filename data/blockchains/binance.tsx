@@ -40,7 +40,6 @@ const binance: BlockchainData = {
       defi.autofarm,
       defi.beefy,
       defi.magik,
-      defi.yieldwolf,
       defi.dexVaults,
     ],
     protocols: [
