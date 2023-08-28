@@ -23,8 +23,9 @@ const cardano: BlockchainData = {
       exchanges.gateio,
     ],
     decentralisedExchanges: [
-      exchanges.pancakeswap
-      // { link: 'https://lattice.is/dashboard', name: 'Lattice' },
+      // exchanges.pancakeswap
+      { link: 'https://minswap.org/', name: 'Minswap' },
+      { link: 'https://app.sundae.fi/', name: 'SundaeSwap' },
     ],
     wallets: [
       { link: 'https://daedaluswallet.io/', name: 'Daedalus Wallet' },

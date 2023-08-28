@@ -42,6 +42,7 @@ module.exports = {
           matic: '#9A60FF',
           op: '#ff0420',
           sol: '#19FB9B',
+          uni: '#d30468',
           usdc: '#2775CA',
           usdt: '#009393',
           xmr: '#d26e2b',

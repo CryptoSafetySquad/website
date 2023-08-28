@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Page from '../Components/Page'
-import shortAddress from '../functions/shortAddress'
 
 const CEX = 'Centralised Exchange';
 const DEX = 'Decentralised Exchange';
@@ -18,7 +17,7 @@ const wbtc = {
 }
 
 const usdt = {
-  name: 'USDT', class: 'text-usdt', category: 'Stablecoin', ...chains,
+  name: 'USDT', class: 'text-usdt', category: 'Stablecoin (Centralised)', ...chains,
   eth: '0xdac17f958d2ee523a2206206994597c13d831ec7',
   bsc: '0x55d398326f99059fF775485246999027B3197955',
   polypos: '0xc2132d05d31c914a87c6611c10748aeb04b58e8f',
@@ -29,28 +28,43 @@ const usdt = {
 }
 
 const usdc = {
-  name: 'USDC', class: 'text-usdc', category: 'Stablecoin', ...chains,
+  name: 'USDC', class: 'text-usdc', category: 'Stablecoin (Centralised)', ...chains,
   eth: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
   bsc: '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d',
   polypos: '0x2791bca1f2de4661ed88a30c99a7a9449aa84174',
   polyzk: '0xa8ce8aee21bc2a48a5ef670afcc9274c7bbbc035',
   sol: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
   op: '0x7f5c764cbc14f9669b88837ca1490cca17c31607',
-  arb: '0xaf88d065e77c8cc2239327c5edb3a432268e5831'
+  arb: '0xaf88d065e77c8cc2239327c5edb3a432268e5831',
+  base: '0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca', // Caveat USDbC, see https://help.coinbase.com/en/coinbase/getting-started/crypto-education/usd-base-coin
 }
 
 const dai = {
-  name: 'DAI', class: 'text-dai', category: 'Stablecoin', ...chains,
+  name: 'DAI', class: 'text-dai', category: 'Stablecoin (Decentralised)', ...chains,
   op: '0xda10009cbd5d07dd0cecc66161fc93d7c9000da1',
   sol: 'EjmyN6qEC1Tf1JxiG1ae7UTJhUxSwk1TCWNWqxWV4J6o',
-  arb: '0xda10009cbd5d07dd0cecc66161fc93d7c9000da1'
+  arb: '0xda10009cbd5d07dd0cecc66161fc93d7c9000da1',
+  base: '0x50c5725949a6f0c72e6c4a641f24049a917db0cb'
+}
+
+const uni = {
+  name: 'UNI', class: 'text-uni', category: 'Governance Token', ...chains,
+  eth: '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984',
+  op: '0x6fd9d7AD17242c41f7131d257212c54A0e816691',
+  sol: '',
+  arb: '',
+  base: ''
 }
 
 const tokenData = [
   wbtc,
   usdt,
   usdc,
-  dai
+  dai,
+]
+
+const exchangeTokens = [
+  uni,
 ]
 
 const hwTokenData = [
@@ -65,72 +79,54 @@ const renderAddress = (address: string, chain: string = '') => {
   }
   switch (chain) {
     case 'btc': break;
-    case 'polypos': return <a href={`https://polygonscan.com/token/${address}`}>{address}</a>
-    case 'polyzk': return <a href={`https://zkevm.polygonscan.com/token/${address}`}>{address}</a>
-    case 'bsc': return <a href={`https://bscscan.com/token/${address}`}>{address}</a>
-    case 'eth': return <a href={`https://etherscan.io/token/${address}`}>{address}</a>
-    case 'sol': return <a href={`https://solscan.io/token/${address}`}>{address}</a>
-    case 'op': return <a href={`https://optimistic.etherscan.io/token/${address}`}>{address}</a>
-    case 'base':
+    case 'polypos': return <a target='_blank' rel='noopener noreferrer' href={`https://polygonscan.com/token/${address}`}>{address}</a>
+    case 'polyzk': return <a target='_blank' rel='noopener noreferrer' href={`https://zkevm.polygonscan.com/token/${address}`}>{address}</a>
+    case 'bsc': return <a target='_blank' rel='noopener noreferrer' href={`https://bscscan.com/token/${address}`}>{address}</a>
+    case 'eth': return <a target='_blank' rel='noopener noreferrer' href={`https://etherscan.io/token/${address}`}>{address}</a>
+    case 'sol': return <a target='_blank' rel='noopener noreferrer' href={`https://solscan.io/token/${address}`}>{address}</a>
+    case 'op': return <a target='_blank' rel='noopener noreferrer' href={`https://optimistic.etherscan.io/token/${address}`}>{address}</a>
+    case 'base': return <a target='_blank' rel='noopener noreferrer' href={`https://basescan.org/token/${address}`}>{address}</a>
     case 'arb':
     case '':
       return <a onClick={() => { navigator.clipboard.writeText(address) }}>{address}</a>
   }
 }
 
+const renderTokenCard = (token) => (
+  <div className='card'>
+    <table key={token.name}>
+      <thead>
+        <tr className={token.class}>
+          <td className='text-xl'>{token.name}</td>
+          <td>{token.category}</td>
+        </tr>
+      </thead>
+      <tbody>
+        {token.btc && <tr><td className='text-btc'>Bitcoin (BRC20)</td><td>{renderAddress(token.btc, 'btc')}</td></tr>}
+        {token.eth && <tr><td className='text-eth'>Ethereum (ERC20)</td><td>{renderAddress(token.eth, 'eth')}</td></tr>}
+        {token.bsc && <tr><td className='text-bnb'>Binance Smart Chain</td><td>{renderAddress(token.bsc, 'bsc')}</td></tr>}
+        {token.sol && <tr><td className='text-sol'>Solana</td><td>{renderAddress(token.sol, 'sol')}</td></tr>}
+        {token.polypos && <tr><td className='text-matic'>Polygon PoS</td><td>{renderAddress(token.polypos, 'polypos')}</td></tr>}
+        {token.polyzk && <tr><td className='text-matic'>Polygon zkEVM</td><td>{renderAddress(token.polyzk, 'polyzk')}</td></tr>}
+        {token.arb && <tr><td className='text-arb'>Arbitrum</td><td>{renderAddress(token.arb, 'arb')}</td></tr>}
+        {token.op && <tr><td className='text-op'>Optimism</td><td>{renderAddress(token.op, 'op')}</td></tr>}
+        {token.base && <tr><td className='text-base'>Base</td><td>{renderAddress(token.base, 'base')}</td></tr>}
+      </tbody>
+    </table>
+  </div>
+)
+
 const Tokens: NextPage = () => {
 
   const title = 'Tokens'
   const content = (
     <>
-      {tokenData.map(token => (
-        <div className='card'>
-          <table key={token.name}>
-            <thead>
-              <tr className={token.class}>
-                <td className='text-xl'>{token.name}</td>
-                <td>{token.category}</td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td className='text-btc'>Bitcoin (BRC20)</td><td>{renderAddress(token.btc, 'btc')}</td></tr>
-              <tr><td className='text-eth'>Ethereum (ERC20)</td><td>{renderAddress(token.eth, 'eth')}</td></tr>
-              <tr><td className='text-bnb'>Binance Smart Chain</td><td>{renderAddress(token.bsc, 'bsc')}</td></tr>
-              <tr><td className='text-sol'>Solana</td><td>{renderAddress(token.sol, 'sol')}</td></tr>
-              <tr><td className='text-matic'>Polygon PoS</td><td>{renderAddress(token.polypos, 'polypos')}</td></tr>
-              <tr><td className='text-matic'>Polygon zkEVM</td><td>{renderAddress(token.polyzk, 'polyzk')}</td></tr>
-              <tr><td className='text-arb'>Arbitrum</td><td>{renderAddress(token.arb, 'arb')}</td></tr>
-              <tr><td className='text-op'>Optimism</td><td>{renderAddress(token.op, 'op')}</td></tr>
-              <tr><td className='text-base'>Base</td><td>{renderAddress(token.base, 'base')}</td></tr>
-            </tbody>
-          </table>
-        </div>
-      ))}
-
+      {tokenData.map(token => renderTokenCard(token))}
+      <h2 className='my-4 text-lg'>Exchange Tokens</h2>
+      {exchangeTokens.map(token => renderTokenCard(token))}
       <h2 className='my-4 text-lg'>Hydro Whale Ecosystem: P79 / OceanMoney / OrcaFi</h2>
-      {hwTokenData.map(token => (
-        <div className='card'>
-          <table key={token.name}>
-            <thead>
-              <tr className={token.class}>
-                <td className='text-xl'>{token.name}</td>
-                <td>{token.category}</td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td className='text-btc'>Bitcoin (BRC20)</td><td>{renderAddress(token.btc, 'btc')}</td></tr>
-              <tr><td className='text-eth'>Ethereum (ERC20)</td><td>{renderAddress(token.eth, 'eth')}</td></tr>
-              <tr><td className='text-bnb'>Binance Smart Chain</td><td>{renderAddress(token.bsc, 'bsc')}</td></tr>
-              <tr><td className='text-sol'>Solana</td><td>{renderAddress(token.sol, 'sol')}</td></tr>
-              <tr><td className='text-matic'>Polygon PoS</td><td>{renderAddress(token.polypos, 'polypos')}</td></tr>
-              <tr><td className='text-matic'>Polygon zkEVM</td><td>{renderAddress(token.polyzk, 'polyzk')}</td></tr>
-              <tr><td className='text-arb'>Arbitrum</td><td>{renderAddress(token.arb, 'arb')}</td></tr>
-              <tr><td className='text-op'>Optimism</td><td>{renderAddress(token.op, 'op')}</td></tr>
-              <tr><td className='text-base'>Base</td><td>{renderAddress(token.base, 'base')}</td></tr>
-            </tbody>
-          </table>
-        </div>
-      ))}
+      <p>Coming Soon</p>
+      {hwTokenData.map(token => renderTokenCard(token))}
     </>
   )
 

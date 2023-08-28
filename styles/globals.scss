@@ -286,6 +286,8 @@ h1 {
 .text-dai { @apply text-currency-dai; }
 .text-base { @apply text-currency-base; }
 
+.text-uni { @apply text-currency-uni; }
+
 span.blockchain {
   position: relative;
   margin-right: 1rem;
