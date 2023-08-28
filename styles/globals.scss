@@ -283,6 +283,8 @@ h1 {
 .text-dag { @apply text-currency-dag; }
 .text-sol { @apply text-currency-sol; }
 .text-ltc { @apply text-currency-ltc; }
+.text-dai { @apply text-currency-dai; }
+.text-base { @apply text-currency-base; }
 
 span.blockchain {
   position: relative;
