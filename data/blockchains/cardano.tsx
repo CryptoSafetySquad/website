@@ -14,6 +14,9 @@ const cardano: BlockchainData = {
     }
   },
   data: {
+    explorers: [
+      { link: 'https://explorer.cardano.org/', name: 'Cardano Explorer' }
+    ],
     centralisedExchanges: [
       exchanges.binance,
       exchanges.kucoin,
