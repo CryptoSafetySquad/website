@@ -33,6 +33,9 @@ const solana: BlockchainData = {
       wallets.phantom,
       wallets.exodus,
     ],
+    defi: [
+      { name: 'Orca', link: 'https://www.orca.so/' }
+    ]
   }
 }
 
