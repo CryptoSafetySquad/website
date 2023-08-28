@@ -34,7 +34,8 @@ const solana: BlockchainData = {
       wallets.exodus,
     ],
     defi: [
-      { name: 'Orca', link: 'https://www.orca.so/' }
+      { name: 'Orca', link: 'https://www.orca.so/' },
+      { name: 'Raydium', link: 'https://raydium.io/' }
     ]
   }
 }
