@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Roboto_Mono } from '@next/font/google'
 
 const links = [
   { href: '/guides', text: 'Guides' },
