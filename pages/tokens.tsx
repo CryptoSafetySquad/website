@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Page from '../Components/Page'
+import shortAddress from '../functions/shortAddress';
 
 const CEX = 'Centralised Exchange';
 const DEX = 'Decentralised Exchange';
@@ -77,30 +78,30 @@ const renderAddress = (address: string, chain: string = '') => {
   if (chain == '') {
     
   }
+  const addressString: string = shortAddress(address)
+
   switch (chain) {
     case 'btc': break;
-    case 'polypos': return <a target='_blank' rel='noopener noreferrer' href={`https://polygonscan.com/token/${address}`}>{address}</a>
-    case 'polyzk': return <a target='_blank' rel='noopener noreferrer' href={`https://zkevm.polygonscan.com/token/${address}`}>{address}</a>
-    case 'bsc': return <a target='_blank' rel='noopener noreferrer' href={`https://bscscan.com/token/${address}`}>{address}</a>
-    case 'eth': return <a target='_blank' rel='noopener noreferrer' href={`https://etherscan.io/token/${address}`}>{address}</a>
-    case 'sol': return <a target='_blank' rel='noopener noreferrer' href={`https://solscan.io/token/${address}`}>{address}</a>
-    case 'op': return <a target='_blank' rel='noopener noreferrer' href={`https://optimistic.etherscan.io/token/${address}`}>{address}</a>
-    case 'base': return <a target='_blank' rel='noopener noreferrer' href={`https://basescan.org/token/${address}`}>{address}</a>
+    case 'polypos': return <a target='_blank' rel='noopener noreferrer' href={`https://polygonscan.com/token/${address}`}>{addressString}</a>
+    case 'polyzk': return <a target='_blank' rel='noopener noreferrer' href={`https://zkevm.polygonscan.com/token/${address}`}>{addressString}</a>
+    case 'bsc': return <a target='_blank' rel='noopener noreferrer' href={`https://bscscan.com/token/${address}`}>{addressString}</a>
+    case 'eth': return <a target='_blank' rel='noopener noreferrer' href={`https://etherscan.io/token/${address}`}>{addressString}</a>
+    case 'sol': return <a target='_blank' rel='noopener noreferrer' href={`https://solscan.io/token/${address}`}>{addressString}</a>
+    case 'op': return <a target='_blank' rel='noopener noreferrer' href={`https://optimistic.etherscan.io/token/${address}`}>{addressString}</a>
+    case 'base': return <a target='_blank' rel='noopener noreferrer' href={`https://basescan.org/token/${address}`}>{addressString}</a>
     case 'arb':
     case '':
-      return <a onClick={() => { navigator.clipboard.writeText(address) }}>{address}</a>
+      return <a onClick={() => { navigator.clipboard.writeText(address) }}>{addressString}</a>
   }
 }
 
 const renderTokenCard = (token: any) => (
-  <div className='card'>
-    <table key={token.name}>
-      <thead>
-        <tr className={token.class}>
-          <td className='text-xl'>{token.name}</td>
-          <td>{token.category}</td>
-        </tr>
-      </thead>
+  <div className='card' key={token.name}>
+    <div className={`flex justify-between flex-row ${token.class}`}>
+      <span className='text-xl'>{token.name}</span>
+      {token.category}
+    </div>
+    <table className='table is-striped'>
       <tbody>
         {token.btc && <tr><td className='text-btc'>Bitcoin (BRC20)</td><td>{renderAddress(token.btc, 'btc')}</td></tr>}
         {token.eth && <tr><td className='text-eth'>Ethereum (ERC20)</td><td>{renderAddress(token.eth, 'eth')}</td></tr>}
@@ -121,12 +122,18 @@ const Tokens: NextPage = () => {
   const title = 'Tokens'
   const content = (
     <>
-      {tokenData.map(token => renderTokenCard(token))}
+      <div className='grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+        {tokenData.map(token => renderTokenCard(token))}
+      </div>
       <h2 className='my-4 text-lg'>Exchange Tokens</h2>
-      {exchangeTokens.map(token => renderTokenCard(token))}
+      <div className='grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+        {exchangeTokens.map(token => renderTokenCard(token))}
+      </div>
       <h2 className='my-4 text-lg'>Hydro Whale Ecosystem: P79 / OceanMoney / OrcaFi</h2>
       <p>Coming Soon</p>
-      {hwTokenData.map(token => renderTokenCard(token))}
+      <div className='grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+        {hwTokenData.map(token => renderTokenCard(token))}
+      </div>
     </>
   )
 
