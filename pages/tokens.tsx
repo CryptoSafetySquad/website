@@ -92,7 +92,7 @@ const renderAddress = (address: string, chain: string = '') => {
   }
 }
 
-const renderTokenCard = (token) => (
+const renderTokenCard = (token: any) => (
   <div className='card'>
     <table key={token.name}>
       <thead>
