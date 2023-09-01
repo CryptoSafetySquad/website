@@ -19,6 +19,9 @@ const nervos: BlockchainData = {
       // exchanges.coinbase,
       // exchanges.binance,
     ],
+    decentralisedExchanges: [
+      { link: 'https://sparkswap.xyz', name: 'SparkSwap' }
+    ]
   },
   metadata: {
     website: 'https://pulsechain.com/',
