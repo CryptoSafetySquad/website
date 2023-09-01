@@ -16,6 +16,7 @@ import ethereum from '../data/blockchains/ethereum'
 import fantom from '../data/blockchains/fantom'
 import kadena from '../data/blockchains/kadena'
 import monero from '../data/blockchains/monero'
+import pulsechain from '../data/blockchains/pulsechain'
 import solana from '../data/blockchains/solana'
 import nervos from '../data/blockchains/nervos'
 // Eth Layer 2
@@ -37,7 +38,8 @@ const l1ecos: any[] = [
   { ...kadena, marketCap: 122733452, lastUpdated: '16/06/2023' },
   { ...nervos, marketCap: 104561039, lastUpdated: '16/06/2023' },
   { ...consellation, marketCap: 62617251, lastUpdated: '16/06/2023' },
-  { ...canto, marketCap: 51729762, lastUpdated: '16/06/2023' }
+  { ...canto, marketCap: 51729762, lastUpdated: '16/06/2023' },
+  { ...pulsechain, marketCap: 0, lastUpdated: '01/09/2023' }
 ]
 const ethl2ecos: any[] = [
   { ...polygon, marketCap: 5451402844, lastUpdated: '16/06/2023' },
