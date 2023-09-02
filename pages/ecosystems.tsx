@@ -23,6 +23,7 @@ import nervos from '../data/blockchains/nervos'
 import arbitrum from '../data/blockchains/layer2eth/arbitrum'
 import polygon from '../data/blockchains/layer2eth/polygon'
 import optimism from '../data/blockchains/layer2eth/optimism'
+import layer1x from '../data/blockchains/layer1x'
 
 const l1ecos: any[] = [
   { ...bitcoin, marketCap: 495610038966, lastUpdated: '16/06/2023' },
@@ -39,7 +40,8 @@ const l1ecos: any[] = [
   { ...nervos, marketCap: 104561039, lastUpdated: '16/06/2023' },
   { ...consellation, marketCap: 62617251, lastUpdated: '16/06/2023' },
   { ...canto, marketCap: 51729762, lastUpdated: '16/06/2023' },
-  { ...pulsechain, marketCap: 0, lastUpdated: '01/09/2023' }
+  { ...pulsechain, marketCap: 0, lastUpdated: '01/09/2023' },
+  { ...layer1x, marketCap: 0, lastUpdated: '01/09/2023' },
 ]
 const ethl2ecos: any[] = [
   { ...polygon, marketCap: 5451402844, lastUpdated: '16/06/2023' },
