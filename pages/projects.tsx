@@ -78,7 +78,7 @@ const projectSimpleCardList = (projects: Project[], cardClass?: string) => {
   return projects.map((project: any) => (
     project.slug && (
       <div className={`card with-bg`} key={project.slug}>
-        <a className={`flex ${cardClass} text-xs justify-between`} href={`/projects/${project.slug}`}>{project.name} <div>{project.blockchain && <BlochainIcon blockchain={project.blockchain} />}</div></a>
+        <a className={`flex ${cardClass} text-xs justify-between`} href={`/projects/${project.slug}`}>{project.name} <div>{project.blockchain && <BlockchainIcon blockchain={project.blockchain} />}</div></a>
       </div>
     )
   ))
