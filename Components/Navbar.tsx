@@ -6,6 +6,7 @@ const links = [
   { href: '/projects', text: 'Projects' },
   { href: '/general-tips', text: 'General Tips' },
   { href: '/ecosystems', text: 'Ecosystems' },
+  { href: '/tokens', text: 'Tokens' },
   { href: '/referrals', text: 'Referrals' },
   { href: '/videos', text: 'Videos' },
 
