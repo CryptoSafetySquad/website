@@ -4,6 +4,7 @@ import shortAddress from '../functions/shortAddress';
 
 const CEX = 'Centralised Exchange';
 const DEX = 'Decentralised Exchange';
+const P79 = 'Project 79';
 
 const chains = { btc: '', eth: '', bsc: '', polypos: '', polyzk: '', base: '', arb: '', op: '', sol: '' }
 
@@ -71,6 +72,7 @@ const exchangeTokens = [
 const hwTokenData = [
   { name: 'ORCA', class: '', category: DEX, ...chains },
   { name: 'WAVE', class: '', category: CEX, ...chains },
+  { name: 'BURL', class: '', category: P79, ...chains, polypos: '0xf771d937c8c1772d1070ae83bca5bc7525b7c71d' },
 ]
 
 const renderAddress = (address: string, chain: string = '') => {
