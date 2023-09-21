@@ -6,7 +6,7 @@ import type { Project } from '../types/project'
 import styles from '../styles/projects.module.css'
 import FullPage from '../Components/FullPage'
 
-const BlochainIcon = ({ blockchain }: { blockchain: string | string[] | undefined; }) => {
+const BlockchainIcon = ({ blockchain }: { blockchain: string | string[] | undefined; }) => {
   if (!blockchain) {
     return null
   }
@@ -66,7 +66,7 @@ const projectCardList = (projects: Project[]) => {
           <p className='text-sm'><a href={`/projects/${project.slug}`}>{project.name}</a></p>
           <div className='flex justify-between'>
             <span className={`text-sm ${styles.tags}`}>{project.type}</span>
-            <span className='text-sm'>{project.blockchain && <BlochainIcon blockchain={project.blockchain} />}</span>
+            <span className='text-sm'>{project.blockchain && <BlockchainIcon blockchain={project.blockchain} />}</span>
           </div>
         </div>
       </div>
