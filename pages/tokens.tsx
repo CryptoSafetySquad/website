@@ -64,9 +64,7 @@ const uni = {
   name: 'UNI', class: 'text-uni', category: 'Governance Token', ...chains,
   eth: '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984',
   op: '0x6fd9d7AD17242c41f7131d257212c54A0e816691',
-  sol: '',
-  arb: '',
-  base: ''
+  polypos: '0xb33eaad8d922b1083446dc23f610c2567fb5180f',
 }
 
 const tokenData = [
