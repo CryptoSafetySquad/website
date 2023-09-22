@@ -73,6 +73,7 @@ const tokenData = [
   usdt,
   usdc,
   dai,
+  paxg,
 ]
 
 const exchangeTokens = [
