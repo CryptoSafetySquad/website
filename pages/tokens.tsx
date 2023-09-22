@@ -4,12 +4,16 @@ import shortAddress from '../functions/shortAddress';
 
 const CEX = 'Centralised Exchange';
 const DEX = 'Decentralised Exchange';
+const STABLE = 'Stablecoin (Centralised)';
+const DSTABLE = 'Stablecoin (Decentralised)';
+const WRAPPED = 'Wrapped Token'; 
+const COMMODITY = 'Commodity';
 const P79 = 'Project 79';
 
 const chains = { btc: '', eth: '', bsc: '', polypos: '', polyzk: '', base: '', arb: '', op: '', sol: '' }
 
 const wbtc = {
-  name: 'wBTC', class: 'text-btc', category: 'Wrapped Token', ...chains,
+  name: 'wBTC', class: 'text-btc', category: WRAPPED, ...chains,
   eth: '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599',
   bsc: '',
   polypos: '0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6',
@@ -19,7 +23,7 @@ const wbtc = {
 }
 
 const usdt = {
-  name: 'USDT', class: 'text-usdt', category: 'Stablecoin (Centralised)', ...chains,
+  name: 'USDT', class: 'text-usdt', category: STABLE, ...chains,
   eth: '0xdac17f958d2ee523a2206206994597c13d831ec7',
   bsc: '0x55d398326f99059fF775485246999027B3197955',
   polypos: '0xc2132d05d31c914a87c6611c10748aeb04b58e8f',
@@ -30,7 +34,7 @@ const usdt = {
 }
 
 const usdc = {
-  name: 'USDC', class: 'text-usdc', category: 'Stablecoin (Centralised)', ...chains,
+  name: 'USDC', class: 'text-usdc', category: STABLE, ...chains,
   eth: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
   bsc: '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d',
   polypos: '0x2791bca1f2de4661ed88a30c99a7a9449aa84174',
@@ -42,12 +46,18 @@ const usdc = {
 }
 
 const dai = {
-  name: 'DAI', class: 'text-dai', category: 'Stablecoin (Decentralised)', ...chains,
+  name: 'DAI', class: 'text-dai', category: DSTABLE, ...chains,
   op: '0xda10009cbd5d07dd0cecc66161fc93d7c9000da1',
   sol: 'EjmyN6qEC1Tf1JxiG1ae7UTJhUxSwk1TCWNWqxWV4J6o',
   arb: '0xda10009cbd5d07dd0cecc66161fc93d7c9000da1',
   base: '0x50c5725949a6f0c72e6c4a641f24049a917db0cb'
 }
+
+const paxg = {
+  name: 'PAXG', class: '', category: COMMODITY, ...chains,
+  cmc: 'https://coinmarketcap.com/currencies/pax-gold/',
+  website: 'https://paxos.com/paxgold/',
+  eth: '0x45804880de22913dafe09f4980848ece6ecbaf78',
 
 const uni = {
   name: 'UNI', class: 'text-uni', category: 'Governance Token', ...chains,
