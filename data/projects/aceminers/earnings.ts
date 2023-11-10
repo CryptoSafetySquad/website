@@ -6,6 +6,7 @@ const earnings: EarningsEntry[] = [
   { label: 'Aug 23', date: '2023-08-01', litecoin: { ltc: 0.0538 }, kadena: { kda: 1.4 }, nervos: { ckb: 290 } },
   { label: 'Sep 23', date: '2023-09-01', litecoin: { ltc: 0.0410 }, kadena: { kda: 1 }, nervos: { ckb: 300 } },
   { label: 'Oct 23', date: '2023-10-01', litecoin: { ltc: 0.0360 }, kadena: { kda: 1.1 }, nervos: { ckb: 190 } },
+  // 90 Day Compounding
 ]
 
 export default earnings
