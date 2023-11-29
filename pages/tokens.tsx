@@ -88,9 +88,6 @@ const hwTokenData = [
 
 const renderAddress = (address: string, chain: string = '') => {
   if (!address) return '';
-  if (chain == '') {
-    
-  }
   const addressString: string = shortAddress(address)
 
   switch (chain) {
