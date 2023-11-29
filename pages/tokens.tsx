@@ -83,6 +83,7 @@ const hwTokenData = [
   { name: 'ORCA', class: '', category: DEX, ...chains },
   { name: 'WAVE', class: '', category: CEX, ...chains },
   { name: 'BURL', class: '', category: P79, ...chains, polypos: '0xf771d937c8c1772d1070ae83bca5bc7525b7c71d' },
+  { name: 'STAR', class: '', category: P79, ...chains, polypos: '0x0861df779be45784f156bd608b110403edc3ec5a' },
 ]
 
 const renderAddress = (address: string, chain: string = '') => {
