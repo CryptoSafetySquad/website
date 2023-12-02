@@ -37,7 +37,7 @@ const usdc = {
   name: 'USDC', class: 'text-usdc', category: STABLE, ...chains,
   eth: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
   bsc: '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d',
-  polypos: '0x2791bca1f2de4661ed88a30c99a7a9449aa84174',
+  polypos: '0x3c499c542cef5e3811e1192ce70d8cc03d5c3359',
   polyzk: '0xa8ce8aee21bc2a48a5ef670afcc9274c7bbbc035',
   sol: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
   op: '0x7f5c764cbc14f9669b88837ca1490cca17c31607',
