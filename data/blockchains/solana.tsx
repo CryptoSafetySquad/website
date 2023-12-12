@@ -19,6 +19,7 @@ const solana: BlockchainData = {
     explorers: [
       { name: 'Solana Explorer', link: 'https://explorer.solana.com/', },
       { name: 'SolScan', link: 'https://solscan.io/', },
+      { name: 'SolanaFM', link: 'https://solana.fm/?cluster=mainnet-alpha' }
     ],
     centralisedExchanges: [
       exchanges.kucoin,
