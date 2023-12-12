@@ -35,7 +35,8 @@ const solana: BlockchainData = {
     ],
     defi: [
       { name: 'Orca', link: 'https://www.orca.so/' },
-      { name: 'Raydium', link: 'https://raydium.io/' }
+      { name: 'Raydium', link: 'https://raydium.io/' },
+      { name: 'KyberSwap', link: 'https://kyberswap.com' }
     ]
   }
 }
