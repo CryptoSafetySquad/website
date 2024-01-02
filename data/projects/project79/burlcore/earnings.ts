@@ -10,7 +10,7 @@ const earnings: EarningsEntry[] = [
   { label: '7 Oct 23', date: '2023-10-07', ethereum: { usdc: 2.55 }, amount: 2.55 }, // YLD ($225): 1.13% - ($300): 0.85%
   // 6 Month Average - Total Earnings: 21.75, Total Return 9.66% (@$225/Token) 7.25% (@$300/Token)
   //                 - Average Earning: 3.625     @225 = 1.61%     @300 = 1.20%
-  { label: '14 Nov 23', date: '2023-11-14', ethereum: { usdc: 1.55 }, amount: 1.55 }, // YLD ($225): 0.68% - ($300): 0.51%
+  { label: '14 Nov 23', date: '2023-11-14', ethereum: { usdc: 1.55 }, amount: 1.55 }, // (October Earnings) YLD ($225): 0.68% - ($300): 0.51%
 ]
 
 export default earnings
