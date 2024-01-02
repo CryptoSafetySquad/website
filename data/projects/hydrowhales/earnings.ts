@@ -19,7 +19,7 @@ const earnings: EarningsEntry[] = [
   { label: '1 Sep 23', date: '2023-09-01', polygon: { wbtc: 8 }, amount: 28 },
   // #9 $5/wBTC $20/ORCA (not yet launched) TODO
   { label: '1 Oct 23', date: '2023-10-01', polygon: { wbtc: 5 }, amount: 25 },
-  // #10 $5/wBTC $20/ORCA (not yet launched) TODO
+  // #10 (dashboard #9) $5/wBTC $20/ORCA (not yet launched) TODO
   { label: '1 Nov 23', date: '2023-11-01', polygon: { wbtc: 5 }, amount: 25 },
 ]
 
