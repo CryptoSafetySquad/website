@@ -135,11 +135,11 @@ const Tokens: NextPage = () => {
       <div className='grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
         {tokenData.map(token => renderTokenCard(token))}
       </div>
-      <h2 className='my-4 text-lg'>Exchange Tokens</h2>
+      <h2 className='my-4 text-2xl text-secondary'>Exchange Tokens</h2>
       <div className='grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
         {exchangeTokens.map(token => renderTokenCard(token))}
       </div>
-      <h2 className='my-4 text-lg'>Hydro Whale Ecosystem: P79 / OceanMoney / OrcaFi</h2>
+      <h2 className='my-4 text-2xl text-secondary'>Hydro Whale Ecosystem: P79 / OceanMoney / OrcaFi</h2>
       <p>Coming Soon</p>
       <div className='grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
         {hwTokenData.map(token => renderTokenCard(token))}
