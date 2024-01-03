@@ -8,7 +8,7 @@ export const OceanMoney: Project = {
   slug: 'ocean-money',
   type: 'Banking Services, Crypto Services',
   website: 'https://www.ocean.money/',
-  bannerImage: 'https://www.ocean.money/_next/image?url=%2Fimages%2Fblog-1.png&w=1920&q=75',
+  bannerImage: 'https://assets-global.website-files.com/646e47bd54fee4d24e78119f/647fc9d9e0647034e6d6de67_img.webp',
   twitter: 'OceanMoney_',
   news,
   officialVideos,

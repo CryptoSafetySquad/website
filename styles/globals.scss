@@ -264,25 +264,28 @@ h1 {
 
 .text-usdc { @apply text-currency-usdc; }
 .text-usdt { @apply text-currency-usdt; }
-.text-avax { @apply text-currency-avax; }
-.text-btc { @apply text-currency-btc; }
-.text-bnb { @apply text-currency-bnb; }
-.text-op { @apply text-currency-op; }
-.text-eth { @apply text-currency-eth; }
+
 .text-arb { @apply text-currency-arb; }
-.text-matic { @apply text-currency-matic; }
-.text-ckb { @apply text-currency-ckb; }
-.text-ftm { @apply text-currency-ftm; }
-.text-canto { @apply text-currency-canto; }
-.text-kda { @apply text-currency-kda; }
-.text-xmr { @apply text-currency-xmr; }
-.text-dag { @apply text-currency-dag; }
-.text-sol { @apply text-currency-sol; }
-.text-ltc { @apply text-currency-ltc; }
-.text-dai { @apply text-currency-dai; }
+.text-avax { @apply text-currency-avax; }
 .text-base { @apply text-currency-base; }
+.text-bnb { @apply text-currency-bnb; }
+.text-btc { @apply text-currency-btc; }
+.text-canto { @apply text-currency-canto; }
+.text-ckb { @apply text-currency-ckb; }
+.text-dag { @apply text-currency-dag; }
+.text-dai { @apply text-currency-dai; }
+.text-eth { @apply text-currency-eth; }
+.text-ftm { @apply text-currency-ftm; }
+.text-kda { @apply text-currency-kda; }
+.text-ltc { @apply text-currency-ltc; }
+.text-matic { @apply text-currency-matic; }
+.text-op { @apply text-currency-op; }
+.text-paxg { @apply text-currency-paxg; }
+.text-sol { @apply text-currency-sol; }
+.text-xmr { @apply text-currency-xmr; }
 
 .text-uni { @apply text-currency-uni; }
+.text-cake { @apply text-currency-cake; }
 
 span.blockchain {
   position: relative;

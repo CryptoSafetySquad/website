@@ -54,7 +54,7 @@ const dai = {
 }
 
 const paxg = {
-  name: 'PAXG', class: '', category: COMMODITY, ...chains,
+  name: 'PAXG', class: 'text-paxg', category: COMMODITY, ...chains,
   cmc: 'https://coinmarketcap.com/currencies/pax-gold/',
   website: 'https://paxos.com/paxgold/',
   eth: '0x45804880de22913dafe09f4980848ece6ecbaf78',
