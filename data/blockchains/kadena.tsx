@@ -2,6 +2,8 @@ import type { BlockchainData } from "../../types/BlockchainData"
 
 import exchanges from "../exchanges"
 
+import AceMinersNFT from "../projects/aceminers/aceminers"
+
 const kadena: BlockchainData = {
   name: 'Kadena',
   slug: 'kadena',
@@ -38,7 +40,10 @@ const kadena: BlockchainData = {
     ],
     gaming: [
       { name: 'UFO Gaming', link: 'https://ufogaming.io/' }
-    ]
+    ],
+    projects: [
+      AceMinersNFT
+    ],
   }
 }
 

@@ -2,6 +2,8 @@ import type { BlockchainData } from "../../types/BlockchainData"
 
 import exchanges from "../exchanges"
 
+import AceMinersNFT from "../projects/aceminers/aceminers"
+
 const nervos: BlockchainData = {
   name: 'Nervos',
   slug: 'nervos',
@@ -18,6 +20,9 @@ const nervos: BlockchainData = {
       exchanges.gateio,
       exchanges.coinbase,
       exchanges.binance,
+    ],
+    projects: [
+      AceMinersNFT,
     ],
   },
   metadata: {
