@@ -44,7 +44,7 @@ const Page = ({ title, slug, content, description, author, withCommenting, heade
           )
           : (
             <div>
-              <h1 className='text-lg mt-6 mb-12'>{`${title}`}</h1>
+              <h1 className='text-2xl text-secondary mt-6 mb-12'>{`${title}`}</h1>
             </div>
           )
         }
