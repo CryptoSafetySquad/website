@@ -7,7 +7,7 @@ const links = [
   { href: '/general-tips', text: 'General Tips' },
   { href: '/ecosystems', text: 'Ecosystems' },
   { href: '/tokens', text: 'Tokens' },
-  { href: '/referrals', text: 'Referrals' },
+  { href: '/referrals', text: 'Referrals/Links' },
   { href: '/videos', text: 'Videos' },
 
 ]
