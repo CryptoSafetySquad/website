@@ -25,7 +25,8 @@ const avalanche = {
       exchanges.coinbase,
     ],
     decentralisedExchanges: [
-      { name: 'TraderJoe', link: 'https://traderjoexyz.com/' }
+      { name: 'TraderJoe', link: 'https://traderjoexyz.com/' },
+      exchanges.sushi,
     ],
     defi: [
       defi.yieldYak,

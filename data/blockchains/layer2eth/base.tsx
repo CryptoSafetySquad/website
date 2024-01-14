@@ -27,7 +27,8 @@ const base: BlockchainData = {
       { link: 'https://aerodrome.finance/', name: 'Aerodrome' },
       { link: 'https://base.velocimeter.xyz/home', name: 'BVM Velocimeter' },
       { link: 'https://app.alienbase.xyz/', name: 'Alien Base' },
-      { link: 'https://baseswap.fi/', name: 'BaseSwap' }
+      { link: 'https://baseswap.fi/', name: 'BaseSwap' },
+      exchanges.sushi,
     ],
     defi: [
     ],

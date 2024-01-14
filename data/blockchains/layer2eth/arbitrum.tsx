@@ -26,6 +26,7 @@ const arbitrum: BlockchainData = {
     ],
     decentralisedExchanges: [
       exchanges.apollox,
+      exchanges.sushi,
     ],
     defi: [
       defi.yieldYak,

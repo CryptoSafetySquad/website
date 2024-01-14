@@ -25,6 +25,9 @@ const optimism: BlockchainData = {
       exchanges.kucoin,
       exchanges.gateio,
     ],
+    decentralisedExchanges: [
+      exchanges.sushi
+    ],
     defi: [
     ],
   }

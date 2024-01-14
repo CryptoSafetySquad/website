@@ -36,6 +36,7 @@ const ethereum: BlockchainData = {
       exchanges.pancakeswap,
       exchanges.apeswap,
       exchanges.apollox,
+      exchanges.sushi,
     ],
     defi: [
       defi.beefy

@@ -11,6 +11,7 @@ const exchanges = {
   quickswap: { name: 'QuickSwap', link: 'https://quickswap.exchange/' },
   apollox: { name: 'ApolloX', link: 'https://www.apollox.finance/' },
   matcha: { name: 'Matcha', link: 'https://matcha.xyz/', type: 'Decentralised' },
+  sushi: { name: 'Sushi', link: 'https://www.sushi.com/', type: 'Decentralised' },
   // _: { name: '', link: '', type: 'Decentralised' },
   // _: { name: '', link: '', type: 'Decentralised' },
   // _: { name: '', link: '', type: 'Decentralised' },

@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import type { EcosystemLink } from '../../types/EcosystemLink'
 
 import EcosystemPage from '../../Components/EcosystemPage'
 

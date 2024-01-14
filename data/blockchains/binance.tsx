@@ -35,6 +35,7 @@ const binance: BlockchainData = {
       exchanges.apollox,
       { name: 'Aequinox', link: 'https://www.aequinox.exchange/#/' },
       { name: 'Thena', link: 'https://thena.fi/' },
+      exchanges.sushi,
     ],
     defi: [
       defi.autofarm,
