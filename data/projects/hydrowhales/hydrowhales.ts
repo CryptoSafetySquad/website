@@ -20,6 +20,7 @@ export const HydroWhalesMiningClub: Project = {
     { name: 'Community Wallet', contract: '0x3f85C11A8Db617E9a78c75Bdb12919D1F0a092ec', explorerUrl: 'https://www.blockchain.com/explorer/addresses/eth/0x3f85C11A8Db617E9a78c75Bdb12919D1F0a092ec', short: '0x3f...92ec', blockchain: 'Ethereum' },
     { name: 'Project Development', contract: '0xa8c1B1a70bBFF30449A932aB238f95AaA1b33a03', explorerUrl: 'https://www.blockchain.com/explorer/addresses/eth/0xa8c1B1a70bBFF30449A932aB238f95AaA1b33a03', short: '0xa8...3a03', blockchain: 'Ethereum' },
     { name: 'Bitcoin Miner Wallet', contract: 'bc1qty4mw7fjg5pwqvshwfp5jytckqj6n7k8w8xzm4', explorerUrl: 'https://blockchair.com/bitcoin/address/bc1qty4mw7fjg5pwqvshwfp5jytckqj6n7k8w8xzm4', short: 'bc1q...xzm4', blockchain: 'Ethereum' },
+    { name: 'New Bitcoin Miner Wallet (Jan 24)', contract: 'bc1qntuj75ch6scgqngk0ztcqn6fla8seca5a6x45q', explorerUrl: 'https://blockchair.com/bitcoin/address/bc1qntuj75ch6scgqngk0ztcqn6fla8seca5a6x45q', short: 'bc1q...xzm4', blockchain: 'Ethereum' },
 
   ],
   nfts: [
