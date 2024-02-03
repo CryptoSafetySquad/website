@@ -40,6 +40,7 @@ const polygon: BlockchainData = {
       marketplaces.magiceden,
     ],
     wallets: [
+      wallets.oneinch,
       wallets.trustwallet,
       wallets.metamask,
       wallets.exodus,
