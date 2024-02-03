@@ -31,6 +31,7 @@ const solana: BlockchainData = {
       marketplaces.magiceden
     ],
     wallets: [
+      wallets.trustwallet,
       wallets.phantom,
       wallets.exodus,
     ],
