@@ -45,6 +45,11 @@ const usdc = {
   base: '0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca', // Caveat USDbC, see https://help.coinbase.com/en/coinbase/getting-started/crypto-education/usd-base-coin
 }
 
+const usdce = {
+  name: 'USDC.e', class: 'text-usdc', category: STABLE, ...chains,
+  polypos: '0x2791bca1f2de4661ed88a30c99a7a9449aa84174',
+}
+
 const dai = {
   name: 'DAI', class: 'text-dai', category: DSTABLE, ...chains,
   op: '0xda10009cbd5d07dd0cecc66161fc93d7c9000da1',
@@ -71,6 +76,7 @@ const tokenData = [
   wbtc,
   usdt,
   usdc,
+  usdce,
   dai,
   paxg,
 ]
