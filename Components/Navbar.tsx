@@ -3,7 +3,6 @@ import Link from "next/link"
 
 const links = [
   { href: '/guides', text: 'Guides' },
-  { href: '/projects', text: 'Projects' },
   { href: '/general-tips', text: 'General Tips' },
   { href: '/ecosystems', text: 'Ecosystems' },
   { href: '/tokens', text: 'Tokens' },
