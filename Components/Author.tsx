@@ -38,12 +38,8 @@ const AuthorComponent = ({ nickname, content, fullname, image, socials, wallets 
       <div className='author grid grid-cols-[30%,1fr] xl:grid-cols-1 gap-4'>
         {image && <img src={image} />}
         <div className='pr-4 xl:pr-0'>
-          <h2>{fullname} {fullname && nickname && `aka `} {nickname}</h2>
+          <h2>{nickname}</h2>
           {socials && socials.linkedin && <a className='link-small' href={socials.linkedin} target='_blank' rel='noopener noreferrer'>LinkedIn</a>}
-          
-          <div className='mt-4'>
-            {content}
-          </div>
 
           {wallets && (wallets.btc || wallets.eth) ? (
             <>
