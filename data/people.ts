@@ -14,7 +14,7 @@ const people: {[key: string]: Person;} = {
   },
   adamdignan: {
     name: 'Adam Dignan',
-    linkedin: 'https://www.linkedin.com/in/adam-dignan-b7985418b/'
+    linkedin: 'https://www.linkedin.com/in/adam-dignan-b7985418b/' // Deleted
   },
   dylanhatten: {
     name: 'Dylan Hatten',
