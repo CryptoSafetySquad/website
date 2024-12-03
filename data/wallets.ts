@@ -7,6 +7,8 @@ const wallets = {
   cakewallet: { name: 'Cake Wallet', link: 'https://cakewallet.com/' },
   phantom: { name: 'Phantom', link: 'https://phantom.app/' },
   exodus: { name: 'Exodus', link: 'https://www.exodus.com/' },
+  onekey: { name: 'OneKey', link: 'https://www.onekey.so/' },
+  surf: { name: 'Surf', link: 'https://surf.tech/' },
 }
 
 export default wallets

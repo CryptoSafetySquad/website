@@ -1,3 +1,4 @@
+import React from "react"
 import type { NewsEntry } from "../types/NewsEntry"
 
 const parseDate = (date: string) => {
@@ -39,13 +40,13 @@ const NewsListing = ({ newsEntries }: { newsEntries: NewsEntry[] }) => {
               console.log(currentDate)
               currentDate = `${date.monthName} ${date.year}`
               return (
-                <>
+                <React.Fragment key={`news-item-${index}-month-name`}>
                   <tr className='text-xs' key={`news-item-${index}-month-name`}><td className='py-2' colSpan={2}>{currentDate}</td></tr>
                   <tr key={`news-item-${index}`}>
                     <td className='text-xs pr-2 pb-2 align-top'>{entry.date}</td>
                     <td className='text-xs pl-2 pb-2'>{entry.content}</td>
                   </tr>
-                </>
+                </React.Fragment>
               )
             }
             return <tr key={`news-item-${index}`}>

@@ -19,6 +19,7 @@ import monero from '../data/blockchains/monero'
 import pulsechain from '../data/blockchains/pulsechain'
 import solana from '../data/blockchains/solana'
 import nervos from '../data/blockchains/nervos'
+import sui from '../data/blockchains/sui'
 // Eth Layer 2
 import arbitrum from '../data/blockchains/layer2eth/arbitrum'
 import polygon from '../data/blockchains/layer2eth/polygon'
@@ -42,6 +43,7 @@ const l1ecos: any[] = [
   { ...canto, marketCap: 51729762, lastUpdated: '16/06/2023' },
   { ...pulsechain, marketCap: 0, lastUpdated: '01/09/2023' },
   { ...layer1x, marketCap: 0, lastUpdated: '01/09/2023' },
+  { ...sui, marketCap: 0, lastUpdated: '03/12/2024' },
 ]
 const ethl2ecos: any[] = [
   { ...polygon, marketCap: 5451402844, lastUpdated: '16/06/2023' },

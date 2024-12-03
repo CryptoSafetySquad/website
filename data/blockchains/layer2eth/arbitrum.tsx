@@ -33,6 +33,7 @@ const arbitrum: BlockchainData = {
     ],
     nftMarketplaces: [
       marketplaces.alphaShares,
+      marketplaces.magiceden
     ],
   }
 }

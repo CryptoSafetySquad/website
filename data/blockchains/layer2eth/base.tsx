@@ -2,6 +2,7 @@ import type { BlockchainData } from "../../../types/BlockchainData"
 
 import exchanges from "../../exchanges"
 import defi from "../../defi"
+import marketplaces from "../../marketplaces"
 
 const base: BlockchainData = {
   name: 'Base',
@@ -9,20 +10,17 @@ const base: BlockchainData = {
   // icon: '/images/icons/blockchains/optimism.png',
   iconSize: { w: 24, h: 24 },
   metadata: {
-    // website: 'https://www.optimism.io/',
+    // website: '',
     // token: {
     //   // name: 'OP',
-    //   // cmc: 'https://coinmarketcap.com/currencies/optimism-ethereum/'
+    //   // cmc: ''
     // }
   },
   data: {
     explorers: [
       { link: 'https://basescan.org/', name: 'BaseScan (Etherscan)' }
     ],
-    centralisedExchanges: [
-      // exchanges.kucoin,
-      // exchanges.gateio,
-    ],
+    centralisedExchanges: [],
     decentralisedExchanges: [
       { link: 'https://aerodrome.finance/', name: 'Aerodrome' },
       { link: 'https://base.velocimeter.xyz/home', name: 'BVM Velocimeter' },
@@ -30,8 +28,10 @@ const base: BlockchainData = {
       { link: 'https://baseswap.fi/', name: 'BaseSwap' },
       exchanges.sushi,
     ],
-    defi: [
-    ],
+    defi: [],
+    nftMarketplaces: [
+      marketplaces.magiceden
+    ]
   }
 }
 
