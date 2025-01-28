@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import { AuthorProps, default as Author } from './Author'
 import Navbar from './Navbar'
-import Discussion from './Discussion';
 
 export interface PageComponentProps {
   title: string;
@@ -65,11 +64,6 @@ const FullPage = ({ title, slug, content, description, author, withCommenting, h
             {content}
           </div>
           </div>
-          {
-            withCommenting === true && (
-              <Discussion slug={slug} title={`${title}`} />
-            )
-          }
       </main>
     </div>
   )
