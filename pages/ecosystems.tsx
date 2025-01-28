@@ -27,7 +27,7 @@ import optimism from '../data/blockchains/layer2eth/optimism'
 import layer1x from '../data/blockchains/layer1x'
 
 const l1ecos: any[] = [
-  { ...bitcoin, marketCap: 1990067776993, lastUpdated: '28/01/2025' },
+  { ...bitcoin, marketCap: 2000197160919, lastUpdated: '28/01/2025' },
   { ...ethereum, marketCap: 368030754681, lastUpdated: '28/01/2025' },
   { ...solana, marketCap: 109833503200, lastUpdated: '28/01/2025' },
   { ...binance, marketCap: 94118258943, lastUpdated: '28/01/2025' },
