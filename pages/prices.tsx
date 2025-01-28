@@ -84,6 +84,7 @@ const Prices: NextPage = () => {
               <th>BTC/ETH Avg</th>
               <th>Avg +/- % Previous</th>
               <th>BTC +/- % Previous</th>
+              <th>ETH +/- % Previous</th>
             </tr>
           </thead>
           <tbody>
@@ -99,9 +100,8 @@ const Prices: NextPage = () => {
                 <td>{dataAverage(data).toLocaleString("en-US")}</td>
                 <td>{btcEthAverage(data).toLocaleString("en-US")}</td>
                 <td>{formatPercent(dataAverage(data) / dataAverage(priceData[index - 1]))}</td>
-                <td>{
-                  formatPercent((data.btc || 0) / ( prevData?.btc || 0))
-                }</td>
+                <td>{formatPercent((data.btc || 0) / ( prevData?.btc || 0))}</td>
+                <td>{formatPercent((data.eth || 0) / ( prevData?.eth || 0))}</td>
               </tr>
             })}
           </tbody>
