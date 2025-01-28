@@ -87,7 +87,7 @@ const Prices: NextPage = () => {
           </thead>
           <tbody>
             {priceData.map((data: HistoricalPriceData, index) => {
-              return <tr>
+              return <tr key={index}>
                 <td>{data.date}</td>
                 <td>{formatCurrency(data.btc || 0)}</td>
                 <td>{formatCurrency(data.eth || 0)}</td>
