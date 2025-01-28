@@ -82,11 +82,13 @@ const Prices: NextPage = () => {
               <th>ADA</th>
               <th>Average</th>
               <th>BTC/ETH Avg</th>
-              <th>+/- % Previous</th>
+              <th>Avg +/- % Previous</th>
+              <th>BTC +/- % Previous</th>
             </tr>
           </thead>
           <tbody>
             {priceData.map((data: HistoricalPriceData, index) => {
+              const prevData = priceData[index - 1]
               return <tr key={index}>
                 <td>{data.date}</td>
                 <td>{formatCurrency(data.btc || 0)}</td>
@@ -96,7 +98,10 @@ const Prices: NextPage = () => {
                 <td>{formatCurrency(data.ada || 0)}</td>
                 <td>{dataAverage(data).toLocaleString("en-US")}</td>
                 <td>{btcEthAverage(data).toLocaleString("en-US")}</td>
-                <td>{(formatPercent(dataAverage(data) / dataAverage(priceData[index - 1])))}</td>
+                <td>{formatPercent(dataAverage(data) / dataAverage(priceData[index - 1]))}</td>
+                <td>{
+                  formatPercent((data.btc || 0) / ( prevData?.btc || 0))
+                }</td>
               </tr>
             })}
           </tbody>
