@@ -7,17 +7,17 @@ import marketplaces from "../marketplaces"
 
 const fantom: BlockchainData = {
   icon: '/images/icons/blockchains/fantom.png',
-  name: 'Fantom',
+  name: 'Sonic (ex: Fantom)',
   slug: 'fantom',
   iconSize: {
     w: 24,
     h: 24,
   },
   metadata: {
-    website: 'https://fantom.foundation/',
+    website: 'https://www.soniclabs.com/',
     token: {
-      name: 'FTM',
-      cmc: 'https://coinmarketcap.com/currencies/fantom/',
+      name: 'S',
+      cmc: 'https://coinmarketcap.com/currencies/sonic/',
     }
   },
   data: {
