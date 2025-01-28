@@ -55,8 +55,8 @@ const Prices: NextPage = () => {
 
       <Navbar />
 
-      <main className='h-full py-16'>
-        <h1 className='text-4xl text-center'>
+      <main className='h-full py-16 px-8'>
+        <h1 className='text-4xl text-center mb-4'>
           Prices
         </h1>
 
