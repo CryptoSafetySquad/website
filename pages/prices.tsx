@@ -75,11 +75,11 @@ const Prices: NextPage = () => {
           <thead>
             <tr>
               <th>Date</th>
-              <th>BTC</th>
-              <th>ETH</th>
-              <th>XRP</th>
-              <th>SOL</th>
-              <th>ADA</th>
+              <th>#1 BTC</th>
+              <th>#2 ETH</th>
+              <th>#3 XRP</th>
+              <th>#5 SOL</th>
+              <th>#9 ADA</th>
               <th>Average</th>
               <th>BTC/ETH Avg</th>
               <th>Avg +/- % Previous</th>
