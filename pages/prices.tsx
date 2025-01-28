@@ -16,7 +16,7 @@ type HistoricalPriceData = {
 
 const TRACKED_TOKENS: number = 6
 
-const dataAverage: number = (data: HistoricalPriceData) => {
+const dataAverage = (data: HistoricalPriceData): number => {
   if (!data) { return 0 }
   let sum = 0
   sum += data.btc || 0
@@ -28,7 +28,7 @@ const dataAverage: number = (data: HistoricalPriceData) => {
   return (sum / TRACKED_TOKENS)
 }
 
-const btcEthAverage: number = (data: HistoricalPriceData) => {
+const btcEthAverage = (data: HistoricalPriceData): number => {
   return ((data.btc || 0) + (data.eth || 0)) / 2
 }
 
