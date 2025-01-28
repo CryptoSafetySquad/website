@@ -27,13 +27,13 @@ import optimism from '../data/blockchains/layer2eth/optimism'
 import layer1x from '../data/blockchains/layer1x'
 
 const l1ecos: any[] = [
-  { ...bitcoin, marketCap: 495610038966, lastUpdated: '16/06/2023' },
-  { ...ethereum, marketCap: 200492209355, lastUpdated: '16/06/2023' },
-  { ...binance, marketCap: 36886308118, lastUpdated: '16/06/2023' },
-  { ...cardano, marketCap: 9114624590, lastUpdated: '16/06/2023' },
-  { ...solana, marketCap: 5900365921, lastUpdated: '16/06/2023' },
+  { ...bitcoin, marketCap: 1990067776993, lastUpdated: '28/01/2025' },
+  { ...ethereum, marketCap: 368030754681, lastUpdated: '28/01/2025' },
+  { ...solana, marketCap: 109833503200, lastUpdated: '28/01/2025' },
+  { ...binance, marketCap: 94118258943, lastUpdated: '28/01/2025' },
+  { ...cardano, marketCap: 32030673751, lastUpdated: '28/01/2025' },
   // { name: 'Litecoin', slug: 'litecoin', marketCap: 6823904572, lastUpdated: '' },
-  { ...avalanche, marketCap: 3937538704, lastUpdated: '16/06/2023' },
+  { ...avalanche, marketCap: 13259034464, lastUpdated: '28/01/2025' },
   { ...cosmos, marketCap: 2974424096, lastUpdated: '19/06/2023' },
   { ...monero, marketCap: 2503949150, lastUpdated: '16/06/2023' },
   { ...fantom, marketCap: 711720765, lastUpdated: '16/06/2023' },
